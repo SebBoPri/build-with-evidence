@@ -452,7 +452,7 @@ function Index() {
                 Start a conversation
               </a>
               <a
-                href="gap"
+                href="mailto:hello@slipstreamlabs.se"
                 className="text-sm text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
               >
                 hello@slipstreamlabs.se
