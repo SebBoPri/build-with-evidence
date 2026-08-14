@@ -460,7 +460,7 @@ function Index() {
       </main>
 
       <footer className="rule-t">
-        <div className="mx-auto flex w-full max-w-[76rem] flex-col gap-3 px-6 py-10 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between md:px-10">
+        <div className="mx-auto flex w-full max-w-[84rem] flex-col gap-3 px-6 py-10 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between md:px-10">
           <p>© {new Date().getFullYear()} Slipstream Labs · Stockholm</p>
           <p className="label-mono">Evidence before build</p>
         </div>
