@@ -28,6 +28,7 @@ const nav = [
   { href: "#approach", label: "Approach" },
   { href: "#sprint", label: "Discovery Sprint" },
   { href: "#outcomes", label: "Outcomes" },
+  { href: "#testimonials", label: "Results" },
   { href: "#about", label: "About" },
 ];
 
@@ -95,6 +96,41 @@ const outcomes = [
     title: "Know what to do next",
     body: "Leave with a clear direction and the evidence behind it.",
   },
+];
+
+const testimonials = [
+  {
+    quote:
+      "Sebastian helped us see that we were solving the wrong problem. We reframed the sprint, saved months of engineering, and landed on something customers actually wanted.",
+    role: "Product Lead, B2B SaaS",
+  },
+  {
+    quote:
+      "The difference was the rigour. Every recommendation came with evidence we could trace, and the assumptions we had to drop were written down, not buried.",
+    role: "Head of Product, fintech scale-up",
+  },
+  {
+    quote:
+      "We went into the sprint arguing about features. We came out agreeing on the one bet worth making and why.",
+    role: "CEO, Series A healthtech",
+  },
+];
+
+const trackRecord = [
+  { value: "20+", label: "Teams guided through discovery decisions" },
+  { value: "4", label: "Continents" },
+  { value: "5+", label: "Years focused on product discovery" },
+];
+
+const sectors = [
+  "Seed",
+  "Series A",
+  "Scale-up",
+  "SaaS",
+  "Fintech",
+  "Health",
+  "Climate",
+  "AI infrastructure",
 ];
 
 function Index() {
@@ -313,6 +349,67 @@ function Index() {
           </div>
         </Section>
 
+        {/* Testimonials */}
+        <Section id="testimonials" label="What teams say">
+          <h2 className="display-md max-w-2xl text-balance">Evidence, seen from the other side.</h2>
+          <div className="mt-14 grid gap-px sm:grid-cols-2 lg:grid-cols-3">
+            {testimonials.map((t) => (
+              <figure
+                key={t.role}
+                className="group relative border-t border-hairline pt-6 sm:pr-8 lg:not-last:border-r lg:not-last:border-hairline"
+              >
+                <span
+                  className="absolute -top-px left-0 h-px w-0 bg-accent transition-all duration-500 group-hover:w-full lg:w-[calc(100%-2rem)] lg:group-hover:w-[calc(100%-2rem)]"
+                  aria-hidden="true"
+                />
+                <blockquote className="text-lg leading-relaxed text-foreground">
+                  &ldquo;{t.quote}&rdquo;
+                </blockquote>
+                <figcaption className="mt-6">
+                  <p className="text-sm font-medium text-muted-foreground">{t.role}</p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </Section>
+
+        {/* Credibility */}
+        <Section id="track-record" label="Track record">
+          <div className="grid gap-14 md:grid-cols-12">
+            <div className="md:col-span-5">
+              <h2 className="display-md text-balance">Small practice, clear impact.</h2>
+              <p className="mt-7 text-lg leading-relaxed text-muted-foreground">
+                Slipstream Labs works with post-seed and Series A teams across SaaS, fintech,
+                health, climate and AI infrastructure. The work is hands-on, and the measure is
+                whether the next decision gets easier.
+              </p>
+            </div>
+            <div className="md:col-span-7">
+              <dl className="grid gap-px border-t border-hairline sm:grid-cols-3">
+                {trackRecord.map((item) => (
+                  <div
+                    key={item.label}
+                    className="pt-6 sm:pr-8 sm:not-last:border-r sm:not-last:border-hairline"
+                  >
+                    <dt className="display-md text-accent">{item.value}</dt>
+                    <dd className="mt-2 max-w-[12rem] text-sm leading-relaxed text-muted-foreground">
+                      {item.label}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+              <div className="rule-t mt-10 pt-8">
+                <p className="label-mono">Stages and sectors</p>
+                <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
+                  {sectors.map((s) => (
+                    <li key={s}>{s}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </Section>
+
         {/* About */}
         <Section id="about" label="About">
           <div className="grid gap-14 md:grid-cols-12">
@@ -355,7 +452,7 @@ function Index() {
                 Start a conversation
               </a>
               <a
-                href="mailto:hello@slipstreamlabs.se"
+                href="gap"
                 className="text-sm text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
               >
                 hello@slipstreamlabs.se
