@@ -11,7 +11,7 @@ export function Section({
 }) {
   return (
     <section id={id} className="rule-t scroll-mt-16">
-      <div className="mx-auto w-full max-w-[76rem] px-6 py-20 md:px-10 md:py-28">
+      <div className="mx-auto w-full max-w-[84rem] px-6 py-24 md:px-10 md:py-32">
         {label ? (
           <p className="label-mono mb-10 flex items-center gap-3">
             <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />

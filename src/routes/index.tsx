@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section, Lead } from "@/components/site/sections";
+import { Wordmark, Starfield, Trajectory, OrbitDiagram } from "@/components/site/brand";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -249,9 +250,12 @@ function Index() {
 
         {/* Approach */}
         <Section id="approach" label="The approach">
-          <h2 className="display-md max-w-2xl text-balance">
-            Four steps from uncertainty to a decision.
-          </h2>
+          <div className="grid items-center gap-12 md:grid-cols-12">
+            <h2 className="display-md text-balance md:col-span-5">
+              Four steps from uncertainty to a decision.
+            </h2>
+            <OrbitDiagram className="w-full text-foreground/80 md:col-span-7" />
+          </div>
           <ol className="mt-14 grid gap-px border-t border-hairline sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((s) => (
               <li
@@ -286,7 +290,7 @@ function Index() {
               </Lead>
               <a
                 href="#contact"
-                className="mt-9 inline-flex h-11 items-center rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+                className="mt-9 inline-flex h-11 items-center bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
               >
                 Scope a sprint
               </a>
@@ -440,7 +444,7 @@ function Index() {
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
                 href="mailto:hello@slipstreamlabs.se?subject=Discovery%20Sprint%20enquiry"
-                className="inline-flex h-12 items-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+                className="inline-flex h-12 items-center bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
               >
                 Start a conversation
               </a>
