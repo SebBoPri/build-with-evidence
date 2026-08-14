@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section, Lead } from "@/components/site/sections";
+import { Wordmark, Starfield, Trajectory, OrbitDiagram } from "@/components/site/brand";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -136,16 +137,12 @@ const sectors = [
 function Index() {
   return (
     <div className="min-h-screen">
-      <header className="sticky top-0 z-50 border-b border-hairline bg-background/85 backdrop-blur-md">
-        <div className="mx-auto flex h-14 w-full max-w-[76rem] items-center justify-between px-6 md:px-10">
-          <a href="#top" className="flex items-center gap-2.5 text-sm font-medium tracking-tight">
-            <span
-              className="inline-block h-2.5 w-2.5 rotate-45 bg-accent"
-              aria-hidden="true"
-            />
-            Slipstream Labs
+      <header className="sticky top-0 z-50 border-b border-hairline bg-background/80 backdrop-blur-md">
+        <div className="mx-auto flex h-20 w-full max-w-[84rem] items-center justify-between px-6 md:px-10">
+          <a href="#top" aria-label="Slipstream Labs — home">
+            <Wordmark />
           </a>
-          <nav aria-label="Primary" className="hidden items-center gap-7 md:flex">
+          <nav aria-label="Primary" className="hidden items-center gap-8 lg:flex">
             {nav.map((item) => (
               <a
                 key={item.href}
@@ -158,60 +155,57 @@ function Index() {
           </nav>
           <a
             href="#contact"
-            className="rounded-md border border-border px-3.5 py-1.5 text-sm font-medium transition-colors hover:border-foreground"
+            className="border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:bg-foreground hover:text-background"
           >
-            Start a conversation
+            Book an intro call
           </a>
         </div>
       </header>
 
       <main id="top">
         {/* Hero */}
-        <section className="relative overflow-hidden">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 [background-image:linear-gradient(to_right,var(--hairline)_1px,transparent_1px)] [background-size:calc(100%/6)_100%] opacity-70"
+        <section className="relative overflow-hidden border-b border-hairline">
+          <Starfield
+            className="pointer-events-none absolute inset-0 h-full w-full text-foreground opacity-70"
           />
-          <div className="relative mx-auto w-full max-w-[76rem] px-6 pb-24 pt-24 md:px-10 md:pb-36 md:pt-36">
-            <p className="label-mono fade-up">Product discovery &amp; strategy — Stockholm</p>
-            <h1 className="display-xl fade-up mt-8 max-w-4xl text-balance">
-              Work out what is worth building.
+          <Trajectory className="pointer-events-none absolute right-0 top-10 hidden h-[34rem] w-[46rem] text-foreground/70 lg:block" />
+          <div className="relative mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
+            <p className="label-mono fade-up">Product discovery &amp; strategy</p>
+            <h1 className="display-xl fade-up delay-1 mt-10 max-w-4xl text-balance">
+              Chart the problem.
+              <br />
+              <span className="text-muted-foreground">Then build.</span>
             </h1>
-            <p className="fade-up mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-              Slipstream Labs helps product teams validate opportunities and make better product
-              decisions — before committing engineering time and money to the build.
+            <p className="fade-up delay-2 mt-10 max-w-xl text-lg leading-relaxed text-muted-foreground">
+              The easier it becomes to build, the more it matters to know what to build. Slipstream
+              Labs helps product teams turn assumptions into evidence, so they can decide before
+              committing significant engineering resources.
             </p>
-            <div className="fade-up mt-11 flex flex-wrap items-center gap-3">
+            <div className="fade-up delay-3 mt-12 flex flex-wrap items-center gap-3">
               <a
                 href="#contact"
-                className="inline-flex h-11 items-center rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+                className="group inline-flex h-12 items-center gap-3 bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
               >
-                Start a conversation
-              </a>
-              <a
-                href="#approach"
-                className="group inline-flex h-11 items-center gap-2 rounded-md border border-border px-5 text-sm font-medium transition-colors hover:border-foreground"
-              >
-                See how it works
+                Book an intro call
                 <span className="transition-transform group-hover:translate-x-0.5" aria-hidden="true">
                   →
                 </span>
               </a>
+              <a
+                href="#sprint"
+                className="inline-flex h-12 items-center border border-border px-6 text-sm font-medium transition-colors hover:border-foreground"
+              >
+                Explore the sprint
+              </a>
             </div>
-            <dl className="mt-20 grid max-w-3xl grid-cols-1 gap-px border-t border-hairline sm:grid-cols-3">
-              {[
-                ["Evidence", "over assumptions"],
-                ["Clarity", "over complexity"],
-                ["Decisions", "over deliverables"],
-              ].map(([k, v]) => (
-                <div key={k} className="pt-5">
-                  <dt className="text-sm font-medium">{k}</dt>
-                  <dd className="text-sm text-muted-foreground">{v}</dd>
-                </div>
-              ))}
-            </dl>
+            <p className="label-mono fade-up delay-4 mt-14">Evidence before execution.</p>
+            <div className="mt-20 flex items-center justify-between border-t border-hairline pt-6 md:mt-28">
+              <p className="label-mono">Assumption · Evidence · Decision</p>
+              <p className="label-mono">Stockholm, Sweden</p>
+            </div>
           </div>
         </section>
+
 
         {/* Problem */}
         <Section id="problem" label="The problem">
@@ -256,9 +250,12 @@ function Index() {
 
         {/* Approach */}
         <Section id="approach" label="The approach">
-          <h2 className="display-md max-w-2xl text-balance">
-            Four steps from uncertainty to a decision.
-          </h2>
+          <div className="grid items-center gap-12 md:grid-cols-12">
+            <h2 className="display-md text-balance md:col-span-5">
+              Four steps from uncertainty to a decision.
+            </h2>
+            <OrbitDiagram className="w-full text-foreground/80 md:col-span-7" />
+          </div>
           <ol className="mt-14 grid gap-px border-t border-hairline sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((s) => (
               <li
@@ -293,7 +290,7 @@ function Index() {
               </Lead>
               <a
                 href="#contact"
-                className="mt-9 inline-flex h-11 items-center rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+                className="mt-9 inline-flex h-11 items-center bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
               >
                 Scope a sprint
               </a>
@@ -447,7 +444,7 @@ function Index() {
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
                 href="mailto:hello@slipstreamlabs.se?subject=Discovery%20Sprint%20enquiry"
-                className="inline-flex h-12 items-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+                className="inline-flex h-12 items-center bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
               >
                 Start a conversation
               </a>
@@ -463,7 +460,7 @@ function Index() {
       </main>
 
       <footer className="rule-t">
-        <div className="mx-auto flex w-full max-w-[76rem] flex-col gap-3 px-6 py-10 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between md:px-10">
+        <div className="mx-auto flex w-full max-w-[84rem] flex-col gap-3 px-6 py-10 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between md:px-10">
           <p>© {new Date().getFullYear()} Slipstream Labs · Stockholm</p>
           <p className="label-mono">Evidence before build</p>
         </div>
