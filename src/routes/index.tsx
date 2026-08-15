@@ -3,7 +3,7 @@ import { Section, Lead, CinematicFigure } from "@/components/site/sections";
 import { Wordmark, Starfield, Trajectory } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import heroField from "@/assets/hero-field.jpg";
-import evidenceResolve from "@/assets/evidence-resolve.jpg";
+import futuresBranching from "@/assets/futures-branching.jpg";
 import futuresCone from "@/assets/futures-cone.jpg";
 import sprintDecision from "@/assets/sprint-decision.jpg";
 
@@ -257,11 +257,11 @@ function Index() {
           <ApproachRail steps={steps} />
 
           <CinematicFigure
-            src={evidenceResolve}
-            alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
-            caption="Noise → signal"
-            meta="Evidence synthesis"
-            phrase="Name what must be true, then test it until the noise resolves into one line."
+            src={futuresBranching}
+            alt="Abstract diagram: a single point splitting into many fine trajectories, some fading and some continuing"
+            caption="Assumptions → paths"
+            meta="Decision architecture"
+            phrase="Every assumption is a branch. Most should die before you build."
           />
         </Section>
 
