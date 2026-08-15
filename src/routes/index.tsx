@@ -342,7 +342,19 @@ function Index() {
               </div>
             </div>
           </div>
+          <dl className="rule-t mt-14 grid gap-px pt-10 sm:grid-cols-2 lg:grid-cols-4">
+            {sprintFacts.map((f) => (
+              <div key={f.k} className="lg:pr-8 lg:not-last:border-r lg:not-last:border-hairline">
+                <dt className="label-mono">{f.k}</dt>
+                <dd className="mt-3 max-w-xs text-[0.95rem] leading-relaxed text-foreground">
+                  {f.v}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </Section>
+
+
 
         {/* Outcomes */}
         <Section id="outcomes" label="Outcomes">
