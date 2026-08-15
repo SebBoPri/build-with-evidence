@@ -385,7 +385,17 @@ function Index() {
           </CinematicFigure>
         </Section>
 
-
+        {/* Pull quote */}
+        <Section>
+          <blockquote className="max-w-4xl">
+            <p className="display-md text-balance">
+              Just because you can build it does not mean you should.
+            </p>
+            <p className="display-md mt-3 text-balance text-muted-foreground">
+              Speed is only an advantage when you have the right direction.
+            </p>
+          </blockquote>
+        </Section>
 
 
         {/* About */}
