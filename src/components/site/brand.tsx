@@ -56,7 +56,7 @@ export function Starfield({ className = "" }: { className?: string }) {
   );
 }
 
-/** Trajectory from noise to a locked target — the hero's visual argument. */
+/** Trajectory from noise to a locked target, the hero's visual argument. */
 export function Trajectory({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 720 420" className={className} fill="none" aria-hidden="true">
