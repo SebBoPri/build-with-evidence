@@ -201,11 +201,11 @@ function Index() {
             opinion.
           </p>
           <CinematicFigure
-            src={futuresCone}
-            alt="Abstract diagram: a wireframe cone of possible outcomes widening from a single point"
+            src={futuresBranch}
+            alt="Abstract diagram: thin lines branching repeatedly from a single point into many endpoints"
             caption="One idea → many possible futures"
             meta="Uncertainty at the start"
-            phrase="Every roadmap starts as a wide cone of futures. Building is how most teams find out which one they were in."
+            phrase="Every idea branches. Building is how most teams find out which branch they were on."
           >
             <div className="grid gap-14 md:grid-cols-12">
               <div className="md:col-span-6">
