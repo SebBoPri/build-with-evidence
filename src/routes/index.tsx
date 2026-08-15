@@ -295,20 +295,18 @@ function Index() {
 
           <ApproachRail steps={steps} />
 
-          <figure className="mt-16 border border-hairline">
-            <img
-              src={futuresCone}
-              alt="Abstract diagram: a wireframe cone of possible outcomes widening from a single point, with a narrow highlighted cone inside it"
-              loading="lazy"
-              width={1536}
-              height={1024}
-              className="h-56 w-full object-cover opacity-80 md:h-72"
-            />
-            <figcaption className="label-mono flex flex-wrap items-center justify-between gap-2 border-t border-hairline px-4 py-3">
-              <span>Possible → plausible → preferred</span>
-              <span>Narrowing the cone</span>
-            </figcaption>
-          </figure>
+          <CinematicFigure
+            src={futuresCone}
+            alt="Abstract diagram: a wireframe cone of possible outcomes widening from a single point, with a narrow highlighted cone inside it"
+            caption="Possible → plausible → preferred"
+            meta="Narrowing the cone"
+          >
+            <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">
+              Every product plan starts as a wide cone of possibilities. The work is to separate
+              what you believe from what you know, then run the riskiest assumptions through the
+              smallest possible test. The cone narrows. The decision becomes obvious.
+            </p>
+          </CinematicFigure>
         </Section>
 
 
