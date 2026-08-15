@@ -323,7 +323,7 @@ function Index() {
             alt="Abstract diagram: four converging rails of evidence leading into a single bright decision diamond"
             caption="Converge on one decision"
             meta="Flagship offering"
-            phrase="Four evidence rails converge on one decision. You leave with one recommendation and a first move your team can make on Monday."
+            phrase="Four evidence rails converge on one decision. You leave with one recommendation."
           >
             <div className="grid gap-14 md:grid-cols-12">
               <div className="md:col-span-8">
