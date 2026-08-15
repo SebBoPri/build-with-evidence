@@ -319,8 +319,9 @@ function Index() {
           <CinematicFigure
             src={sprintTimeline}
             alt="Abstract diagram: four timeline nodes converging into a single decision diamond"
-            caption="Two to four weeks → one recommendation"
-            meta="Compressed timeline"
+            caption="Four steps → one decision node"
+            meta="Two to four weeks"
+            phrase="Fixed scope, fixed clock: four steps that converge on a single recommendation."
           >
             <div className="grid gap-14 md:grid-cols-12">
               <div className="md:col-span-8">
