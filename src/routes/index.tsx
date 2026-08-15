@@ -5,7 +5,7 @@ import { ApproachRail } from "@/components/site/approach-rail";
 import heroField from "@/assets/hero-field.jpg";
 import evidenceResolve from "@/assets/evidence-resolve.jpg";
 import futuresCone from "@/assets/futures-cone.jpg";
-import sprintDecision from "@/assets/sprint-decision.jpg";
+import futuresBranching from "@/assets/futures-branching.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -274,8 +274,8 @@ function Index() {
           </h2>
 
           <CinematicFigure
-            src={sprintDecision}
-            alt="Abstract diagram: four converging rails of evidence leading into a single bright decision diamond"
+            src={futuresBranching}
+            alt="Abstract diagram: many faint paths converging to a single bright point before branching out again"
             caption="Converge on one decision"
             meta="Flagship offering"
             phrase="Four evidence rails converge on one decision. You leave with one recommendation."
