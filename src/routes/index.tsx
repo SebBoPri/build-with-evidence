@@ -269,33 +269,8 @@ function Index() {
         <Section id="approach" label="The approach">
           <h2 className="display-md max-w-3xl text-balance">Start with what must be true.</h2>
 
-          <ol className="mt-20 grid gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-            {steps.map((s, i) => (
-              <li key={s.n} className="group relative lg:pr-10">
-                {/* rail */}
-                <span
-                  className="absolute left-0 top-[7px] h-px w-full bg-hairline"
-                  aria-hidden="true"
-                />
-                <span
-                  className="relative flex h-[15px] w-[15px] items-center justify-center rounded-full border border-border bg-background"
-                  aria-hidden="true"
-                >
-                  <span
-                    className={`h-[5px] w-[5px] rounded-full bg-foreground transition-opacity ${
-                      i === 0 ? "opacity-100" : "opacity-40 group-hover:opacity-100"
-                    }`}
-                  />
-                </span>
+          <ApproachRail steps={steps} />
 
-                <h3 className="mt-14 text-xl font-medium tracking-tight">{s.title}</h3>
-                <p className="mt-3 max-w-[16rem] text-[0.95rem] leading-relaxed text-muted-foreground">
-                  {s.body}
-                </p>
-                <p className="label-mono mt-10">Step {s.n}</p>
-              </li>
-            ))}
-          </ol>
         </Section>
 
 
