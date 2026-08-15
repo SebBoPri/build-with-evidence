@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Section, Lead, CinematicFigure } from "@/components/site/sections";
+import { Section, Lead, CinematicFigure, Reveal } from "@/components/site/sections";
 import { Wordmark, Starfield, Trajectory } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import heroField from "@/assets/hero-field.jpg";
