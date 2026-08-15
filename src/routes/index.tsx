@@ -3,9 +3,10 @@ import { Section, Lead, CinematicFigure } from "@/components/site/sections";
 import { Wordmark, Starfield, Trajectory } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import heroField from "@/assets/hero-field.jpg";
-import futuresBranching from "@/assets/futures-branching.jpg";
+import evidenceResolve from "@/assets/evidence-resolve.jpg";
 import futuresCone from "@/assets/futures-cone.jpg";
-import sprintDecision from "@/assets/sprint-decision.jpg";
+import railConverge from "@/assets/rail-converge.jpg";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -254,16 +255,30 @@ function Index() {
             readable either way. Those stopping points are what we call kill-lines.
           </p>
 
-          <ApproachRail steps={steps} />
+          <div className="relative">
+            <img
+              src={railConverge}
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              width={1920}
+              height={640}
+              className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 w-full opacity-[0.14]"
+            />
+            <div className="relative">
+              <ApproachRail steps={steps} />
+            </div>
+          </div>
 
           <CinematicFigure
-            src={futuresBranching}
-            alt="Abstract diagram: a single point splitting into many fine trajectories, some fading and some continuing"
-            caption="Assumptions → paths"
-            meta="Decision architecture"
-            phrase="Every assumption is a branch. Most should die before you build."
+            src={evidenceResolve}
+            alt="Abstract diagram: a dense scatter of points on the left resolving into a single clean line on the right"
+            caption="Noise → signal"
+            meta="Evidence, not opinion"
+            phrase="Most of what a team believes is noise. The work is resolving the little of it that is signal."
           />
         </Section>
+
 
 
 
