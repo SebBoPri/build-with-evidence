@@ -183,10 +183,23 @@ function Index() {
       <main id="top">
         {/* Hero */}
         <section className="relative overflow-hidden border-b border-hairline">
+          <img
+            src={heroField}
+            alt=""
+            aria-hidden="true"
+            width={1920}
+            height={1088}
+            className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-60"
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background"
+            aria-hidden="true"
+          />
           <Starfield
-            className="pointer-events-none absolute inset-0 h-full w-full text-foreground opacity-70"
+            className="pointer-events-none absolute inset-0 h-full w-full text-foreground opacity-40"
           />
           <Trajectory className="pointer-events-none absolute right-0 top-10 hidden h-[34rem] w-[46rem] text-foreground/70 lg:block" />
+
           <div className="relative mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
             <p className="label-mono fade-up">Product discovery &amp; strategy</p>
             <h1 className="display-xl fade-up delay-1 mt-10 max-w-4xl text-balance">
