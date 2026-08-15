@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Section, Lead, CinematicFigure, Reveal } from "@/components/site/sections";
+import { Section, Lead, FullBleedFigure, Reveal } from "@/components/site/sections";
 import { Wordmark, Starfield, Trajectory } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import heroField from "@/assets/hero-field.jpg";
@@ -187,25 +187,17 @@ function Index() {
 
         {/* Problem */}
         <section id="problem" className="scroll-mt-16">
-          <figure className="relative overflow-hidden">
-            <img
-              src={futuresBranching}
-              alt="Abstract diagram: many paths fade behind a bright central point while others branch open ahead"
-              loading="lazy"
-              width={1840}
-              height={855}
-              className="w-full object-cover object-center opacity-90 md:min-h-[42rem]"
-            />
-            <Starfield className="pointer-events-none absolute inset-0 h-full w-full text-foreground opacity-25" />
-            <div
-              className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,var(--background)_120%)]"
-              aria-hidden="true"
-            />
-            <figcaption className="label-mono relative mx-auto mt-4 flex w-full max-w-[84rem] flex-wrap items-center justify-between gap-2 px-6 text-muted-foreground md:px-10">
-              <span>Past paths · present position · open futures</span>
-              <span>The value-risk problem</span>
-            </figcaption>
-          </figure>
+          <FullBleedFigure
+            src={futuresBranching}
+            alt="Abstract diagram: many paths fade behind a bright central point while others branch open ahead"
+            title="Past paths close, the present narrows, open futures branch ahead"
+            subtitle="Every product decision closes some paths and opens others."
+            meta="The value-risk problem"
+            overlay={
+              <Starfield className="pointer-events-none absolute inset-0 h-full w-full text-foreground opacity-25" />
+            }
+          />
+
 
           <div className="mx-auto w-full max-w-[84rem] px-6 pb-24 pt-16 md:px-10 md:pb-32 md:pt-20">
             <Reveal>
@@ -271,13 +263,15 @@ function Index() {
 
         {/* Approach */}
         <Section id="approach" label="The approach">
-          <CinematicFigure
+          <FullBleedFigure
+            breakOut
             src={evidenceResolve}
             alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
-            caption="Noise → signal"
+            title="Noise resolves into signal"
+            subtitle="Name what must be true, then test it until the noise resolves into one line."
             meta="Evidence synthesis"
-            phrase="Name what must be true, then test it until the noise resolves into one line."
           />
+
 
           <h2 className="display-md mt-16 max-w-3xl text-balance md:mt-20">
             Start with what must be true.
@@ -297,13 +291,15 @@ function Index() {
 
         {/* Discovery Sprint */}
         <Section id="sprint" label="Discovery Sprint">
-          <CinematicFigure
+          <FullBleedFigure
+            breakOut
             src={sprintDecision}
             alt="Abstract diagram: a single particle trajectory arcing toward a planetary horizon"
-            caption="Converge on one decision"
+            title="Four evidence rails converge on one decision"
+            subtitle="You leave the sprint with one recommendation, not a document dump."
             meta="Flagship offering"
-            phrase="Four evidence rails converge on one decision. You leave with one recommendation."
           />
+
 
           <h2 className="display-md mt-16 max-w-3xl text-balance md:mt-20">
             A fixed-scope sprint that ends in a call.
