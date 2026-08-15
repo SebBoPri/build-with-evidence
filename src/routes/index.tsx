@@ -340,7 +340,7 @@ function Index() {
                 </ul>
               </div>
             </div>
-          </CinematicFigure>
+          
         </Section>
 
         {/* Pull quote */}
