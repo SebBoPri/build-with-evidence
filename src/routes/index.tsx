@@ -4,7 +4,6 @@ import { Wordmark, Starfield, Trajectory } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import heroField from "@/assets/hero-field.jpg";
 import evidenceResolve from "@/assets/evidence-resolve.jpg";
-import futuresBranching from "@/assets/futures-branching.jpg";
 import futuresCone from "@/assets/futures-cone.jpg";
 import sprintDecision from "@/assets/sprint-decision.jpg";
 
@@ -34,8 +33,6 @@ const nav = [
   { href: "#problem", label: "Problem" },
   { href: "#approach", label: "Approach" },
   { href: "#sprint", label: "Discovery Sprint" },
-  { href: "#case", label: "Case snapshot" },
-  { href: "#testimonials", label: "Results" },
   { href: "#about", label: "About" },
 ];
 
@@ -46,38 +43,35 @@ const sprintFacts = [
   { k: "After the sprint", v: "Optional support while you act on it" },
 ];
 
-const caseSnapshot = {
-  context: "Series A B2B SaaS, planning a quarter of engineering on a self-serve onboarding rebuild.",
-  question: "Was onboarding really why new accounts stalled in week one?",
-  evidence:
-    "Fourteen customer interviews and a funnel teardown showed activation wasn't blocked by setup. It stalled when teams couldn't get their data in. Onboarding polish addressed the visible symptom, not the cause.",
-  decision:
-    "Rebuild deferred. The team shipped a narrow import path in three weeks instead, and week-one activation moved before the original project would have started.",
-};
-
+const problemCases = [
+  "A product everyone agreed on, built from what the team believed customers wanted. It shipped. Nobody used it.",
+  "Customers asked for a feature. It shipped. It solved the request, not the problem.",
+  "\u201CDo something with AI\u201D became the goal. It shipped. There was no problem it solved.",
+];
 
 const steps = [
   {
     n: "01",
-    title: "Frame",
-    body: "Sharpen the question. Surface the assumptions your plan quietly depends on.",
+    title: "Assumptions",
+    body: "What has to be true for this to work, ranked by risk.",
   },
   {
     n: "02",
-    title: "Investigate",
-    body: "Talk to customers. Read the market. Separate what is known from what is believed.",
+    title: "Kill-lines",
+    body: "What would make you stop, agreed before you look.",
   },
   {
     n: "03",
-    title: "Test",
-    body: "Put the riskiest assumptions in front of reality with prototypes and experiments.",
+    title: "Evidence",
+    body: "What customers do, not what they say they would.",
   },
   {
     n: "04",
-    title: "Decide",
-    body: "Synthesise the evidence into one clear recommendation and a first move.",
+    title: "Decision",
+    body: "Proceed, reframe or stop. Written down, once.",
   },
 ];
+
 
 const sprintWhen = [
   "You have an idea but no evidence behind it.",
@@ -103,59 +97,7 @@ const sprintGet = [
   "A first move your team can start on Monday",
 ];
 
-const outcomes = [
-  {
-    title: "Know the problem",
-    body: "Understand whether you are solving something that actually matters.",
-  },
-  {
-    title: "Understand the opportunity",
-    body: "Build an evidence-based view of the market, users, and potential.",
-  },
-  {
-    title: "Test your assumptions",
-    body: "Find out what holds up before committing to development.",
-  },
-  {
-    title: "Know what to do next",
-    body: "Leave with a clear direction and the evidence behind it.",
-  },
-];
 
-const testimonials = [
-  {
-    quote:
-      "Sebastian helped us see that we were solving the wrong problem. We reframed the sprint, saved months of engineering, and landed on something customers actually wanted.",
-    role: "Product Lead, B2B SaaS",
-  },
-  {
-    quote:
-      "The difference was the rigour. Every recommendation came with evidence we could trace, and the assumptions we had to drop were written down, not buried.",
-    role: "Head of Product, fintech scale-up",
-  },
-  {
-    quote:
-      "We went into the sprint arguing about features. We came out agreeing on the one bet worth making and why.",
-    role: "CEO, Series A healthtech",
-  },
-];
-
-const trackRecord = [
-  { value: "20+", label: "Teams guided through discovery decisions" },
-  { value: "4", label: "Continents" },
-  { value: "5+", label: "Years focused on product discovery" },
-];
-
-const sectors = [
-  "Seed",
-  "Series A",
-  "Scale-up",
-  "SaaS",
-  "Fintech",
-  "Health",
-  "Climate",
-  "AI infrastructure",
-];
 
 function Index() {
   return (
@@ -246,8 +188,16 @@ function Index() {
         {/* Problem */}
         <Section id="problem" label="The problem">
           <h2 className="display-md max-w-3xl text-balance">
-            Building the wrong thing is the most expensive mistake in product.
+            <span className="block">Building has never been easier.</span>
+            <span className="block text-muted-foreground">
+              Knowing what to build has never mattered more.
+            </span>
           </h2>
+          <p className="mt-10 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            The biggest risk in any product is value risk: whether people will actually use it or
+            pay for it. It is the risk that kills products, and the one most often answered with
+            opinion.
+          </p>
           <CinematicFigure
             src={futuresCone}
             alt="Abstract diagram: a wireframe cone of possible outcomes widening from a single point"
@@ -257,15 +207,18 @@ function Index() {
           >
             <div className="grid gap-14 md:grid-cols-12">
               <div className="md:col-span-6">
-                <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
-                  <p>
-                    Most teams move from idea straight into design and delivery. A quarter later the
-                    feature ships, the metrics don&apos;t move, and nobody can say which assumption
-                    was wrong, because none of them were written down.
-                  </p>
-                  <p>Slipstream Labs exists to create a deliberate step between idea and build.</p>
-                </div>
+                <ol className="divide-y divide-[var(--hairline)] border-y border-hairline">
+                  {problemCases.map((item, i) => (
+                    <li key={item} className="flex gap-6 py-6">
+                      <span className="label-mono shrink-0 pt-1">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <p className="text-[0.95rem] leading-relaxed text-muted-foreground">{item}</p>
+                    </li>
+                  ))}
+                </ol>
               </div>
+
               <div className="md:col-span-6">
                 <p className="label-mono">Skipped without noticing</p>
                 <ul className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
@@ -294,6 +247,13 @@ function Index() {
         <Section id="approach" label="The approach">
           <h2 className="display-md max-w-3xl text-balance">Start with what must be true.</h2>
 
+          <p className="mt-10 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+            Opinion, anecdote and roadmap pressure all sound the same at the start. We separate what
+            you believe from what you know, run the riskiest assumptions through the smallest
+            possible test, and agree in advance what result would make you stop, so the evidence is
+            readable either way. Those stopping points are what we call kill-lines.
+          </p>
+
           <ApproachRail steps={steps} />
 
           <CinematicFigure
@@ -301,15 +261,10 @@ function Index() {
             alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
             caption="Noise → signal"
             meta="Evidence synthesis"
-            phrase="The mechanism is simple: name what must be true, then test it until the noise resolves into one line."
-          >
-            <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">
-              Opinion, anecdote and roadmap pressure all sound the same at the start. We separate
-              what you believe from what you know, run the riskiest assumptions through the smallest
-              possible test, and set kill-lines in advance so the result is readable either way.
-            </p>
-          </CinematicFigure>
+            phrase="Name what must be true, then test it until the noise resolves into one line."
+          />
         </Section>
+
 
 
         {/* Discovery Sprint */}
@@ -385,132 +340,18 @@ function Index() {
           </CinematicFigure>
         </Section>
 
-
-
-        {/* Outcomes */}
-        <Section id="outcomes" label="Outcomes">
-          <h2 className="display-md max-w-2xl text-balance">Decisions, not deliverables.</h2>
-          <div className="mt-14 grid gap-px sm:grid-cols-2">
-            {outcomes.map((o, i) => (
-              <div
-                key={o.title}
-                className="group border-t border-hairline py-8 sm:pr-10 sm:not-odd:pl-10 sm:not-odd:border-l"
-              >
-                <span className="label-mono">{String(i + 1).padStart(2, "0")}</span>
-                <h3 className="mt-3 text-2xl font-medium tracking-tight">{o.title}</h3>
-                <p className="mt-2 max-w-md text-[0.95rem] leading-relaxed text-muted-foreground">
-                  {o.body}
-                </p>
-              </div>
-            ))}
-          </div>
+        {/* Pull quote */}
+        <Section>
+          <blockquote className="max-w-4xl">
+            <p className="display-md text-balance">
+              Just because you can build it does not mean you should.
+            </p>
+            <p className="display-md mt-3 text-balance text-muted-foreground">
+              Speed is only an advantage when you have the right direction.
+            </p>
+          </blockquote>
         </Section>
 
-        {/* Case snapshot */}
-        <Section id="case" label="Case snapshot">
-          <h2 className="display-md max-w-3xl text-balance">One sprint, start to decision.</h2>
-
-          <CinematicFigure
-            src={futuresBranching}
-            alt="Abstract diagram: a single point branching into many diverging paths, with one decision node where the paths regather before splitting again"
-            caption="Rebuild, defer, narrow path"
-            meta="One branch taken"
-            phrase="A quarter of rebuild work, replaced by one narrow import path and the evidence to defend it."
-          >
-            <div className="grid gap-14 md:grid-cols-12">
-              <div className="md:col-span-4">
-                <p className="text-[0.95rem] leading-relaxed text-muted-foreground">
-                  {caseSnapshot.context}
-                </p>
-                <p className="label-mono mt-8">Anonymised at client request</p>
-              </div>
-              <ol className="md:col-span-8">
-                {[
-                  { k: "The question", v: caseSnapshot.question },
-                  { k: "What the evidence showed", v: caseSnapshot.evidence },
-                  { k: "The decision", v: caseSnapshot.decision },
-                ].map((row, i) => (
-                  <li
-                    key={row.k}
-                    className="grid gap-4 border-t border-hairline py-8 last:border-b sm:grid-cols-12"
-                  >
-                    <div className="sm:col-span-4">
-                      <span className="label-mono">
-                        {String(i + 1).padStart(2, "0")} · {row.k}
-                      </span>
-                    </div>
-                    <p className="text-lg leading-relaxed text-muted-foreground sm:col-span-8">
-                      {row.v}
-                    </p>
-                  </li>
-                ))}
-              </ol>
-            </div>
-          </CinematicFigure>
-        </Section>
-
-
-
-        {/* Testimonials */}
-        <Section id="testimonials" label="What teams say">
-          <h2 className="display-md max-w-2xl text-balance">Evidence, seen from the other side.</h2>
-          <div className="mt-14 grid gap-px sm:grid-cols-2 lg:grid-cols-3">
-            {testimonials.map((t) => (
-              <figure
-                key={t.role}
-                className="group relative border-t border-hairline pt-6 sm:pr-8 lg:not-last:border-r lg:not-last:border-hairline"
-              >
-                <span
-                  className="absolute -top-px left-0 h-px w-0 bg-accent transition-all duration-500 group-hover:w-full lg:w-[calc(100%-2rem)] lg:group-hover:w-[calc(100%-2rem)]"
-                  aria-hidden="true"
-                />
-                <blockquote className="text-lg leading-relaxed text-foreground">
-                  &ldquo;{t.quote}&rdquo;
-                </blockquote>
-                <figcaption className="mt-6">
-                  <p className="text-sm font-medium text-muted-foreground">{t.role}</p>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        </Section>
-
-        {/* Credibility */}
-        <Section id="track-record" label="Track record">
-          <div className="grid gap-14 md:grid-cols-12">
-            <div className="md:col-span-5">
-              <h2 className="display-md text-balance">Small practice, clear impact.</h2>
-              <p className="mt-7 text-lg leading-relaxed text-muted-foreground">
-                Slipstream Labs works with post-seed and Series A teams across SaaS, fintech,
-                health, climate and AI infrastructure. The work is hands-on, and the measure is
-                whether the next decision gets easier.
-              </p>
-            </div>
-            <div className="md:col-span-7">
-              <dl className="grid gap-px border-t border-hairline sm:grid-cols-3">
-                {trackRecord.map((item) => (
-                  <div
-                    key={item.label}
-                    className="pt-6 sm:pr-8 sm:not-last:border-r sm:not-last:border-hairline"
-                  >
-                    <dt className="display-md text-accent">{item.value}</dt>
-                    <dd className="mt-2 max-w-[12rem] text-sm leading-relaxed text-muted-foreground">
-                      {item.label}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-              <div className="rule-t mt-10 pt-8">
-                <p className="label-mono">Stages and sectors</p>
-                <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
-                  {sectors.map((s) => (
-                    <li key={s}>{s}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </Section>
 
         {/* About */}
         <Section id="about" label="About">
