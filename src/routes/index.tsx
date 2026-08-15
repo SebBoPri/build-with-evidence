@@ -4,10 +4,8 @@ import { Wordmark, Starfield, Trajectory } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import heroField from "@/assets/hero-field.jpg";
 import evidenceResolve from "@/assets/evidence-resolve.jpg";
-import futuresBranch from "@/assets/futures-branch.jpg";
-import killLine from "@/assets/kill-line.jpg";
-import railConverge from "@/assets/rail-converge.jpg";
-
+import futuresCone from "@/assets/futures-cone.jpg";
+import sprintDecision from "@/assets/sprint-decision.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -201,11 +199,11 @@ function Index() {
             opinion.
           </p>
           <CinematicFigure
-            src={futuresBranch}
-            alt="Abstract diagram: thin lines branching repeatedly from a single point into many endpoints"
+            src={futuresCone}
+            alt="Abstract diagram: a wireframe cone of possible outcomes widening from a single point"
             caption="One idea → many possible futures"
             meta="Uncertainty at the start"
-            phrase="Every idea branches. Building is how most teams find out which branch they were on."
+            phrase="Every roadmap starts as a wide cone of futures. Building is how most teams find out which one they were in."
           >
             <div className="grid gap-14 md:grid-cols-12">
               <div className="md:col-span-6">
@@ -256,38 +254,16 @@ function Index() {
             readable either way. Those stopping points are what we call kill-lines.
           </p>
 
-          <CinematicFigure
-            src={killLine}
-            alt="Abstract chart: a single bright horizontal line with a dense cluster of points below it and a few isolated points above"
-            caption="Set before the evidence arrives"
-            meta="Kill-lines"
-            phrase="A kill-line is a threshold you agree on before you look, so the result is readable either way."
-          />
-
-          <div className="relative">
-            <img
-              src={railConverge}
-              alt=""
-              aria-hidden="true"
-              loading="lazy"
-              width={1920}
-              height={640}
-              className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 w-full opacity-[0.14]"
-            />
-            <div className="relative">
-              <ApproachRail steps={steps} />
-            </div>
-          </div>
+          <ApproachRail steps={steps} />
 
           <CinematicFigure
             src={evidenceResolve}
-            alt="Abstract diagram: a dense scatter of points on the left resolving into a single clean line on the right"
+            alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
             caption="Noise → signal"
-            meta="Evidence, not opinion"
-            phrase="Most of what a team believes is noise. The work is resolving the little of it that is signal."
+            meta="Evidence synthesis"
+            phrase="Name what must be true, then test it until the noise resolves into one line."
           />
         </Section>
-
 
 
 
@@ -297,8 +273,13 @@ function Index() {
             A fixed-scope sprint that ends in a call.
           </h2>
 
-          <div>
-
+          <CinematicFigure
+            src={sprintDecision}
+            alt="Abstract diagram: four converging rails of evidence leading into a single bright decision diamond"
+            caption="Converge on one decision"
+            meta="Flagship offering"
+            phrase="Four evidence rails converge on one decision. You leave with one recommendation."
+          >
             <div className="grid gap-14 md:grid-cols-12">
               <div className="md:col-span-8">
                 <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">
@@ -356,8 +337,7 @@ function Index() {
                 </ul>
               </div>
             </div>
-          </div>
-
+          </CinematicFigure>
         </Section>
 
         {/* Pull quote */}
