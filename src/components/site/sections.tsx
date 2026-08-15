@@ -86,12 +86,14 @@ export function CinematicFigure({
   alt,
   caption,
   meta,
+  phrase,
   children,
 }: {
   src: string;
   alt: string;
   caption?: string;
   meta?: string;
+  phrase?: string;
   children?: ReactNode;
 }) {
   return (
