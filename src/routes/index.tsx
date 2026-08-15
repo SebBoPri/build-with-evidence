@@ -317,11 +317,11 @@ function Index() {
           <h2 className="display-md max-w-3xl text-balance">A fixed-scope sprint that ends in a call.</h2>
 
           <CinematicFigure
-            src={sprintTimeline}
-            alt="Abstract diagram: four timeline nodes converging into a single decision diamond"
-            caption="Four steps → one decision node"
-            meta="Two to four weeks"
-            phrase="Fixed scope, fixed clock: four steps that converge on a single recommendation."
+            src={sprintDecision}
+            alt="Abstract diagram: four converging rails of evidence leading into a single bright decision diamond"
+            caption="Converge on one decision"
+            meta="Flagship offering"
+            phrase="A fixed-scope sprint that ends with a clear decision: build it, change it, test it, or don't build it."
           >
             <div className="grid gap-14 md:grid-cols-12">
               <div className="md:col-span-8">
