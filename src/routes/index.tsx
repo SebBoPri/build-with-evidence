@@ -6,6 +6,7 @@ import heroField from "@/assets/hero-field.jpg";
 import evidenceResolve from "@/assets/evidence-resolve.jpg";
 import futuresBranching from "@/assets/futures-branching.jpg";
 import futuresCone from "@/assets/futures-cone.jpg";
+import sprintTimeline from "@/assets/sprint-timeline.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -379,6 +380,21 @@ function Index() {
               </div>
             ))}
           </dl>
+
+          <figure className="mt-14 border border-hairline">
+            <img
+              src={sprintTimeline}
+              alt="Abstract diagram: four timeline nodes converging into a single decision diamond"
+              loading="lazy"
+              width={1536}
+              height={1024}
+              className="h-48 w-full object-cover opacity-80 md:h-64"
+            />
+            <figcaption className="label-mono flex flex-wrap items-center justify-between gap-2 border-t border-hairline px-4 py-3">
+              <span>Two to four weeks → one recommendation</span>
+              <span>Compressed timeline</span>
+            </figcaption>
+          </figure>
         </Section>
 
 
