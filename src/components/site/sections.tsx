@@ -80,3 +80,44 @@ export function Lead({ children }: { children: ReactNode }) {
     <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">{children}</p>
   );
 }
+
+export function CinematicFigure({
+  src,
+  alt,
+  caption,
+  meta,
+  children,
+}: {
+  src: string;
+  alt: string;
+  caption?: string;
+  meta?: string;
+  children?: ReactNode;
+}) {
+  return (
+    <div className="group">
+      <figure className="relative overflow-hidden border border-hairline bg-surface aspect-[16/9] md:aspect-[21/9]">
+        <div className="tech-grid pointer-events-none absolute inset-0 opacity-[0.04]" aria-hidden="true" />
+        <img
+          src={src}
+          alt={alt}
+          loading="lazy"
+          width={1536}
+          height={1024}
+          className="h-full w-full object-cover opacity-85"
+        />
+        <div
+          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/70 via-background/20 to-transparent"
+          aria-hidden="true"
+        />
+        {(caption || meta) && (
+          <figcaption className="label-mono absolute bottom-0 left-0 right-0 flex flex-wrap items-center justify-between gap-2 border-t border-hairline bg-background/50 px-4 py-3 backdrop-blur-sm">
+            {caption ? <span>{caption}</span> : <span />}
+            {meta ? <span>{meta}</span> : <span />}
+          </figcaption>
+        )}
+      </figure>
+      {children ? <div className="mt-10 md:mt-14">{children}</div> : null}
+    </div>
+  );
+}
