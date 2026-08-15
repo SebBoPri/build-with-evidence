@@ -120,11 +120,11 @@ export function CinematicFigure({
         )}
       </figure>
       {phrase ? (
-        <p className="mt-6 max-w-2xl border-l border-hairline pl-5 text-xl leading-snug tracking-tight text-foreground text-balance md:text-2xl">
+        <p className="mt-10 max-w-2xl border-l border-hairline pl-5 text-xl leading-snug tracking-tight text-foreground text-balance md:mt-12 md:text-2xl">
           {phrase}
         </p>
       ) : null}
-      {children ? <div className="mt-10 md:mt-14">{children}</div> : null}
+      {children ? <div className="mt-16 md:mt-20">{children}</div> : null}
     </div>
   );
 }
