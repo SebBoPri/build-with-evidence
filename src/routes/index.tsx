@@ -271,18 +271,19 @@ function Index() {
 
         {/* Discovery Sprint */}
         <Section id="sprint" label="Discovery Sprint">
-          <h2 className="display-md mb-10 max-w-3xl text-balance md:mb-14">
-            A fixed-scope sprint that ends in a call.
-          </h2>
-
           <CinematicFigure
             src={sprintDecision}
             alt="Abstract diagram: a single particle trajectory arcing toward a planetary horizon"
             caption="Converge on one decision"
             meta="Flagship offering"
             phrase="Four evidence rails converge on one decision. You leave with one recommendation."
-          >
-            <div className="grid gap-14 md:grid-cols-12">
+          />
+
+          <h2 className="display-md mt-16 max-w-3xl text-balance md:mt-20">
+            A fixed-scope sprint that ends in a call.
+          </h2>
+
+            <div className="mt-14 grid gap-14 md:grid-cols-12">
               <div className="md:col-span-8">
                 <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">
                   Two to four weeks of focused discovery on one opportunity. It ends with a
