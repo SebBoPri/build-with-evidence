@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Section, Lead } from "@/components/site/sections";
+import { Section, Lead, CinematicFigure } from "@/components/site/sections";
 import { Wordmark, Starfield, Trajectory } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import heroField from "@/assets/hero-field.jpg";
@@ -245,57 +245,48 @@ function Index() {
 
         {/* Problem */}
         <Section id="problem" label="The problem">
-          <div className="grid gap-14 md:grid-cols-12">
-            <div className="md:col-span-6">
-              <h2 className="display-md text-balance">
-                Building the wrong thing is the most expensive mistake in product.
-              </h2>
-              <div className="mt-7 space-y-5 text-lg leading-relaxed text-muted-foreground">
-                <p>
-                  Most teams move from idea straight into design and delivery. A quarter later the
-                  feature ships, the metrics don&apos;t move, and nobody can say which assumption
-                  was wrong — because none of them were written down.
-                </p>
-                <p>
-                  Slipstream Labs exists to create a deliberate step between idea and build.
-                </p>
+          <h2 className="display-md max-w-3xl text-balance">
+            Building the wrong thing is the most expensive mistake in product.
+          </h2>
+          <CinematicFigure
+            src={futuresBranching}
+            alt="Abstract diagram: a single point branching into many diverging paths, with one decision node where the paths regather before splitting again"
+            caption="Every plan is a branch"
+            meta="Decision point · diverging futures"
+          >
+            <div className="grid gap-14 md:grid-cols-12">
+              <div className="md:col-span-6">
+                <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
+                  <p>
+                    Most teams move from idea straight into design and delivery. A quarter later the
+                    feature ships, the metrics don&apos;t move, and nobody can say which assumption
+                    was wrong — because none of them were written down.
+                  </p>
+                  <p>Slipstream Labs exists to create a deliberate step between idea and build.</p>
+                </div>
+              </div>
+              <div className="md:col-span-6">
+                <p className="label-mono">Skipped without noticing</p>
+                <ul className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
+                  {[
+                    "The problem — is it real, frequent, and painful?",
+                    "The customer — who exactly, and what do they do today?",
+                    "The opportunity — is it big enough to matter?",
+                    "The assumptions — what has to be true for this to work?",
+                    "The solution — is it actually worth building?",
+                  ].map((item) => (
+                    <li
+                      key={item}
+                      className="flex gap-4 py-4 text-[0.95rem] transition-colors hover:text-foreground"
+                    >
+                      <span className="mt-2 h-px w-4 shrink-0 bg-accent" aria-hidden="true" />
+                      <span className="text-muted-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-            <div className="md:col-span-6 md:pt-2">
-              <p className="label-mono">Skipped without noticing</p>
-              <ul className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
-                {[
-                  "The problem — is it real, frequent, and painful?",
-                  "The customer — who exactly, and what do they do today?",
-                  "The opportunity — is it big enough to matter?",
-                  "The assumptions — what has to be true for this to work?",
-                  "The solution — is it actually worth building?",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex gap-4 py-4 text-[0.95rem] transition-colors hover:text-foreground"
-                  >
-                    <span className="mt-2 h-px w-4 shrink-0 bg-accent" aria-hidden="true" />
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <figure className="mt-14 border border-hairline">
-            <img
-              src={futuresBranching}
-              alt="Abstract diagram: a single point branching into many diverging paths, with one decision node where the paths regather before splitting again"
-              loading="lazy"
-              width={1536}
-              height={1024}
-              className="h-56 w-full object-cover opacity-80 md:h-72"
-            />
-            <figcaption className="label-mono flex flex-wrap items-center justify-between gap-2 border-t border-hairline px-4 py-3">
-              <span>Every plan is a branch</span>
-              <span>Decision point · diverging futures</span>
-            </figcaption>
-          </figure>
+          </CinematicFigure>
         </Section>
 
         {/* Approach */}
@@ -304,43 +295,60 @@ function Index() {
 
           <ApproachRail steps={steps} />
 
-          <figure className="mt-16 border border-hairline">
-            <img
-              src={futuresCone}
-              alt="Abstract diagram: a wireframe cone of possible outcomes widening from a single point, with a narrow highlighted cone inside it"
-              loading="lazy"
-              width={1536}
-              height={1024}
-              className="h-56 w-full object-cover opacity-80 md:h-72"
-            />
-            <figcaption className="label-mono flex flex-wrap items-center justify-between gap-2 border-t border-hairline px-4 py-3">
-              <span>Possible → plausible → preferred</span>
-              <span>Narrowing the cone</span>
-            </figcaption>
-          </figure>
+          <CinematicFigure
+            src={futuresCone}
+            alt="Abstract diagram: a wireframe cone of possible outcomes widening from a single point, with a narrow highlighted cone inside it"
+            caption="Possible → plausible → preferred"
+            meta="Narrowing the cone"
+          >
+            <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">
+              Every product plan starts as a wide cone of possibilities. The work is to separate
+              what you believe from what you know, then run the riskiest assumptions through the
+              smallest possible test. The cone narrows. The decision becomes obvious.
+            </p>
+          </CinematicFigure>
         </Section>
 
 
         {/* Discovery Sprint */}
         <Section id="sprint" label="Discovery Sprint">
-          <div className="grid gap-14 md:grid-cols-12">
-            <div className="md:col-span-5">
-              <h2 className="display-md text-balance">A fixed-scope sprint that ends in a call.</h2>
-              <Lead>
-                <span className="mt-7 block">
+          <h2 className="display-md max-w-3xl text-balance">A fixed-scope sprint that ends in a call.</h2>
+
+          <CinematicFigure
+            src={sprintTimeline}
+            alt="Abstract diagram: four timeline nodes converging into a single decision diamond"
+            caption="Two to four weeks → one recommendation"
+            meta="Compressed timeline"
+          >
+            <div className="grid gap-14 md:grid-cols-12">
+              <div className="md:col-span-8">
+                <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">
                   Two to four weeks of focused discovery on one opportunity. It ends with a
-                  recommendation, not a document dump: build it, change it, test it, or
-                  don&apos;t build it.
-                </span>
-              </Lead>
-              <a
-                href="#contact"
-                className="mt-9 inline-flex h-11 items-center bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-              >
-                Scope a sprint
-              </a>
+                  recommendation, not a document dump: build it, change it, test it, or don&apos;t
+                  build it.
+                </p>
+                <a
+                  href="#contact"
+                  className="mt-8 inline-flex h-11 items-center bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+                >
+                  Scope a sprint
+                </a>
+              </div>
+              <div className="md:col-span-4">
+                <dl className="grid gap-6 border-t border-hairline pt-6">
+                  {sprintFacts.map((f) => (
+                    <div key={f.k}>
+                      <dt className="label-mono">{f.k}</dt>
+                      <dd className="mt-2 text-[0.95rem] leading-relaxed text-foreground">
+                        {f.v}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
             </div>
-            <div className="grid gap-10 md:col-span-7 sm:grid-cols-2">
+
+            <div className="rule-t mt-14 grid gap-10 pt-10 sm:grid-cols-2 lg:grid-cols-3">
               <div>
                 <p className="label-mono">When to use it</p>
                 <ul className="mt-4 space-y-3 text-[0.95rem] leading-relaxed text-muted-foreground">
@@ -357,9 +365,9 @@ function Index() {
                   ))}
                 </ul>
               </div>
-              <div className="sm:col-span-2 rule-t pt-8">
+              <div>
                 <p className="label-mono">What you get</p>
-                <ul className="mt-4 grid gap-3 text-[0.95rem] leading-relaxed text-muted-foreground sm:grid-cols-2">
+                <ul className="mt-4 space-y-3 text-[0.95rem] leading-relaxed text-muted-foreground">
                   {sprintGet.map((i) => (
                     <li key={i} className="flex gap-3">
                       <span className="mt-2.5 h-px w-3 shrink-0 bg-accent" aria-hidden="true" />
@@ -369,32 +377,7 @@ function Index() {
                 </ul>
               </div>
             </div>
-          </div>
-          <dl className="rule-t mt-14 grid gap-px pt-10 sm:grid-cols-2 lg:grid-cols-4">
-            {sprintFacts.map((f) => (
-              <div key={f.k} className="lg:pr-8 lg:not-last:border-r lg:not-last:border-hairline">
-                <dt className="label-mono">{f.k}</dt>
-                <dd className="mt-3 max-w-xs text-[0.95rem] leading-relaxed text-foreground">
-                  {f.v}
-                </dd>
-              </div>
-            ))}
-          </dl>
-
-          <figure className="mt-14 border border-hairline">
-            <img
-              src={sprintTimeline}
-              alt="Abstract diagram: four timeline nodes converging into a single decision diamond"
-              loading="lazy"
-              width={1536}
-              height={1024}
-              className="h-56 w-full object-cover opacity-80 md:h-72"
-            />
-            <figcaption className="label-mono flex flex-wrap items-center justify-between gap-2 border-t border-hairline px-4 py-3">
-              <span>Two to four weeks → one recommendation</span>
-              <span>Compressed timeline</span>
-            </figcaption>
-          </figure>
+          </CinematicFigure>
         </Section>
 
 
@@ -420,48 +403,44 @@ function Index() {
 
         {/* Case snapshot */}
         <Section id="case" label="Case snapshot">
-          <div className="grid gap-14 md:grid-cols-12">
-            <div className="md:col-span-4">
-              <h2 className="display-md text-balance">One sprint, start to decision.</h2>
-              <p className="mt-7 text-[0.95rem] leading-relaxed text-muted-foreground">
-                {caseSnapshot.context}
-              </p>
-              <figure className="mt-10 border border-hairline">
-                <img
-                  src={evidenceResolve}
-                  alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
-                  loading="lazy"
-                  width={1536}
-                  height={1024}
-                  className="h-56 w-full object-cover opacity-80 md:h-72"
-                />
-                <figcaption className="label-mono border-t border-hairline px-4 py-3">
-                  Noise → signal
-                </figcaption>
-              </figure>
-              <p className="label-mono mt-8">Anonymised at client request</p>
+          <h2 className="display-md max-w-3xl text-balance">One sprint, start to decision.</h2>
 
+          <CinematicFigure
+            src={evidenceResolve}
+            alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
+            caption="Noise → signal"
+            meta="Evidence synthesis"
+          >
+            <div className="grid gap-14 md:grid-cols-12">
+              <div className="md:col-span-4">
+                <p className="text-[0.95rem] leading-relaxed text-muted-foreground">
+                  {caseSnapshot.context}
+                </p>
+                <p className="label-mono mt-8">Anonymised at client request</p>
+              </div>
+              <ol className="md:col-span-8">
+                {[
+                  { k: "The question", v: caseSnapshot.question },
+                  { k: "What the evidence showed", v: caseSnapshot.evidence },
+                  { k: "The decision", v: caseSnapshot.decision },
+                ].map((row, i) => (
+                  <li
+                    key={row.k}
+                    className="grid gap-4 border-t border-hairline py-8 last:border-b sm:grid-cols-12"
+                  >
+                    <div className="sm:col-span-4">
+                      <span className="label-mono">
+                        {String(i + 1).padStart(2, "0")} · {row.k}
+                      </span>
+                    </div>
+                    <p className="text-lg leading-relaxed text-muted-foreground sm:col-span-8">
+                      {row.v}
+                    </p>
+                  </li>
+                ))}
+              </ol>
             </div>
-            <ol className="md:col-span-8">
-              {[
-                { k: "The question", v: caseSnapshot.question },
-                { k: "What the evidence showed", v: caseSnapshot.evidence },
-                { k: "The decision", v: caseSnapshot.decision },
-              ].map((row, i) => (
-                <li
-                  key={row.k}
-                  className="grid gap-4 border-t border-hairline py-8 last:border-b sm:grid-cols-12"
-                >
-                  <div className="sm:col-span-4">
-                    <span className="label-mono">{String(i + 1).padStart(2, "0")} · {row.k}</span>
-                  </div>
-                  <p className="text-lg leading-relaxed text-muted-foreground sm:col-span-8">
-                    {row.v}
-                  </p>
-                </li>
-              ))}
-            </ol>
-          </div>
+          </CinematicFigure>
         </Section>
 
 
