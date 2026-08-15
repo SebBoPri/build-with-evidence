@@ -6,7 +6,7 @@ import heroField from "@/assets/hero-field.jpg";
 import evidenceResolve from "@/assets/evidence-resolve.jpg";
 import futuresBranching from "@/assets/futures-branching.jpg";
 import futuresCone from "@/assets/futures-cone.jpg";
-import sprintTimeline from "@/assets/sprint-timeline.jpg";
+import sprintDecision from "@/assets/sprint-decision.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
