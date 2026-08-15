@@ -98,59 +98,7 @@ const sprintGet = [
   "A first move your team can start on Monday",
 ];
 
-const outcomes = [
-  {
-    title: "Know the problem",
-    body: "Understand whether you are solving something that actually matters.",
-  },
-  {
-    title: "Understand the opportunity",
-    body: "Build an evidence-based view of the market, users, and potential.",
-  },
-  {
-    title: "Test your assumptions",
-    body: "Find out what holds up before committing to development.",
-  },
-  {
-    title: "Know what to do next",
-    body: "Leave with a clear direction and the evidence behind it.",
-  },
-];
 
-const testimonials = [
-  {
-    quote:
-      "Sebastian helped us see that we were solving the wrong problem. We reframed the sprint, saved months of engineering, and landed on something customers actually wanted.",
-    role: "Product Lead, B2B SaaS",
-  },
-  {
-    quote:
-      "The difference was the rigour. Every recommendation came with evidence we could trace, and the assumptions we had to drop were written down, not buried.",
-    role: "Head of Product, fintech scale-up",
-  },
-  {
-    quote:
-      "We went into the sprint arguing about features. We came out agreeing on the one bet worth making and why.",
-    role: "CEO, Series A healthtech",
-  },
-];
-
-const trackRecord = [
-  { value: "20+", label: "Teams guided through discovery decisions" },
-  { value: "4", label: "Continents" },
-  { value: "5+", label: "Years focused on product discovery" },
-];
-
-const sectors = [
-  "Seed",
-  "Series A",
-  "Scale-up",
-  "SaaS",
-  "Fintech",
-  "Health",
-  "Climate",
-  "AI infrastructure",
-];
 
 function Index() {
   return (
