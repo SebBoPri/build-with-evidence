@@ -298,7 +298,7 @@ function Index() {
         <Section id="sprint">
           <FullBleedFigure
             breakOut
-            src={sprintDecision}
+            src={sprintDecision.url}
             alt="Abstract diagram: a single particle trajectory arcing toward a planetary horizon"
             title="Four evidence rails converge on one decision"
             subtitle="You leave the sprint with one recommendation, not a document dump."
