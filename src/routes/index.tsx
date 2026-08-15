@@ -28,10 +28,27 @@ const nav = [
   { href: "#problem", label: "Problem" },
   { href: "#approach", label: "Approach" },
   { href: "#sprint", label: "Discovery Sprint" },
-  { href: "#outcomes", label: "Outcomes" },
+  { href: "#case", label: "Case snapshot" },
   { href: "#testimonials", label: "Results" },
   { href: "#about", label: "About" },
 ];
+
+const sprintFacts = [
+  { k: "Duration", v: "2–4 weeks, fixed scope" },
+  { k: "Your team's time", v: "~3 hours per week" },
+  { k: "Engagement", v: "One opportunity, one recommendation" },
+  { k: "After the sprint", v: "Optional support while you act on it" },
+];
+
+const caseSnapshot = {
+  context: "Series A B2B SaaS, planning a quarter of engineering on a self-serve onboarding rebuild.",
+  question: "Was onboarding really why new accounts stalled in week one?",
+  evidence:
+    "Fourteen customer interviews and a funnel teardown showed activation wasn't blocked by setup — it stalled when teams couldn't get their data in. Onboarding polish addressed the visible symptom, not the cause.",
+  decision:
+    "Rebuild deferred. The team shipped a narrow import path in three weeks instead, and week-one activation moved before the original project would have started.",
+};
+
 
 const steps = [
   {
@@ -325,7 +342,19 @@ function Index() {
               </div>
             </div>
           </div>
+          <dl className="rule-t mt-14 grid gap-px pt-10 sm:grid-cols-2 lg:grid-cols-4">
+            {sprintFacts.map((f) => (
+              <div key={f.k} className="lg:pr-8 lg:not-last:border-r lg:not-last:border-hairline">
+                <dt className="label-mono">{f.k}</dt>
+                <dd className="mt-3 max-w-xs text-[0.95rem] leading-relaxed text-foreground">
+                  {f.v}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </Section>
+
+
 
         {/* Outcomes */}
         <Section id="outcomes" label="Outcomes">
@@ -345,6 +374,40 @@ function Index() {
             ))}
           </div>
         </Section>
+
+        {/* Case snapshot */}
+        <Section id="case" label="Case snapshot">
+          <div className="grid gap-14 md:grid-cols-12">
+            <div className="md:col-span-4">
+              <h2 className="display-md text-balance">One sprint, start to decision.</h2>
+              <p className="mt-7 text-[0.95rem] leading-relaxed text-muted-foreground">
+                {caseSnapshot.context}
+              </p>
+              <p className="label-mono mt-8">Anonymised at client request</p>
+            </div>
+            <ol className="md:col-span-8">
+              {[
+                { k: "The question", v: caseSnapshot.question },
+                { k: "What the evidence showed", v: caseSnapshot.evidence },
+                { k: "The decision", v: caseSnapshot.decision },
+              ].map((row, i) => (
+                <li
+                  key={row.k}
+                  className="grid gap-4 border-t border-hairline py-8 last:border-b sm:grid-cols-12"
+                >
+                  <div className="sm:col-span-4">
+                    <span className="label-mono">{String(i + 1).padStart(2, "0")} · {row.k}</span>
+                  </div>
+                  <p className="text-lg leading-relaxed text-muted-foreground sm:col-span-8">
+                    {row.v}
+                  </p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </Section>
+
+
 
         {/* Testimonials */}
         <Section id="testimonials" label="What teams say">
