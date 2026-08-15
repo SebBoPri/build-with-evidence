@@ -262,7 +262,7 @@ function Index() {
         </section>
 
         {/* Approach */}
-        <Section id="approach" label="The approach">
+        <Section id="approach">
           <FullBleedFigure
             breakOut
             src={evidenceResolve}
@@ -272,10 +272,15 @@ function Index() {
             meta="Evidence synthesis"
           />
 
+          <p className="label-mono mb-10 flex items-center gap-3">
+            <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
+            The approach
+          </p>
 
-          <h2 className="display-md mt-16 max-w-3xl text-balance md:mt-20">
+          <h2 className="display-md max-w-3xl text-balance">
             Start with what must be true.
           </h2>
+
 
           <p className="mt-10 max-w-3xl text-lg leading-relaxed text-muted-foreground">
             Opinion, anecdote and roadmap pressure all sound the same at the start. We separate what
@@ -290,7 +295,7 @@ function Index() {
 
 
         {/* Discovery Sprint */}
-        <Section id="sprint" label="Discovery Sprint">
+        <Section id="sprint">
           <FullBleedFigure
             breakOut
             src={sprintDecision}
@@ -300,8 +305,13 @@ function Index() {
             meta="Flagship offering"
           />
 
+          <p className="label-mono mb-10 flex items-center gap-3">
+            <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
+            Discovery Sprint
+          </p>
 
-          <h2 className="display-md mt-16 max-w-3xl text-balance md:mt-20">
+          <h2 className="display-md max-w-3xl text-balance">
+
             A fixed-scope sprint that ends in a call.
           </h2>
 
