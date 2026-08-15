@@ -409,10 +409,11 @@ function Index() {
           <h2 className="display-md max-w-3xl text-balance">One sprint, start to decision.</h2>
 
           <CinematicFigure
-            src={evidenceResolve}
-            alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
-            caption="Noise → signal"
-            meta="Evidence synthesis"
+            src={futuresBranching}
+            alt="Abstract diagram: a single point branching into many diverging paths, with one decision node where the paths regather before splitting again"
+            caption="Rebuild → defer → narrow path"
+            meta="One branch taken"
+            phrase="A quarter of rebuild work, replaced by one narrow import path — and the evidence to defend it."
           >
             <div className="grid gap-14 md:grid-cols-12">
               <div className="md:col-span-4">
