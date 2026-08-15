@@ -312,24 +312,43 @@ function Index() {
 
         {/* Discovery Sprint */}
         <Section id="sprint" label="Discovery Sprint">
-          <div className="grid gap-14 md:grid-cols-12">
-            <div className="md:col-span-5">
-              <h2 className="display-md text-balance">A fixed-scope sprint that ends in a call.</h2>
-              <Lead>
-                <span className="mt-7 block">
+          <h2 className="display-md max-w-3xl text-balance">A fixed-scope sprint that ends in a call.</h2>
+
+          <CinematicFigure
+            src={sprintTimeline}
+            alt="Abstract diagram: four timeline nodes converging into a single decision diamond"
+            caption="Two to four weeks → one recommendation"
+            meta="Compressed timeline"
+          >
+            <div className="grid gap-14 md:grid-cols-12">
+              <div className="md:col-span-8">
+                <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">
                   Two to four weeks of focused discovery on one opportunity. It ends with a
-                  recommendation, not a document dump: build it, change it, test it, or
-                  don&apos;t build it.
-                </span>
-              </Lead>
-              <a
-                href="#contact"
-                className="mt-9 inline-flex h-11 items-center bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-              >
-                Scope a sprint
-              </a>
+                  recommendation, not a document dump: build it, change it, test it, or don&apos;t
+                  build it.
+                </p>
+                <a
+                  href="#contact"
+                  className="mt-8 inline-flex h-11 items-center bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+                >
+                  Scope a sprint
+                </a>
+              </div>
+              <div className="md:col-span-4">
+                <dl className="grid gap-6 border-t border-hairline pt-6">
+                  {sprintFacts.map((f) => (
+                    <div key={f.k}>
+                      <dt className="label-mono">{f.k}</dt>
+                      <dd className="mt-2 text-[0.95rem] leading-relaxed text-foreground">
+                        {f.v}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
             </div>
-            <div className="grid gap-10 md:col-span-7 sm:grid-cols-2">
+
+            <div className="rule-t mt-14 grid gap-10 pt-10 sm:grid-cols-2 lg:grid-cols-3">
               <div>
                 <p className="label-mono">When to use it</p>
                 <ul className="mt-4 space-y-3 text-[0.95rem] leading-relaxed text-muted-foreground">
@@ -346,9 +365,9 @@ function Index() {
                   ))}
                 </ul>
               </div>
-              <div className="sm:col-span-2 rule-t pt-8">
+              <div>
                 <p className="label-mono">What you get</p>
-                <ul className="mt-4 grid gap-3 text-[0.95rem] leading-relaxed text-muted-foreground sm:grid-cols-2">
+                <ul className="mt-4 space-y-3 text-[0.95rem] leading-relaxed text-muted-foreground">
                   {sprintGet.map((i) => (
                     <li key={i} className="flex gap-3">
                       <span className="mt-2.5 h-px w-3 shrink-0 bg-accent" aria-hidden="true" />
@@ -358,32 +377,7 @@ function Index() {
                 </ul>
               </div>
             </div>
-          </div>
-          <dl className="rule-t mt-14 grid gap-px pt-10 sm:grid-cols-2 lg:grid-cols-4">
-            {sprintFacts.map((f) => (
-              <div key={f.k} className="lg:pr-8 lg:not-last:border-r lg:not-last:border-hairline">
-                <dt className="label-mono">{f.k}</dt>
-                <dd className="mt-3 max-w-xs text-[0.95rem] leading-relaxed text-foreground">
-                  {f.v}
-                </dd>
-              </div>
-            ))}
-          </dl>
-
-          <figure className="mt-14 border border-hairline">
-            <img
-              src={sprintTimeline}
-              alt="Abstract diagram: four timeline nodes converging into a single decision diamond"
-              loading="lazy"
-              width={1536}
-              height={1024}
-              className="h-56 w-full object-cover opacity-80 md:h-72"
-            />
-            <figcaption className="label-mono flex flex-wrap items-center justify-between gap-2 border-t border-hairline px-4 py-3">
-              <span>Two to four weeks → one recommendation</span>
-              <span>Compressed timeline</span>
-            </figcaption>
-          </figure>
+          </CinematicFigure>
         </Section>
 
 
