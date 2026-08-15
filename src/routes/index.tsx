@@ -4,7 +4,8 @@ import { Wordmark, Starfield, Trajectory } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import heroField from "@/assets/hero-field.jpg";
 import evidenceResolve from "@/assets/evidence-resolve.jpg";
-import futuresCone from "@/assets/futures-cone.jpg";
+import futuresBranch from "@/assets/futures-branch.jpg";
+import killLine from "@/assets/kill-line.jpg";
 import railConverge from "@/assets/rail-converge.jpg";
 
 
@@ -200,11 +201,11 @@ function Index() {
             opinion.
           </p>
           <CinematicFigure
-            src={futuresCone}
-            alt="Abstract diagram: a wireframe cone of possible outcomes widening from a single point"
+            src={futuresBranch}
+            alt="Abstract diagram: thin lines branching repeatedly from a single point into many endpoints"
             caption="One idea → many possible futures"
             meta="Uncertainty at the start"
-            phrase="Every roadmap starts as a wide cone of futures. Building is how most teams find out which one they were in."
+            phrase="Every idea branches. Building is how most teams find out which branch they were on."
           >
             <div className="grid gap-14 md:grid-cols-12">
               <div className="md:col-span-6">
@@ -254,6 +255,14 @@ function Index() {
             possible test, and agree in advance what result would make you stop, so the evidence is
             readable either way. Those stopping points are what we call kill-lines.
           </p>
+
+          <CinematicFigure
+            src={killLine}
+            alt="Abstract chart: a single bright horizontal line with a dense cluster of points below it and a few isolated points above"
+            caption="Set before the evidence arrives"
+            meta="Kill-lines"
+            phrase="A kill-line is a threshold you agree on before you look, so the result is readable either way."
+          />
 
           <div className="relative">
             <img
