@@ -4,6 +4,8 @@ import { Wordmark, Starfield, Trajectory } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import heroField from "@/assets/hero-field.jpg";
 import evidenceResolve from "@/assets/evidence-resolve.jpg";
+import futuresBranching from "@/assets/futures-branching.jpg";
+import futuresCone from "@/assets/futures-cone.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
