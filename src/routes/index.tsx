@@ -294,6 +294,13 @@ function Index() {
         <Section id="approach" label="The approach">
           <h2 className="display-md max-w-3xl text-balance">Start with what must be true.</h2>
 
+          <p className="mt-10 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+            Opinion, anecdote and roadmap pressure all sound the same at the start. We separate what
+            you believe from what you know, run the riskiest assumptions through the smallest
+            possible test, and agree in advance what result would make you stop, so the evidence is
+            readable either way. Those stopping points are what we call kill-lines.
+          </p>
+
           <ApproachRail steps={steps} />
 
           <CinematicFigure
@@ -301,15 +308,10 @@ function Index() {
             alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
             caption="Noise → signal"
             meta="Evidence synthesis"
-            phrase="The mechanism is simple: name what must be true, then test it until the noise resolves into one line."
-          >
-            <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">
-              Opinion, anecdote and roadmap pressure all sound the same at the start. We separate
-              what you believe from what you know, run the riskiest assumptions through the smallest
-              possible test, and set kill-lines in advance so the result is readable either way.
-            </p>
-          </CinematicFigure>
+            phrase="Name what must be true, then test it until the noise resolves into one line."
+          />
         </Section>
+
 
 
         {/* Discovery Sprint */}
