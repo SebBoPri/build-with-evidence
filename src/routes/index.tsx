@@ -297,15 +297,16 @@ function Index() {
           <ApproachRail steps={steps} />
 
           <CinematicFigure
-            src={futuresCone}
-            alt="Abstract diagram: a wireframe cone of possible outcomes widening from a single point, with a narrow highlighted cone inside it"
-            caption="Possible → plausible → preferred"
-            meta="Narrowing the cone"
+            src={evidenceResolve}
+            alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
+            caption="Noise → signal"
+            meta="Evidence synthesis"
+            phrase="The mechanism is simple: name what must be true, then test it until the noise resolves into one line."
           >
             <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">
-              Every product plan starts as a wide cone of possibilities. The work is to separate
-              what you believe from what you know, then run the riskiest assumptions through the
-              smallest possible test. The cone narrows. The decision becomes obvious.
+              Opinion, anecdote and roadmap pressure all sound the same at the start. We separate
+              what you believe from what you know, run the riskiest assumptions through the smallest
+              possible test, and set kill-lines in advance so the result is readable either way.
             </p>
           </CinematicFigure>
         </Section>
