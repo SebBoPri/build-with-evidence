@@ -288,13 +288,8 @@ function Index() {
             A fixed-scope sprint that ends in a call.
           </h2>
 
-          <CinematicFigure
-            src={sprintDecision}
-            alt="Abstract diagram: four converging rails of evidence leading into a single bright decision diamond"
-            caption="Converge on one decision"
-            meta="Flagship offering"
-            phrase="Four evidence rails converge on one decision. You leave with one recommendation."
-          >
+          <div>
+
             <div className="grid gap-14 md:grid-cols-12">
               <div className="md:col-span-8">
                 <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">
