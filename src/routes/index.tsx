@@ -256,6 +256,14 @@ function Index() {
             readable either way. Those stopping points are what we call kill-lines.
           </p>
 
+          <CinematicFigure
+            src={killLine}
+            alt="Abstract chart: a single bright horizontal line with a dense cluster of points below it and a few isolated points above"
+            caption="Set before the evidence arrives"
+            meta="Kill-lines"
+            phrase="A kill-line is a threshold you agree on before you look, so the result is readable either way."
+          />
+
           <div className="relative">
             <img
               src={railConverge}
