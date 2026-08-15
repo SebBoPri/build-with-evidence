@@ -245,7 +245,17 @@ function Index() {
 
         {/* Approach */}
         <Section id="approach" label="The approach">
-          <h2 className="display-md max-w-3xl text-balance">Start with what must be true.</h2>
+          <CinematicFigure
+            src={evidenceResolve}
+            alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
+            caption="Noise → signal"
+            meta="Evidence synthesis"
+            phrase="Name what must be true, then test it until the noise resolves into one line."
+          />
+
+          <h2 className="display-md mt-16 max-w-3xl text-balance md:mt-20">
+            Start with what must be true.
+          </h2>
 
           <p className="mt-10 max-w-3xl text-lg leading-relaxed text-muted-foreground">
             Opinion, anecdote and roadmap pressure all sound the same at the start. We separate what
@@ -255,14 +265,6 @@ function Index() {
           </p>
 
           <ApproachRail steps={steps} />
-
-          <CinematicFigure
-            src={evidenceResolve}
-            alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
-            caption="Noise → signal"
-            meta="Evidence synthesis"
-            phrase="Name what must be true, then test it until the noise resolves into one line."
-          />
         </Section>
 
 
