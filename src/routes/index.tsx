@@ -187,16 +187,21 @@ function Index() {
 
         {/* Problem */}
         <section id="problem" className="scroll-mt-16">
-          <figure>
+          <figure className="relative overflow-hidden">
             <img
               src={futuresBranching}
               alt="Abstract diagram: many paths fade behind a bright central point while others branch open ahead"
               loading="lazy"
-              width={1536}
-              height={1024}
-              className="w-full opacity-90"
+              width={1840}
+              height={855}
+              className="w-full object-cover object-center opacity-90 md:min-h-[42rem]"
             />
-            <figcaption className="label-mono mx-auto mt-4 flex w-full max-w-[84rem] flex-wrap items-center justify-between gap-2 px-6 text-muted-foreground md:px-10">
+            <Starfield className="pointer-events-none absolute inset-0 h-full w-full text-foreground opacity-25" />
+            <div
+              className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,var(--background)_120%)]"
+              aria-hidden="true"
+            />
+            <figcaption className="label-mono relative mx-auto mt-4 flex w-full max-w-[84rem] flex-wrap items-center justify-between gap-2 px-6 text-muted-foreground md:px-10">
               <span>Past paths · present position · open futures</span>
               <span>The value-risk problem</span>
             </figcaption>
