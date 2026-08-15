@@ -246,8 +246,16 @@ function Index() {
         {/* Problem */}
         <Section id="problem" label="The problem">
           <h2 className="display-md max-w-3xl text-balance">
-            Building the wrong thing is the most expensive mistake in product.
+            <span className="block">Building has never been easier.</span>
+            <span className="block text-muted-foreground">
+              Knowing what to build has never mattered more.
+            </span>
           </h2>
+          <p className="mt-10 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            The biggest risk in any product is value risk: whether people will actually use it or
+            pay for it. It is the risk that kills products, and the one most often answered with
+            opinion.
+          </p>
           <CinematicFigure
             src={futuresCone}
             alt="Abstract diagram: a wireframe cone of possible outcomes widening from a single point"
@@ -257,15 +265,18 @@ function Index() {
           >
             <div className="grid gap-14 md:grid-cols-12">
               <div className="md:col-span-6">
-                <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
-                  <p>
-                    Most teams move from idea straight into design and delivery. A quarter later the
-                    feature ships, the metrics don&apos;t move, and nobody can say which assumption
-                    was wrong, because none of them were written down.
-                  </p>
-                  <p>Slipstream Labs exists to create a deliberate step between idea and build.</p>
-                </div>
+                <ol className="divide-y divide-[var(--hairline)] border-y border-hairline">
+                  {problemCases.map((item, i) => (
+                    <li key={item} className="flex gap-6 py-6">
+                      <span className="label-mono shrink-0 pt-1">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <p className="text-[0.95rem] leading-relaxed text-muted-foreground">{item}</p>
+                    </li>
+                  ))}
+                </ol>
               </div>
+
               <div className="md:col-span-6">
                 <p className="label-mono">Skipped without noticing</p>
                 <ul className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
