@@ -123,3 +123,71 @@ export function CinematicFigure({
     </div>
   );
 }
+
+/**
+ * Helsing-style full-bleed plate: edge-to-edge image with a compact
+ * title / subtitle block set immediately underneath it.
+ */
+export function FullBleedFigure({
+  src,
+  alt,
+  title,
+  subtitle,
+  meta,
+  breakOut = false,
+  overlay,
+}: {
+  src: string;
+  alt: string;
+  title: string;
+  subtitle?: string;
+  meta?: string;
+  /** cancel the parent Section's horizontal + top padding */
+  breakOut?: boolean;
+  overlay?: ReactNode;
+}) {
+  return (
+    <figure
+      className={
+        breakOut
+          ? "relative left-1/2 w-screen -translate-x-1/2 -mt-24 mb-16 md:-mt-32 md:mb-20"
+          : "relative mb-16 md:mb-20"
+      }
+    >
+      <div className="relative overflow-hidden">
+        <img
+          src={src}
+          alt={alt}
+          loading="lazy"
+          width={1920}
+          height={900}
+          className="h-[22rem] w-full object-cover object-center opacity-90 sm:h-[30rem] md:h-[42rem]"
+        />
+        {overlay}
+        <div
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_35%,var(--background)_115%)]"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-background"
+          aria-hidden="true"
+        />
+      </div>
+
+      <figcaption className="mx-auto w-full max-w-[84rem] px-6 pt-6 md:px-10 md:pt-8">
+        <div className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2 border-t border-hairline pt-6">
+          <div>
+            <p className="text-lg tracking-tight text-foreground md:text-xl">{title}</p>
+            {subtitle ? (
+              <p className="mt-1 text-[0.95rem] leading-relaxed text-muted-foreground">
+                {subtitle}
+              </p>
+            ) : null}
+          </div>
+          {meta ? <p className="label-mono">{meta}</p> : null}
+        </div>
+      </figcaption>
+    </figure>
+  );
+}
+
