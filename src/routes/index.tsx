@@ -5,7 +5,7 @@ import { ApproachRail } from "@/components/site/approach-rail";
 import heroField from "@/assets/hero-field.jpg";
 import evidenceResolve from "@/assets/evidence-resolve.jpg";
 import futuresBranching from "@/assets/futures-branching.jpg";
-import sprintDecision from "@/assets/sprint-decision.jpg";
+import sprintDecision from "@/assets/sprint-decision.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -298,7 +298,7 @@ function Index() {
         <Section id="sprint">
           <FullBleedFigure
             breakOut
-            src={sprintDecision}
+            src={sprintDecision.url}
             alt="Abstract diagram: a single particle trajectory arcing toward a planetary horizon"
             title="Four evidence rails converge on one decision"
             subtitle="You leave the sprint with one recommendation, not a document dump."
