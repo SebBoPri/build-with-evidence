@@ -249,10 +249,11 @@ function Index() {
             Building the wrong thing is the most expensive mistake in product.
           </h2>
           <CinematicFigure
-            src={futuresBranching}
-            alt="Abstract diagram: a single point branching into many diverging paths, with one decision node where the paths regather before splitting again"
-            caption="Every plan is a branch"
-            meta="Decision point · diverging futures"
+            src={futuresCone}
+            alt="Abstract diagram: a wireframe cone of possible outcomes widening from a single point"
+            caption="One idea → many possible futures"
+            meta="Uncertainty at the start"
+            phrase="Every roadmap starts as a wide cone of futures. Building is how most teams find out which one they were in."
           >
             <div className="grid gap-14 md:grid-cols-12">
               <div className="md:col-span-6">
@@ -296,15 +297,16 @@ function Index() {
           <ApproachRail steps={steps} />
 
           <CinematicFigure
-            src={futuresCone}
-            alt="Abstract diagram: a wireframe cone of possible outcomes widening from a single point, with a narrow highlighted cone inside it"
-            caption="Possible → plausible → preferred"
-            meta="Narrowing the cone"
+            src={evidenceResolve}
+            alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
+            caption="Noise → signal"
+            meta="Evidence synthesis"
+            phrase="The mechanism is simple: name what must be true, then test it until the noise resolves into one line."
           >
             <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">
-              Every product plan starts as a wide cone of possibilities. The work is to separate
-              what you believe from what you know, then run the riskiest assumptions through the
-              smallest possible test. The cone narrows. The decision becomes obvious.
+              Opinion, anecdote and roadmap pressure all sound the same at the start. We separate
+              what you believe from what you know, run the riskiest assumptions through the smallest
+              possible test, and set kill-lines in advance so the result is readable either way.
             </p>
           </CinematicFigure>
         </Section>
@@ -317,8 +319,9 @@ function Index() {
           <CinematicFigure
             src={sprintTimeline}
             alt="Abstract diagram: four timeline nodes converging into a single decision diamond"
-            caption="Two to four weeks → one recommendation"
-            meta="Compressed timeline"
+            caption="Four steps → one decision node"
+            meta="Two to four weeks"
+            phrase="Fixed scope, fixed clock: four steps that converge on a single recommendation."
           >
             <div className="grid gap-14 md:grid-cols-12">
               <div className="md:col-span-8">
@@ -406,10 +409,11 @@ function Index() {
           <h2 className="display-md max-w-3xl text-balance">One sprint, start to decision.</h2>
 
           <CinematicFigure
-            src={evidenceResolve}
-            alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
-            caption="Noise → signal"
-            meta="Evidence synthesis"
+            src={futuresBranching}
+            alt="Abstract diagram: a single point branching into many diverging paths, with one decision node where the paths regather before splitting again"
+            caption="Rebuild → defer → narrow path"
+            meta="One branch taken"
+            phrase="A quarter of rebuild work, replaced by one narrow import path — and the evidence to defend it."
           >
             <div className="grid gap-14 md:grid-cols-12">
               <div className="md:col-span-4">

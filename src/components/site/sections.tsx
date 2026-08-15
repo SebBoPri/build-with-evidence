@@ -86,12 +86,14 @@ export function CinematicFigure({
   alt,
   caption,
   meta,
+  phrase,
   children,
 }: {
   src: string;
   alt: string;
   caption?: string;
   meta?: string;
+  phrase?: string;
   children?: ReactNode;
 }) {
   return (
@@ -117,6 +119,11 @@ export function CinematicFigure({
           </figcaption>
         )}
       </figure>
+      {phrase ? (
+        <p className="mt-6 max-w-2xl border-l border-hairline pl-5 text-xl leading-snug tracking-tight text-foreground text-balance md:text-2xl">
+          {phrase}
+        </p>
+      ) : null}
       {children ? <div className="mt-10 md:mt-14">{children}</div> : null}
     </div>
   );
