@@ -274,8 +274,8 @@ function Index() {
           </h2>
 
           <CinematicFigure
-            src={futuresBranching}
-            alt="Abstract diagram: many faint paths converging to a single bright point before branching out again"
+            src={sprintDecision}
+            alt="Abstract diagram: a single particle trajectory arcing toward a planetary horizon"
             caption="Converge on one decision"
             meta="Flagship offering"
             phrase="Four evidence rails converge on one decision. You leave with one recommendation."
