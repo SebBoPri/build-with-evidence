@@ -241,7 +241,6 @@ function Index() {
                 </ul>
               </div>
             </div>
-          </CinematicFigure>
         </Section>
 
         {/* Approach */}
