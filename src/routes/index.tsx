@@ -187,7 +187,15 @@ function Index() {
 
         {/* Problem */}
         <Section id="problem" label="The problem">
-          <h2 className="display-md max-w-3xl text-balance">
+          <CinematicFigure
+            src={futuresBranching}
+            alt="Abstract diagram: many paths fade behind a bright central point while others branch open ahead"
+            caption="Past paths · present position · open futures"
+            meta="The value-risk problem"
+            phrase="Every product decision closes some paths and opens others. The question is whether you are closing them with evidence or with momentum."
+          />
+
+          <h2 className="display-md mt-16 max-w-3xl text-balance md:mt-20">
             <span className="block">Building has never been easier.</span>
             <span className="block text-muted-foreground">
               Knowing what to build has never mattered more.
@@ -198,14 +206,7 @@ function Index() {
             pay for it. It is the risk that kills products, and the one most often answered with
             opinion.
           </p>
-          <CinematicFigure
-            src={futuresBranching}
-            alt="Abstract diagram: many paths fade behind a bright central point while others branch open ahead"
-            caption="Past paths · present position · open futures"
-            meta="The value-risk problem"
-            phrase="Every product decision closes some paths and opens others. The question is whether you are closing them with evidence or with momentum."
-          >
-            <div className="grid gap-14 md:grid-cols-12">
+            <div className="mt-16 grid gap-14 md:grid-cols-12 md:mt-20">
               <div className="md:col-span-6">
                 <ol className="divide-y divide-[var(--hairline)] border-y border-hairline">
                   {problemCases.map((item, i) => (
