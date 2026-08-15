@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section, Lead } from "@/components/site/sections";
 import { Wordmark, Starfield, Trajectory } from "@/components/site/brand";
+import { ApproachRail } from "@/components/site/approach-rail";
 
 export const Route = createFileRoute("/")({
   head: () => ({
