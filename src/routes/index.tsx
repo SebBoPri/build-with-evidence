@@ -245,57 +245,48 @@ function Index() {
 
         {/* Problem */}
         <Section id="problem" label="The problem">
-          <div className="grid gap-14 md:grid-cols-12">
-            <div className="md:col-span-6">
-              <h2 className="display-md text-balance">
-                Building the wrong thing is the most expensive mistake in product.
-              </h2>
-              <div className="mt-7 space-y-5 text-lg leading-relaxed text-muted-foreground">
-                <p>
-                  Most teams move from idea straight into design and delivery. A quarter later the
-                  feature ships, the metrics don&apos;t move, and nobody can say which assumption
-                  was wrong — because none of them were written down.
-                </p>
-                <p>
-                  Slipstream Labs exists to create a deliberate step between idea and build.
-                </p>
+          <h2 className="display-md max-w-3xl text-balance">
+            Building the wrong thing is the most expensive mistake in product.
+          </h2>
+          <CinematicFigure
+            src={futuresBranching}
+            alt="Abstract diagram: a single point branching into many diverging paths, with one decision node where the paths regather before splitting again"
+            caption="Every plan is a branch"
+            meta="Decision point · diverging futures"
+          >
+            <div className="grid gap-14 md:grid-cols-12">
+              <div className="md:col-span-6">
+                <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
+                  <p>
+                    Most teams move from idea straight into design and delivery. A quarter later the
+                    feature ships, the metrics don&apos;t move, and nobody can say which assumption
+                    was wrong — because none of them were written down.
+                  </p>
+                  <p>Slipstream Labs exists to create a deliberate step between idea and build.</p>
+                </div>
+              </div>
+              <div className="md:col-span-6">
+                <p className="label-mono">Skipped without noticing</p>
+                <ul className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
+                  {[
+                    "The problem — is it real, frequent, and painful?",
+                    "The customer — who exactly, and what do they do today?",
+                    "The opportunity — is it big enough to matter?",
+                    "The assumptions — what has to be true for this to work?",
+                    "The solution — is it actually worth building?",
+                  ].map((item) => (
+                    <li
+                      key={item}
+                      className="flex gap-4 py-4 text-[0.95rem] transition-colors hover:text-foreground"
+                    >
+                      <span className="mt-2 h-px w-4 shrink-0 bg-accent" aria-hidden="true" />
+                      <span className="text-muted-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-            <div className="md:col-span-6 md:pt-2">
-              <p className="label-mono">Skipped without noticing</p>
-              <ul className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
-                {[
-                  "The problem — is it real, frequent, and painful?",
-                  "The customer — who exactly, and what do they do today?",
-                  "The opportunity — is it big enough to matter?",
-                  "The assumptions — what has to be true for this to work?",
-                  "The solution — is it actually worth building?",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex gap-4 py-4 text-[0.95rem] transition-colors hover:text-foreground"
-                  >
-                    <span className="mt-2 h-px w-4 shrink-0 bg-accent" aria-hidden="true" />
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <figure className="mt-14 border border-hairline">
-            <img
-              src={futuresBranching}
-              alt="Abstract diagram: a single point branching into many diverging paths, with one decision node where the paths regather before splitting again"
-              loading="lazy"
-              width={1536}
-              height={1024}
-              className="h-56 w-full object-cover opacity-80 md:h-72"
-            />
-            <figcaption className="label-mono flex flex-wrap items-center justify-between gap-2 border-t border-hairline px-4 py-3">
-              <span>Every plan is a branch</span>
-              <span>Decision point · diverging futures</span>
-            </figcaption>
-          </figure>
+          </CinematicFigure>
         </Section>
 
         {/* Approach */}
