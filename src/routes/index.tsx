@@ -249,10 +249,11 @@ function Index() {
             Building the wrong thing is the most expensive mistake in product.
           </h2>
           <CinematicFigure
-            src={futuresBranching}
-            alt="Abstract diagram: a single point branching into many diverging paths, with one decision node where the paths regather before splitting again"
-            caption="Every plan is a branch"
-            meta="Decision point · diverging futures"
+            src={futuresCone}
+            alt="Abstract diagram: a wireframe cone of possible outcomes widening from a single point"
+            caption="One idea → many possible futures"
+            meta="Uncertainty at the start"
+            phrase="Every roadmap starts as a wide cone of futures. Building is how most teams find out which one they were in."
           >
             <div className="grid gap-14 md:grid-cols-12">
               <div className="md:col-span-6">
