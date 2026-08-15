@@ -208,9 +208,9 @@ function Index() {
             </Reveal>
             <Reveal delay={80}>
               <p className="max-w-2xl text-xl leading-snug tracking-tight text-foreground text-balance md:text-2xl">
-                Every product decision closes some paths and opens others. The question is whether
-                you are closing them with evidence or with momentum.
+                The question is whether you are closing those paths with evidence or with momentum.
               </p>
+
             </Reveal>
             <h2 className="display-md mt-16 max-w-3xl text-balance md:mt-20">
               <span className="block">Building has never been easier.</span>
