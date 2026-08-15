@@ -4,8 +4,8 @@ import { Wordmark, Starfield, Trajectory } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import heroField from "@/assets/hero-field.jpg";
 import evidenceResolve from "@/assets/evidence-resolve.jpg";
-import futuresCone from "@/assets/futures-cone.jpg";
 import futuresBranching from "@/assets/futures-branching.jpg";
+import sprintDecision from "@/assets/sprint-decision.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -199,11 +199,11 @@ function Index() {
             opinion.
           </p>
           <CinematicFigure
-            src={futuresCone}
-            alt="Abstract diagram: a wireframe cone of possible outcomes widening from a single point"
-            caption="One idea → many possible futures"
-            meta="Uncertainty at the start"
-            phrase="Every roadmap starts as a wide cone of futures. Building is how most teams find out which one they were in."
+            src={futuresBranching}
+            alt="Abstract diagram: many paths fade behind a bright central point while others branch open ahead"
+            caption="Past paths · present position · open futures"
+            meta="The value-risk problem"
+            phrase="Every product decision closes some paths and opens others. The question is whether you are closing them with evidence or with momentum."
           >
             <div className="grid gap-14 md:grid-cols-12">
               <div className="md:col-span-6">
@@ -274,8 +274,8 @@ function Index() {
           </h2>
 
           <CinematicFigure
-            src={futuresBranching}
-            alt="Abstract diagram: many faint paths converging to a single bright point before branching out again"
+            src={sprintDecision}
+            alt="Abstract diagram: a single particle trajectory arcing toward a planetary horizon"
             caption="Converge on one decision"
             meta="Flagship offering"
             phrase="Four evidence rails converge on one decision. You leave with one recommendation."
