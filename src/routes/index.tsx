@@ -403,48 +403,44 @@ function Index() {
 
         {/* Case snapshot */}
         <Section id="case" label="Case snapshot">
-          <div className="grid gap-14 md:grid-cols-12">
-            <div className="md:col-span-4">
-              <h2 className="display-md text-balance">One sprint, start to decision.</h2>
-              <p className="mt-7 text-[0.95rem] leading-relaxed text-muted-foreground">
-                {caseSnapshot.context}
-              </p>
-              <figure className="mt-10 border border-hairline">
-                <img
-                  src={evidenceResolve}
-                  alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
-                  loading="lazy"
-                  width={1536}
-                  height={1024}
-                  className="h-56 w-full object-cover opacity-80 md:h-72"
-                />
-                <figcaption className="label-mono border-t border-hairline px-4 py-3">
-                  Noise → signal
-                </figcaption>
-              </figure>
-              <p className="label-mono mt-8">Anonymised at client request</p>
+          <h2 className="display-md max-w-3xl text-balance">One sprint, start to decision.</h2>
 
+          <CinematicFigure
+            src={evidenceResolve}
+            alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
+            caption="Noise → signal"
+            meta="Evidence synthesis"
+          >
+            <div className="grid gap-14 md:grid-cols-12">
+              <div className="md:col-span-4">
+                <p className="text-[0.95rem] leading-relaxed text-muted-foreground">
+                  {caseSnapshot.context}
+                </p>
+                <p className="label-mono mt-8">Anonymised at client request</p>
+              </div>
+              <ol className="md:col-span-8">
+                {[
+                  { k: "The question", v: caseSnapshot.question },
+                  { k: "What the evidence showed", v: caseSnapshot.evidence },
+                  { k: "The decision", v: caseSnapshot.decision },
+                ].map((row, i) => (
+                  <li
+                    key={row.k}
+                    className="grid gap-4 border-t border-hairline py-8 last:border-b sm:grid-cols-12"
+                  >
+                    <div className="sm:col-span-4">
+                      <span className="label-mono">
+                        {String(i + 1).padStart(2, "0")} · {row.k}
+                      </span>
+                    </div>
+                    <p className="text-lg leading-relaxed text-muted-foreground sm:col-span-8">
+                      {row.v}
+                    </p>
+                  </li>
+                ))}
+              </ol>
             </div>
-            <ol className="md:col-span-8">
-              {[
-                { k: "The question", v: caseSnapshot.question },
-                { k: "What the evidence showed", v: caseSnapshot.evidence },
-                { k: "The decision", v: caseSnapshot.decision },
-              ].map((row, i) => (
-                <li
-                  key={row.k}
-                  className="grid gap-4 border-t border-hairline py-8 last:border-b sm:grid-cols-12"
-                >
-                  <div className="sm:col-span-4">
-                    <span className="label-mono">{String(i + 1).padStart(2, "0")} · {row.k}</span>
-                  </div>
-                  <p className="text-lg leading-relaxed text-muted-foreground sm:col-span-8">
-                    {row.v}
-                  </p>
-                </li>
-              ))}
-            </ol>
-          </div>
+          </CinematicFigure>
         </Section>
 
 
