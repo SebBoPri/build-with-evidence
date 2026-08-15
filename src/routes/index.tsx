@@ -375,6 +375,40 @@ function Index() {
           </div>
         </Section>
 
+        {/* Case snapshot */}
+        <Section id="case" label="Case snapshot">
+          <div className="grid gap-14 md:grid-cols-12">
+            <div className="md:col-span-4">
+              <h2 className="display-md text-balance">One sprint, start to decision.</h2>
+              <p className="mt-7 text-[0.95rem] leading-relaxed text-muted-foreground">
+                {caseSnapshot.context}
+              </p>
+              <p className="label-mono mt-8">Anonymised at client request</p>
+            </div>
+            <ol className="md:col-span-8">
+              {[
+                { k: "The question", v: caseSnapshot.question },
+                { k: "What the evidence showed", v: caseSnapshot.evidence },
+                { k: "The decision", v: caseSnapshot.decision },
+              ].map((row, i) => (
+                <li
+                  key={row.k}
+                  className="grid gap-4 border-t border-hairline py-8 last:border-b sm:grid-cols-12"
+                >
+                  <div className="sm:col-span-4">
+                    <span className="label-mono">{String(i + 1).padStart(2, "0")} · {row.k}</span>
+                  </div>
+                  <p className="text-lg leading-relaxed text-muted-foreground sm:col-span-8">
+                    {row.v}
+                  </p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </Section>
+
+
+
         {/* Testimonials */}
         <Section id="testimonials" label="What teams say">
           <h2 className="display-md max-w-2xl text-balance">Evidence, seen from the other side.</h2>
