@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Section, Lead } from "@/components/site/sections";
 import { Wordmark, Starfield, Trajectory } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
+import heroField from "@/assets/hero-field.jpg";
+import evidenceResolve from "@/assets/evidence-resolve.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -183,10 +185,23 @@ function Index() {
       <main id="top">
         {/* Hero */}
         <section className="relative overflow-hidden border-b border-hairline">
+          <img
+            src={heroField}
+            alt=""
+            aria-hidden="true"
+            width={1920}
+            height={1088}
+            className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-60"
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background"
+            aria-hidden="true"
+          />
           <Starfield
-            className="pointer-events-none absolute inset-0 h-full w-full text-foreground opacity-70"
+            className="pointer-events-none absolute inset-0 h-full w-full text-foreground opacity-40"
           />
           <Trajectory className="pointer-events-none absolute right-0 top-10 hidden h-[34rem] w-[46rem] text-foreground/70 lg:block" />
+
           <div className="relative mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
             <p className="label-mono fade-up">Product discovery &amp; strategy</p>
             <h1 className="display-xl fade-up delay-1 mt-10 max-w-4xl text-balance">
@@ -365,7 +380,21 @@ function Index() {
               <p className="mt-7 text-[0.95rem] leading-relaxed text-muted-foreground">
                 {caseSnapshot.context}
               </p>
+              <figure className="mt-10 border border-hairline">
+                <img
+                  src={evidenceResolve}
+                  alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
+                  loading="lazy"
+                  width={1536}
+                  height={1024}
+                  className="h-44 w-full object-cover opacity-80"
+                />
+                <figcaption className="label-mono border-t border-hairline px-4 py-3">
+                  Noise → signal
+                </figcaption>
+              </figure>
               <p className="label-mono mt-8">Anonymised at client request</p>
+
             </div>
             <ol className="md:col-span-8">
               {[
