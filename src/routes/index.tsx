@@ -4,6 +4,8 @@ import { Wordmark, Starfield, Trajectory } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import heroField from "@/assets/hero-field.jpg";
 import evidenceResolve from "@/assets/evidence-resolve.jpg";
+import futuresBranching from "@/assets/futures-branching.jpg";
+import futuresCone from "@/assets/futures-cone.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -279,6 +281,20 @@ function Index() {
               </ul>
             </div>
           </div>
+          <figure className="mt-14 border border-hairline">
+            <img
+              src={futuresBranching}
+              alt="Abstract diagram: a single point branching into many diverging paths, with one decision node where the paths regather before splitting again"
+              loading="lazy"
+              width={1536}
+              height={1024}
+              className="h-56 w-full object-cover opacity-80 md:h-72"
+            />
+            <figcaption className="label-mono flex flex-wrap items-center justify-between gap-2 border-t border-hairline px-4 py-3">
+              <span>Every plan is a branch</span>
+              <span>Decision point · diverging futures</span>
+            </figcaption>
+          </figure>
         </Section>
 
         {/* Approach */}
@@ -287,6 +303,20 @@ function Index() {
 
           <ApproachRail steps={steps} />
 
+          <figure className="mt-16 border border-hairline">
+            <img
+              src={futuresCone}
+              alt="Abstract diagram: a wireframe cone of possible outcomes widening from a single point, with a narrow highlighted cone inside it"
+              loading="lazy"
+              width={1536}
+              height={1024}
+              className="h-56 w-full object-cover opacity-80 md:h-80"
+            />
+            <figcaption className="label-mono flex flex-wrap items-center justify-between gap-2 border-t border-hairline px-4 py-3">
+              <span>Possible → plausible → preferred</span>
+              <span>Narrowing the cone</span>
+            </figcaption>
+          </figure>
         </Section>
 
 
