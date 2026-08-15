@@ -267,31 +267,37 @@ function Index() {
 
         {/* Approach */}
         <Section id="approach" label="The approach">
-          <div className="grid items-center gap-12 md:grid-cols-12">
-            <h2 className="display-md text-balance md:col-span-5">
-              Four steps from uncertainty to a decision.
-            </h2>
-            <OrbitDiagram className="w-full text-foreground/80 md:col-span-7" />
-          </div>
-          <ol className="mt-14 grid gap-px border-t border-hairline sm:grid-cols-2 lg:grid-cols-4">
-            {steps.map((s) => (
-              <li
-                key={s.n}
-                className="group relative pt-6 lg:pr-8 lg:not-last:border-r lg:not-last:border-hairline"
-              >
+          <h2 className="display-md max-w-3xl text-balance">Start with what must be true.</h2>
+
+          <ol className="mt-20 grid gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+            {steps.map((s, i) => (
+              <li key={s.n} className="group relative lg:pr-10">
+                {/* rail */}
                 <span
-                  className="absolute -top-px left-0 h-px w-0 bg-accent transition-all duration-500 group-hover:w-full lg:w-[calc(100%-2rem)] lg:group-hover:w-[calc(100%-2rem)]"
+                  className="absolute left-0 top-[7px] h-px w-full bg-hairline"
                   aria-hidden="true"
                 />
-                <span className="label-mono">{s.n}</span>
-                <h3 className="mt-3 text-xl font-medium tracking-tight">{s.title}</h3>
-                <p className="mt-2 max-w-xs pb-8 text-[0.95rem] leading-relaxed text-muted-foreground">
+                <span
+                  className="relative flex h-[15px] w-[15px] items-center justify-center rounded-full border border-border bg-background"
+                  aria-hidden="true"
+                >
+                  <span
+                    className={`h-[5px] w-[5px] rounded-full bg-foreground transition-opacity ${
+                      i === 0 ? "opacity-100" : "opacity-40 group-hover:opacity-100"
+                    }`}
+                  />
+                </span>
+
+                <h3 className="mt-14 text-xl font-medium tracking-tight">{s.title}</h3>
+                <p className="mt-3 max-w-[16rem] text-[0.95rem] leading-relaxed text-muted-foreground">
                   {s.body}
                 </p>
+                <p className="label-mono mt-10">Step {s.n}</p>
               </li>
             ))}
           </ol>
         </Section>
+
 
         {/* Discovery Sprint */}
         <Section id="sprint" label="Discovery Sprint">
