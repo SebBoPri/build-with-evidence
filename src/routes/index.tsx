@@ -4,7 +4,8 @@ import { Wordmark, Starfield, Trajectory } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import heroField from "@/assets/hero-field.jpg";
 import evidenceResolve from "@/assets/evidence-resolve.jpg";
-import futuresCone from "@/assets/futures-cone.jpg";
+import futuresBranch from "@/assets/futures-branch.jpg";
+import killLine from "@/assets/kill-line.jpg";
 import railConverge from "@/assets/rail-converge.jpg";
 
 
