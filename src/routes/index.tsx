@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Section, Lead, CinematicFigure } from "@/components/site/sections";
+import { Section, Lead, CinematicFigure, Reveal } from "@/components/site/sections";
 import { Wordmark, Starfield, Trajectory } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import heroField from "@/assets/hero-field.jpg";
@@ -186,26 +186,46 @@ function Index() {
 
 
         {/* Problem */}
-        <Section id="problem" label="The problem">
-          <CinematicFigure
-            src={futuresBranching}
-            alt="Abstract diagram: many paths fade behind a bright central point while others branch open ahead"
-            caption="Past paths · present position · open futures"
-            meta="The value-risk problem"
-            phrase="Every product decision closes some paths and opens others. The question is whether you are closing them with evidence or with momentum."
-          />
+        <section id="problem" className="scroll-mt-16">
+          <figure>
+            <img
+              src={futuresBranching}
+              alt="Abstract diagram: many paths fade behind a bright central point while others branch open ahead"
+              loading="lazy"
+              width={1536}
+              height={1024}
+              className="w-full opacity-90"
+            />
+            <figcaption className="label-mono mx-auto mt-4 flex w-full max-w-[84rem] flex-wrap items-center justify-between gap-2 px-6 text-muted-foreground md:px-10">
+              <span>Past paths · present position · open futures</span>
+              <span>The value-risk problem</span>
+            </figcaption>
+          </figure>
 
-          <h2 className="display-md mt-16 max-w-3xl text-balance md:mt-20">
-            <span className="block">Building has never been easier.</span>
-            <span className="block text-muted-foreground">
-              Knowing what to build has never mattered more.
-            </span>
-          </h2>
-          <p className="mt-10 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            The biggest risk in any product is value risk: whether people will actually use it or
-            pay for it. It is the risk that kills products, and the one most often answered with
-            opinion.
-          </p>
+          <div className="mx-auto w-full max-w-[84rem] px-6 pb-24 pt-16 md:px-10 md:pb-32 md:pt-20">
+            <Reveal>
+              <p className="label-mono mb-10 flex items-center gap-3">
+                <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
+                The problem
+              </p>
+            </Reveal>
+            <Reveal delay={80}>
+              <p className="max-w-2xl text-xl leading-snug tracking-tight text-foreground text-balance md:text-2xl">
+                Every product decision closes some paths and opens others. The question is whether
+                you are closing them with evidence or with momentum.
+              </p>
+            </Reveal>
+            <h2 className="display-md mt-16 max-w-3xl text-balance md:mt-20">
+              <span className="block">Building has never been easier.</span>
+              <span className="block text-muted-foreground">
+                Knowing what to build has never mattered more.
+              </span>
+            </h2>
+            <p className="mt-10 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+              The biggest risk in any product is value risk: whether people will actually use it or
+              pay for it. It is the risk that kills products, and the one most often answered with
+              opinion.
+            </p>
             <div className="mt-16 grid gap-14 md:grid-cols-12 md:mt-20">
               <div className="md:col-span-6">
                 <ol className="divide-y divide-[var(--hairline)] border-y border-hairline">
@@ -241,7 +261,8 @@ function Index() {
                 </ul>
               </div>
             </div>
-        </Section>
+          </div>
+        </section>
 
         {/* Approach */}
         <Section id="approach" label="The approach">
