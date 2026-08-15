@@ -28,10 +28,27 @@ const nav = [
   { href: "#problem", label: "Problem" },
   { href: "#approach", label: "Approach" },
   { href: "#sprint", label: "Discovery Sprint" },
-  { href: "#outcomes", label: "Outcomes" },
+  { href: "#case", label: "Case snapshot" },
   { href: "#testimonials", label: "Results" },
   { href: "#about", label: "About" },
 ];
+
+const sprintFacts = [
+  { k: "Duration", v: "2–4 weeks, fixed scope" },
+  { k: "Your team's time", v: "~3 hours per week" },
+  { k: "Engagement", v: "One opportunity, one recommendation" },
+  { k: "After the sprint", v: "Optional support while you act on it" },
+];
+
+const caseSnapshot = {
+  context: "Series A B2B SaaS, planning a quarter of engineering on a self-serve onboarding rebuild.",
+  question: "Was onboarding really why new accounts stalled in week one?",
+  evidence:
+    "Fourteen customer interviews and a funnel teardown showed activation wasn't blocked by setup — it stalled when teams couldn't get their data in. Onboarding polish addressed the visible symptom, not the cause.",
+  decision:
+    "Rebuild deferred. The team shipped a narrow import path in three weeks instead, and week-one activation moved before the original project would have started.",
+};
+
 
 const steps = [
   {
