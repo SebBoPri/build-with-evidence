@@ -98,7 +98,7 @@ export function CinematicFigure({
 }) {
   return (
     <div className="group">
-      <figure className="relative overflow-hidden border border-hairline bg-surface aspect-[16/9] md:aspect-[21/9]">
+      <figure className="relative border border-hairline bg-surface">
         <div className="tech-grid pointer-events-none absolute inset-0 opacity-[0.04]" aria-hidden="true" />
         <img
           src={src}
@@ -106,21 +106,17 @@ export function CinematicFigure({
           loading="lazy"
           width={1536}
           height={1024}
-          className="h-full w-full object-cover opacity-85"
-        />
-        <div
-          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/70 via-background/20 to-transparent"
-          aria-hidden="true"
+          className="w-full opacity-90"
         />
         {(caption || meta) && (
-          <figcaption className="label-mono absolute bottom-0 left-0 right-0 flex flex-wrap items-center justify-between gap-2 border-t border-hairline bg-background/50 px-4 py-3 backdrop-blur-sm">
+          <figcaption className="label-mono flex flex-wrap items-center justify-between gap-2 border-t border-hairline bg-background/50 px-4 py-3 backdrop-blur-sm">
             {caption ? <span>{caption}</span> : <span />}
             {meta ? <span>{meta}</span> : <span />}
           </figcaption>
         )}
       </figure>
       {phrase ? (
-        <p className="mt-10 max-w-2xl border-l border-hairline pl-5 text-xl leading-snug tracking-tight text-foreground text-balance md:mt-12 md:text-2xl">
+        <p className="mt-12 max-w-2xl border-l border-hairline pl-5 text-xl leading-snug tracking-tight text-foreground text-balance md:mt-16 md:text-2xl">
           {phrase}
         </p>
       ) : null}
