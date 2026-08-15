@@ -380,7 +380,21 @@ function Index() {
               <p className="mt-7 text-[0.95rem] leading-relaxed text-muted-foreground">
                 {caseSnapshot.context}
               </p>
+              <figure className="mt-10 border border-hairline">
+                <img
+                  src={evidenceResolve}
+                  alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
+                  loading="lazy"
+                  width={1536}
+                  height={1024}
+                  className="h-44 w-full object-cover opacity-80"
+                />
+                <figcaption className="label-mono border-t border-hairline px-4 py-3">
+                  Noise → signal
+                </figcaption>
+              </figure>
               <p className="label-mono mt-8">Anonymised at client request</p>
+
             </div>
             <ol className="md:col-span-8">
               {[
