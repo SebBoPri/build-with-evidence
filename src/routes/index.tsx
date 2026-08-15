@@ -311,7 +311,7 @@ function Index() {
               loading="lazy"
               width={1536}
               height={1024}
-              className="h-56 w-full object-cover opacity-80 md:h-80"
+              className="h-56 w-full object-cover opacity-80 md:h-72"
             />
             <figcaption className="label-mono flex flex-wrap items-center justify-between gap-2 border-t border-hairline px-4 py-3">
               <span>Possible → plausible → preferred</span>
@@ -388,7 +388,7 @@ function Index() {
               loading="lazy"
               width={1536}
               height={1024}
-              className="h-48 w-full object-cover opacity-80 md:h-64"
+              className="h-56 w-full object-cover opacity-80 md:h-72"
             />
             <figcaption className="label-mono flex flex-wrap items-center justify-between gap-2 border-t border-hairline px-4 py-3">
               <span>Two to four weeks → one recommendation</span>
@@ -433,7 +433,7 @@ function Index() {
                   loading="lazy"
                   width={1536}
                   height={1024}
-                  className="h-44 w-full object-cover opacity-80"
+                  className="h-56 w-full object-cover opacity-80 md:h-72"
                 />
                 <figcaption className="label-mono border-t border-hairline px-4 py-3">
                   Noise → signal
