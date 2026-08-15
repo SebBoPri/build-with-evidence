@@ -11,13 +11,13 @@ import sprintDecision from "@/assets/sprint-decision.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Slipstream Labs — Work out what is worth building" },
+      { title: "Slipstream Labs: Work out what is worth building" },
       {
         name: "description",
         content:
           "Product discovery and strategy for post-seed and Series A teams. Fixed-scope Discovery Sprints that turn uncertainty into evidence-backed decisions.",
       },
-      { property: "og:title", content: "Slipstream Labs — Work out what is worth building" },
+      { property: "og:title", content: "Slipstream Labs: Work out what is worth building" },
       {
         property: "og:description",
         content:
@@ -50,7 +50,7 @@ const caseSnapshot = {
   context: "Series A B2B SaaS, planning a quarter of engineering on a self-serve onboarding rebuild.",
   question: "Was onboarding really why new accounts stalled in week one?",
   evidence:
-    "Fourteen customer interviews and a funnel teardown showed activation wasn't blocked by setup — it stalled when teams couldn't get their data in. Onboarding polish addressed the visible symptom, not the cause.",
+    "Fourteen customer interviews and a funnel teardown showed activation wasn't blocked by setup. It stalled when teams couldn't get their data in. Onboarding polish addressed the visible symptom, not the cause.",
   decision:
     "Rebuild deferred. The team shipped a narrow import path in three weeks instead, and week-one activation moved before the original project would have started.",
 };
@@ -162,7 +162,7 @@ function Index() {
     <div className="min-h-screen">
       <header className="sticky top-0 z-50 border-b border-hairline bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex h-20 w-full max-w-[84rem] items-center justify-between px-6 md:px-10">
-          <a href="#top" aria-label="Slipstream Labs — home">
+          <a href="#top" aria-label="Slipstream Labs home">
             <Wordmark />
           </a>
           <nav aria-label="Primary" className="hidden items-center gap-8 lg:flex">
@@ -261,7 +261,7 @@ function Index() {
                   <p>
                     Most teams move from idea straight into design and delivery. A quarter later the
                     feature ships, the metrics don&apos;t move, and nobody can say which assumption
-                    was wrong — because none of them were written down.
+                    was wrong, because none of them were written down.
                   </p>
                   <p>Slipstream Labs exists to create a deliberate step between idea and build.</p>
                 </div>
@@ -270,11 +270,11 @@ function Index() {
                 <p className="label-mono">Skipped without noticing</p>
                 <ul className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
                   {[
-                    "The problem — is it real, frequent, and painful?",
-                    "The customer — who exactly, and what do they do today?",
-                    "The opportunity — is it big enough to matter?",
-                    "The assumptions — what has to be true for this to work?",
-                    "The solution — is it actually worth building?",
+                    "Is the problem real, frequent, and painful?",
+                    "Who is the customer, and what do they do today?",
+                    "Is the opportunity big enough to matter?",
+                    "What has to be true for this to work?",
+                    "Is the solution actually worth building?",
                   ].map((item) => (
                     <li
                       key={item}
@@ -413,9 +413,9 @@ function Index() {
           <CinematicFigure
             src={futuresBranching}
             alt="Abstract diagram: a single point branching into many diverging paths, with one decision node where the paths regather before splitting again"
-            caption="Rebuild → defer → narrow path"
+            caption="Rebuild, defer, narrow path"
             meta="One branch taken"
-            phrase="A quarter of rebuild work, replaced by one narrow import path — and the evidence to defend it."
+            phrase="A quarter of rebuild work, replaced by one narrow import path and the evidence to defend it."
           >
             <div className="grid gap-14 md:grid-cols-12">
               <div className="md:col-span-4">
@@ -517,12 +517,12 @@ function Index() {
           <div className="grid gap-14 md:grid-cols-12">
             <div className="md:col-span-4">
               <h2 className="display-md">Sebastian Bouvier</h2>
-              <p className="mt-3 text-sm text-muted-foreground">Founder — Slipstream Labs</p>
+              <p className="mt-3 text-sm text-muted-foreground">Founder of Slipstream Labs</p>
             </div>
             <div className="space-y-5 text-lg leading-relaxed text-muted-foreground md:col-span-8">
               <p>
-                I&apos;ve spent my career on the messy front half of product — product management,
-                business analysis, and data across several industries. The pattern repeats
+                I&apos;ve spent my career on the messy front half of product, working across product
+                management, business analysis, and data in several industries. The pattern repeats
                 everywhere: teams are rarely short of ideas, they&apos;re short of evidence and a
                 way to choose.
               </p>

@@ -98,8 +98,7 @@ export function CinematicFigure({
 }) {
   return (
     <div className="group">
-      <figure className="relative border border-hairline bg-surface">
-        <div className="tech-grid pointer-events-none absolute inset-0 opacity-[0.04]" aria-hidden="true" />
+      <figure>
         <img
           src={src}
           alt={alt}
@@ -109,14 +108,14 @@ export function CinematicFigure({
           className="w-full opacity-90"
         />
         {(caption || meta) && (
-          <figcaption className="label-mono flex flex-wrap items-center justify-between gap-2 border-t border-hairline bg-background/50 px-4 py-3 backdrop-blur-sm">
+          <figcaption className="label-mono mt-4 flex flex-wrap items-center justify-between gap-2 text-muted-foreground">
             {caption ? <span>{caption}</span> : <span />}
             {meta ? <span>{meta}</span> : <span />}
           </figcaption>
         )}
       </figure>
       {phrase ? (
-        <p className="mt-12 max-w-2xl border-l border-hairline pl-5 text-xl leading-snug tracking-tight text-foreground text-balance md:mt-16 md:text-2xl">
+        <p className="mt-12 max-w-2xl text-xl leading-snug tracking-tight text-foreground text-balance md:mt-16 md:text-2xl">
           {phrase}
         </p>
       ) : null}
