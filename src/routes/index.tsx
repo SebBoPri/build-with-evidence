@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Section, Lead } from "@/components/site/sections";
 import { Wordmark, Starfield, Trajectory } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
+import heroField from "@/assets/hero-field.jpg";
+import evidenceResolve from "@/assets/evidence-resolve.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
