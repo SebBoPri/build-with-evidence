@@ -154,25 +154,46 @@ export function FullBleedFigure({
           : "relative mb-16 md:mb-20"
       }
     >
-      <div className="relative overflow-hidden">
+      <div
+        className="relative overflow-hidden"
+        style={{
+          maskImage:
+            "radial-gradient(120% 105% at 50% 45%, #000 42%, rgba(0,0,0,0.55) 74%, transparent 100%)",
+          WebkitMaskImage:
+            "radial-gradient(120% 105% at 50% 45%, #000 42%, rgba(0,0,0,0.55) 74%, transparent 100%)",
+        }}
+      >
         <img
           src={src}
           alt={alt}
           loading="lazy"
           width={1920}
           height={900}
-          className="h-[22rem] w-full object-cover object-center opacity-90 sm:h-[30rem] md:h-[42rem]"
+          className="h-[22rem] w-full object-cover object-center opacity-80 sm:h-[30rem] md:h-[42rem]"
         />
         {overlay}
         <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_35%,var(--background)_115%)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,var(--background)_100%)]"
           aria-hidden="true"
         />
         <div
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-background"
+          className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background via-background/70 to-transparent"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent md:w-56"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent md:w-56"
           aria-hidden="true"
         />
       </div>
+
 
       <figcaption className="mx-auto w-full max-w-[84rem] px-6 pt-6 md:px-10 md:pt-8">
         <div className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2 border-t border-hairline pt-6">
