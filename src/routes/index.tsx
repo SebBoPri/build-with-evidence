@@ -5,7 +5,7 @@ import { ApproachRail } from "@/components/site/approach-rail";
 import heroField from "@/assets/hero-field.jpg";
 import evidenceResolve from "@/assets/evidence-resolve.jpg";
 import futuresCone from "@/assets/futures-cone.jpg";
-import sprintDecision from "@/assets/sprint-decision.jpg";
+import futuresBranching from "@/assets/futures-branching.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
