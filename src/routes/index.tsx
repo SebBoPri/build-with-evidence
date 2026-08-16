@@ -151,14 +151,21 @@ function Index() {
             }}
             aria-hidden="true"
           >
-            <img
-              src={heroField}
-              alt=""
-              aria-hidden="true"
-              width={1920}
-              height={1088}
-              className="h-full w-full object-cover opacity-70"
-            />
+            <picture>
+              <source srcSet={heroFieldWebp} type="image/webp" />
+              <img
+                src={heroField}
+                alt=""
+                aria-hidden="true"
+                loading="eager"
+                decoding="sync"
+                fetchPriority="high"
+                width={1600}
+                height={907}
+                className="h-full w-full object-cover opacity-70"
+              />
+            </picture>
+
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,var(--background)_100%)]" />
             <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent" />
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background via-background/70 to-transparent" />
