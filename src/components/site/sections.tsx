@@ -131,6 +131,7 @@ export function CinematicFigure({
 export function FullBleedFigure({
   src,
   srcWebp,
+  srcWebp2x,
   alt,
   title,
   subtitle,
@@ -144,6 +145,8 @@ export function FullBleedFigure({
   src: string;
   /** preferred WebP source; `src` is the fallback */
   srcWebp?: string;
+  /** 2x (retina) WebP source */
+  srcWebp2x?: string;
   alt: string;
   title: string;
   subtitle?: string;
@@ -173,7 +176,14 @@ export function FullBleedFigure({
         }}
       >
         <picture>
-          {srcWebp ? <source srcSet={srcWebp} type="image/webp" /> : null}
+          {srcWebp ? (
+            <source
+              srcSet={
+                srcWebp2x ? `${srcWebp} 1x, ${srcWebp2x} 2x` : srcWebp
+              }
+              type="image/webp"
+            />
+          ) : null}
           <img
             src={src}
             alt={alt}
