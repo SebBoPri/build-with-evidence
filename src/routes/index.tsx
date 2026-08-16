@@ -323,11 +323,15 @@ function Index() {
         <Section id="sprint">
           <FullBleedFigure
             breakOut
-            src={sprintDecision.url}
-            alt="Abstract diagram: a single particle trajectory arcing toward a planetary horizon"
-            title="Four evidence rails converge on one decision"
+            src={sprintDecision}
+            srcWebp={sprintDecisionWebp}
+            width={1328}
+            height={1184}
+            alt="Abstract diagram: a dense network of bright nodes linked by faint filaments, mapping structure across dark space"
+            title="Discovery maps the structure before you commit"
             subtitle="You leave the sprint with one recommendation, not a document dump."
             meta="Flagship offering"
+
           />
 
           <p className="label-mono mb-10 flex items-center gap-3">
