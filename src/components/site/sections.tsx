@@ -130,18 +130,27 @@ export function CinematicFigure({
  */
 export function FullBleedFigure({
   src,
+  srcWebp,
   alt,
   title,
   subtitle,
   meta,
+  width,
+  height,
+  eager = false,
   breakOut = false,
   overlay,
 }: {
   src: string;
+  /** preferred WebP source; `src` is the fallback */
+  srcWebp?: string;
   alt: string;
   title: string;
   subtitle?: string;
   meta?: string;
+  width?: number;
+  height?: number;
+  eager?: boolean;
   /** cancel the parent Section's horizontal + top padding */
   breakOut?: boolean;
   overlay?: ReactNode;
@@ -163,14 +172,20 @@ export function FullBleedFigure({
             "radial-gradient(100% 95% at 50% 50%, #000 78%, rgba(0,0,0,0.6) 92%, transparent 100%)",
         }}
       >
-        <img
-          src={src}
-          alt={alt}
-          loading="lazy"
-          width={1920}
-          height={900}
-          className="h-[28rem] w-full object-cover object-center opacity-95 sm:h-[38rem] md:h-[52rem]"
-        />
+        <picture>
+          {srcWebp ? <source srcSet={srcWebp} type="image/webp" /> : null}
+          <img
+            src={src}
+            alt={alt}
+            loading={eager ? "eager" : "lazy"}
+            decoding={eager ? "sync" : "async"}
+            {...(eager ? { fetchPriority: "high" as const } : {})}
+            width={width ?? 1600}
+            height={height ?? 900}
+            className="h-[28rem] w-full object-cover object-center opacity-95 sm:h-[38rem] md:h-[52rem]"
+          />
+        </picture>
+
         {overlay}
         <div
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_65%,var(--background)_100%)]"
