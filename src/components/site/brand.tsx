@@ -16,8 +16,8 @@ export function Wordmark({ className = "" }: { className?: string }) {
     <stop offset="0.55" stopColor="#ffffff" stopOpacity="0.6"/>
     <stop offset="1" stopColor="#ffffff" stopOpacity="0.05"/>
   </linearGradient></defs>
-  <polygon points="0,0 638,31 0,24" fill="{`url(#${gid})`}"/>
-  <polygon points="0,40 638,34 0,64" fill="{`url(#${gid})`}"/>
+  <polygon points="0,0 638,31 0,24" fill={`url(#)`}/>
+  <polygon points="0,40 638,34 0,64" fill={`url(#)`}/>
   <g fill="currentColor" transform="translate(0 146) scale(0.052000 -0.052000)">
     <path transform="translate(0.00 0)" d="M310 -14Q230 -14 168.5 14.5Q107 43 72.0 97.0Q37 151 37 229V255H156V229Q156 160 198.0 126.0Q240 92 310 92Q381 92 417.0 121.0Q453 150 453 196Q453 227 436.0 246.5Q419 266 386.5 278.0Q354 290 308 301L278 307Q209 323 158.5 347.5Q108 372 81.0 411.0Q54 450 54 513Q54 576 84.0 621.0Q114 666 169.0 690.0Q224 714 298 714Q372 714 430.0 689.0Q488 664 521.5 614.0Q555 564 555 489V456H436V489Q436 532 419.0 558.0Q402 584 371.0 596.0Q340 608 298 608Q236 608 204.0 584.0Q172 560 172 516Q172 488 186.5 468.5Q201 449 229.5 436.5Q258 424 301 415L331 408Q403 392 457.0 367.5Q511 343 541.5 303.0Q572 263 572 199Q572 136 539.5 88.0Q507 40 448.5 13.0Q390 -14 310 -14Z"/>
     <path transform="translate(872.12 0)" d="M69 0V700H190V109H518V0Z"/>
