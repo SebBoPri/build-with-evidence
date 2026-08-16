@@ -3,9 +3,13 @@ import { Section, Lead, FullBleedFigure, Reveal } from "@/components/site/sectio
 import { Wordmark, Starfield } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import heroField from "@/assets/hero-field.jpg";
+import heroFieldWebp from "@/assets/hero-field.webp";
 import evidenceResolve from "@/assets/evidence-resolve.jpg";
+import evidenceResolveWebp from "@/assets/evidence-resolve.webp";
 import futuresBranching from "@/assets/futures-branching.jpg";
-import sprintDecision from "@/assets/sprint-decision.jpg.asset.json";
+import futuresBranchingWebp from "@/assets/futures-branching.webp";
+import sprintDecision from "@/assets/sprint-decision.jpg";
+import sprintDecisionWebp from "@/assets/sprint-decision.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,9 +27,16 @@ export const Route = createFileRoute("/")({
           "Fixed-scope Discovery Sprints that turn product uncertainty into an evidence-backed decision: build it, change it, test it, or don't build it.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://slipstreamlabs.se/" },
+      { property: "og:image", content: "https://slipstreamlabs.se/og.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://slipstreamlabs.se/og.png" },
     ],
+    links: [{ rel: "canonical", href: "https://slipstreamlabs.se/" }],
   }),
+
   component: Index,
 });
 
@@ -140,14 +151,21 @@ function Index() {
             }}
             aria-hidden="true"
           >
-            <img
-              src={heroField}
-              alt=""
-              aria-hidden="true"
-              width={1920}
-              height={1088}
-              className="h-full w-full object-cover opacity-70"
-            />
+            <picture>
+              <source srcSet={heroFieldWebp} type="image/webp" />
+              <img
+                src={heroField}
+                alt=""
+                aria-hidden="true"
+                loading="eager"
+                decoding="sync"
+                fetchPriority="high"
+                width={1600}
+                height={907}
+                className="h-full w-full object-cover opacity-70"
+              />
+            </picture>
+
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,var(--background)_100%)]" />
             <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent" />
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background via-background/70 to-transparent" />
@@ -198,10 +216,13 @@ function Index() {
         <section id="problem" className="scroll-mt-16">
           <FullBleedFigure
             src={futuresBranching}
-            alt="Abstract diagram: many paths fade behind a bright central point while others branch open ahead"
-            title="Past paths close, the present narrows, open futures branch ahead"
-            subtitle="Every product decision closes some paths and opens others."
-            meta="The value-risk problem"
+            srcWebp={futuresBranchingWebp}
+            width={1600}
+            height={640}
+            alt="Abstract diagram: many faint paths fanning outward from a single bright point, none of them marked out from the others"
+            title="Many possible futures, none of them yet tested"
+            subtitle="At the start, nothing distinguishes the path that works from the ones that do not."
+            meta="Uncertainty at the start"
             overlay={
               <Starfield className="pointer-events-none absolute inset-0 h-full w-full text-foreground opacity-25" />
             }
@@ -215,13 +236,8 @@ function Index() {
                 The problem
               </p>
             </Reveal>
-            <Reveal delay={80}>
-              <p className="max-w-2xl text-xl leading-snug tracking-tight text-foreground text-balance md:text-2xl">
-                The question is whether you are closing those paths with evidence or with momentum.
-              </p>
-
-            </Reveal>
             <h2 className="display-md mt-16 max-w-3xl text-balance md:mt-20">
+
               <span className="block">Building has never been easier.</span>
               <span className="block text-muted-foreground">
                 Knowing what to build has never mattered more.
@@ -275,6 +291,10 @@ function Index() {
           <FullBleedFigure
             breakOut
             src={evidenceResolve}
+            srcWebp={evidenceResolveWebp}
+            width={1600}
+            height={1073}
+
             alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
             title="Noise resolves into signal"
             subtitle="Name what must be true, then test it until the noise resolves into one line."
@@ -307,11 +327,15 @@ function Index() {
         <Section id="sprint">
           <FullBleedFigure
             breakOut
-            src={sprintDecision.url}
-            alt="Abstract diagram: a single particle trajectory arcing toward a planetary horizon"
-            title="Four evidence rails converge on one decision"
+            src={sprintDecision}
+            srcWebp={sprintDecisionWebp}
+            width={1328}
+            height={1184}
+            alt="Abstract diagram: a dense network of bright nodes linked by faint filaments, mapping structure across dark space"
+            title="Discovery maps the structure before you commit"
             subtitle="You leave the sprint with one recommendation, not a document dump."
             meta="Flagship offering"
+
           />
 
           <p className="label-mono mb-10 flex items-center gap-3">
@@ -425,7 +449,7 @@ function Index() {
         <Section id="contact">
           <div className="max-w-3xl">
             <p className="label-mono">Get in touch</p>
-            <h2 className="display-xl mt-8 text-balance">
+            <h2 className="display-md mt-8 text-balance">
               Have a product decision you&apos;re stuck on?
             </h2>
             <p className="mt-7 text-lg text-muted-foreground md:text-xl">
