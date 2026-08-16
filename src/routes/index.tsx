@@ -449,7 +449,7 @@ function Index() {
         <Section id="contact">
           <div className="max-w-3xl">
             <p className="label-mono">Get in touch</p>
-            <h2 className="display-xl mt-8 text-balance">
+            <h2 className="display-md mt-8 text-balance">
               Have a product decision you&apos;re stuck on?
             </h2>
             <p className="mt-7 text-lg text-muted-foreground md:text-xl">
