@@ -35,6 +35,33 @@ export const Route = createFileRoute("/")({
       { name: "twitter:image", content: "https://slipstreamlabs.se/og.png" },
     ],
     links: [{ rel: "canonical", href: "https://slipstreamlabs.se/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: "Slipstream Labs",
+          url: "https://slipstreamlabs.se/",
+          logo: "https://slipstreamlabs.se/favicon.svg",
+          image: "https://slipstreamlabs.se/og.png",
+          description:
+            "Product discovery and strategy for post-seed and Series A teams. Fixed-scope Discovery Sprints that turn uncertainty into evidence-backed decisions.",
+          email: "hello@slipstreamlabs.se",
+          areaServed: { "@type": "Country", name: "Sweden" },
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Stockholm",
+            addressCountry: "SE",
+          },
+          founder: {
+            "@type": "Person",
+            name: "Sebastian Bouvier",
+            jobTitle: "Founder",
+          },
+        }),
+      },
+    ],
   }),
 
   component: Index,

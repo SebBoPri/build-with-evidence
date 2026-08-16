@@ -91,6 +91,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Evidence-backed product discovery for post-seed and Series A teams. Work out what is worth building before you build it.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Slipstream Labs" },
+      { property: "og:locale", content: "en_GB" },
+      { name: "theme-color", content: "#08090a" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
