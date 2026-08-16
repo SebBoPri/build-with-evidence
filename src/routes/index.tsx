@@ -332,8 +332,8 @@ function Index() {
             width={1328}
             height={1184}
             alt="Abstract diagram: a dense network of bright nodes linked by faint filaments, mapping structure across dark space"
-            title="Discovery maps the structure before you commit"
-            subtitle="You leave the sprint with one recommendation, not a document dump."
+            title="Structure emerges, then you choose"
+            subtitle="The sprint ends with one recommendation, not a document dump."
             meta="Flagship offering"
 
           />
