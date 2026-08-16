@@ -3,9 +3,13 @@ import { Section, Lead, FullBleedFigure, Reveal } from "@/components/site/sectio
 import { Wordmark, Starfield } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import heroField from "@/assets/hero-field.jpg";
+import heroFieldWebp from "@/assets/hero-field.webp";
 import evidenceResolve from "@/assets/evidence-resolve.jpg";
+import evidenceResolveWebp from "@/assets/evidence-resolve.webp";
 import futuresBranching from "@/assets/futures-branching.jpg";
-import sprintDecision from "@/assets/sprint-decision.jpg.asset.json";
+import futuresBranchingWebp from "@/assets/futures-branching.webp";
+import sprintDecision from "@/assets/sprint-decision.jpg";
+import sprintDecisionWebp from "@/assets/sprint-decision.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,9 +27,16 @@ export const Route = createFileRoute("/")({
           "Fixed-scope Discovery Sprints that turn product uncertainty into an evidence-backed decision: build it, change it, test it, or don't build it.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://slipstreamlabs.se/" },
+      { property: "og:image", content: "https://slipstreamlabs.se/og.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://slipstreamlabs.se/og.png" },
     ],
+    links: [{ rel: "canonical", href: "https://slipstreamlabs.se/" }],
   }),
+
   component: Index,
 });
 
