@@ -145,6 +145,8 @@ export function FullBleedFigure({
   src: string;
   /** preferred WebP source; `src` is the fallback */
   srcWebp?: string;
+  /** 2x (retina) WebP source */
+  srcWebp2x?: string;
   alt: string;
   title: string;
   subtitle?: string;
