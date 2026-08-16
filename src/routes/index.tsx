@@ -291,6 +291,10 @@ function Index() {
           <FullBleedFigure
             breakOut
             src={evidenceResolve}
+            srcWebp={evidenceResolveWebp}
+            width={1600}
+            height={1073}
+
             alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
             title="Noise resolves into signal"
             subtitle="Name what must be true, then test it until the noise resolves into one line."
