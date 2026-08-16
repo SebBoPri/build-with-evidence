@@ -173,7 +173,14 @@ export function FullBleedFigure({
         }}
       >
         <picture>
-          {srcWebp ? <source srcSet={srcWebp} type="image/webp" /> : null}
+          {srcWebp ? (
+            <source
+              srcSet={
+                srcWebp2x ? `${srcWebp} 1x, ${srcWebp2x} 2x` : srcWebp
+              }
+              type="image/webp"
+            />
+          ) : null}
           <img
             src={src}
             alt={alt}
