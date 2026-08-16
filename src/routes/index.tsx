@@ -8,8 +8,8 @@ import evidenceResolve from "@/assets/evidence-resolve.jpg";
 import evidenceResolveWebp from "@/assets/evidence-resolve.webp";
 import futuresBranching from "@/assets/futures-branching.jpg";
 import futuresBranchingWebp from "@/assets/futures-branching.webp";
-import sprintDecision from "@/assets/sprint-decision.jpg";
-import sprintDecisionWebp from "@/assets/sprint-decision.webp";
+import sprintConverge from "@/assets/sprint-converge.jpg";
+import sprintConvergeWebp from "@/assets/sprint-converge.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -35,6 +35,33 @@ export const Route = createFileRoute("/")({
       { name: "twitter:image", content: "https://slipstreamlabs.se/og.png" },
     ],
     links: [{ rel: "canonical", href: "https://slipstreamlabs.se/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: "Slipstream Labs",
+          url: "https://slipstreamlabs.se/",
+          logo: "https://slipstreamlabs.se/favicon.svg",
+          image: "https://slipstreamlabs.se/og.png",
+          description:
+            "Product discovery and strategy for post-seed and Series A teams. Fixed-scope Discovery Sprints that turn uncertainty into evidence-backed decisions.",
+          email: "hello@slipstreamlabs.se",
+          areaServed: { "@type": "Country", name: "Sweden" },
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Stockholm",
+            addressCountry: "SE",
+          },
+          founder: {
+            "@type": "Person",
+            name: "Sebastian Bouvier",
+            jobTitle: "Founder",
+          },
+        }),
+      },
+    ],
   }),
 
   component: Index,
@@ -42,8 +69,8 @@ export const Route = createFileRoute("/")({
 
 const nav = [
   { href: "#problem", label: "Problem" },
-  { href: "#approach", label: "Approach" },
   { href: "#sprint", label: "Discovery Sprint" },
+  { href: "#approach", label: "Approach" },
   { href: "#about", label: "About" },
 ];
 
@@ -182,8 +209,8 @@ function Index() {
               <span className="text-muted-foreground">Then build.</span>
             </h1>
             <p className="fade-up delay-2 mt-10 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              The easier it becomes to build, the more it matters to know what to build. Slipstream
-              Labs helps product teams turn assumptions into evidence, so they can decide before
+              The easier it becomes to build, the more expensive it becomes to build the wrong
+              thing. Slipstream Labs helps product teams turn assumptions into evidence before
               committing significant engineering resources.
             </p>
             <div className="fade-up delay-3 mt-12 flex flex-wrap items-center gap-3">
@@ -264,6 +291,9 @@ function Index() {
 
               <div className="md:col-span-6">
                 <p className="label-mono">Skipped without noticing</p>
+                <p className="mt-4 text-[0.95rem] leading-relaxed text-muted-foreground">
+                  These are the questions teams skip when momentum takes over.
+                </p>
                 <ul className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
                   {[
                     "Is the problem real, frequent, and painful?",
@@ -286,53 +316,16 @@ function Index() {
           </div>
         </section>
 
-        {/* Approach */}
-        <Section id="approach">
-          <FullBleedFigure
-            breakOut
-            src={evidenceResolve}
-            srcWebp={evidenceResolveWebp}
-            width={1600}
-            height={1073}
-
-            alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
-            title="Noise resolves into signal"
-            subtitle="Name what must be true, then test it until the noise resolves into one line."
-            meta="Evidence synthesis"
-          />
-
-          <p className="label-mono mb-10 flex items-center gap-3">
-            <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
-            The approach
-          </p>
-
-          <h2 className="display-md max-w-3xl text-balance">
-            Start with what must be true.
-          </h2>
-
-
-          <p className="mt-10 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-            Opinion, anecdote and roadmap pressure all sound the same at the start. We separate what
-            you believe from what you know, run the riskiest assumptions through the smallest
-            possible test, and agree in advance what result would make you stop, so the evidence is
-            readable either way. Those stopping points are what we call kill-lines.
-          </p>
-
-          <ApproachRail steps={steps} />
-        </Section>
-
-
-
         {/* Discovery Sprint */}
         <Section id="sprint">
           <FullBleedFigure
             breakOut
-            src={sprintDecision}
-            srcWebp={sprintDecisionWebp}
-            width={1328}
-            height={1184}
-            alt="Abstract diagram: a dense network of bright nodes linked by faint filaments, mapping structure across dark space"
-            title="Structure emerges, then you choose"
+            src={sprintConverge}
+            srcWebp={sprintConvergeWebp}
+            width={1600}
+            height={1008}
+            alt="Abstract diagram: four tracks of evidence converging on a single marked decision point"
+            title="Four evidence tracks converge on one decision"
             subtitle="The sprint ends with one recommendation, not a document dump."
             meta="Flagship offering"
 
@@ -345,7 +338,7 @@ function Index() {
 
           <h2 className="display-md max-w-3xl text-balance">
 
-            A fixed-scope sprint that ends in a call.
+            Two to four weeks from uncertainty to decision.
           </h2>
 
             <div className="mt-14 grid gap-14 md:grid-cols-12">
@@ -407,6 +400,43 @@ function Index() {
             </div>
           
         </Section>
+
+        {/* Approach */}
+        <Section id="approach">
+          <FullBleedFigure
+            breakOut
+            src={evidenceResolve}
+            srcWebp={evidenceResolveWebp}
+            width={1600}
+            height={1073}
+
+            alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
+            title="Noise resolves into signal"
+            subtitle="Name what must be true, then test it until the noise resolves into one line."
+            meta="Evidence synthesis"
+          />
+
+          <p className="label-mono mb-10 flex items-center gap-3">
+            <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
+            The approach
+          </p>
+
+          <h2 className="display-md max-w-3xl text-balance">
+            Start with what must be true.
+          </h2>
+
+
+          <p className="mt-10 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+            Opinion, anecdote and roadmap pressure all sound the same at the start. We separate what
+            you believe from what you know, run the riskiest assumptions through the smallest
+            possible test, and agree in advance what result would make you stop, so the evidence is
+            readable either way. Those stopping points are what we call kill-lines.
+          </p>
+
+          <ApproachRail steps={steps} />
+        </Section>
+
+
 
         {/* Pull quote */}
         <Section>
