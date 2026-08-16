@@ -216,10 +216,13 @@ function Index() {
         <section id="problem" className="scroll-mt-16">
           <FullBleedFigure
             src={futuresBranching}
-            alt="Abstract diagram: many paths fade behind a bright central point while others branch open ahead"
-            title="Past paths close, the present narrows, open futures branch ahead"
-            subtitle="Every product decision closes some paths and opens others."
-            meta="The value-risk problem"
+            srcWebp={futuresBranchingWebp}
+            width={1600}
+            height={640}
+            alt="Abstract diagram: many faint paths fanning outward from a single bright point, none of them marked out from the others"
+            title="Many possible futures, none of them yet tested"
+            subtitle="At the start, nothing distinguishes the path that works from the ones that do not."
+            meta="Uncertainty at the start"
             overlay={
               <Starfield className="pointer-events-none absolute inset-0 h-full w-full text-foreground opacity-25" />
             }
@@ -233,13 +236,8 @@ function Index() {
                 The problem
               </p>
             </Reveal>
-            <Reveal delay={80}>
-              <p className="max-w-2xl text-xl leading-snug tracking-tight text-foreground text-balance md:text-2xl">
-                The question is whether you are closing those paths with evidence or with momentum.
-              </p>
-
-            </Reveal>
             <h2 className="display-md mt-16 max-w-3xl text-balance md:mt-20">
+
               <span className="block">Building has never been easier.</span>
               <span className="block text-muted-foreground">
                 Knowing what to build has never mattered more.
