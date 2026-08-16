@@ -131,6 +131,7 @@ export function CinematicFigure({
 export function FullBleedFigure({
   src,
   srcWebp,
+  srcWebp2x,
   alt,
   title,
   subtitle,
