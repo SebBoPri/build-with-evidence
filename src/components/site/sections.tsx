@@ -158,9 +158,9 @@ export function FullBleedFigure({
         className="relative overflow-hidden"
         style={{
           maskImage:
-            "radial-gradient(105% 100% at 50% 50%, #000 72%, rgba(0,0,0,0.55) 88%, transparent 100%)",
+            "radial-gradient(100% 95% at 50% 50%, #000 78%, rgba(0,0,0,0.6) 92%, transparent 100%)",
           WebkitMaskImage:
-            "radial-gradient(105% 100% at 50% 50%, #000 72%, rgba(0,0,0,0.55) 88%, transparent 100%)",
+            "radial-gradient(100% 95% at 50% 50%, #000 78%, rgba(0,0,0,0.6) 92%, transparent 100%)",
         }}
       >
         <img
@@ -169,27 +169,27 @@ export function FullBleedFigure({
           loading="lazy"
           width={1920}
           height={900}
-          className="h-[26rem] w-full object-cover object-center opacity-90 sm:h-[34rem] md:h-[46rem]"
+          className="h-[28rem] w-full object-cover object-center opacity-95 sm:h-[38rem] md:h-[52rem]"
         />
         {overlay}
         <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_55%,var(--background)_100%)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_65%,var(--background)_100%)]"
           aria-hidden="true"
         />
         <div
-          className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-background to-transparent md:h-24"
+          className="pointer-events-none absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-background to-transparent md:h-16"
           aria-hidden="true"
         />
         <div
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-background via-background/60 to-transparent md:h-40"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-background via-background/50 to-transparent md:h-28"
           aria-hidden="true"
         />
         <div
-          className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-background to-transparent md:w-24"
+          className="pointer-events-none absolute inset-y-0 left-0 w-6 bg-gradient-to-r from-background to-transparent md:w-14"
           aria-hidden="true"
         />
         <div
-          className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-background to-transparent md:w-24"
+          className="pointer-events-none absolute inset-y-0 right-0 w-6 bg-gradient-to-l from-background to-transparent md:w-14"
           aria-hidden="true"
         />
       </div>
