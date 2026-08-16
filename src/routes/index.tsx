@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section, Lead, FullBleedFigure, Reveal } from "@/components/site/sections";
-import { Wordmark, Starfield, Trajectory } from "@/components/site/brand";
+import { Wordmark, Starfield } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import heroField from "@/assets/hero-field.jpg";
 import evidenceResolve from "@/assets/evidence-resolve.jpg";
@@ -130,22 +130,31 @@ function Index() {
       <main id="top">
         {/* Hero */}
         <section className="relative overflow-hidden border-b border-hairline">
-          <img
-            src={heroField}
-            alt=""
-            aria-hidden="true"
-            width={1920}
-            height={1088}
-            className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-60"
-          />
           <div
-            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background"
+            className="pointer-events-none absolute inset-0"
+            style={{
+              maskImage:
+                "radial-gradient(120% 105% at 50% 45%, #000 42%, rgba(0,0,0,0.55) 74%, transparent 100%)",
+              WebkitMaskImage:
+                "radial-gradient(120% 105% at 50% 45%, #000 42%, rgba(0,0,0,0.55) 74%, transparent 100%)",
+            }}
             aria-hidden="true"
-          />
-          <Starfield
-            className="pointer-events-none absolute inset-0 h-full w-full text-foreground opacity-40"
-          />
-          <Trajectory className="pointer-events-none absolute right-0 top-10 hidden h-[34rem] w-[46rem] text-foreground/70 lg:block" />
+          >
+            <img
+              src={heroField}
+              alt=""
+              aria-hidden="true"
+              width={1920}
+              height={1088}
+              className="h-full w-full object-cover opacity-70"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,var(--background)_100%)]" />
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent" />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background via-background/70 to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent md:w-56" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent md:w-56" />
+          </div>
+
 
           <div className="relative mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
             <p className="label-mono fade-up">Product discovery &amp; strategy</p>
