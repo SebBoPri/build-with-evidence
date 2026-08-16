@@ -4,12 +4,16 @@ import { Wordmark, Starfield } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import heroField from "@/assets/hero-field.jpg";
 import heroFieldWebp from "@/assets/hero-field.webp";
+import heroFieldWebp2x from "@/assets/hero-field@2x.webp";
 import evidenceResolve from "@/assets/evidence-resolve.jpg";
 import evidenceResolveWebp from "@/assets/evidence-resolve.webp";
+import evidenceResolveWebp2x from "@/assets/evidence-resolve@2x.webp";
 import futuresBranching from "@/assets/futures-branching.jpg";
 import futuresBranchingWebp from "@/assets/futures-branching.webp";
+import futuresBranchingWebp2x from "@/assets/futures-branching@2x.webp";
 import sprintConverge from "@/assets/sprint-converge.jpg";
 import sprintConvergeWebp from "@/assets/sprint-converge.webp";
+import sprintConvergeWebp2x from "@/assets/sprint-converge@2x.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -179,7 +183,7 @@ function Index() {
             aria-hidden="true"
           >
             <picture>
-              <source srcSet={heroFieldWebp} type="image/webp" />
+              <source srcSet={`${heroFieldWebp} 1x, ${heroFieldWebp2x} 2x`} type="image/webp" />
               <img
                 src={heroField}
                 alt=""
@@ -244,6 +248,7 @@ function Index() {
           <FullBleedFigure
             src={futuresBranching}
             srcWebp={futuresBranchingWebp}
+            srcWebp2x={futuresBranchingWebp2x}
             width={1600}
             height={640}
             alt="Abstract diagram: many faint paths fanning outward from a single bright point, none of them marked out from the others"
@@ -322,6 +327,7 @@ function Index() {
             breakOut
             src={sprintConverge}
             srcWebp={sprintConvergeWebp}
+            srcWebp2x={sprintConvergeWebp2x}
             width={1344}
             height={896}
             alt="Abstract image: a dense field of nodes and filaments, with one bounded region marked by survey brackets and a single node fixed by a crosshair"
@@ -406,6 +412,7 @@ function Index() {
             breakOut
             src={evidenceResolve}
             srcWebp={evidenceResolveWebp}
+            srcWebp2x={evidenceResolveWebp2x}
             width={1600}
             height={1073}
 
