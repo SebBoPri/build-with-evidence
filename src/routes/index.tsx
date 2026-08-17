@@ -422,10 +422,6 @@ function Index() {
 
           />
 
-          <p className="label-mono mb-10 flex items-center gap-3">
-            <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
-            The approach
-          </p>
 
           <h2 className="display-md max-w-3xl text-balance">
             Start with what must be true.
