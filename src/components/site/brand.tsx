@@ -12,9 +12,9 @@ export function Wordmark({ className = "" }: { className?: string }) {
     >
   
   <defs><linearGradient id={gid} x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0" stopColor="#ffffff" stopOpacity="1"/>
-    <stop offset="0.55" stopColor="#ffffff" stopOpacity="0.6"/>
-    <stop offset="1" stopColor="#ffffff" stopOpacity="0.05"/>
+    <stop offset="0" stopColor="currentColor" stopOpacity="1"/>
+    <stop offset="0.55" stopColor="currentColor" stopOpacity="0.6"/>
+    <stop offset="1" stopColor="currentColor" stopOpacity="0.05"/>
   </linearGradient></defs>
   <polygon points="0,0 638,31 0,24" fill={`url(#${gid})`}/>
   <polygon points="0,40 638,34 0,64" fill={`url(#${gid})`}/>

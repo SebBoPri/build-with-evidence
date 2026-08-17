@@ -205,14 +205,14 @@ function Index() {
           </div>
 
 
-          <div className="relative mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
-            <p className="label-mono fade-up">Product discovery &amp; strategy</p>
-            <h1 className="display-xl fade-up delay-1 mt-10 max-w-4xl text-balance">
+          <div className="relative mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 text-primary-foreground md:px-10 md:pb-20 md:pt-32">
+            <p className="label-mono !text-primary-foreground/80 fade-up">Product discovery &amp; strategy</p>
+            <h1 className="display-xl fade-up delay-1 mt-10 max-w-4xl text-balance text-primary-foreground">
               Chart the problem.
               <br />
-              <span className="text-muted-foreground">Then build.</span>
+              <span className="text-primary-foreground/60">Then build.</span>
             </h1>
-            <p className="fade-up delay-2 mt-10 max-w-xl text-lg leading-relaxed text-muted-foreground">
+            <p className="fade-up delay-2 mt-10 max-w-xl text-lg leading-relaxed !text-primary-foreground/80">
               The easier it becomes to build, the more expensive it becomes to build the wrong
               thing. Slipstream Labs helps product teams turn assumptions into evidence before
               committing significant engineering resources.
@@ -229,15 +229,15 @@ function Index() {
               </a>
               <a
                 href="#sprint"
-                className="inline-flex h-12 items-center border border-border px-6 text-sm font-medium transition-colors hover:border-foreground"
+                className="inline-flex h-12 items-center border border-primary-foreground/40 px-6 text-sm font-medium text-primary-foreground transition-colors hover:border-primary-foreground hover:bg-primary-foreground/10"
               >
                 Explore the sprint
               </a>
             </div>
-            <p className="label-mono fade-up delay-4 mt-14">Evidence before execution.</p>
-            <div className="mt-20 flex items-center justify-between border-t border-hairline pt-6 md:mt-28">
-              <p className="label-mono">Assumption · Evidence · Decision</p>
-              <p className="label-mono">Stockholm, Sweden</p>
+            <p className="label-mono !text-primary-foreground/80 fade-up delay-4 mt-14">Evidence before execution.</p>
+            <div className="mt-20 flex items-center justify-between border-t border-primary-foreground/30 pt-6 md:mt-28">
+              <p className="label-mono !text-primary-foreground/90">Assumption · Evidence · Decision</p>
+              <p className="label-mono !text-primary-foreground/90">Stockholm, Sweden</p>
             </div>
           </div>
         </section>
@@ -259,7 +259,7 @@ function Index() {
             meta="Uncertainty at the start"
 
             overlay={
-              <Starfield className="pointer-events-none absolute inset-0 h-full w-full text-foreground opacity-25" />
+              <Starfield className="pointer-events-none absolute inset-0 h-full w-full text-primary-foreground opacity-25" />
             }
           />
 
