@@ -133,8 +133,10 @@ export function FullBleedFigure({
   srcWebp,
   srcWebp2x,
   alt,
+  eyebrow,
   title,
   subtitle,
+  note,
   meta,
   width,
   height,
@@ -148,8 +150,12 @@ export function FullBleedFigure({
   /** 2x (retina) WebP source */
   srcWebp2x?: string;
   alt: string;
+  /** small mono label naming the section the image belongs to */
+  eyebrow?: string;
   title: string;
   subtitle?: string;
+  /** short "how to read this" note describing what the image shows */
+  note?: string;
   meta?: string;
   width?: number;
   height?: number;
@@ -158,6 +164,7 @@ export function FullBleedFigure({
   breakOut?: boolean;
   overlay?: ReactNode;
 }) {
+
   return (
     <figure
       className={
