@@ -265,13 +265,8 @@ function Index() {
 
 
           <div className="mx-auto w-full max-w-[84rem] px-6 pb-24 pt-16 md:px-10 md:pb-32 md:pt-20">
-            <Reveal>
-              <p className="label-mono mb-10 flex items-center gap-3">
-                <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
-                The problem
-              </p>
-            </Reveal>
-            <h2 className="display-md mt-16 max-w-3xl text-balance md:mt-20">
+            <h2 className="display-md max-w-3xl text-balance">
+
 
               <span className="block">Building has never been easier.</span>
               <span className="block text-muted-foreground">
