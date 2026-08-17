@@ -334,9 +334,12 @@ function Index() {
             width={1344}
             height={896}
             alt="Abstract image: a dense field of nodes and filaments, with one bounded region marked by survey brackets and a single node fixed by a crosshair"
+            eyebrow="Discovery Sprint"
             title="We survey one region properly, not all of it"
             subtitle="The sprint ends with one recommendation, not a document dump."
+            note="The brackets mark the question in scope. The crosshair is the decision the sprint resolves."
             meta="Flagship offering"
+
           />
 
           <p className="label-mono mb-10 flex items-center gap-3">
