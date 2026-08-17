@@ -133,8 +133,10 @@ export function FullBleedFigure({
   srcWebp,
   srcWebp2x,
   alt,
+  eyebrow,
   title,
   subtitle,
+  note,
   meta,
   width,
   height,
@@ -148,8 +150,12 @@ export function FullBleedFigure({
   /** 2x (retina) WebP source */
   srcWebp2x?: string;
   alt: string;
+  /** small mono label naming the section the image belongs to */
+  eyebrow?: string;
   title: string;
   subtitle?: string;
+  /** short "how to read this" note describing what the image shows */
+  note?: string;
   meta?: string;
   width?: number;
   height?: number;
@@ -158,6 +164,7 @@ export function FullBleedFigure({
   breakOut?: boolean;
   overlay?: ReactNode;
 }) {
+
   return (
     <figure
       className={
@@ -222,16 +229,26 @@ export function FullBleedFigure({
 
       <figcaption className="mx-auto w-full max-w-[84rem] px-6 pt-6 md:px-10 md:pt-8">
         <div className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2 border-t border-hairline pt-6">
-          <div>
+          <div className="max-w-2xl">
+            {eyebrow ? (
+              <p className="label-mono mb-3 flex items-center gap-3">
+                <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
+                {eyebrow}
+              </p>
+            ) : null}
             <p className="text-lg tracking-tight text-foreground md:text-xl">{title}</p>
             {subtitle ? (
               <p className="mt-1 text-[0.95rem] leading-relaxed text-muted-foreground">
                 {subtitle}
               </p>
             ) : null}
+            {note ? (
+              <p className="label-mono mt-4 leading-relaxed text-muted-foreground/80">{note}</p>
+            ) : null}
           </div>
           {meta ? <p className="label-mono">{meta}</p> : null}
         </div>
+
       </figcaption>
     </figure>
   );

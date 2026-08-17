@@ -252,9 +252,12 @@ function Index() {
             width={1600}
             height={640}
             alt="Abstract diagram: many faint paths fanning outward from a single bright point, none of them marked out from the others"
+            eyebrow="The problem"
             title="Many possible futures, none of them yet tested"
             subtitle="At the start, nothing distinguishes the path that works from the ones that do not."
+            note="Each line is a plausible plan. The bright point is where you are standing today."
             meta="Uncertainty at the start"
+
             overlay={
               <Starfield className="pointer-events-none absolute inset-0 h-full w-full text-foreground opacity-25" />
             }
@@ -262,13 +265,8 @@ function Index() {
 
 
           <div className="mx-auto w-full max-w-[84rem] px-6 pb-24 pt-16 md:px-10 md:pb-32 md:pt-20">
-            <Reveal>
-              <p className="label-mono mb-10 flex items-center gap-3">
-                <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
-                The problem
-              </p>
-            </Reveal>
-            <h2 className="display-md mt-16 max-w-3xl text-balance md:mt-20">
+            <h2 className="display-md max-w-3xl text-balance">
+
 
               <span className="block">Building has never been easier.</span>
               <span className="block text-muted-foreground">
@@ -331,15 +329,14 @@ function Index() {
             width={1344}
             height={896}
             alt="Abstract image: a dense field of nodes and filaments, with one bounded region marked by survey brackets and a single node fixed by a crosshair"
+            eyebrow="Discovery Sprint"
             title="We survey one region properly, not all of it"
             subtitle="The sprint ends with one recommendation, not a document dump."
+            note="The brackets mark the question in scope. The crosshair is the decision the sprint resolves."
             meta="Flagship offering"
+
           />
 
-          <p className="label-mono mb-10 flex items-center gap-3">
-            <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
-            Discovery Sprint
-          </p>
 
           <h2 className="display-md max-w-3xl text-balance">
 
@@ -417,15 +414,14 @@ function Index() {
             height={1073}
 
             alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
+            eyebrow="The approach"
             title="Noise resolves into signal"
             subtitle="Name what must be true, then test it until the noise resolves into one line."
+            note="Left is everything you could believe. Right is what the evidence still supports."
             meta="Evidence synthesis"
+
           />
 
-          <p className="label-mono mb-10 flex items-center gap-3">
-            <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
-            The approach
-          </p>
 
           <h2 className="display-md max-w-3xl text-balance">
             Start with what must be true.
