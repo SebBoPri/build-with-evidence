@@ -252,9 +252,12 @@ function Index() {
             width={1600}
             height={640}
             alt="Abstract diagram: many faint paths fanning outward from a single bright point, none of them marked out from the others"
+            eyebrow="The problem"
             title="Many possible futures, none of them yet tested"
             subtitle="At the start, nothing distinguishes the path that works from the ones that do not."
+            note="Each line is a plausible plan. The bright point is where you are standing today."
             meta="Uncertainty at the start"
+
             overlay={
               <Starfield className="pointer-events-none absolute inset-0 h-full w-full text-foreground opacity-25" />
             }
