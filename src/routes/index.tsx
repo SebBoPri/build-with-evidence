@@ -423,9 +423,12 @@ function Index() {
             height={1073}
 
             alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
+            eyebrow="The approach"
             title="Noise resolves into signal"
             subtitle="Name what must be true, then test it until the noise resolves into one line."
+            note="Left is everything you could believe. Right is what the evidence still supports."
             meta="Evidence synthesis"
+
           />
 
           <p className="label-mono mb-10 flex items-center gap-3">
