@@ -178,20 +178,17 @@ function Index() {
             }}
             aria-hidden="true"
           >
-            <picture>
-              <source srcSet={`${heroFieldWebp} 1x, ${heroFieldWebp2x} 2x`} type="image/webp" />
-              <img
-                src={heroField}
-                alt=""
-                aria-hidden="true"
-                loading="eager"
-                decoding="sync"
-                fetchPriority="high"
-                width={1600}
-                height={907}
-                className="h-full w-full object-cover opacity-70"
-              />
-            </picture>
+            <img
+              src={heroField.url}
+              alt=""
+              aria-hidden="true"
+              loading="eager"
+              decoding="sync"
+              fetchPriority="high"
+              width={1600}
+              height={907}
+              className="h-full w-full object-cover opacity-70"
+            />
 
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,var(--background)_100%)]" />
             <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent" />
