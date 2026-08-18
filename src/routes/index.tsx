@@ -316,9 +316,7 @@ function Index() {
         <Section id="sprint">
           <FullBleedFigure
             breakOut
-            src={sprintConverge}
-            srcWebp={sprintConvergeWebp}
-            srcWebp2x={sprintConvergeWebp2x}
+            src={sprintConverge.url}
             width={1344}
             height={896}
             alt="Abstract image: a dense field of nodes and filaments, with one bounded region marked by survey brackets and a single node fixed by a crosshair"
