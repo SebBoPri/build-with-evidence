@@ -2,18 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Section, Lead, FullBleedFigure, Reveal } from "@/components/site/sections";
 import { Wordmark, Starfield } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
-import heroField from "@/assets/hero-field.jpg";
-import heroFieldWebp from "@/assets/hero-field.webp";
-import heroFieldWebp2x from "@/assets/hero-field@2x.webp";
+import heroField from "@/assets/hero-field-test.png.asset.json";
 import evidenceResolve from "@/assets/evidence-resolve.jpg";
 import evidenceResolveWebp from "@/assets/evidence-resolve.webp";
 import evidenceResolveWebp2x from "@/assets/evidence-resolve@2x.webp";
 import futuresBranching from "@/assets/futures-branching.jpg";
 import futuresBranchingWebp from "@/assets/futures-branching.webp";
 import futuresBranchingWebp2x from "@/assets/futures-branching@2x.webp";
-import sprintConverge from "@/assets/sprint-converge.jpg";
-import sprintConvergeWebp from "@/assets/sprint-converge.webp";
-import sprintConvergeWebp2x from "@/assets/sprint-converge@2x.webp";
+import sprintConverge from "@/assets/sprint-converge-test.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -182,20 +178,17 @@ function Index() {
             }}
             aria-hidden="true"
           >
-            <picture>
-              <source srcSet={`${heroFieldWebp} 1x, ${heroFieldWebp2x} 2x`} type="image/webp" />
-              <img
-                src={heroField}
-                alt=""
-                aria-hidden="true"
-                loading="eager"
-                decoding="sync"
-                fetchPriority="high"
-                width={1600}
-                height={907}
-                className="h-full w-full object-cover opacity-70"
-              />
-            </picture>
+            <img
+              src={heroField.url}
+              alt=""
+              aria-hidden="true"
+              loading="eager"
+              decoding="sync"
+              fetchPriority="high"
+              width={1600}
+              height={907}
+              className="h-full w-full object-cover opacity-70"
+            />
 
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,var(--background)_100%)]" />
             <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent" />
@@ -323,9 +316,7 @@ function Index() {
         <Section id="sprint">
           <FullBleedFigure
             breakOut
-            src={sprintConverge}
-            srcWebp={sprintConvergeWebp}
-            srcWebp2x={sprintConvergeWebp2x}
+            src={sprintConverge.url}
             width={1344}
             height={896}
             alt="Abstract image: a dense field of nodes and filaments, with one bounded region marked by survey brackets and a single node fixed by a crosshair"
