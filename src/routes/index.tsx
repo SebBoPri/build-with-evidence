@@ -453,15 +453,15 @@ function Index() {
             </div>
             <div className="space-y-5 text-lg leading-relaxed text-muted-foreground md:col-span-8">
               <p>
-                I&apos;ve spent my career on the messy front half of product, working across product
-                management, business analysis, and data in several industries. The pattern repeats
-                everywhere: teams are rarely short of ideas, they&apos;re short of evidence and a
-                way to choose.
+                I have spent my career on the messy front half of product, working across product
+                management, business analysis, and data in several industries. The pattern is the
+                same everywhere: teams are rarely short of ideas, but they are short of evidence
+                and a clear way to choose.
               </p>
               <p>
                 Slipstream Labs is how I do that work now. Small, direct, and hands-on: you work
-                with me, not a delivery pyramid. I care more about you making a good call than
-                about the length of the report behind it.
+                with me, not a delivery pyramid. I care more about you making a good call than about
+                the thickness of the report behind it.
               </p>
               <p className="text-foreground">Based in Stockholm, working with teams anywhere.</p>
             </div>
