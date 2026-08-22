@@ -119,13 +119,13 @@ const sprintWhen = [
 ];
 
 const sprintInside = [
-  "Problem framing and assumption mapping",
-  "Customer and user research",
-  "Market and competitor analysis",
-  "Opportunity assessment and sizing",
-  "Hypothesis testing and experiment design",
-  "Prototyping where it earns its place",
-  "Evidence synthesis and prioritisation",
+  "Frame the problem and map the assumptions",
+  "Talk to customers and observe what they do",
+  "Check the market and competitive context",
+  "Assess and size the opportunity",
+  "Design the smallest test that proves or disproves the riskiest assumption",
+  "Build only the prototype that earns its place",
+  "Synthesise the evidence and recommend the next move",
 ];
 
 const sprintGet = [
