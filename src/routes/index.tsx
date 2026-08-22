@@ -420,10 +420,10 @@ function Index() {
 
 
           <p className="mt-10 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-            Opinion, anecdote and roadmap pressure all sound the same at the start. We separate what
-            you believe from what you know, run the riskiest assumptions through the smallest
-            possible test, and agree in advance what result would make you stop, so the evidence is
-            readable either way. Those stopping points are what we call kill-lines.
+            At the start, opinion, anecdote and roadmap pressure all sound the same. We separate
+            what you believe from what you know, test the riskiest assumptions with the smallest
+            possible experiment, and agree the result that would make you stop. That stopping point
+            is the kill-line. It keeps the evidence readable either way.
           </p>
 
           <ApproachRail steps={steps} />
