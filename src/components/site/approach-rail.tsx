@@ -70,21 +70,21 @@ export function ApproachRail({ steps }: { steps: Step[] }) {
 
             <h3
               className={`mt-14 text-xl font-medium tracking-tight transition-colors duration-500 ${
-                reached ? "text-foreground" : "text-foreground/70"
+                reached ? "text-foreground" : "text-foreground/45"
               }`}
             >
               {s.title}
             </h3>
             <p
               className={`mt-3 max-w-[16rem] text-[0.95rem] leading-relaxed transition-colors duration-500 ${
-                reached ? "text-muted-foreground" : "text-muted-foreground/75"
+                reached ? "text-muted-foreground" : "text-muted-foreground/50"
               }`}
             >
               {s.body}
             </p>
             <p
               className={`label-mono mt-10 transition-opacity duration-500 ${
-                reached ? "opacity-100" : "opacity-70"
+                reached ? "opacity-100" : "opacity-50"
               }`}
             >
               Step {s.n}

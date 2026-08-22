@@ -93,7 +93,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Slipstream Labs" },
       { property: "og:locale", content: "en_GB" },
-      { name: "theme-color", content: "#fafafa" },
+      { name: "theme-color", content: "#08090a" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [

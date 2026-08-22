@@ -2,14 +2,18 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Section, Lead, FullBleedFigure, Reveal } from "@/components/site/sections";
 import { Wordmark, Starfield } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
-import heroField from "@/assets/hero-field-test.png.asset.json";
+import heroField from "@/assets/hero-field.jpg";
+import heroFieldWebp from "@/assets/hero-field.webp";
+import heroFieldWebp2x from "@/assets/hero-field@2x.webp";
 import evidenceResolve from "@/assets/evidence-resolve.jpg";
 import evidenceResolveWebp from "@/assets/evidence-resolve.webp";
 import evidenceResolveWebp2x from "@/assets/evidence-resolve@2x.webp";
 import futuresBranching from "@/assets/futures-branching.jpg";
 import futuresBranchingWebp from "@/assets/futures-branching.webp";
 import futuresBranchingWebp2x from "@/assets/futures-branching@2x.webp";
-import sprintConverge from "@/assets/sprint-converge-test.png.asset.json";
+import sprintConverge from "@/assets/sprint-converge.jpg";
+import sprintConvergeWebp from "@/assets/sprint-converge.webp";
+import sprintConvergeWebp2x from "@/assets/sprint-converge@2x.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -82,9 +86,9 @@ const sprintFacts = [
 ];
 
 const problemCases = [
-  "The team built what everyone agreed customers wanted. It shipped. Nobody used it.",
-  "Customers asked for a feature. It shipped. It solved the request, not the actual problem.",
-  "The board said to 'do something with AI'. It shipped. It solved nothing.",
+  "A product everyone agreed on, built from what the team believed customers wanted. It shipped. Nobody used it.",
+  "Customers asked for a feature. It shipped. It solved the request, not the problem.",
+  "\u201CDo something with AI\u201D became the goal. It shipped. There was no problem it solved.",
 ];
 
 const steps = [
@@ -112,27 +116,27 @@ const steps = [
 
 
 const sprintWhen = [
-  "You have a strong idea but no evidence behind it.",
-  "Two opportunities look equally plausible and the team cannot choose.",
-  "A roadmap bet is about to consume a quarter of engineering time.",
-  "The team disagrees and no one has data to settle the debate.",
+  "You have an idea but no evidence behind it.",
+  "Two opportunities look equally plausible.",
+  "A roadmap bet is about to consume a quarter of engineering.",
+  "The team disagrees and no one has the data to settle it.",
 ];
 
 const sprintInside = [
-  "Frame the problem and map the assumptions",
-  "Talk to customers and observe what they do",
-  "Check the market and competitive context",
-  "Assess and size the opportunity",
-  "Design the smallest test that proves or disproves the riskiest assumption",
-  "Build only the prototype that earns its place",
-  "Synthesise the evidence and recommend the next move",
+  "Problem framing and assumption mapping",
+  "Customer and user research",
+  "Market and competitor analysis",
+  "Opportunity assessment and sizing",
+  "Hypothesis testing and experiment design",
+  "Prototyping where it earns its place",
+  "Evidence synthesis and prioritisation",
 ];
 
 const sprintGet = [
   "A written recommendation with the reasoning made visible",
   "The evidence, and its limits, stated plainly",
   "A prioritised view of the opportunity",
-  "A first move the team can start on Monday",
+  "A first move your team can start on Monday",
 ];
 
 
@@ -178,17 +182,20 @@ function Index() {
             }}
             aria-hidden="true"
           >
-            <img
-              src={heroField.url}
-              alt=""
-              aria-hidden="true"
-              loading="eager"
-              decoding="sync"
-              fetchPriority="high"
-              width={1600}
-              height={907}
-              className="h-full w-full object-cover opacity-70"
-            />
+            <picture>
+              <source srcSet={`${heroFieldWebp} 1x, ${heroFieldWebp2x} 2x`} type="image/webp" />
+              <img
+                src={heroField}
+                alt=""
+                aria-hidden="true"
+                loading="eager"
+                decoding="sync"
+                fetchPriority="high"
+                width={1600}
+                height={907}
+                className="h-full w-full object-cover opacity-70"
+              />
+            </picture>
 
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,var(--background)_100%)]" />
             <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent" />
@@ -198,17 +205,17 @@ function Index() {
           </div>
 
 
-          <div className="relative mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 text-foreground md:px-10 md:pb-20 md:pt-32">
-            <p className="label-mono text-foreground/80 fade-up">Product discovery &amp; strategy</p>
-            <h1 className="display-xl fade-up delay-1 mt-10 max-w-4xl text-balance text-foreground">
+          <div className="relative mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
+            <p className="label-mono fade-up">Product discovery &amp; strategy</p>
+            <h1 className="display-xl fade-up delay-1 mt-10 max-w-4xl text-balance">
               Chart the problem.
               <br />
-              <span className="text-foreground/60">Then build.</span>
+              <span className="text-muted-foreground">Then build.</span>
             </h1>
-            <p className="fade-up delay-2 mt-10 max-w-xl text-lg leading-relaxed text-foreground/80">
-              When building is cheap, the real cost is building the wrong thing. We help product
-              teams turn assumptions into evidence before they commit serious engineering
-              resources.
+            <p className="fade-up delay-2 mt-10 max-w-xl text-lg leading-relaxed text-muted-foreground">
+              The easier it becomes to build, the more expensive it becomes to build the wrong
+              thing. Slipstream Labs helps product teams turn assumptions into evidence before
+              committing significant engineering resources.
             </p>
             <div className="fade-up delay-3 mt-12 flex flex-wrap items-center gap-3">
               <a
@@ -222,15 +229,15 @@ function Index() {
               </a>
               <a
                 href="#sprint"
-                className="inline-flex h-12 items-center border border-foreground/40 px-6 text-sm font-medium text-foreground transition-colors hover:border-foreground hover:bg-foreground/10"
+                className="inline-flex h-12 items-center border border-border px-6 text-sm font-medium transition-colors hover:border-foreground"
               >
                 Explore the sprint
               </a>
             </div>
-            <p className="label-mono text-foreground/80 fade-up delay-4 mt-14">Evidence before execution.</p>
-            <div className="mt-20 flex items-center justify-between border-t border-foreground/30 pt-6 md:mt-28">
-              <p className="label-mono text-foreground/90">Assumption · Evidence · Decision</p>
-              <p className="label-mono text-foreground/90">Stockholm, Sweden</p>
+            <p className="label-mono fade-up delay-4 mt-14">Evidence before execution.</p>
+            <div className="mt-20 flex items-center justify-between border-t border-hairline pt-6 md:mt-28">
+              <p className="label-mono">Assumption · Evidence · Decision</p>
+              <p className="label-mono">Stockholm, Sweden</p>
             </div>
           </div>
         </section>
@@ -252,7 +259,7 @@ function Index() {
             meta="Uncertainty at the start"
 
             overlay={
-              <Starfield className="pointer-events-none absolute inset-0 h-full w-full text-primary-foreground opacity-25" />
+              <Starfield className="pointer-events-none absolute inset-0 h-full w-full text-foreground opacity-25" />
             }
           />
 
@@ -267,9 +274,9 @@ function Index() {
               </span>
             </h2>
             <p className="mt-10 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              The biggest risk in any product is value risk: whether anyone will actually use or pay
-              for it. Most teams answer this with opinion, momentum, or the loudest voice in the
-              room.
+              The biggest risk in any product is value risk: whether people will actually use it or
+              pay for it. It is the risk that kills products, and the one most often answered with
+              opinion.
             </p>
             <div className="mt-16 grid gap-14 md:grid-cols-12 md:mt-20">
               <div className="md:col-span-6">
@@ -316,7 +323,9 @@ function Index() {
         <Section id="sprint">
           <FullBleedFigure
             breakOut
-            src={sprintConverge.url}
+            src={sprintConverge}
+            srcWebp={sprintConvergeWebp}
+            srcWebp2x={sprintConvergeWebp2x}
             width={1344}
             height={896}
             alt="Abstract image: a dense field of nodes and filaments, with one bounded region marked by survey brackets and a single node fixed by a crosshair"
@@ -337,9 +346,9 @@ function Index() {
             <div className="mt-14 grid gap-14 md:grid-cols-12">
               <div className="md:col-span-8">
                 <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">
-                  A focused discovery sprint on one decision. It ends with a written
-                  recommendation: build it, change it, test it, or stop. No document dump, no
-                  open-ended research.
+                  Two to four weeks of focused discovery on one opportunity. It ends with a
+                  recommendation, not a document dump: build it, change it, test it, or don&apos;t
+                  build it.
                 </p>
                 <a
                   href="#contact"
@@ -420,10 +429,10 @@ function Index() {
 
 
           <p className="mt-10 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-            At the start, opinion, anecdote and roadmap pressure all sound the same. We separate
-            what you believe from what you know, test the riskiest assumptions with the smallest
-            possible experiment, and agree the result that would make you stop. That stopping point
-            is the kill-line. It keeps the evidence readable either way.
+            Opinion, anecdote and roadmap pressure all sound the same at the start. We separate what
+            you believe from what you know, run the riskiest assumptions through the smallest
+            possible test, and agree in advance what result would make you stop, so the evidence is
+            readable either way. Those stopping points are what we call kill-lines.
           </p>
 
           <ApproachRail steps={steps} />
@@ -453,15 +462,15 @@ function Index() {
             </div>
             <div className="space-y-5 text-lg leading-relaxed text-muted-foreground md:col-span-8">
               <p>
-                I have spent my career on the messy front half of product, working across product
-                management, business analysis, and data in several industries. The pattern is the
-                same everywhere: teams are rarely short of ideas, but they are short of evidence
-                and a clear way to choose.
+                I&apos;ve spent my career on the messy front half of product, working across product
+                management, business analysis, and data in several industries. The pattern repeats
+                everywhere: teams are rarely short of ideas, they&apos;re short of evidence and a
+                way to choose.
               </p>
               <p>
                 Slipstream Labs is how I do that work now. Small, direct, and hands-on: you work
-                with me, not a delivery pyramid. I care more about you making a good call than about
-                the thickness of the report behind it.
+                with me, not a delivery pyramid. I care more about you making a good call than
+                about the length of the report behind it.
               </p>
               <p className="text-foreground">Based in Stockholm, working with teams anywhere.</p>
             </div>
