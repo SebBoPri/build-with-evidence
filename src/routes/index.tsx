@@ -337,9 +337,9 @@ function Index() {
             <div className="mt-14 grid gap-14 md:grid-cols-12">
               <div className="md:col-span-8">
                 <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">
-                  Two to four weeks of focused discovery on one opportunity. It ends with a
-                  recommendation, not a document dump: build it, change it, test it, or don&apos;t
-                  build it.
+                  A focused discovery sprint on one decision. It ends with a written
+                  recommendation: build it, change it, test it, or stop. No document dump, no
+                  open-ended research.
                 </p>
                 <a
                   href="#contact"
