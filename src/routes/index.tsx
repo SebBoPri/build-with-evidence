@@ -82,9 +82,9 @@ const sprintFacts = [
 ];
 
 const problemCases = [
-  "A product everyone agreed on, built from what the team believed customers wanted. It shipped. Nobody used it.",
-  "Customers asked for a feature. It shipped. It solved the request, not the problem.",
-  "\u201CDo something with AI\u201D became the goal. It shipped. There was no problem it solved.",
+  "The team built what everyone agreed customers wanted. It shipped. Nobody used it.",
+  "Customers asked for a feature. It shipped. It solved the request, not the actual problem.",
+  "The board said to 'do something with AI'. It shipped. It solved nothing.",
 ];
 
 const steps = [
@@ -112,27 +112,27 @@ const steps = [
 
 
 const sprintWhen = [
-  "You have an idea but no evidence behind it.",
-  "Two opportunities look equally plausible.",
-  "A roadmap bet is about to consume a quarter of engineering.",
-  "The team disagrees and no one has the data to settle it.",
+  "You have a strong idea but no evidence behind it.",
+  "Two opportunities look equally plausible and the team cannot choose.",
+  "A roadmap bet is about to consume a quarter of engineering time.",
+  "The team disagrees and no one has data to settle the debate.",
 ];
 
 const sprintInside = [
-  "Problem framing and assumption mapping",
-  "Customer and user research",
-  "Market and competitor analysis",
-  "Opportunity assessment and sizing",
-  "Hypothesis testing and experiment design",
-  "Prototyping where it earns its place",
-  "Evidence synthesis and prioritisation",
+  "Frame the problem and map the assumptions",
+  "Talk to customers and observe what they do",
+  "Check the market and competitive context",
+  "Assess and size the opportunity",
+  "Design the smallest test that proves or disproves the riskiest assumption",
+  "Build only the prototype that earns its place",
+  "Synthesise the evidence and recommend the next move",
 ];
 
 const sprintGet = [
   "A written recommendation with the reasoning made visible",
   "The evidence, and its limits, stated plainly",
   "A prioritised view of the opportunity",
-  "A first move your team can start on Monday",
+  "A first move the team can start on Monday",
 ];
 
 
@@ -206,9 +206,9 @@ function Index() {
               <span className="text-foreground/60">Then build.</span>
             </h1>
             <p className="fade-up delay-2 mt-10 max-w-xl text-lg leading-relaxed text-foreground/80">
-              The easier it becomes to build, the more expensive it becomes to build the wrong
-              thing. Slipstream Labs helps product teams turn assumptions into evidence before
-              committing significant engineering resources.
+              When building is cheap, the real cost is building the wrong thing. We help product
+              teams turn assumptions into evidence before they commit serious engineering
+              resources.
             </p>
             <div className="fade-up delay-3 mt-12 flex flex-wrap items-center gap-3">
               <a
@@ -267,9 +267,9 @@ function Index() {
               </span>
             </h2>
             <p className="mt-10 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              The biggest risk in any product is value risk: whether people will actually use it or
-              pay for it. It is the risk that kills products, and the one most often answered with
-              opinion.
+              The biggest risk in any product is value risk: whether anyone will actually use or pay
+              for it. Most teams answer this with opinion, momentum, or the loudest voice in the
+              room.
             </p>
             <div className="mt-16 grid gap-14 md:grid-cols-12 md:mt-20">
               <div className="md:col-span-6">
@@ -337,9 +337,9 @@ function Index() {
             <div className="mt-14 grid gap-14 md:grid-cols-12">
               <div className="md:col-span-8">
                 <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">
-                  Two to four weeks of focused discovery on one opportunity. It ends with a
-                  recommendation, not a document dump: build it, change it, test it, or don&apos;t
-                  build it.
+                  A focused discovery sprint on one decision. It ends with a written
+                  recommendation: build it, change it, test it, or stop. No document dump, no
+                  open-ended research.
                 </p>
                 <a
                   href="#contact"
@@ -420,10 +420,10 @@ function Index() {
 
 
           <p className="mt-10 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-            Opinion, anecdote and roadmap pressure all sound the same at the start. We separate what
-            you believe from what you know, run the riskiest assumptions through the smallest
-            possible test, and agree in advance what result would make you stop, so the evidence is
-            readable either way. Those stopping points are what we call kill-lines.
+            At the start, opinion, anecdote and roadmap pressure all sound the same. We separate
+            what you believe from what you know, test the riskiest assumptions with the smallest
+            possible experiment, and agree the result that would make you stop. That stopping point
+            is the kill-line. It keeps the evidence readable either way.
           </p>
 
           <ApproachRail steps={steps} />
@@ -453,15 +453,15 @@ function Index() {
             </div>
             <div className="space-y-5 text-lg leading-relaxed text-muted-foreground md:col-span-8">
               <p>
-                I&apos;ve spent my career on the messy front half of product, working across product
-                management, business analysis, and data in several industries. The pattern repeats
-                everywhere: teams are rarely short of ideas, they&apos;re short of evidence and a
-                way to choose.
+                I have spent my career on the messy front half of product, working across product
+                management, business analysis, and data in several industries. The pattern is the
+                same everywhere: teams are rarely short of ideas, but they are short of evidence
+                and a clear way to choose.
               </p>
               <p>
                 Slipstream Labs is how I do that work now. Small, direct, and hands-on: you work
-                with me, not a delivery pyramid. I care more about you making a good call than
-                about the length of the report behind it.
+                with me, not a delivery pyramid. I care more about you making a good call than about
+                the thickness of the report behind it.
               </p>
               <p className="text-foreground">Based in Stockholm, working with teams anywhere.</p>
             </div>
