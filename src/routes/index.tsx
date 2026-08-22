@@ -82,9 +82,9 @@ const sprintFacts = [
 ];
 
 const problemCases = [
-  "A product everyone agreed on, built from what the team believed customers wanted. It shipped. Nobody used it.",
-  "Customers asked for a feature. It shipped. It solved the request, not the problem.",
-  "\u201CDo something with AI\u201D became the goal. It shipped. There was no problem it solved.",
+  "The team built what everyone agreed customers wanted. It shipped. Nobody used it.",
+  "Customers asked for a feature. It shipped. It solved the request, not the actual problem.",
+  "The board said to 'do something with AI'. It shipped. It solved nothing.",
 ];
 
 const steps = [
