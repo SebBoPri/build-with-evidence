@@ -267,9 +267,9 @@ function Index() {
               </span>
             </h2>
             <p className="mt-10 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              The biggest risk in any product is value risk: whether people will actually use it or
-              pay for it. It is the risk that kills products, and the one most often answered with
-              opinion.
+              The biggest risk in any product is value risk: whether anyone will actually use or pay
+              for it. Most teams answer this with opinion, momentum, or the loudest voice in the
+              room.
             </p>
             <div className="mt-16 grid gap-14 md:grid-cols-12 md:mt-20">
               <div className="md:col-span-6">
