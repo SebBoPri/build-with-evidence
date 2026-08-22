@@ -206,9 +206,9 @@ function Index() {
               <span className="text-foreground/60">Then build.</span>
             </h1>
             <p className="fade-up delay-2 mt-10 max-w-xl text-lg leading-relaxed text-foreground/80">
-              The easier it becomes to build, the more expensive it becomes to build the wrong
-              thing. Slipstream Labs helps product teams turn assumptions into evidence before
-              committing significant engineering resources.
+              When building is cheap, the real cost is building the wrong thing. We help product
+              teams turn assumptions into evidence before they commit serious engineering
+              resources.
             </p>
             <div className="fade-up delay-3 mt-12 flex flex-wrap items-center gap-3">
               <a
