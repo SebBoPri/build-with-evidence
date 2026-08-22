@@ -112,10 +112,10 @@ const steps = [
 
 
 const sprintWhen = [
-  "You have an idea but no evidence behind it.",
-  "Two opportunities look equally plausible.",
-  "A roadmap bet is about to consume a quarter of engineering.",
-  "The team disagrees and no one has the data to settle it.",
+  "You have a strong idea but no evidence behind it.",
+  "Two opportunities look equally plausible and the team cannot choose.",
+  "A roadmap bet is about to consume a quarter of engineering time.",
+  "The team disagrees and no one has data to settle the debate.",
 ];
 
 const sprintInside = [
