@@ -132,7 +132,7 @@ const sprintGet = [
   "A written recommendation with the reasoning made visible",
   "The evidence, and its limits, stated plainly",
   "A prioritised view of the opportunity",
-  "A first move your team can start on Monday",
+  "A first move the team can start on Monday",
 ];
 
 
