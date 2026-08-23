@@ -422,68 +422,108 @@ function Index() {
 
 
           <h2 className="display-md max-w-3xl text-balance">
-
-            Two to four weeks from uncertainty to decision.
+            From uncertain idea to validated opportunity in 2–4 weeks.
           </h2>
 
-            <div className="mt-14 grid gap-14 md:grid-cols-12">
-              <div className="md:col-span-8">
-                <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">
-                  Two to four weeks of focused discovery on one opportunity. It ends with a
-                  recommendation, not a document dump: build it, change it, test it, or don&apos;t
-                  build it.
+          <div className="mt-14 grid gap-14 md:grid-cols-12">
+            <div className="md:col-span-8">
+              <div className="max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
+                <p>A focused Discovery Sprint for one product opportunity.</p>
+                <p>
+                  We investigate the problem, understand the customer, test the riskiest
+                  assumptions, and determine whether there is something worth pursuing.
                 </p>
-                <a
-                  href="#contact"
-                  className="mt-8 inline-flex h-11 items-center bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-                >
-                  Scope a sprint
-                </a>
+                <p>The result isn&apos;t a hundred-page report.</p>
+                <p className="text-foreground">
+                  It&apos;s a clearer opportunity, the evidence behind it, and a concrete path
+                  forward.
+                </p>
               </div>
-              <div className="md:col-span-4">
-                <dl className="grid gap-6 border-t border-hairline pt-6">
-                  {sprintFacts.map((f) => (
-                    <div key={f.k}>
-                      <dt className="label-mono">{f.k}</dt>
-                      <dd className="mt-2 text-[0.95rem] leading-relaxed text-foreground">
-                        {f.v}
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
-              </div>
+              <a
+                href="#contact"
+                className="group mt-8 inline-flex h-11 items-center gap-3 bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+              >
+                Scope a Discovery Sprint
+                <span className="transition-transform group-hover:translate-x-0.5" aria-hidden="true">
+                  →
+                </span>
+              </a>
             </div>
+            <div className="md:col-span-4">
+              <p className="label-mono">The sprint</p>
+              <dl className="mt-5 grid gap-6 border-t border-hairline pt-6">
+                {sprintFacts.map((f) => (
+                  <div key={f.k}>
+                    <dt className="label-mono">{f.k}</dt>
+                    <dd className="mt-2 text-[0.95rem] leading-relaxed text-foreground">{f.v}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
 
-            <div className="rule-t mt-14 grid gap-10 pt-10 sm:grid-cols-2 lg:grid-cols-3">
-              <div>
-                <p className="label-mono">When to use it</p>
-                <ul className="mt-4 space-y-3 text-[0.95rem] leading-relaxed text-muted-foreground">
-                  {sprintWhen.map((i) => (
-                    <li key={i}>{i}</li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <p className="label-mono">What happens</p>
-                <ul className="mt-4 space-y-3 text-[0.95rem] leading-relaxed text-muted-foreground">
-                  {sprintInside.map((i) => (
-                    <li key={i}>{i}</li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <p className="label-mono">What you get</p>
-                <ul className="mt-4 space-y-3 text-[0.95rem] leading-relaxed text-muted-foreground">
-                  {sprintGet.map((i) => (
-                    <li key={i} className="flex gap-3">
-                      <span className="mt-2.5 h-px w-3 shrink-0 bg-accent" aria-hidden="true" />
+          <div className="rule-t mt-16 grid gap-12 pt-10 md:grid-cols-12">
+            <div className="md:col-span-5">
+              <p className="label-mono">When to use it</p>
+              <ul className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
+                {sprintWhen.map((i) => (
+                  <li key={i} className="flex gap-4 py-4">
+                    <span className="mt-2 h-px w-4 shrink-0 bg-accent" aria-hidden="true" />
+                    <span className="text-[0.95rem] leading-relaxed text-muted-foreground">
                       {i}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                    </span>
+                  </li>
+                ))}
+              </ul>
             </div>
-          
+            <div className="md:col-span-7">
+              <p className="label-mono">What we investigate</p>
+              <dl className="mt-5 grid gap-x-10 gap-y-6 sm:grid-cols-2">
+                {sprintInvestigate.map((f) => (
+                  <div key={f.k} className="border-t border-hairline pt-4">
+                    <dt className="text-base font-medium tracking-tight text-foreground">{f.k}</dt>
+                    <dd className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">
+                      {f.v}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+
+          <div className="rule-t mt-16 grid gap-12 pt-10 md:grid-cols-12">
+            <div className="md:col-span-5">
+              <p className="label-mono">What happens</p>
+              <ul className="mt-5 space-y-3 text-[0.95rem] leading-relaxed text-muted-foreground">
+                {sprintInside.map((i) => (
+                  <li key={i}>{i}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="md:col-span-7">
+              <p className="label-mono">What you leave with</p>
+              <dl className="mt-5 grid gap-x-10 gap-y-6 sm:grid-cols-2">
+                {sprintGet.map((f) => (
+                  <div key={f.k} className="border-t border-hairline pt-4">
+                    <dt className="text-base font-medium tracking-tight text-foreground">{f.k}</dt>
+                    <dd className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">
+                      {f.v}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+
+          <div className="rule-t mt-16 max-w-2xl pt-10">
+            <p className="label-mono">The outcome</p>
+            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
+              You don&apos;t leave with more opinions.
+            </p>
+            <p className="mt-3 text-lg leading-relaxed text-foreground">
+              You leave knowing what is worth pursuing, why, and what to do next.
+            </p>
+          </div>
         </Section>
 
         {/* Approach */}
