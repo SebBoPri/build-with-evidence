@@ -27,3 +27,4 @@ CLAUDE.md is canonical. AGENTS.md is Lovable's template file. README.md is the o
 2. CTA and footer copy drifted from spec.
 3. Head title, og:title and JSON-LD say "Work out what is worth building" while the H1 says "Find what's worth building". `__root.tsx` lines 80 and 87 use a third title variant containing em dashes. Fix as part of this item.
 4. Contact is mailto only. Formspree not implemented.
+5. Contact form: offline error state and keyboard focus visibility unverified. Check before relying on the form.
