@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Slipstream Labs — Product Discovery & Strategy" },
+      { title: "Slipstream Labs: Find what’s worth building" },
       {
         name: "description",
         content:
           "Slipstream Labs helps product teams work out what is worth building, with evidence-backed discovery sprints.",
       },
       { name: "author", content: "Sebastian Bouvier" },
-      { property: "og:title", content: "Slipstream Labs — Product Discovery & Strategy" },
+      { property: "og:title", content: "Slipstream Labs: Find what’s worth building" },
       {
         property: "og:description",
         content:
@@ -95,6 +95,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:locale", content: "en_GB" },
       { name: "theme-color", content: "#08090a" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Slipstream Labs: Find what’s worth building" },
     ],
     links: [
       {

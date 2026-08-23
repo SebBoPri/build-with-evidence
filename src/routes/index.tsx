@@ -18,13 +18,13 @@ import sprintConvergeWebp2x from "@/assets/sprint-converge@2x.webp";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Slipstream Labs: Work out what is worth building" },
+      { title: "Slipstream Labs: Find what’s worth building" },
       {
         name: "description",
         content:
           "Product discovery and strategy for post-seed and Series A teams. Fixed-scope Discovery Sprints that turn uncertainty into evidence-backed decisions.",
       },
-      { property: "og:title", content: "Slipstream Labs: Work out what is worth building" },
+      { property: "og:title", content: "Slipstream Labs: Find what’s worth building" },
       {
         property: "og:description",
         content:
@@ -36,6 +36,7 @@ export const Route = createFileRoute("/")({
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Slipstream Labs: Find what’s worth building" },
       { name: "twitter:image", content: "https://slipstreamlabs.se/og.png" },
     ],
     links: [{ rel: "canonical", href: "https://slipstreamlabs.se/" }],
