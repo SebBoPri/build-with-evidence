@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-type Step = { n: string; title: string; body: string };
+type Step = { n: string; title: string; q?: string; body: string };
 
 /**
  * Four-step rail whose nodes light up in sequence as the section scrolls
@@ -42,12 +42,12 @@ export function ApproachRail({ steps }: { steps: Step[] }) {
   const active = Math.min(steps.length - 1, Math.floor(progress * steps.length + 0.0001));
 
   return (
-    <ol ref={ref} className="mt-20 grid gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+    <ol ref={ref} className="mt-20 grid gap-y-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
       {steps.map((s, i) => {
         const reached = progress > 0 && i <= active;
         const fill = Math.min(1, Math.max(0, progress * steps.length - i));
         return (
-          <li key={s.n} className="group relative lg:pr-10">
+          <li key={s.n} className="group relative lg:pr-8">
             <span className="absolute left-0 top-[7px] h-px w-full bg-hairline" aria-hidden="true">
               <span
                 className="block h-px origin-left bg-foreground/70 transition-transform duration-500 ease-out"
@@ -75,6 +75,15 @@ export function ApproachRail({ steps }: { steps: Step[] }) {
             >
               {s.title}
             </h3>
+            {s.q ? (
+              <p
+                className={`mt-3 max-w-[16rem] text-[0.95rem] font-medium leading-relaxed transition-colors duration-500 ${
+                  reached ? "text-foreground" : "text-foreground/45"
+                }`}
+              >
+                {s.q}
+              </p>
+            ) : null}
             <p
               className={`mt-3 max-w-[16rem] text-[0.95rem] leading-relaxed transition-colors duration-500 ${
                 reached ? "text-muted-foreground" : "text-muted-foreground/50"
