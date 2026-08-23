@@ -81,45 +81,89 @@ const nav = [
 const sprintFacts = [
   { k: "Duration", v: "2–4 weeks, fixed scope" },
   { k: "Your team's time", v: "~3 hours per week" },
-  { k: "Engagement", v: "One opportunity, one recommendation" },
-  { k: "After the sprint", v: "Optional support while you act on it" },
+  { k: "Focus", v: "One opportunity" },
+  { k: "Outcome", v: "An evidence-backed path forward" },
 ];
 
 const problemCases = [
-  "A product everyone agreed on, built from what the team believed customers wanted. It shipped. Nobody used it.",
-  "Customers asked for a feature. It shipped. It solved the request, not the problem.",
-  "\u201CDo something with AI\u201D became the goal. It shipped. There was no problem it solved.",
+  {
+    t: "The product nobody needed",
+    body: "Everyone agreed the idea made sense. It shipped. Adoption never came.",
+  },
+  {
+    t: "The feature that solved the request, not the problem",
+    body: "Customers asked for something specific. The team built it. The underlying problem remained.",
+  },
+  {
+    t: "AI for the sake of AI",
+    body: "\u201CDo something with AI\u201D became the goal. The technology arrived before the problem worth solving was clear.",
+  },
+];
+
+const skippedQuestions = [
+  "Is this a real problem?",
+  "How often does it happen?",
+  "Who experiences it most acutely?",
+  "What do people do today?",
+  "Is the opportunity big enough to matter?",
+  "What has to be true for this to work?",
+  "What evidence would change our mind?",
+  "Is this worth building?",
 ];
 
 const steps = [
   {
     n: "01",
     title: "Assumptions",
-    body: "What has to be true for this to work, ranked by risk.",
+    q: "What has to be true for this opportunity to work?",
+    body: "We map the assumptions behind the idea and rank them by risk.",
   },
   {
     n: "02",
     title: "Kill-lines",
-    body: "What would make you stop, agreed before you look.",
+    q: "What would make us stop?",
+    body: "Before testing, we agree what evidence would be strong enough to change direction or walk away.",
   },
   {
     n: "03",
     title: "Evidence",
-    body: "What customers do, not what they say they would.",
+    q: "What happens in reality?",
+    body: "We gather evidence from customers, users, markets and experiments. We prioritise what people actually do over what they say they might do.",
   },
   {
     n: "04",
-    title: "Decision",
-    body: "Proceed, reframe or stop. Written down, once.",
+    title: "Opportunity",
+    q: "What does the evidence tell us?",
+    body: "We connect the evidence, identify what holds up and what doesn't, and determine whether a meaningful opportunity remains.",
+  },
+  {
+    n: "05",
+    title: "Action",
+    q: "What should happen next?",
+    body: "Build it. Change it. Test it. Or stop. The answer is written down, with the reasoning behind it.",
   },
 ];
 
-
 const sprintWhen = [
-  "You have an idea but no evidence behind it.",
+  "You have an idea, but little evidence (or uncertainty) behind it.",
+  "A promising opportunity needs validating.",
   "Two opportunities look equally plausible.",
   "A roadmap bet is about to consume a quarter of engineering.",
-  "The team disagrees and no one has the data to settle it.",
+  "Your team disagrees about what to build.",
+  "You're being asked to \u201Cdo something with AI\u201D but don't yet know what problem it should solve.",
+  "You need evidence before asking for significant investment.",
+];
+
+const sprintInvestigate = [
+  { k: "The problem", v: "Is it real, frequent and painful enough to matter?" },
+  { k: "The customer", v: "Who experiences it, and what do they do today?" },
+  { k: "The opportunity", v: "How large and strategically relevant could it be?" },
+  { k: "The assumptions", v: "What has to be true for this to work?" },
+  { k: "The solution", v: "Does the proposed approach actually address the problem?" },
+  {
+    k: "The evidence",
+    v: "What do we know, what don't we know, and what would change our mind?",
+  },
 ];
 
 const sprintInside = [
@@ -127,16 +171,29 @@ const sprintInside = [
   "Customer and user research",
   "Market and competitor analysis",
   "Opportunity assessment and sizing",
-  "Hypothesis testing and experiment design",
+  "Hypothesis testing",
+  "Experiment design",
   "Prototyping where it earns its place",
   "Evidence synthesis and prioritisation",
 ];
 
 const sprintGet = [
-  "A written recommendation with the reasoning made visible",
-  "The evidence, and its limits, stated plainly",
-  "A prioritised view of the opportunity",
-  "A first move your team can start on Monday",
+  {
+    k: "A clearer opportunity",
+    v: "A grounded understanding of the problem, customer and potential value.",
+  },
+  {
+    k: "Evidence",
+    v: "What we've learned, how we learned it, and where uncertainty remains.",
+  },
+  {
+    k: "A recommendation",
+    v: "Build it, change it, test it further, or don't pursue it.",
+  },
+  {
+    k: "A next move",
+    v: "A practical starting point your team can act on immediately.",
+  },
 ];
 
 
@@ -208,15 +265,20 @@ function Index() {
           <div className="relative mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
             <p className="label-mono fade-up">Product discovery &amp; strategy</p>
             <h1 className="display-xl fade-up delay-1 mt-10 max-w-4xl text-balance">
-              Chart the problem.
+              Find what&rsquo;s worth
               <br />
-              <span className="text-muted-foreground">Then build.</span>
+              <span className="text-muted-foreground">building.</span>
             </h1>
-            <p className="fade-up delay-2 mt-10 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              The easier it becomes to build, the more expensive it becomes to build the wrong
-              thing. Slipstream Labs helps product teams turn assumptions into evidence before
-              committing significant engineering resources.
-            </p>
+            <div className="fade-up delay-2 mt-10 max-w-xl space-y-5 text-lg leading-relaxed text-muted-foreground">
+              <p className="text-foreground">
+                Building has never been easier. Knowing what is worth building has never mattered
+                more.
+              </p>
+              <p>
+                Slipstream Labs helps product teams turn uncertain ideas and opportunities into
+                evidence-backed paths forward, before committing significant engineering resources.
+              </p>
+            </div>
             <div className="fade-up delay-3 mt-12 flex flex-wrap items-center gap-3">
               <a
                 href="#contact"
@@ -231,12 +293,12 @@ function Index() {
                 href="#sprint"
                 className="inline-flex h-12 items-center border border-border px-6 text-sm font-medium transition-colors hover:border-foreground"
               >
-                Explore the sprint
+                Explore the Discovery Sprint
               </a>
             </div>
-            <p className="label-mono fade-up delay-4 mt-14">Evidence before execution.</p>
-            <div className="mt-20 flex items-center justify-between border-t border-hairline pt-6 md:mt-28">
-              <p className="label-mono">Assumption · Evidence · Decision</p>
+            <p className="label-mono fade-up delay-4 mt-14">Evidence before build.</p>
+            <div className="mt-20 flex flex-wrap items-center justify-between gap-x-8 gap-y-2 border-t border-hairline pt-6 md:mt-28">
+              <p className="label-mono">Assumption · Evidence · Opportunity · Action</p>
               <p className="label-mono">Stockholm, Sweden</p>
             </div>
           </div>
@@ -266,45 +328,46 @@ function Index() {
 
           <div className="mx-auto w-full max-w-[84rem] px-6 pb-24 pt-16 md:px-10 md:pb-32 md:pt-20">
             <h2 className="display-md max-w-3xl text-balance">
-
-
-              <span className="block">Building has never been easier.</span>
-              <span className="block text-muted-foreground">
-                Knowing what to build has never mattered more.
-              </span>
+              Building the wrong thing is still expensive.
             </h2>
-            <p className="mt-10 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              The biggest risk in any product is value risk: whether people will actually use it or
-              pay for it. It is the risk that kills products, and the one most often answered with
-              opinion.
-            </p>
-            <div className="mt-16 grid gap-14 md:grid-cols-12 md:mt-20">
+            <div className="mt-10 max-w-2xl space-y-5 text-lg leading-relaxed text-muted-foreground">
+              <p>
+                The cost of building software keeps falling. The cost of committing to the wrong
+                product idea does not.
+              </p>
+              <p>
+                A team can go from assumption to production in weeks. But if the problem
+                isn&apos;t real, the customer isn&apos;t who you thought, or the solution
+                doesn&apos;t create enough value, speed only gets you to the wrong destination
+                faster.
+              </p>
+            </div>
+            <div className="mt-16 grid gap-14 md:mt-20 md:grid-cols-12">
               <div className="md:col-span-6">
-                <ol className="divide-y divide-[var(--hairline)] border-y border-hairline">
+                <p className="label-mono">We&apos;ve all seen it</p>
+                <ol className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
                   {problemCases.map((item, i) => (
-                    <li key={item} className="flex gap-6 py-6">
+                    <li key={item.t} className="flex gap-6 py-6">
                       <span className="label-mono shrink-0 pt-1">
                         {String(i + 1).padStart(2, "0")}
                       </span>
-                      <p className="text-[0.95rem] leading-relaxed text-muted-foreground">{item}</p>
+                      <div>
+                        <h3 className="text-base font-medium tracking-tight text-foreground">
+                          {item.t}
+                        </h3>
+                        <p className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">
+                          {item.body}
+                        </p>
+                      </div>
                     </li>
                   ))}
                 </ol>
               </div>
 
               <div className="md:col-span-6">
-                <p className="label-mono">Skipped without noticing</p>
-                <p className="mt-4 text-[0.95rem] leading-relaxed text-muted-foreground">
-                  These are the questions teams skip when momentum takes over.
-                </p>
+                <p className="label-mono">The questions that get skipped</p>
                 <ul className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
-                  {[
-                    "Is the problem real, frequent, and painful?",
-                    "Who is the customer, and what do they do today?",
-                    "Is the opportunity big enough to matter?",
-                    "What has to be true for this to work?",
-                    "Is the solution actually worth building?",
-                  ].map((item) => (
+                  {skippedQuestions.map((item) => (
                     <li
                       key={item}
                       className="flex gap-4 py-4 text-[0.95rem] transition-colors hover:text-foreground"
@@ -314,10 +377,30 @@ function Index() {
                     </li>
                   ))}
                 </ul>
+                <p className="mt-10 text-lg leading-relaxed text-foreground">
+                  The problem isn&apos;t a lack of ideas.
+                  <br />
+                  It&apos;s knowing which ideas deserve to become products.
+                </p>
               </div>
             </div>
           </div>
         </section>
+
+        {/* Transition */}
+        <Section>
+          <h2 className="display-md max-w-3xl text-balance">
+            Don&apos;t explore everything. Find the path worth pursuing.
+          </h2>
+          <div className="mt-10 max-w-2xl space-y-5 text-lg leading-relaxed text-muted-foreground">
+            <p>At the start of a product opportunity, many futures are possible.</p>
+            <p>Some lead somewhere valuable. Most don&apos;t.</p>
+            <p>
+              Our job is not to predict the future. It&apos;s to investigate the assumptions that
+              separate the promising paths from the rest.
+            </p>
+          </div>
+        </Section>
 
         {/* Discovery Sprint */}
         <Section id="sprint">
@@ -339,68 +422,108 @@ function Index() {
 
 
           <h2 className="display-md max-w-3xl text-balance">
-
-            Two to four weeks from uncertainty to decision.
+            From uncertain idea to validated opportunity in 2–4 weeks.
           </h2>
 
-            <div className="mt-14 grid gap-14 md:grid-cols-12">
-              <div className="md:col-span-8">
-                <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">
-                  Two to four weeks of focused discovery on one opportunity. It ends with a
-                  recommendation, not a document dump: build it, change it, test it, or don&apos;t
-                  build it.
+          <div className="mt-14 grid gap-14 md:grid-cols-12">
+            <div className="md:col-span-8">
+              <div className="max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
+                <p>A focused Discovery Sprint for one product opportunity.</p>
+                <p>
+                  We investigate the problem, understand the customer, test the riskiest
+                  assumptions, and determine whether there is something worth pursuing.
                 </p>
-                <a
-                  href="#contact"
-                  className="mt-8 inline-flex h-11 items-center bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-                >
-                  Scope a sprint
-                </a>
+                <p>The result isn&apos;t a hundred-page report.</p>
+                <p className="text-foreground">
+                  It&apos;s a clearer opportunity, the evidence behind it, and a concrete path
+                  forward.
+                </p>
               </div>
-              <div className="md:col-span-4">
-                <dl className="grid gap-6 border-t border-hairline pt-6">
-                  {sprintFacts.map((f) => (
-                    <div key={f.k}>
-                      <dt className="label-mono">{f.k}</dt>
-                      <dd className="mt-2 text-[0.95rem] leading-relaxed text-foreground">
-                        {f.v}
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
-              </div>
+              <a
+                href="#contact"
+                className="group mt-8 inline-flex h-11 items-center gap-3 bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+              >
+                Scope a Discovery Sprint
+                <span className="transition-transform group-hover:translate-x-0.5" aria-hidden="true">
+                  →
+                </span>
+              </a>
             </div>
+            <div className="md:col-span-4">
+              <p className="label-mono">The sprint</p>
+              <dl className="mt-5 grid gap-6 border-t border-hairline pt-6">
+                {sprintFacts.map((f) => (
+                  <div key={f.k}>
+                    <dt className="label-mono">{f.k}</dt>
+                    <dd className="mt-2 text-[0.95rem] leading-relaxed text-foreground">{f.v}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
 
-            <div className="rule-t mt-14 grid gap-10 pt-10 sm:grid-cols-2 lg:grid-cols-3">
-              <div>
-                <p className="label-mono">When to use it</p>
-                <ul className="mt-4 space-y-3 text-[0.95rem] leading-relaxed text-muted-foreground">
-                  {sprintWhen.map((i) => (
-                    <li key={i}>{i}</li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <p className="label-mono">What happens</p>
-                <ul className="mt-4 space-y-3 text-[0.95rem] leading-relaxed text-muted-foreground">
-                  {sprintInside.map((i) => (
-                    <li key={i}>{i}</li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <p className="label-mono">What you get</p>
-                <ul className="mt-4 space-y-3 text-[0.95rem] leading-relaxed text-muted-foreground">
-                  {sprintGet.map((i) => (
-                    <li key={i} className="flex gap-3">
-                      <span className="mt-2.5 h-px w-3 shrink-0 bg-accent" aria-hidden="true" />
+          <div className="rule-t mt-16 grid gap-12 pt-10 md:grid-cols-12">
+            <div className="md:col-span-5">
+              <p className="label-mono">When to use it</p>
+              <ul className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
+                {sprintWhen.map((i) => (
+                  <li key={i} className="flex gap-4 py-4">
+                    <span className="mt-2 h-px w-4 shrink-0 bg-accent" aria-hidden="true" />
+                    <span className="text-[0.95rem] leading-relaxed text-muted-foreground">
                       {i}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                    </span>
+                  </li>
+                ))}
+              </ul>
             </div>
-          
+            <div className="md:col-span-7">
+              <p className="label-mono">What we investigate</p>
+              <dl className="mt-5 grid gap-x-10 gap-y-6 sm:grid-cols-2">
+                {sprintInvestigate.map((f) => (
+                  <div key={f.k} className="border-t border-hairline pt-4">
+                    <dt className="text-base font-medium tracking-tight text-foreground">{f.k}</dt>
+                    <dd className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">
+                      {f.v}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+
+          <div className="rule-t mt-16 grid gap-12 pt-10 md:grid-cols-12">
+            <div className="md:col-span-5">
+              <p className="label-mono">What happens</p>
+              <ul className="mt-5 space-y-3 text-[0.95rem] leading-relaxed text-muted-foreground">
+                {sprintInside.map((i) => (
+                  <li key={i}>{i}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="md:col-span-7">
+              <p className="label-mono">What you leave with</p>
+              <dl className="mt-5 grid gap-x-10 gap-y-6 sm:grid-cols-2">
+                {sprintGet.map((f) => (
+                  <div key={f.k} className="border-t border-hairline pt-4">
+                    <dt className="text-base font-medium tracking-tight text-foreground">{f.k}</dt>
+                    <dd className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">
+                      {f.v}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+
+          <div className="rule-t mt-16 max-w-2xl pt-10">
+            <p className="label-mono">The outcome</p>
+            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
+              You don&apos;t leave with more opinions.
+            </p>
+            <p className="mt-3 text-lg leading-relaxed text-foreground">
+              You leave knowing what is worth pursuing, why, and what to do next.
+            </p>
+          </div>
         </Section>
 
         {/* Approach */}
