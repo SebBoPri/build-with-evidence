@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Section, Lead, FullBleedFigure, Reveal } from "@/components/site/sections";
 import { Wordmark, Starfield } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
+import { ContactForm } from "@/components/site/contact-form";
 import heroField from "@/assets/hero-field.jpg";
 import heroFieldWebp from "@/assets/hero-field.webp";
 import heroFieldWebp2x from "@/assets/hero-field@2x.webp";
@@ -611,20 +612,7 @@ function Index() {
             <p className="mt-7 text-lg text-muted-foreground md:text-xl">
               Let&rsquo;s work out what is worth building.
             </p>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <a
-                href="mailto:hello@slipstreamlabs.se?subject=Discovery%20Sprint%20enquiry"
-                className="inline-flex h-12 items-center bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-              >
-                Start a conversation
-              </a>
-              <a
-                href="mailto:hello@slipstreamlabs.se"
-                className="text-sm text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
-              >
-                hello@slipstreamlabs.se
-              </a>
-            </div>
+            <ContactForm />
           </div>
         </Section>
       </main>
