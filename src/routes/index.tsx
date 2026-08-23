@@ -265,15 +265,20 @@ function Index() {
           <div className="relative mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
             <p className="label-mono fade-up">Product discovery &amp; strategy</p>
             <h1 className="display-xl fade-up delay-1 mt-10 max-w-4xl text-balance">
-              Chart the problem.
+              Find what&rsquo;s worth
               <br />
-              <span className="text-muted-foreground">Then build.</span>
+              <span className="text-muted-foreground">building.</span>
             </h1>
-            <p className="fade-up delay-2 mt-10 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              The easier it becomes to build, the more expensive it becomes to build the wrong
-              thing. Slipstream Labs helps product teams turn assumptions into evidence before
-              committing significant engineering resources.
-            </p>
+            <div className="fade-up delay-2 mt-10 max-w-xl space-y-5 text-lg leading-relaxed text-muted-foreground">
+              <p className="text-foreground">
+                Building has never been easier. Knowing what is worth building has never mattered
+                more.
+              </p>
+              <p>
+                Slipstream Labs helps product teams turn uncertain ideas and opportunities into
+                evidence-backed paths forward, before committing significant engineering resources.
+              </p>
+            </div>
             <div className="fade-up delay-3 mt-12 flex flex-wrap items-center gap-3">
               <a
                 href="#contact"
@@ -288,12 +293,12 @@ function Index() {
                 href="#sprint"
                 className="inline-flex h-12 items-center border border-border px-6 text-sm font-medium transition-colors hover:border-foreground"
               >
-                Explore the sprint
+                Explore the Discovery Sprint
               </a>
             </div>
-            <p className="label-mono fade-up delay-4 mt-14">Evidence before execution.</p>
-            <div className="mt-20 flex items-center justify-between border-t border-hairline pt-6 md:mt-28">
-              <p className="label-mono">Assumption · Evidence · Decision</p>
+            <p className="label-mono fade-up delay-4 mt-14">Evidence before build.</p>
+            <div className="mt-20 flex flex-wrap items-center justify-between gap-x-8 gap-y-2 border-t border-hairline pt-6 md:mt-28">
+              <p className="label-mono">Assumption · Evidence · Opportunity · Action</p>
               <p className="label-mono">Stockholm, Sweden</p>
             </div>
           </div>
