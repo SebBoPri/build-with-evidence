@@ -81,45 +81,89 @@ const nav = [
 const sprintFacts = [
   { k: "Duration", v: "2–4 weeks, fixed scope" },
   { k: "Your team's time", v: "~3 hours per week" },
-  { k: "Engagement", v: "One opportunity, one recommendation" },
-  { k: "After the sprint", v: "Optional support while you act on it" },
+  { k: "Focus", v: "One opportunity" },
+  { k: "Outcome", v: "An evidence-backed path forward" },
 ];
 
 const problemCases = [
-  "A product everyone agreed on, built from what the team believed customers wanted. It shipped. Nobody used it.",
-  "Customers asked for a feature. It shipped. It solved the request, not the problem.",
-  "\u201CDo something with AI\u201D became the goal. It shipped. There was no problem it solved.",
+  {
+    t: "The product nobody needed",
+    body: "Everyone agreed the idea made sense. It shipped. Adoption never came.",
+  },
+  {
+    t: "The feature that solved the request, not the problem",
+    body: "Customers asked for something specific. The team built it. The underlying problem remained.",
+  },
+  {
+    t: "AI for the sake of AI",
+    body: "\u201CDo something with AI\u201D became the goal. The technology arrived before the problem worth solving was clear.",
+  },
+];
+
+const skippedQuestions = [
+  "Is this a real problem?",
+  "How often does it happen?",
+  "Who experiences it most acutely?",
+  "What do people do today?",
+  "Is the opportunity big enough to matter?",
+  "What has to be true for this to work?",
+  "What evidence would change our mind?",
+  "Is this worth building?",
 ];
 
 const steps = [
   {
     n: "01",
     title: "Assumptions",
-    body: "What has to be true for this to work, ranked by risk.",
+    q: "What has to be true for this opportunity to work?",
+    body: "We map the assumptions behind the idea and rank them by risk.",
   },
   {
     n: "02",
     title: "Kill-lines",
-    body: "What would make you stop, agreed before you look.",
+    q: "What would make us stop?",
+    body: "Before testing, we agree what evidence would be strong enough to change direction or walk away.",
   },
   {
     n: "03",
     title: "Evidence",
-    body: "What customers do, not what they say they would.",
+    q: "What happens in reality?",
+    body: "We gather evidence from customers, users, markets and experiments. We prioritise what people actually do over what they say they might do.",
   },
   {
     n: "04",
-    title: "Decision",
-    body: "Proceed, reframe or stop. Written down, once.",
+    title: "Opportunity",
+    q: "What does the evidence tell us?",
+    body: "We connect the evidence, identify what holds up and what doesn't, and determine whether a meaningful opportunity remains.",
+  },
+  {
+    n: "05",
+    title: "Action",
+    q: "What should happen next?",
+    body: "Build it. Change it. Test it. Or stop. The answer is written down, with the reasoning behind it.",
   },
 ];
 
-
 const sprintWhen = [
-  "You have an idea but no evidence behind it.",
+  "You have an idea, but little evidence (or uncertainty) behind it.",
+  "A promising opportunity needs validating.",
   "Two opportunities look equally plausible.",
   "A roadmap bet is about to consume a quarter of engineering.",
-  "The team disagrees and no one has the data to settle it.",
+  "Your team disagrees about what to build.",
+  "You're being asked to \u201Cdo something with AI\u201D but don't yet know what problem it should solve.",
+  "You need evidence before asking for significant investment.",
+];
+
+const sprintInvestigate = [
+  { k: "The problem", v: "Is it real, frequent and painful enough to matter?" },
+  { k: "The customer", v: "Who experiences it, and what do they do today?" },
+  { k: "The opportunity", v: "How large and strategically relevant could it be?" },
+  { k: "The assumptions", v: "What has to be true for this to work?" },
+  { k: "The solution", v: "Does the proposed approach actually address the problem?" },
+  {
+    k: "The evidence",
+    v: "What do we know, what don't we know, and what would change our mind?",
+  },
 ];
 
 const sprintInside = [
@@ -127,16 +171,29 @@ const sprintInside = [
   "Customer and user research",
   "Market and competitor analysis",
   "Opportunity assessment and sizing",
-  "Hypothesis testing and experiment design",
+  "Hypothesis testing",
+  "Experiment design",
   "Prototyping where it earns its place",
   "Evidence synthesis and prioritisation",
 ];
 
 const sprintGet = [
-  "A written recommendation with the reasoning made visible",
-  "The evidence, and its limits, stated plainly",
-  "A prioritised view of the opportunity",
-  "A first move your team can start on Monday",
+  {
+    k: "A clearer opportunity",
+    v: "A grounded understanding of the problem, customer and potential value.",
+  },
+  {
+    k: "Evidence",
+    v: "What we've learned, how we learned it, and where uncertainty remains.",
+  },
+  {
+    k: "A recommendation",
+    v: "Build it, change it, test it further, or don't pursue it.",
+  },
+  {
+    k: "A next move",
+    v: "A practical starting point your team can act on immediately.",
+  },
 ];
 
 
