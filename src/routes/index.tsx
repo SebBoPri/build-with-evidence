@@ -328,45 +328,46 @@ function Index() {
 
           <div className="mx-auto w-full max-w-[84rem] px-6 pb-24 pt-16 md:px-10 md:pb-32 md:pt-20">
             <h2 className="display-md max-w-3xl text-balance">
-
-
-              <span className="block">Building has never been easier.</span>
-              <span className="block text-muted-foreground">
-                Knowing what to build has never mattered more.
-              </span>
+              Building the wrong thing is still expensive.
             </h2>
-            <p className="mt-10 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              The biggest risk in any product is value risk: whether people will actually use it or
-              pay for it. It is the risk that kills products, and the one most often answered with
-              opinion.
-            </p>
-            <div className="mt-16 grid gap-14 md:grid-cols-12 md:mt-20">
+            <div className="mt-10 max-w-2xl space-y-5 text-lg leading-relaxed text-muted-foreground">
+              <p>
+                The cost of building software keeps falling. The cost of committing to the wrong
+                product idea does not.
+              </p>
+              <p>
+                A team can go from assumption to production in weeks. But if the problem
+                isn&apos;t real, the customer isn&apos;t who you thought, or the solution
+                doesn&apos;t create enough value, speed only gets you to the wrong destination
+                faster.
+              </p>
+            </div>
+            <div className="mt-16 grid gap-14 md:mt-20 md:grid-cols-12">
               <div className="md:col-span-6">
-                <ol className="divide-y divide-[var(--hairline)] border-y border-hairline">
+                <p className="label-mono">We&apos;ve all seen it</p>
+                <ol className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
                   {problemCases.map((item, i) => (
-                    <li key={item} className="flex gap-6 py-6">
+                    <li key={item.t} className="flex gap-6 py-6">
                       <span className="label-mono shrink-0 pt-1">
                         {String(i + 1).padStart(2, "0")}
                       </span>
-                      <p className="text-[0.95rem] leading-relaxed text-muted-foreground">{item}</p>
+                      <div>
+                        <h3 className="text-base font-medium tracking-tight text-foreground">
+                          {item.t}
+                        </h3>
+                        <p className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">
+                          {item.body}
+                        </p>
+                      </div>
                     </li>
                   ))}
                 </ol>
               </div>
 
               <div className="md:col-span-6">
-                <p className="label-mono">Skipped without noticing</p>
-                <p className="mt-4 text-[0.95rem] leading-relaxed text-muted-foreground">
-                  These are the questions teams skip when momentum takes over.
-                </p>
+                <p className="label-mono">The questions that get skipped</p>
                 <ul className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
-                  {[
-                    "Is the problem real, frequent, and painful?",
-                    "Who is the customer, and what do they do today?",
-                    "Is the opportunity big enough to matter?",
-                    "What has to be true for this to work?",
-                    "Is the solution actually worth building?",
-                  ].map((item) => (
+                  {skippedQuestions.map((item) => (
                     <li
                       key={item}
                       className="flex gap-4 py-4 text-[0.95rem] transition-colors hover:text-foreground"
@@ -376,10 +377,30 @@ function Index() {
                     </li>
                   ))}
                 </ul>
+                <p className="mt-10 text-lg leading-relaxed text-foreground">
+                  The problem isn&apos;t a lack of ideas.
+                  <br />
+                  It&apos;s knowing which ideas deserve to become products.
+                </p>
               </div>
             </div>
           </div>
         </section>
+
+        {/* Transition */}
+        <Section>
+          <h2 className="display-md max-w-3xl text-balance">
+            Don&apos;t explore everything. Find the path worth pursuing.
+          </h2>
+          <div className="mt-10 max-w-2xl space-y-5 text-lg leading-relaxed text-muted-foreground">
+            <p>At the start of a product opportunity, many futures are possible.</p>
+            <p>Some lead somewhere valuable. Most don&apos;t.</p>
+            <p>
+              Our job is not to predict the future. It&apos;s to investigate the assumptions that
+              separate the promising paths from the rest.
+            </p>
+          </div>
+        </Section>
 
         {/* Discovery Sprint */}
         <Section id="sprint">
