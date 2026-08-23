@@ -606,10 +606,10 @@ function Index() {
           <div className="max-w-3xl">
             <p className="label-mono">Get in touch</p>
             <h2 className="display-md mt-8 text-balance">
-              Have a product decision you&apos;re stuck on?
+              Have an opportunity you&rsquo;re not sure about?
             </h2>
             <p className="mt-7 text-lg text-muted-foreground md:text-xl">
-              Let&apos;s work out what is worth building.
+              Let&rsquo;s work out what is worth building.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
@@ -630,8 +630,14 @@ function Index() {
       </main>
 
       <footer className="rule-t">
-        <div className="mx-auto flex w-full max-w-[84rem] flex-col gap-3 px-6 py-10 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between md:px-10">
-          <p>© {new Date().getFullYear()} Slipstream Labs · Stockholm</p>
+        <div className="mx-auto flex w-full max-w-[84rem] flex-col gap-3 px-6 py-10 text-sm text-muted-foreground md:flex-row md:items-end md:justify-between md:px-10">
+          <div className="space-y-1">
+            <p>Slipstream Labs</p>
+            <p>Product discovery &amp; strategy</p>
+            <p>Find what&rsquo;s worth building.</p>
+            <p>Stockholm, Sweden</p>
+            <p>© 2026</p>
+          </div>
           <p className="label-mono">Evidence before build</p>
         </div>
       </footer>
