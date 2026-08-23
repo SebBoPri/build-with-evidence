@@ -17,6 +17,7 @@ CLAUDE.md is canonical. AGENTS.md is Lovable's template file. README.md is the o
 ## Working rules
 - `git pull` before starting. Lovable may have pushed.
 - This project uses bun, never npm install. `bun.lock` is the single source of truth, since that is what Lovable builds with.
+- Use bunx, never npx.
 - Run `bun run dev` and check 375 / 768 / 1440 before considering a copy change done.
 - Prune unused Radix dependencies and CSS only when asked, never as a side effect.
 - Never force-push or amend a commit that has already been pushed. main is synced with Lovable and rewriting it risks desyncing or losing history.

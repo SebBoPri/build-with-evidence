@@ -412,9 +412,9 @@ function Index() {
             srcWebp2x={sprintConvergeWebp2x}
             width={1344}
             height={896}
-            alt="Abstract image: a dense field of nodes and filaments, with one bounded region marked by survey brackets and a single node fixed by a crosshair"
+            alt="Abstract image: a dense field of nodes and filaments, with one bounded region marked by bracket rules and a single node fixed by a crosshair"
             eyebrow="Discovery Sprint"
-            title="We survey one region properly, not all of it"
+            title="One question, taken to a decision"
             subtitle="The sprint ends with one recommendation, not a document dump."
             note="The brackets mark the question in scope. The crosshair is the decision the sprint resolves."
             meta="Flagship offering"
