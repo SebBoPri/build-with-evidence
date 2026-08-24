@@ -579,21 +579,30 @@ function Index() {
           <div className="grid gap-14 md:grid-cols-12">
             <div className="md:col-span-4">
               <h2 className="display-md">Sebastian Bouvier</h2>
-              <p className="mt-3 text-sm text-muted-foreground">Founder of Slipstream Labs</p>
+              <p className="mt-3 text-sm text-muted-foreground">Founder, Slipstream Labs</p>
             </div>
             <div className="space-y-5 text-lg leading-relaxed text-muted-foreground md:col-span-8">
               <p>
-                I&apos;ve spent my career on the messy front half of product, working across product
-                management, business analysis, and data in several industries. The pattern repeats
-                everywhere: teams are rarely short of ideas, they&apos;re short of evidence and a
-                way to choose.
+                I&apos;ve spent my career working in the messy front half of products, across
+                product management, business analysis and data in several industries.
               </p>
               <p>
-                Slipstream Labs is how I do that work now. Small, direct, and hands-on: you work
-                with me, not a delivery pyramid. I care more about you making a good call than
-                about the length of the report behind it.
+                The pattern repeats: teams rarely run out of ideas. They run out of{" "}
+                <strong className="text-foreground">evidence, time and a clear way to choose</strong>{" "}
+                between them.
               </p>
-              <p className="text-foreground">Based in Stockholm, working with teams anywhere.</p>
+              <p>
+                Slipstream Labs is built around solving that problem. I work directly with product
+                teams to investigate opportunities, challenge assumptions and find what is worth
+                pursuing before significant resources are committed.
+              </p>
+              <p className="text-foreground">
+                No delivery pyramid. No theatre. No giant report that disappears into a drawer.
+              </p>
+              <p className="text-foreground">
+                Just focused discovery, honest evidence and a clear path forward.
+              </p>
+              <p>Based in Stockholm. Working with teams anywhere.</p>
             </div>
           </div>
         </Section>
