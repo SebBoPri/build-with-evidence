@@ -630,7 +630,7 @@ function Index() {
             <p>Product discovery &amp; strategy</p>
             <p>Find what&rsquo;s worth building.</p>
             <p>Stockholm, Sweden</p>
-            <p>© 2026</p>
+            <p>© 2026 Slipstream Labs</p>
           </div>
           <p className="label-mono">Evidence before build</p>
         </div>
