@@ -537,28 +537,24 @@ function Index() {
             srcWebp2x={evidenceResolveWebp2x}
             width={1600}
             height={1073}
-
             alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
-            eyebrow="The approach"
+            eyebrow="How we work"
             title="Noise resolves into signal"
-            subtitle="Name what must be true, then test it until the noise resolves into one line."
+            subtitle="Name what must be true, then test it until the evidence separates the promising paths from the rest."
             note="Left is everything you could believe. Right is what the evidence still supports."
             meta="Evidence synthesis"
-
           />
 
+          <h2 className="display-md max-w-3xl text-balance">Start with what must be true.</h2>
 
-          <h2 className="display-md max-w-3xl text-balance">
-            Start with what must be true.
-          </h2>
-
-
-          <p className="mt-10 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-            Opinion, anecdote and roadmap pressure all sound the same at the start. We separate what
-            you believe from what you know, run the riskiest assumptions through the smallest
-            possible test, and agree in advance what result would make you stop, so the evidence is
-            readable either way. Those stopping points are what we call kill-lines.
-          </p>
+          <div className="mt-10 max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
+            <p>Every product idea contains assumptions.</p>
+            <p>Some are harmless. Others can kill the entire opportunity.</p>
+            <p>
+              We identify the assumptions that matter most, then test them with the smallest amount
+              of work needed to learn something useful.
+            </p>
+          </div>
 
           <ApproachRail steps={steps} />
         </Section>
@@ -569,10 +565,10 @@ function Index() {
         <Section>
           <blockquote className="max-w-4xl">
             <p className="display-md text-balance">
-              Just because you can build it does not mean you should.
+              Just because you can build it doesn&apos;t mean you should.
             </p>
             <p className="display-md mt-3 text-balance text-muted-foreground">
-              Speed is only an advantage when you have the right direction.
+              Speed is only an advantage when you&apos;re moving in the right direction.
             </p>
           </blockquote>
         </Section>
@@ -583,21 +579,30 @@ function Index() {
           <div className="grid gap-14 md:grid-cols-12">
             <div className="md:col-span-4">
               <h2 className="display-md">Sebastian Bouvier</h2>
-              <p className="mt-3 text-sm text-muted-foreground">Founder of Slipstream Labs</p>
+              <p className="mt-3 text-sm text-muted-foreground">Founder, Slipstream Labs</p>
             </div>
             <div className="space-y-5 text-lg leading-relaxed text-muted-foreground md:col-span-8">
               <p>
-                I&apos;ve spent my career on the messy front half of product, working across product
-                management, business analysis, and data in several industries. The pattern repeats
-                everywhere: teams are rarely short of ideas, they&apos;re short of evidence and a
-                way to choose.
+                I&apos;ve spent my career working in the messy front half of products, across
+                product management, business analysis and data in several industries.
               </p>
               <p>
-                Slipstream Labs is how I do that work now. Small, direct, and hands-on: you work
-                with me, not a delivery pyramid. I care more about you making a good call than
-                about the length of the report behind it.
+                The pattern repeats: teams rarely run out of ideas. They run out of{" "}
+                <strong className="text-foreground">evidence, time and a clear way to choose</strong>{" "}
+                between them.
               </p>
-              <p className="text-foreground">Based in Stockholm, working with teams anywhere.</p>
+              <p>
+                Slipstream Labs is built around solving that problem. I work directly with product
+                teams to investigate opportunities, challenge assumptions and find what is worth
+                pursuing before significant resources are committed.
+              </p>
+              <p className="text-foreground">
+                No delivery pyramid. No theatre. No giant report that disappears into a drawer.
+              </p>
+              <p className="text-foreground">
+                Just focused discovery, honest evidence and a clear path forward.
+              </p>
+              <p>Based in Stockholm. Working with teams anywhere.</p>
             </div>
           </div>
         </Section>
@@ -605,13 +610,14 @@ function Index() {
         {/* CTA */}
         <Section id="contact">
           <div className="max-w-3xl">
-            <p className="label-mono">Get in touch</p>
-            <h2 className="display-md mt-8 text-balance">
-              Have an opportunity you&rsquo;re not sure about?
+            <h2 className="display-md text-balance">
+              Have an opportunity you&apos;re not sure about?
             </h2>
-            <p className="mt-7 text-lg text-muted-foreground md:text-xl">
-              Let&rsquo;s work out what is worth building.
-            </p>
+            <div className="mt-7 max-w-2xl space-y-4 text-lg leading-relaxed text-muted-foreground md:text-xl">
+              <p>You don&apos;t need another workshop.</p>
+              <p>You need to know whether there&apos;s something worth building.</p>
+              <p className="text-foreground">Let&apos;s investigate it.</p>
+            </div>
             <ContactForm />
           </div>
         </Section>
@@ -624,7 +630,7 @@ function Index() {
             <p>Product discovery &amp; strategy</p>
             <p>Find what&rsquo;s worth building.</p>
             <p>Stockholm, Sweden</p>
-            <p>© 2026</p>
+            <p>© 2026 Slipstream Labs</p>
           </div>
           <p className="label-mono">Evidence before build</p>
         </div>
