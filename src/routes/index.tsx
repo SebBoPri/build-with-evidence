@@ -610,13 +610,14 @@ function Index() {
         {/* CTA */}
         <Section id="contact">
           <div className="max-w-3xl">
-            <p className="label-mono">Get in touch</p>
-            <h2 className="display-md mt-8 text-balance">
-              Have an opportunity you&rsquo;re not sure about?
+            <h2 className="display-md text-balance">
+              Have an opportunity you&apos;re not sure about?
             </h2>
-            <p className="mt-7 text-lg text-muted-foreground md:text-xl">
-              Let&rsquo;s work out what is worth building.
-            </p>
+            <div className="mt-7 max-w-2xl space-y-4 text-lg leading-relaxed text-muted-foreground md:text-xl">
+              <p>You don&apos;t need another workshop.</p>
+              <p>You need to know whether there&apos;s something worth building.</p>
+              <p className="text-foreground">Let&apos;s investigate it.</p>
+            </div>
             <ContactForm />
           </div>
         </Section>
