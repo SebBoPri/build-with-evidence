@@ -565,10 +565,10 @@ function Index() {
         <Section>
           <blockquote className="max-w-4xl">
             <p className="display-md text-balance">
-              Just because you can build it does not mean you should.
+              Just because you can build it doesn&apos;t mean you should.
             </p>
             <p className="display-md mt-3 text-balance text-muted-foreground">
-              Speed is only an advantage when you have the right direction.
+              Speed is only an advantage when you&apos;re moving in the right direction.
             </p>
           </blockquote>
         </Section>
