@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 type Step = { n: string; title: string; q?: string; body: string };
 
 /**
- * Four-step rail whose nodes light up in sequence as the section scrolls
+ * Five-step rail whose nodes light up in sequence as the section scrolls
  * through the viewport, so the rail doubles as a progress indicator.
  */
 export function ApproachRail({ steps }: { steps: Step[] }) {
