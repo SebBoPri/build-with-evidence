@@ -128,9 +128,15 @@ export function ContactForm() {
             <button
               type="submit"
               disabled={status === "pending"}
-              className="inline-flex h-12 items-center bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+              className="group inline-flex h-12 items-center gap-3 bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
             >
               {status === "pending" ? "Sending" : "Start a conversation"}
+              <span
+                className="transition-transform group-hover:translate-x-0.5"
+                aria-hidden="true"
+              >
+                →
+              </span>
             </button>
             <a
               href="mailto:hello@slipstreamlabs.se"
