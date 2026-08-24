@@ -537,28 +537,24 @@ function Index() {
             srcWebp2x={evidenceResolveWebp2x}
             width={1600}
             height={1073}
-
             alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
-            eyebrow="The approach"
+            eyebrow="How we work"
             title="Noise resolves into signal"
-            subtitle="Name what must be true, then test it until the noise resolves into one line."
+            subtitle="Name what must be true, then test it until the evidence separates the promising paths from the rest."
             note="Left is everything you could believe. Right is what the evidence still supports."
             meta="Evidence synthesis"
-
           />
 
+          <h2 className="display-md max-w-3xl text-balance">Start with what must be true.</h2>
 
-          <h2 className="display-md max-w-3xl text-balance">
-            Start with what must be true.
-          </h2>
-
-
-          <p className="mt-10 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-            Opinion, anecdote and roadmap pressure all sound the same at the start. We separate what
-            you believe from what you know, run the riskiest assumptions through the smallest
-            possible test, and agree in advance what result would make you stop, so the evidence is
-            readable either way. Those stopping points are what we call kill-lines.
-          </p>
+          <div className="mt-10 max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
+            <p>Every product idea contains assumptions.</p>
+            <p>Some are harmless. Others can kill the entire opportunity.</p>
+            <p>
+              We identify the assumptions that matter most, then test them with the smallest amount
+              of work needed to learn something useful.
+            </p>
+          </div>
 
           <ApproachRail steps={steps} />
         </Section>
