@@ -435,7 +435,7 @@ function Index() {
             </dl>
           </div>
 
-          <div className="rule-t mt-16 max-w-2xl pt-10">
+          <div className="rule-t mt-12 max-w-2xl pt-10">
             <p className="text-lg leading-relaxed text-muted-foreground">
               You don&apos;t leave with more opinions.
             </p>
