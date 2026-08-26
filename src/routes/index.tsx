@@ -80,13 +80,6 @@ const nav = [
   { href: "#about", label: "About" },
 ];
 
-const sprintFacts = [
-  { k: "Duration", v: "2–4 weeks, fixed scope" },
-  { k: "Your team's time", v: "~3 hours per week" },
-  { k: "Focus", v: "One opportunity" },
-  { k: "Outcome", v: "An evidence-backed path forward" },
-];
-
 const problemCases = [
   {
     t: "The product nobody needed",
@@ -147,46 +140,16 @@ const steps = [
 ];
 
 const sprintWhen = [
-  "You have an idea, but little evidence (or uncertainty) behind it.",
-  "A promising opportunity needs validating.",
-  "Two opportunities look equally plausible.",
   "A roadmap bet is about to consume a quarter of engineering.",
+  "Two opportunities look equally plausible.",
   "Your team disagrees about what to build.",
-  "You're being asked to \u201Cdo something with AI\u201D but don't yet know what problem it should solve.",
-  "You need evidence before asking for significant investment.",
-];
-
-const sprintInvestigate = [
-  { k: "The problem", v: "Is it real, frequent and painful enough to matter?" },
-  { k: "The customer", v: "Who experiences it, and what do they do today?" },
-  { k: "The opportunity", v: "How large and strategically relevant could it be?" },
-  { k: "The assumptions", v: "What has to be true for this to work?" },
-  { k: "The solution", v: "Does the proposed approach actually address the problem?" },
-  {
-    k: "The evidence",
-    v: "What do we know, what don't we know, and what would change our mind?",
-  },
-];
-
-const sprintInside = [
-  "Problem framing and assumption mapping",
-  "Customer and user research",
-  "Market and competitor analysis",
-  "Opportunity assessment and sizing",
-  "Hypothesis testing",
-  "Experiment design",
-  "Prototyping where it earns its place",
-  "Evidence synthesis and prioritisation",
+  "You're being asked to do something with AI, without a clear problem it solves.",
 ];
 
 const sprintGet = [
   {
-    k: "A clearer opportunity",
-    v: "A grounded understanding of the problem, customer and potential value.",
-  },
-  {
     k: "Evidence",
-    v: "What we've learned, how we learned it, and where uncertainty remains.",
+    v: "What we learned, how we learned it, and where uncertainty remains.",
   },
   {
     k: "A recommendation",
@@ -197,6 +160,7 @@ const sprintGet = [
     v: "A practical starting point your team can act on immediately.",
   },
 ];
+
 
 
 
