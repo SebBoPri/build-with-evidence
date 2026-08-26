@@ -399,43 +399,40 @@ function Index() {
             </p>
           </div>
 
-          <div className="rule-t mt-16 grid gap-12 pt-10 md:grid-cols-12">
-            <div className="md:col-span-5">
-              <p className="label-mono">When to use it</p>
-              <ul className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
-                {sprintWhen.map((i) => (
-                  <li key={i} className="flex gap-4 py-4">
-                    <span className="mt-2 h-px w-4 shrink-0 bg-accent" aria-hidden="true" />
-                    <span className="text-[0.95rem] leading-relaxed text-muted-foreground">
-                      {i}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="md:col-span-7">
-              <p className="label-mono">What we look at</p>
-              <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                Whether the problem is real, who has it, what they do today, how large the
-                opportunity is, and what has to be true for it to work.
-              </p>
-            </div>
+          <div className="mt-12">
+            <p className="label-mono">What we look at</p>
+            <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+              Whether the problem is real, who has it, what they do today, how large the
+              opportunity is, and what has to be true for it to work.
+            </p>
           </div>
 
-          <div className="rule-t mt-16 grid gap-12 pt-10 md:grid-cols-12">
-            <div className="md:col-span-7 md:col-start-6">
-              <p className="label-mono">What you leave with</p>
-              <dl className="mt-5 grid gap-x-10 gap-y-6 sm:grid-cols-2">
-                {sprintGet.map((f) => (
-                  <div key={f.k} className="border-t border-hairline pt-4">
-                    <dt className="text-base font-medium tracking-tight text-foreground">{f.k}</dt>
-                    <dd className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">
-                      {f.v}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
+          <div className="rule-t mt-12 pt-10">
+            <p className="label-mono">When to use it</p>
+            <ul className="mt-5 max-w-3xl divide-y divide-[var(--hairline)] border-y border-hairline">
+              {sprintWhen.map((i) => (
+                <li key={i} className="flex gap-4 py-4">
+                  <span className="mt-2 h-px w-4 shrink-0 bg-accent" aria-hidden="true" />
+                  <span className="text-[0.95rem] leading-relaxed text-muted-foreground">
+                    {i}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="rule-t mt-12 pt-10">
+            <p className="label-mono">What you leave with</p>
+            <dl className="mt-5 grid gap-x-10 gap-y-6 md:grid-cols-3">
+              {sprintGet.map((f) => (
+                <div key={f.k} className="border-t border-hairline pt-4">
+                  <dt className="text-base font-medium tracking-tight text-foreground">{f.k}</dt>
+                  <dd className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">
+                    {f.v}
+                  </dd>
+                </div>
+              ))}
+            </dl>
           </div>
 
           <div className="rule-t mt-16 max-w-2xl pt-10">
