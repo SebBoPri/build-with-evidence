@@ -80,13 +80,6 @@ const nav = [
   { href: "#about", label: "About" },
 ];
 
-const sprintFacts = [
-  { k: "Duration", v: "2–4 weeks, fixed scope" },
-  { k: "Your team's time", v: "~3 hours per week" },
-  { k: "Focus", v: "One opportunity" },
-  { k: "Outcome", v: "An evidence-backed path forward" },
-];
-
 const problemCases = [
   {
     t: "The product nobody needed",
@@ -147,46 +140,16 @@ const steps = [
 ];
 
 const sprintWhen = [
-  "You have an idea, but little evidence (or uncertainty) behind it.",
-  "A promising opportunity needs validating.",
-  "Two opportunities look equally plausible.",
   "A roadmap bet is about to consume a quarter of engineering.",
+  "Two opportunities look equally plausible.",
   "Your team disagrees about what to build.",
-  "You're being asked to \u201Cdo something with AI\u201D but don't yet know what problem it should solve.",
-  "You need evidence before asking for significant investment.",
-];
-
-const sprintInvestigate = [
-  { k: "The problem", v: "Is it real, frequent and painful enough to matter?" },
-  { k: "The customer", v: "Who experiences it, and what do they do today?" },
-  { k: "The opportunity", v: "How large and strategically relevant could it be?" },
-  { k: "The assumptions", v: "What has to be true for this to work?" },
-  { k: "The solution", v: "Does the proposed approach actually address the problem?" },
-  {
-    k: "The evidence",
-    v: "What do we know, what don't we know, and what would change our mind?",
-  },
-];
-
-const sprintInside = [
-  "Problem framing and assumption mapping",
-  "Customer and user research",
-  "Market and competitor analysis",
-  "Opportunity assessment and sizing",
-  "Hypothesis testing",
-  "Experiment design",
-  "Prototyping where it earns its place",
-  "Evidence synthesis and prioritisation",
+  "You're being asked to do something with AI, without a clear problem it solves.",
 ];
 
 const sprintGet = [
   {
-    k: "A clearer opportunity",
-    v: "A grounded understanding of the problem, customer and potential value.",
-  },
-  {
     k: "Evidence",
-    v: "What we've learned, how we learned it, and where uncertainty remains.",
+    v: "What we learned, how we learned it, and where uncertainty remains.",
   },
   {
     k: "A recommendation",
@@ -197,6 +160,7 @@ const sprintGet = [
     v: "A practical starting point your team can act on immediately.",
   },
 ];
+
 
 
 
@@ -424,44 +388,15 @@ function Index() {
 
 
           <h2 className="display-md max-w-3xl text-balance">
-            From uncertain idea to validated opportunity in 2–4 weeks.
+            From uncertain idea to a decision you can act on.
           </h2>
 
-          <div className="mt-14 grid gap-14 md:grid-cols-12">
-            <div className="md:col-span-8">
-              <div className="max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
-                <p>A focused Discovery Sprint for one product opportunity.</p>
-                <p>
-                  We investigate the problem, understand the customer, test the riskiest
-                  assumptions, and determine whether there is something worth pursuing.
-                </p>
-                <p>The result isn&apos;t a hundred-page report.</p>
-                <p className="text-foreground">
-                  It&apos;s a clearer opportunity, the evidence behind it, and a concrete path
-                  forward.
-                </p>
-              </div>
-              <a
-                href="#contact"
-                className="group mt-8 inline-flex h-11 items-center gap-3 bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-              >
-                Scope a Discovery Sprint
-                <span className="transition-transform group-hover:translate-x-0.5" aria-hidden="true">
-                  →
-                </span>
-              </a>
-            </div>
-            <div className="md:col-span-4">
-              <p className="label-mono">The sprint</p>
-              <dl className="mt-5 grid gap-6 border-t border-hairline pt-6">
-                {sprintFacts.map((f) => (
-                  <div key={f.k}>
-                    <dt className="label-mono">{f.k}</dt>
-                    <dd className="mt-2 text-[0.95rem] leading-relaxed text-foreground">{f.v}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
+          <div className="mt-10 max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
+            <p>
+              A focused engagement on one product opportunity. We run it with your team: framing the
+              problem, talking to customers, testing the riskiest assumptions together. The
+              conclusion is one your team helped reach, so it holds up in the room afterwards.
+            </p>
           </div>
 
           <div className="rule-t mt-16 grid gap-12 pt-10 md:grid-cols-12">
@@ -479,30 +414,16 @@ function Index() {
               </ul>
             </div>
             <div className="md:col-span-7">
-              <p className="label-mono">What we investigate</p>
-              <dl className="mt-5 grid gap-x-10 gap-y-6 sm:grid-cols-2">
-                {sprintInvestigate.map((f) => (
-                  <div key={f.k} className="border-t border-hairline pt-4">
-                    <dt className="text-base font-medium tracking-tight text-foreground">{f.k}</dt>
-                    <dd className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">
-                      {f.v}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
+              <p className="label-mono">What we look at</p>
+              <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
+                Whether the problem is real, who has it, what they do today, how large the
+                opportunity is, and what has to be true for it to work.
+              </p>
             </div>
           </div>
 
           <div className="rule-t mt-16 grid gap-12 pt-10 md:grid-cols-12">
-            <div className="md:col-span-5">
-              <p className="label-mono">What happens</p>
-              <ul className="mt-5 space-y-3 text-[0.95rem] leading-relaxed text-muted-foreground">
-                {sprintInside.map((i) => (
-                  <li key={i}>{i}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="md:col-span-7">
+            <div className="md:col-span-7 md:col-start-6">
               <p className="label-mono">What you leave with</p>
               <dl className="mt-5 grid gap-x-10 gap-y-6 sm:grid-cols-2">
                 {sprintGet.map((f) => (
@@ -518,14 +439,21 @@ function Index() {
           </div>
 
           <div className="rule-t mt-16 max-w-2xl pt-10">
-            <p className="label-mono">The outcome</p>
-            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
+            <p className="text-lg leading-relaxed text-muted-foreground">
               You don&apos;t leave with more opinions.
             </p>
-            <p className="mt-3 text-lg leading-relaxed text-foreground">
-              You leave knowing what is worth pursuing, why, and what to do next.
-            </p>
           </div>
+
+          <a
+            href="#contact"
+            className="group mt-10 inline-flex h-11 items-center gap-3 bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+          >
+            Scope a Discovery Sprint
+            <span className="transition-transform group-hover:translate-x-0.5" aria-hidden="true">
+              →
+            </span>
+          </a>
+
         </Section>
 
         {/* Approach */}
