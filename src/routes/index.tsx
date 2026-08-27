@@ -14,6 +14,8 @@ import futuresBranchingWebp from "@/assets/futures-branching.webp";
 import sprintConverge from "@/assets/sprint-converge.jpg";
 import sprintConvergeWebp from "@/assets/sprint-converge.webp";
 import sprintConvergeWebp2x from "@/assets/sprint-converge@2x.webp";
+
+export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Slipstream Labs: Find what’s worth building" },
