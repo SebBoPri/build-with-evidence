@@ -206,7 +206,7 @@ function Index() {
             aria-hidden="true"
           >
             <picture>
-              <source srcSet={`${heroFieldWebp} 1x, ${heroFieldWebp2x} 2x`} type="image/webp" />
+              <source srcSet={heroFieldWebp} type="image/webp" />
               <img
                 src={heroField}
                 alt=""
