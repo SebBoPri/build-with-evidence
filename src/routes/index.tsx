@@ -215,7 +215,7 @@ function Index() {
                 decoding="sync"
                 fetchPriority="high"
                 width={1600}
-                height={907}
+                height={900}
                 className="h-full w-full object-cover opacity-70"
               />
             </picture>
