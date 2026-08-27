@@ -5,7 +5,7 @@ import { ApproachRail } from "@/components/site/approach-rail";
 import { ContactForm } from "@/components/site/contact-form";
 import heroField from "@/assets/hero-field.jpg";
 import heroFieldWebp from "@/assets/hero-field.webp";
-import heroFieldWebp2x from "@/assets/hero-field@2x.webp";
+
 import evidenceResolve from "@/assets/evidence-resolve.jpg";
 import evidenceResolveWebp from "@/assets/evidence-resolve.webp";
 import evidenceResolveWebp2x from "@/assets/evidence-resolve@2x.webp";
