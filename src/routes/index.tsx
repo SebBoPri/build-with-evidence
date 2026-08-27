@@ -5,7 +5,7 @@ import { ApproachRail } from "@/components/site/approach-rail";
 import { ContactForm } from "@/components/site/contact-form";
 import heroField from "@/assets/hero-field.jpg";
 import heroFieldWebp from "@/assets/hero-field.webp";
-import heroFieldWebp2x from "@/assets/hero-field@2x.webp";
+
 import evidenceResolve from "@/assets/evidence-resolve.jpg";
 import evidenceResolveWebp from "@/assets/evidence-resolve.webp";
 import evidenceResolveWebp2x from "@/assets/evidence-resolve@2x.webp";
@@ -206,7 +206,7 @@ function Index() {
             aria-hidden="true"
           >
             <picture>
-              <source srcSet={`${heroFieldWebp} 1x, ${heroFieldWebp2x} 2x`} type="image/webp" />
+              <source srcSet={heroFieldWebp} type="image/webp" />
               <img
                 src={heroField}
                 alt=""
@@ -215,7 +215,7 @@ function Index() {
                 decoding="sync"
                 fetchPriority="high"
                 width={1600}
-                height={907}
+                height={900}
                 className="h-full w-full object-cover opacity-70"
               />
             </picture>
