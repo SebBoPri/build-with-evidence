@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Section, Lead, FullBleedFigure, Reveal } from "@/components/site/sections";
-import { Wordmark, Starfield } from "@/components/site/brand";
+import { Wordmark } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import { ContactForm } from "@/components/site/contact-form";
 import heroField from "@/assets/hero-field.jpg";
@@ -11,7 +11,6 @@ import evidenceResolveWebp from "@/assets/evidence-resolve.webp";
 import evidenceResolveWebp2x from "@/assets/evidence-resolve@2x.webp";
 import futuresBranching from "@/assets/futures-branching.jpg";
 import futuresBranchingWebp from "@/assets/futures-branching.webp";
-import futuresBranchingWebp2x from "@/assets/futures-branching@2x.webp";
 import sprintConverge from "@/assets/sprint-converge.jpg";
 import sprintConvergeWebp from "@/assets/sprint-converge.webp";
 import sprintConvergeWebp2x from "@/assets/sprint-converge@2x.webp";
@@ -276,19 +275,11 @@ function Index() {
           <FullBleedFigure
             src={futuresBranching}
             srcWebp={futuresBranchingWebp}
-            srcWebp2x={futuresBranchingWebp2x}
             width={1600}
-            height={640}
-            alt="Abstract diagram: many faint paths fanning outward from a single bright point, none of them marked out from the others"
+            height={1067}
+            alt="A ploughed field of bare dark earth under heavy cloud."
             eyebrow="The problem"
-            title="Many possible futures, none of them yet tested"
-            subtitle="At the start, nothing distinguishes the path that works from the ones that do not."
-            note="Each line is a plausible plan. The bright point is where you are standing today."
             meta="Uncertainty at the start"
-
-            overlay={
-              <Starfield className="pointer-events-none absolute inset-0 h-full w-full text-foreground opacity-25" />
-            }
           />
 
 
