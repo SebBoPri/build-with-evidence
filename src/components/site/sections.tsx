@@ -152,7 +152,7 @@ export function FullBleedFigure({
   alt: string;
   /** small mono label naming the section the image belongs to */
   eyebrow?: string;
-  title: string;
+  title?: string;
   subtitle?: string;
   /** short "how to read this" note describing what the image shows */
   note?: string;
