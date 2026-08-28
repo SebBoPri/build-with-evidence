@@ -204,7 +204,6 @@ export function FullBleedFigure({
           />
         </picture>
 
-        {overlay}
         <div
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_65%,var(--background)_100%)]"
           aria-hidden="true"
@@ -225,6 +224,8 @@ export function FullBleedFigure({
           className="pointer-events-none absolute inset-y-0 right-0 w-6 bg-gradient-to-l from-background to-transparent md:w-14"
           aria-hidden="true"
         />
+
+        {overlay}
       </div>
 
 

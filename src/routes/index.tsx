@@ -278,16 +278,23 @@ function Index() {
             width={1600}
             height={1067}
             alt="A ploughed field of bare dark earth under heavy cloud."
-            eyebrow="The problem"
-            meta="Uncertainty at the start"
+            overlay={
+              <div className="absolute bottom-0 left-0 z-10 max-w-3xl p-6 md:p-10">
+                <p className="label-mono flex items-center gap-3">
+                  <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
+                  The problem
+                </p>
+                <h2 className="display-md mt-3 text-balance text-foreground">
+                  Building the wrong thing is still expensive.
+                </h2>
+                <p className="label-mono mt-4 text-muted-foreground">Uncertainty at the start</p>
+              </div>
+            }
           />
 
 
           <div className="mx-auto w-full max-w-[84rem] px-6 pb-24 pt-16 md:px-10 md:pb-32 md:pt-20">
-            <h2 className="display-md max-w-3xl text-balance">
-              Building the wrong thing is still expensive.
-            </h2>
-            <div className="mt-10 max-w-2xl space-y-5 text-lg leading-relaxed text-muted-foreground">
+            <div className="max-w-2xl space-y-5 text-lg leading-relaxed text-muted-foreground">
               <p>
                 The cost of building software keeps falling. The cost of committing to the wrong
                 product idea does not.
