@@ -235,10 +235,6 @@ function Index() {
               <span className="text-muted-foreground">building.</span>
             </h1>
             <div className="fade-up delay-2 mt-10 max-w-xl space-y-5 text-lg leading-relaxed text-muted-foreground">
-              <p className="text-foreground">
-                Building has never been easier. Knowing what is worth building has never mattered
-                more.
-              </p>
               <p>
                 Slipstream Labs helps product teams turn uncertain ideas and opportunities into
                 evidence-backed paths forward, before committing significant engineering resources.
@@ -269,6 +265,13 @@ function Index() {
           </div>
         </section>
 
+        <section className="scroll-mt-16 bg-black">
+          <div className="mx-auto w-full max-w-[84rem] px-6 py-32 md:px-10 md:py-44">
+            <h2 className="display-md max-w-4xl text-balance">
+              The cost of building software keeps falling. The cost of committing to the wrong product idea does not.
+            </h2>
+          </div>
+        </section>
 
         {/* Problem */}
         <section id="problem" className="scroll-mt-16">
