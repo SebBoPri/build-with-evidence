@@ -164,6 +164,7 @@ export function FullBleedFigure({
   breakOut?: boolean;
   overlay?: ReactNode;
 }) {
+  const hasCaption = Boolean(eyebrow || title || subtitle || note || meta);
 
   return (
     <figure
