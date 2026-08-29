@@ -9,8 +9,8 @@ import heroFieldWebp from "@/assets/hero-field.webp";
 import evidenceResolve from "@/assets/evidence-resolve.jpg";
 import evidenceResolveWebp from "@/assets/evidence-resolve.webp";
 import evidenceResolveWebp2x from "@/assets/evidence-resolve@2x.webp";
-import futuresBranching from "@/assets/futures-branching.jpg";
-import futuresBranchingWebp from "@/assets/futures-branching.webp";
+import problemField from "@/assets/problem-field.jpg";
+import problemFieldWebp from "@/assets/problem-field.webp";
 import sprintConverge from "@/assets/sprint-converge.jpg";
 import sprintConvergeWebp from "@/assets/sprint-converge.webp";
 import sprintConvergeWebp2x from "@/assets/sprint-converge@2x.webp";
@@ -276,8 +276,8 @@ function Index() {
         {/* Problem */}
         <section id="problem" className="scroll-mt-16">
           <FullBleedFigure
-            src={futuresBranching}
-            srcWebp={futuresBranchingWebp}
+            src={problemField}
+            srcWebp={problemFieldWebp}
             width={1600}
             height={1067}
             alt="A ploughed field of bare dark earth under heavy cloud."
