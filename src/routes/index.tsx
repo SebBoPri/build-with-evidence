@@ -382,7 +382,6 @@ function Index() {
             eyebrow="Discovery Sprint"
             title="One question, taken to a decision"
             subtitle="The sprint ends with one recommendation, not a document dump."
-            note="The brackets mark the question in scope. The crosshair is the decision the sprint resolves."
             meta="Flagship offering"
 
           />
@@ -467,7 +466,6 @@ function Index() {
             eyebrow="How we work"
             title="Noise resolves into signal"
             subtitle="Name what must be true, then test it until the evidence separates the promising paths from the rest."
-            note="Left is everything you could believe. Right is what the evidence still supports."
             meta="Evidence synthesis"
           />
 
