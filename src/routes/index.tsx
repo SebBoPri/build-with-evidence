@@ -299,10 +299,6 @@ function Index() {
           <div className="mx-auto w-full max-w-[84rem] px-6 pb-24 pt-16 md:px-10 md:pb-32 md:pt-20">
             <div className="max-w-2xl space-y-5 text-lg leading-relaxed text-muted-foreground">
               <p>
-                The cost of building software keeps falling. The cost of committing to the wrong
-                product idea does not.
-              </p>
-              <p>
                 A team can go from assumption to production in weeks. But if the problem
                 isn&apos;t real, the customer isn&apos;t who you thought, or the solution
                 doesn&apos;t create enough value, speed only gets you to the wrong destination
