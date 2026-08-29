@@ -266,7 +266,7 @@ function Index() {
         </section>
 
         <section className="scroll-mt-16 bg-black">
-          <div className="mx-auto w-full max-w-[84rem] px-6 py-32 md:px-10 md:py-44">
+          <div className="mx-auto w-full max-w-[84rem] px-6 pt-32 pb-24 md:px-10 md:pt-44 md:pb-32">
             <h2 className="display-md max-w-4xl text-balance">
               The cost of building software keeps falling. The cost of committing to the wrong product idea does not.
             </h2>
