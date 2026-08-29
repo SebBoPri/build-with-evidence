@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Section, Lead, FullBleedFigure, Reveal } from "@/components/site/sections";
+import { Section, FullBleedFigure } from "@/components/site/sections";
 import { Wordmark } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import { ContactForm } from "@/components/site/contact-form";
