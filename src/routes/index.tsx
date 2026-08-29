@@ -507,8 +507,8 @@ function Index() {
             </div>
             <div className="space-y-5 text-lg leading-relaxed text-muted-foreground md:col-span-8">
               <p>
-                I&apos;ve spent my career working in the messy front half of products, across
-                product management, business analysis and data in several industries.
+              I&apos;ve spent my career working in the messy front half of products, across
+                product management, business analysis and data in banking, telecom, logistics, automotive and fintech.
               </p>
               <p>
                 The pattern repeats: teams rarely run out of ideas. They run out of{" "}
