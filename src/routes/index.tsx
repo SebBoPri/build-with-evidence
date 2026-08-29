@@ -276,8 +276,8 @@ function Index() {
         {/* Problem */}
         <section id="problem" className="scroll-mt-16">
           <FullBleedFigure
-            src={futuresBranching}
-            srcWebp={futuresBranchingWebp}
+            src={problemField}
+            srcWebp={problemFieldWebp}
             width={1600}
             height={1067}
             alt="A ploughed field of bare dark earth under heavy cloud."
