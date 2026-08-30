@@ -229,20 +229,12 @@ function Index() {
               </p>
             </div>
             <div className="fade-up delay-3 mt-12 flex flex-wrap items-center gap-3">
-              <a
-                href="#contact"
-                className="group inline-flex h-12 items-center gap-3 bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-              >
-                Book an intro call
-                <span className="transition-transform group-hover:translate-x-0.5" aria-hidden="true">
-                  →
-                </span>
-              </a>
+              <CtaButton href="#contact">Let's explore together</CtaButton>
               <a
                 href="#sprint"
                 className="inline-flex h-12 items-center border border-border px-6 text-sm font-medium transition-colors hover:border-foreground"
               >
-                Explore the Discovery Sprint
+                How the sprint works
               </a>
             </div>
             <p className="label-mono fade-up delay-4 mt-14">Evidence before build.</p>
