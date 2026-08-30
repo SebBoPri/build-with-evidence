@@ -94,16 +94,6 @@ const problemCases = [
   },
 ];
 
-const skippedQuestions = [
-  "Is this a real problem?",
-  "How often does it happen?",
-  "Who experiences it most acutely?",
-  "What do people do today?",
-  "Is the opportunity big enough to matter?",
-  "What has to be true for this to work?",
-  "What evidence would change our mind?",
-  "Is this worth building?",
-];
 
 const steps = [
   {
@@ -265,13 +255,6 @@ function Index() {
           </div>
         </section>
 
-        <section className="scroll-mt-16 bg-black">
-          <div className="mx-auto w-full max-w-[84rem] px-6 pt-32 pb-24 md:px-10 md:pt-44 md:pb-32">
-            <h2 className="display-md max-w-4xl text-balance">
-              The cost of building software keeps falling. The cost of committing to the wrong product idea does not.
-            </h2>
-          </div>
-        </section>
 
         {/* Problem */}
         <section id="problem" className="scroll-mt-16">
@@ -327,25 +310,6 @@ function Index() {
                 </ol>
               </div>
 
-              <div className="md:col-span-6">
-                <p className="label-mono">The questions that get skipped</p>
-                <ul className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
-                  {skippedQuestions.map((item) => (
-                    <li
-                      key={item}
-                      className="flex gap-4 py-4 text-[0.95rem] transition-colors hover:text-foreground"
-                    >
-                      <span className="mt-2 h-px w-4 shrink-0 bg-accent" aria-hidden="true" />
-                      <span className="text-muted-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-10 text-lg leading-relaxed text-foreground">
-                  The problem isn&apos;t a lack of ideas.
-                  <br />
-                  It&apos;s knowing which ideas deserve to become products.
-                </p>
-              </div>
             </div>
           </div>
         </section>
@@ -395,13 +359,6 @@ function Index() {
             </p>
           </div>
 
-          <div className="mt-12">
-            <p className="label-mono">What we look at</p>
-            <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-              Whether the problem is real, who has it, what they do today, how large the
-              opportunity is, and what has to be true for it to work.
-            </p>
-          </div>
 
           <div className="rule-t mt-12 pt-10">
             <p className="label-mono">When to use it</p>
