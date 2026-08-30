@@ -280,7 +280,7 @@ function Index() {
 
 
           <div className="mx-auto w-full max-w-[84rem] px-6 pb-24 pt-16 md:px-10 md:pb-32 md:pt-20">
-            <div className="max-w-2xl space-y-5 text-lg leading-relaxed text-muted-foreground">
+            <div className="max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
               <p>
                 A team can go from assumption to production in weeks. But if the problem
                 isn&apos;t real, the customer isn&apos;t who you thought, or the solution
@@ -288,30 +288,28 @@ function Index() {
                 faster.
               </p>
             </div>
-            <div className="mt-16 grid gap-14 md:mt-20 md:grid-cols-12">
-              <div className="md:col-span-6">
-                <p className="label-mono">We&apos;ve all seen it</p>
-                <ol className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
-                  {problemCases.map((item, i) => (
-                    <li key={item.t} className="flex gap-6 py-6">
-                      <span className="label-mono shrink-0 pt-1">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <div>
-                        <h3 className="text-base font-medium tracking-tight text-foreground">
-                          {item.t}
-                        </h3>
-                        <p className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">
-                          {item.body}
-                        </p>
-                      </div>
-                    </li>
-                  ))}
-                </ol>
-              </div>
-
+            <div className="mt-16 md:mt-20">
+              <p className="label-mono">We&apos;ve all seen it</p>
+              <ol className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
+                {problemCases.map((item, i) => (
+                  <li key={item.t} className="flex gap-6 py-6 md:py-7">
+                    <span className="label-mono shrink-0 pt-1">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <div className="max-w-3xl">
+                      <h3 className="text-base font-medium tracking-tight text-foreground">
+                        {item.t}
+                      </h3>
+                      <p className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">
+                        {item.body}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
             </div>
           </div>
+
         </section>
 
         {/* Transition */}
