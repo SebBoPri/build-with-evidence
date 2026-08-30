@@ -3,6 +3,7 @@ import { Section, FullBleedFigure } from "@/components/site/sections";
 import { Wordmark } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import { ContactForm } from "@/components/site/contact-form";
+import { CtaButton } from "@/components/site/cta-button";
 import heroField from "@/assets/hero-field.jpg";
 import heroFieldWebp from "@/assets/hero-field.webp";
 
@@ -172,12 +173,9 @@ function Index() {
               </a>
             ))}
           </nav>
-          <a
-            href="#contact"
-            className="border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:bg-foreground hover:text-background"
-          >
-            Book an intro call
-          </a>
+          <CtaButton href="#contact" className="h-10 px-5">
+            Let's explore together
+          </CtaButton>
         </div>
       </header>
 
@@ -231,20 +229,12 @@ function Index() {
               </p>
             </div>
             <div className="fade-up delay-3 mt-12 flex flex-wrap items-center gap-3">
-              <a
-                href="#contact"
-                className="group inline-flex h-12 items-center gap-3 bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-              >
-                Book an intro call
-                <span className="transition-transform group-hover:translate-x-0.5" aria-hidden="true">
-                  →
-                </span>
-              </a>
+              <CtaButton href="#contact">Let's explore together</CtaButton>
               <a
                 href="#sprint"
                 className="inline-flex h-12 items-center border border-border px-6 text-sm font-medium transition-colors hover:border-foreground"
               >
-                Explore the Discovery Sprint
+                How the sprint works
               </a>
             </div>
             <p className="label-mono fade-up delay-4 mt-14">Evidence before build.</p>
@@ -392,15 +382,9 @@ function Index() {
             </p>
           </div>
 
-          <a
-            href="#contact"
-            className="group mt-10 inline-flex h-11 items-center gap-3 bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-          >
-            Scope a Discovery Sprint
-            <span className="transition-transform group-hover:translate-x-0.5" aria-hidden="true">
-              →
-            </span>
-          </a>
+          <CtaButton href="#contact" className="mt-10">
+            Let's explore together
+          </CtaButton>
 
         </Section>
 
