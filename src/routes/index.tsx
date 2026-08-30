@@ -173,12 +173,9 @@ function Index() {
               </a>
             ))}
           </nav>
-          <a
-            href="#contact"
-            className="border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:bg-foreground hover:text-background"
-          >
-            Book an intro call
-          </a>
+          <CtaButton href="#contact" className="h-10 px-5">
+            Let's explore together
+          </CtaButton>
         </div>
       </header>
 
