@@ -346,20 +346,6 @@ function Index() {
 
         {/* Approach */}
         <Section id="approach">
-          <FullBleedFigure
-            breakOut
-            src={evidenceResolve}
-            srcWebp={evidenceResolveWebp}
-            srcWebp2x={evidenceResolveWebp2x}
-            width={1600}
-            height={1073}
-            alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
-            eyebrow="How we work"
-            title="Noise resolves into signal"
-            subtitle="Name what must be true, then test it until the evidence separates the promising paths from the rest."
-            meta="Evidence synthesis"
-          />
-
           <h2 className="display-md max-w-3xl text-balance">Start with what must be true.</h2>
 
           <div className="mt-10 max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
