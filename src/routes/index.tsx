@@ -1,20 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Section, FullBleedFigure } from "@/components/site/sections";
+import { Section } from "@/components/site/sections";
 import { Wordmark } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import { ContactForm } from "@/components/site/contact-form";
 import { CtaButton } from "@/components/site/cta-button";
-import heroField from "@/assets/hero-field.jpg";
-import heroFieldWebp from "@/assets/hero-field.webp";
-
-import evidenceResolve from "@/assets/evidence-resolve.jpg";
-import evidenceResolveWebp from "@/assets/evidence-resolve.webp";
-import evidenceResolveWebp2x from "@/assets/evidence-resolve@2x.webp";
-import problemField from "@/assets/problem-field.jpg";
-import problemFieldWebp from "@/assets/problem-field.webp";
-import sprintConverge from "@/assets/sprint-converge.jpg";
-import sprintConvergeWebp from "@/assets/sprint-converge.webp";
-import sprintConvergeWebp2x from "@/assets/sprint-converge@2x.webp";
+import heroStream from "@/assets/hero-stream.jpg.asset.json";
+import heroStreamWebp from "@/assets/hero-stream.webp.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
