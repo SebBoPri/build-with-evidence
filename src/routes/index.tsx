@@ -91,32 +91,32 @@ const steps = [
   {
     n: "01",
     title: "Assumptions",
-    q: "What has to be true for this opportunity to work?",
-    body: "We map the assumptions behind the idea and rank them by risk.",
+    q: "What has to be true?",
+    body: "Map the beliefs behind the idea and rank them by risk.",
   },
   {
     n: "02",
     title: "Kill-lines",
     q: "What would make us stop?",
-    body: "Before testing, we agree what evidence would be strong enough to change direction or walk away.",
+    body: "Define the evidence strong enough to change direction or walk away before testing begins.",
   },
   {
     n: "03",
     title: "Evidence",
     q: "What happens in reality?",
-    body: "We gather evidence from customers, users, markets and experiments. We prioritise what people actually do over what they say they might do.",
+    body: "Test the riskiest assumptions with the smallest amount of work that teaches something useful.",
   },
   {
     n: "04",
     title: "Opportunity",
-    q: "What does the evidence tell us?",
-    body: "We connect the evidence, identify what holds up and what doesn't, and determine whether a meaningful opportunity remains.",
+    q: "What remains?",
+    body: "Connect what held up and decide whether a meaningful opportunity is left.",
   },
   {
     n: "05",
     title: "Action",
-    q: "What should happen next?",
-    body: "Build it. Change it. Test it. Or stop. The answer is written down, with the reasoning behind it.",
+    q: "What next?",
+    body: "Build it, change it, test it, or stop. The decision is written down.",
   },
 ];
 
@@ -274,20 +274,6 @@ function Index() {
           </div>
         </Section>
 
-        {/* Transition */}
-        <Section>
-          <h2 className="display-md max-w-3xl text-balance">
-            Don&apos;t explore everything. Find the path worth pursuing.
-          </h2>
-          <div className="mt-10 max-w-2xl space-y-5 text-lg leading-relaxed text-muted-foreground">
-            <p>At the start of a product opportunity, many futures are possible.</p>
-            <p>Some lead somewhere valuable. Most don&apos;t.</p>
-            <p>
-              Our job is not to predict the future. It&apos;s to investigate the assumptions that
-              separate the promising paths from the rest.
-            </p>
-          </div>
-        </Section>
 
         {/* Discovery Sprint */}
         <Section id="sprint">
@@ -349,11 +335,13 @@ function Index() {
           <h2 className="display-md max-w-3xl text-balance">Start with what must be true.</h2>
 
           <div className="mt-10 max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
-            <p>Every product idea contains assumptions.</p>
-            <p>Some are harmless. Others can kill the entire opportunity.</p>
             <p>
-              We identify the assumptions that matter most, then test them with the smallest amount
-              of work needed to learn something useful.
+              Every product idea rests on assumptions. The dangerous ones are not the assumptions
+              you question. They are the assumptions you never name.
+            </p>
+            <p>
+              A kill line is the evidence that would make us stop, change direction, or commit. We
+              define it before we start, so momentum cannot override what the evidence says.
             </p>
           </div>
 
