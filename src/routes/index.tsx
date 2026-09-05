@@ -91,32 +91,32 @@ const steps = [
   {
     n: "01",
     title: "Assumptions",
-    q: "What has to be true for this opportunity to work?",
-    body: "We map the assumptions behind the idea and rank them by risk.",
+    q: "What has to be true?",
+    body: "Map the beliefs behind the idea and rank them by risk.",
   },
   {
     n: "02",
     title: "Kill-lines",
     q: "What would make us stop?",
-    body: "Before testing, we agree what evidence would be strong enough to change direction or walk away.",
+    body: "Define the evidence strong enough to change direction or walk away before testing begins.",
   },
   {
     n: "03",
     title: "Evidence",
     q: "What happens in reality?",
-    body: "We gather evidence from customers, users, markets and experiments. We prioritise what people actually do over what they say they might do.",
+    body: "Test the riskiest assumptions with the smallest amount of work that teaches something useful.",
   },
   {
     n: "04",
     title: "Opportunity",
-    q: "What does the evidence tell us?",
-    body: "We connect the evidence, identify what holds up and what doesn't, and determine whether a meaningful opportunity remains.",
+    q: "What remains?",
+    body: "Connect what held up and decide whether a meaningful opportunity is left.",
   },
   {
     n: "05",
     title: "Action",
-    q: "What should happen next?",
-    body: "Build it. Change it. Test it. Or stop. The answer is written down, with the reasoning behind it.",
+    q: "What next?",
+    body: "Build it, change it, test it, or stop. The decision is written down.",
   },
 ];
 
