@@ -335,11 +335,13 @@ function Index() {
           <h2 className="display-md max-w-3xl text-balance">Start with what must be true.</h2>
 
           <div className="mt-10 max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
-            <p>Every product idea contains assumptions.</p>
-            <p>Some are harmless. Others can kill the entire opportunity.</p>
             <p>
-              We identify the assumptions that matter most, then test them with the smallest amount
-              of work needed to learn something useful.
+              Every product idea rests on assumptions. The dangerous ones are not the assumptions
+              you question. They are the assumptions you never name.
+            </p>
+            <p>
+              A kill line is the evidence that would make us stop, change direction, or commit. We
+              define it before we start, so momentum cannot override what the evidence says.
             </p>
           </div>
 
