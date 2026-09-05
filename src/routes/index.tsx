@@ -184,16 +184,16 @@ function Index() {
             aria-hidden="true"
           >
             <picture>
-              <source srcSet={heroFieldWebp} type="image/webp" />
+              <source srcSet={heroStreamWebp.url} type="image/webp" />
               <img
-                src={heroField}
+                src={heroStream.url}
                 alt=""
                 aria-hidden="true"
                 loading="eager"
                 decoding="sync"
                 fetchPriority="high"
                 width={1600}
-                height={900}
+                height={1073}
                 className="h-full w-full object-cover opacity-70"
               />
             </picture>
