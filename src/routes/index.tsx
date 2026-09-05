@@ -1,20 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Section, FullBleedFigure } from "@/components/site/sections";
+import { Section } from "@/components/site/sections";
 import { Wordmark } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import { ContactForm } from "@/components/site/contact-form";
 import { CtaButton } from "@/components/site/cta-button";
-import heroField from "@/assets/hero-field.jpg";
-import heroFieldWebp from "@/assets/hero-field.webp";
-
-import evidenceResolve from "@/assets/evidence-resolve.jpg";
-import evidenceResolveWebp from "@/assets/evidence-resolve.webp";
-import evidenceResolveWebp2x from "@/assets/evidence-resolve@2x.webp";
-import problemField from "@/assets/problem-field.jpg";
-import problemFieldWebp from "@/assets/problem-field.webp";
-import sprintConverge from "@/assets/sprint-converge.jpg";
-import sprintConvergeWebp from "@/assets/sprint-converge.webp";
-import sprintConvergeWebp2x from "@/assets/sprint-converge@2x.webp";
+import heroStream from "@/assets/hero-stream.jpg.asset.json";
+import heroStreamWebp from "@/assets/hero-stream.webp.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -193,16 +184,16 @@ function Index() {
             aria-hidden="true"
           >
             <picture>
-              <source srcSet={heroFieldWebp} type="image/webp" />
+              <source srcSet={heroStreamWebp.url} type="image/webp" />
               <img
-                src={heroField}
+                src={heroStream.url}
                 alt=""
                 aria-hidden="true"
                 loading="eager"
                 decoding="sync"
                 fetchPriority="high"
                 width={1600}
-                height={900}
+                height={1073}
                 className="h-full w-full object-cover opacity-70"
               />
             </picture>
@@ -247,60 +238,41 @@ function Index() {
 
 
         {/* Problem */}
-        <section id="problem" className="scroll-mt-16">
-          <FullBleedFigure
-            src={problemField}
-            srcWebp={problemFieldWebp}
-            width={1600}
-            height={1067}
-            alt="A ploughed field of bare dark earth under heavy cloud."
-            overlay={
-              <div className="absolute bottom-0 left-0 z-10 max-w-3xl p-6 md:p-10">
-                <p className="label-mono flex items-center gap-3">
-                  <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
-                  The problem
-                </p>
-                <h2 className="display-md mt-3 text-balance text-foreground">
-                  Building the wrong thing is still expensive.
-                </h2>
-                <p className="label-mono mt-4 text-muted-foreground">Uncertainty at the start</p>
-              </div>
-            }
-          />
+        <Section id="problem" label="The problem">
+          <h2 className="display-md max-w-3xl text-balance">
+            Building the wrong thing is still expensive.
+          </h2>
 
-
-          <div className="mx-auto w-full max-w-[84rem] px-6 pb-24 pt-16 md:px-10 md:pb-32 md:pt-20">
-            <div className="max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
-              <p>
-                A team can go from assumption to production in weeks. But if the problem
-                isn&apos;t real, the customer isn&apos;t who you thought, or the solution
-                doesn&apos;t create enough value, speed only gets you to the wrong destination
-                faster.
-              </p>
-            </div>
-            <div className="mt-16 md:mt-20">
-              <p className="label-mono">We&apos;ve all seen it</p>
-              <ol className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
-                {problemCases.map((item, i) => (
-                  <li key={item.t} className="flex gap-6 py-6 md:py-7">
-                    <span className="label-mono shrink-0 pt-1">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <div className="max-w-3xl">
-                      <h3 className="text-base font-medium tracking-tight text-foreground">
-                        {item.t}
-                      </h3>
-                      <p className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">
-                        {item.body}
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </div>
+          <div className="mt-10 max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
+            <p>
+              A team can go from assumption to production in weeks. But if the problem
+              isn&apos;t real, the customer isn&apos;t who you thought, or the solution
+              doesn&apos;t create enough value, speed only gets you to the wrong destination
+              faster.
+            </p>
           </div>
 
-        </section>
+          <div className="mt-16 md:mt-20">
+            <p className="label-mono">We&apos;ve all seen it</p>
+            <ol className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
+              {problemCases.map((item, i) => (
+                <li key={item.t} className="flex gap-6 py-6 md:py-7">
+                  <span className="label-mono shrink-0 pt-1">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div className="max-w-3xl">
+                    <h3 className="text-base font-medium tracking-tight text-foreground">
+                      {item.t}
+                    </h3>
+                    <p className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">
+                      {item.body}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </Section>
 
         {/* Transition */}
         <Section>
@@ -319,22 +291,6 @@ function Index() {
 
         {/* Discovery Sprint */}
         <Section id="sprint">
-          <FullBleedFigure
-            breakOut
-            src={sprintConverge}
-            srcWebp={sprintConvergeWebp}
-            srcWebp2x={sprintConvergeWebp2x}
-            width={1344}
-            height={896}
-            alt="Abstract image: a dense field of nodes and filaments, with one bounded region marked by bracket rules and a single node fixed by a crosshair"
-            eyebrow="Discovery Sprint"
-            title="One question, taken to a decision"
-            subtitle="The sprint ends with one recommendation, not a document dump."
-            meta="Flagship offering"
-
-          />
-
-
           <h2 className="display-md max-w-3xl text-balance">
             From uncertain idea to a decision you can act on.
           </h2>
@@ -390,20 +346,6 @@ function Index() {
 
         {/* Approach */}
         <Section id="approach">
-          <FullBleedFigure
-            breakOut
-            src={evidenceResolve}
-            srcWebp={evidenceResolveWebp}
-            srcWebp2x={evidenceResolveWebp2x}
-            width={1600}
-            height={1073}
-            alt="Abstract diagram: scattered noise on the left resolving into a single clean signal line on the right"
-            eyebrow="How we work"
-            title="Noise resolves into signal"
-            subtitle="Name what must be true, then test it until the evidence separates the promising paths from the rest."
-            meta="Evidence synthesis"
-          />
-
           <h2 className="display-md max-w-3xl text-balance">Start with what must be true.</h2>
 
           <div className="mt-10 max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
