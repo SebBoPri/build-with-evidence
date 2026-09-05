@@ -238,60 +238,41 @@ function Index() {
 
 
         {/* Problem */}
-        <section id="problem" className="scroll-mt-16">
-          <FullBleedFigure
-            src={problemField}
-            srcWebp={problemFieldWebp}
-            width={1600}
-            height={1067}
-            alt="A ploughed field of bare dark earth under heavy cloud."
-            overlay={
-              <div className="absolute bottom-0 left-0 z-10 max-w-3xl p-6 md:p-10">
-                <p className="label-mono flex items-center gap-3">
-                  <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
-                  The problem
-                </p>
-                <h2 className="display-md mt-3 text-balance text-foreground">
-                  Building the wrong thing is still expensive.
-                </h2>
-                <p className="label-mono mt-4 text-muted-foreground">Uncertainty at the start</p>
-              </div>
-            }
-          />
+        <Section id="problem" label="The problem">
+          <h2 className="display-md max-w-3xl text-balance">
+            Building the wrong thing is still expensive.
+          </h2>
 
-
-          <div className="mx-auto w-full max-w-[84rem] px-6 pb-24 pt-16 md:px-10 md:pb-32 md:pt-20">
-            <div className="max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
-              <p>
-                A team can go from assumption to production in weeks. But if the problem
-                isn&apos;t real, the customer isn&apos;t who you thought, or the solution
-                doesn&apos;t create enough value, speed only gets you to the wrong destination
-                faster.
-              </p>
-            </div>
-            <div className="mt-16 md:mt-20">
-              <p className="label-mono">We&apos;ve all seen it</p>
-              <ol className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
-                {problemCases.map((item, i) => (
-                  <li key={item.t} className="flex gap-6 py-6 md:py-7">
-                    <span className="label-mono shrink-0 pt-1">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <div className="max-w-3xl">
-                      <h3 className="text-base font-medium tracking-tight text-foreground">
-                        {item.t}
-                      </h3>
-                      <p className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">
-                        {item.body}
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </div>
+          <div className="mt-10 max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
+            <p>
+              A team can go from assumption to production in weeks. But if the problem
+              isn&apos;t real, the customer isn&apos;t who you thought, or the solution
+              doesn&apos;t create enough value, speed only gets you to the wrong destination
+              faster.
+            </p>
           </div>
 
-        </section>
+          <div className="mt-16 md:mt-20">
+            <p className="label-mono">We&apos;ve all seen it</p>
+            <ol className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
+              {problemCases.map((item, i) => (
+                <li key={item.t} className="flex gap-6 py-6 md:py-7">
+                  <span className="label-mono shrink-0 pt-1">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div className="max-w-3xl">
+                    <h3 className="text-base font-medium tracking-tight text-foreground">
+                      {item.t}
+                    </h3>
+                    <p className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">
+                      {item.body}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </Section>
 
         {/* Transition */}
         <Section>
