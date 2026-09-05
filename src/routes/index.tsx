@@ -274,20 +274,6 @@ function Index() {
           </div>
         </Section>
 
-        {/* Transition */}
-        <Section>
-          <h2 className="display-md max-w-3xl text-balance">
-            Don&apos;t explore everything. Find the path worth pursuing.
-          </h2>
-          <div className="mt-10 max-w-2xl space-y-5 text-lg leading-relaxed text-muted-foreground">
-            <p>At the start of a product opportunity, many futures are possible.</p>
-            <p>Some lead somewhere valuable. Most don&apos;t.</p>
-            <p>
-              Our job is not to predict the future. It&apos;s to investigate the assumptions that
-              separate the promising paths from the rest.
-            </p>
-          </div>
-        </Section>
 
         {/* Discovery Sprint */}
         <Section id="sprint">
