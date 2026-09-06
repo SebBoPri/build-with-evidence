@@ -174,7 +174,7 @@ function Index() {
         {/* Hero */}
         <section className="relative overflow-hidden border-b border-hairline">
           <div className="mx-auto w-full max-w-[84rem] px-6 md:px-10">
-            <div className="grid min-h-[calc(100vh-5rem)] grid-cols-1 items-center gap-12 py-16 md:py-20 lg:grid-cols-2 lg:gap-16">
+            <div className="grid grid-cols-1 items-center gap-12 py-16 md:py-20 lg:min-h-[calc(100vh-5rem)] lg:grid-cols-2 lg:gap-16">
               {/* Text */}
               <div className="flex flex-col justify-center">
                 <p className="label-mono fade-up">Product discovery &amp; strategy</p>
