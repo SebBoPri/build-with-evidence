@@ -173,63 +173,54 @@ function Index() {
       <main id="top">
         {/* Hero */}
         <section className="relative overflow-hidden border-b border-hairline">
-          <div
-            className="pointer-events-none absolute inset-0"
-            style={{
-              maskImage:
-                "radial-gradient(120% 105% at 50% 45%, #000 42%, rgba(0,0,0,0.55) 74%, transparent 100%)",
-              WebkitMaskImage:
-                "radial-gradient(120% 105% at 50% 45%, #000 42%, rgba(0,0,0,0.55) 74%, transparent 100%)",
-            }}
-            aria-hidden="true"
-          >
-            <picture>
-              <source srcSet={heroStreamWebp.url} type="image/webp" />
-              <img
-                src={heroStream.url}
-                alt=""
-                aria-hidden="true"
-                loading="eager"
-                decoding="sync"
-                fetchPriority="high"
-                width={1600}
-                height={1073}
-                className="h-full w-full object-cover opacity-70"
-              />
-            </picture>
+          <div className="mx-auto w-full max-w-[84rem] px-6 md:px-10">
+            <div className="grid grid-cols-1 items-center gap-12 py-16 md:py-20 lg:min-h-[calc(100vh-5rem)] lg:grid-cols-2 lg:gap-16">
+              {/* Text */}
+              <div className="flex flex-col justify-center">
+                <p className="label-mono fade-up">Product discovery &amp; strategy</p>
+                <h1 className="display-xl fade-up delay-1 mt-8 max-w-3xl text-balance">
+                  Find what&rsquo;s worth
+                  <br />
+                  <span className="text-muted-foreground">building.</span>
+                </h1>
+                <div className="fade-up delay-2 mt-8 max-w-xl space-y-5 text-lg leading-relaxed text-muted-foreground">
+                  <p>
+                    Slipstream Labs helps product teams turn uncertain ideas and opportunities into
+                    evidence-backed paths forward, before committing significant engineering resources.
+                  </p>
+                </div>
+                <div className="fade-up delay-3 mt-10 flex flex-wrap items-center gap-3">
+                  <CtaButton href="#contact">Let's explore together</CtaButton>
+                  <a
+                    href="#sprint"
+                    className="inline-flex h-12 items-center border border-border px-6 text-sm font-medium transition-colors hover:border-foreground"
+                  >
+                    How the sprint works
+                  </a>
+                </div>
+                <p className="label-mono fade-up delay-4 mt-12">Evidence before build.</p>
+              </div>
 
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,var(--background)_100%)]" />
-            <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent" />
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background via-background/70 to-transparent" />
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent md:w-56" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent md:w-56" />
-          </div>
-
-
-          <div className="relative mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
-            <p className="label-mono fade-up">Product discovery &amp; strategy</p>
-            <h1 className="display-xl fade-up delay-1 mt-10 max-w-4xl text-balance">
-              Find what&rsquo;s worth
-              <br />
-              <span className="text-muted-foreground">building.</span>
-            </h1>
-            <div className="fade-up delay-2 mt-10 max-w-xl space-y-5 text-lg leading-relaxed text-muted-foreground">
-              <p>
-                Slipstream Labs helps product teams turn uncertain ideas and opportunities into
-                evidence-backed paths forward, before committing significant engineering resources.
-              </p>
+              {/* Image */}
+              <div className="fade-up delay-2 relative aspect-[4/3] w-full overflow-hidden border border-hairline md:aspect-[3/2] lg:aspect-auto lg:h-[min(70vh,42rem)]">
+                <picture>
+                  <source srcSet={heroStreamWebp.url} type="image/webp" />
+                  <img
+                    src={heroStream.url}
+                    alt=""
+                    loading="eager"
+                    decoding="sync"
+                    fetchPriority="high"
+                    width={1600}
+                    height={1073}
+                    className="h-full w-full object-cover opacity-90"
+                  />
+                </picture>
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_50%,var(--background)_100%)]" />
+              </div>
             </div>
-            <div className="fade-up delay-3 mt-12 flex flex-wrap items-center gap-3">
-              <CtaButton href="#contact">Let's explore together</CtaButton>
-              <a
-                href="#sprint"
-                className="inline-flex h-12 items-center border border-border px-6 text-sm font-medium transition-colors hover:border-foreground"
-              >
-                How the sprint works
-              </a>
-            </div>
-            <p className="label-mono fade-up delay-4 mt-14">Evidence before build.</p>
-            <div className="mt-20 flex flex-wrap items-center justify-between gap-x-8 gap-y-2 border-t border-hairline pt-6 md:mt-28">
+
+            <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-2 border-t border-hairline py-6">
               <p className="label-mono">Assumption · Evidence · Opportunity · Action</p>
               <p className="label-mono">Stockholm, Sweden</p>
             </div>
