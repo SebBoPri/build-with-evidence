@@ -143,6 +143,7 @@ export function FullBleedFigure({
   eager = false,
   breakOut = false,
   overlay,
+  imgClassName = "",
 }: {
   src: string;
   /** preferred WebP source; `src` is the fallback */
@@ -163,6 +164,7 @@ export function FullBleedFigure({
   /** cancel the parent Section's horizontal + top padding */
   breakOut?: boolean;
   overlay?: ReactNode;
+  imgClassName?: string;
 }) {
   const hasCaption = Boolean(eyebrow || title || subtitle || note || meta);
 
