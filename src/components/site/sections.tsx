@@ -143,6 +143,7 @@ export function FullBleedFigure({
   eager = false,
   breakOut = false,
   overlay,
+  imgClassName = "",
 }: {
   src: string;
   /** preferred WebP source; `src` is the fallback */
@@ -163,6 +164,7 @@ export function FullBleedFigure({
   /** cancel the parent Section's horizontal + top padding */
   breakOut?: boolean;
   overlay?: ReactNode;
+  imgClassName?: string;
 }) {
   const hasCaption = Boolean(eyebrow || title || subtitle || note || meta);
 
@@ -170,17 +172,14 @@ export function FullBleedFigure({
     <figure
       className={
         breakOut
-          ? "relative left-1/2 w-screen -translate-x-1/2 -mt-24 mb-16 md:-mt-32 md:mb-20"
+          ? "relative left-1/2 w-screen -translate-x-1/2 mb-16 md:mb-20"
           : "relative mb-16 md:mb-20"
       }
     >
       <div
         className="relative overflow-hidden"
         style={{
-          maskImage:
-            "radial-gradient(100% 95% at 50% 50%, #000 78%, rgba(0,0,0,0.6) 92%, transparent 100%)",
-          WebkitMaskImage:
-            "radial-gradient(100% 95% at 50% 50%, #000 78%, rgba(0,0,0,0.6) 92%, transparent 100%)",
+          aspectRatio: width && height ? `${width}/${height}` : "16/9",
         }}
       >
         <picture>
@@ -200,30 +199,9 @@ export function FullBleedFigure({
             {...(eager ? { fetchPriority: "high" as const } : {})}
             width={width ?? 1600}
             height={height ?? 900}
-            className="h-[28rem] w-full object-cover object-center opacity-95 sm:h-[38rem] md:h-[52rem]"
+            className={`h-full w-full object-cover object-center opacity-95 ${imgClassName}`}
           />
         </picture>
-
-        <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_65%,var(--background)_100%)]"
-          aria-hidden="true"
-        />
-        <div
-          className="pointer-events-none absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-background to-transparent md:h-16"
-          aria-hidden="true"
-        />
-        <div
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-background via-background/50 to-transparent md:h-28"
-          aria-hidden="true"
-        />
-        <div
-          className="pointer-events-none absolute inset-y-0 left-0 w-6 bg-gradient-to-r from-background to-transparent md:w-14"
-          aria-hidden="true"
-        />
-        <div
-          className="pointer-events-none absolute inset-y-0 right-0 w-6 bg-gradient-to-l from-background to-transparent md:w-14"
-          aria-hidden="true"
-        />
 
         {overlay}
       </div>
