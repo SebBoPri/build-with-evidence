@@ -201,20 +201,15 @@ function Index() {
               <p className="label-mono">Stockholm, Sweden</p>
             </div>
           </div>
-          <picture className="block h-[170px] border-y border-hairline md:h-[280px]">
-            <source srcSet={heroStreamWebp.url} type="image/webp" />
-            <img
-              src={heroStream.url}
-              alt=""
-              aria-hidden="true"
-              loading="eager"
-              decoding="sync"
-              fetchPriority="high"
-              width={1600}
-              height={1073}
-              className="h-full w-full object-cover object-[25%_center] md:object-center"
-            />
-          </picture>
+          <FullBleedFigure
+            src={heroStream.url}
+            srcWebp={heroStreamWebp.url}
+            alt=""
+            width={1600}
+            height={1073}
+            eager
+            breakOut
+          />
         </section>
 
 
