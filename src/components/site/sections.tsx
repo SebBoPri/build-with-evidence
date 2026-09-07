@@ -199,7 +199,7 @@ export function FullBleedFigure({
             {...(eager ? { fetchPriority: "high" as const } : {})}
             width={width ?? 1600}
             height={height ?? 900}
-            className="h-full w-full object-cover object-center opacity-95"
+            className={`h-full w-full object-cover object-center opacity-95 ${imgClassName}`}
           />
         </picture>
 
