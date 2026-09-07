@@ -209,6 +209,7 @@ function Index() {
             height={1073}
             eager
             breakOut
+            imgClassName="object-[25%_center] md:object-center"
           />
         </section>
 
