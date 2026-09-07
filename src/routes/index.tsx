@@ -172,44 +172,11 @@ function Index() {
 
       <main id="top">
         {/* Hero */}
-        <section className="relative overflow-hidden border-b border-hairline">
-          <div
-            className="pointer-events-none absolute inset-0"
-            style={{
-              maskImage:
-                "radial-gradient(120% 105% at 50% 45%, #000 42%, rgba(0,0,0,0.55) 74%, transparent 100%)",
-              WebkitMaskImage:
-                "radial-gradient(120% 105% at 50% 45%, #000 42%, rgba(0,0,0,0.55) 74%, transparent 100%)",
-            }}
-            aria-hidden="true"
-          >
-            <picture>
-              <source srcSet={heroStreamWebp.url} type="image/webp" />
-              <img
-                src={heroStream.url}
-                alt=""
-                aria-hidden="true"
-                loading="eager"
-                decoding="sync"
-                fetchPriority="high"
-                width={1600}
-                height={1073}
-                className="h-full w-full object-cover opacity-70"
-              />
-            </picture>
-
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,var(--background)_100%)]" />
-            <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent" />
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background via-background/70 to-transparent" />
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent md:w-56" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent md:w-56" />
-          </div>
-
-
-          <div className="relative mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
+        <section>
+          <div className="mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
             <p className="label-mono fade-up">Product discovery &amp; strategy</p>
             <h1 className="display-xl fade-up delay-1 mt-10 max-w-4xl text-balance">
-              Find what&rsquo;s worth
+              <span>Find what&rsquo;s worth</span>
               <br />
               <span className="text-muted-foreground">building.</span>
             </h1>
@@ -234,6 +201,20 @@ function Index() {
               <p className="label-mono">Stockholm, Sweden</p>
             </div>
           </div>
+          <picture className="block h-[170px] border-y border-hairline md:h-[280px]">
+            <source srcSet={heroStreamWebp.url} type="image/webp" />
+            <img
+              src={heroStream.url}
+              alt=""
+              aria-hidden="true"
+              loading="eager"
+              decoding="sync"
+              fetchPriority="high"
+              width={1600}
+              height={1073}
+              className="h-full w-full object-cover object-[25%_center] md:object-center"
+            />
+          </picture>
         </section>
 
 
