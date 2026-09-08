@@ -176,7 +176,7 @@ function Index() {
           <div className="mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
             <p className="label-mono fade-up">Product discovery &amp; strategy</p>
             <h1 className="display-xl fade-up delay-1 mt-10 max-w-4xl text-balance">
-              <span>Find what&rsquo;s worth</span>{" "}
+              <span>Find what&rsquo;s worth </span>
               <br />
               <span className="text-muted-foreground">building.</span>
             </h1>
@@ -197,7 +197,7 @@ function Index() {
             </div>
             <p className="label-mono fade-up delay-4 mt-14">Evidence before build.</p>
             <div className="mt-20 flex flex-wrap items-center justify-between gap-x-8 gap-y-2 border-t border-hairline pt-6 md:mt-28">
-              <p className="label-mono">Assumption · Evidence · Opportunity · Action</p>
+              <p className="label-mono">Assumption · Kill-line · Evidence · Decision</p>
               <p className="label-mono">Stockholm, Sweden</p>
             </div>
           </div>
@@ -253,7 +253,7 @@ function Index() {
 
 
         {/* Discovery Sprint */}
-        <Section id="sprint">
+        <Section id="sprint" label="Discovery Sprint">
           <h2 className="display-md max-w-3xl text-balance">
             From uncertain idea to a decision you can act on.
           </h2>
