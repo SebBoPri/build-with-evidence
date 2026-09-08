@@ -176,7 +176,7 @@ function Index() {
           <div className="mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
             <p className="label-mono fade-up">Product discovery &amp; strategy</p>
             <h1 className="display-xl fade-up delay-1 mt-10 max-w-4xl text-balance">
-              <span>Find what&rsquo;s worth </span>
+              <span>Find what&rsquo;s worth</span>{" "}
               <br />
               <span className="text-muted-foreground">building.</span>
             </h1>
