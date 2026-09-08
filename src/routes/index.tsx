@@ -90,33 +90,33 @@ const problemCases = [
 const steps = [
   {
     n: "01",
-    title: "Assumptions",
-    q: "What has to be true?",
-    body: "Map the beliefs behind the idea and rank them by risk.",
+    title: "Find the risk",
+    q: "What could make this idea fail?",
+    body: "Find the assumption that matters most, usually whether people will value the product enough to use it.",
   },
   {
     n: "02",
-    title: "Kill-lines",
-    q: "What would make us stop?",
-    body: "Define the evidence strong enough to change direction or walk away before testing begins.",
+    title: "Set the line",
+    q: "What would we need to see?",
+    body: "Decide what real behaviour would count as enough. Interest is easy. Using, paying, or making a real commitment tells us more.",
   },
   {
     n: "03",
-    title: "Evidence",
-    q: "What happens in reality?",
-    body: "Test the riskiest assumptions with the smallest amount of work that teaches something useful.",
+    title: "Set it before testing",
+    q: "Do we all agree, in advance?",
+    body: "Write the kill-line down before the prototype is tested. Everyone involved agrees on it while the answer is still unknown.",
   },
   {
     n: "04",
-    title: "Opportunity",
-    q: "What remains?",
-    body: "Connect what held up and decide whether a meaningful opportunity is left.",
+    title: "Test the assumption",
+    q: "What do people actually do?",
+    body: "Put a prototype in front of real users. Watch what happens and measure it against the kill-line, rather than what people say they might do.",
   },
   {
     n: "05",
-    title: "Action",
-    q: "What next?",
-    body: "Build it, change it, test it, or stop. The decision is written down.",
+    title: "Follow the result",
+    q: "What does this mean for the product?",
+    body: "Stop. Change it. Build it. The value of a kill-line is not knowing where to draw it. It is being willing to follow it when the answer is no.",
   },
 ];
 
@@ -317,7 +317,7 @@ function Index() {
               you question. They are the assumptions you never name.
             </p>
             <p>
-              A kill line is the evidence that would make us stop, change direction, or commit. We
+              A kill-line is the evidence that would make us stop, change direction, or commit. We
               define it before we start, so momentum cannot override what the evidence says.
             </p>
           </div>
