@@ -6,6 +6,7 @@ import { ContactForm } from "@/components/site/contact-form";
 import { CtaButton } from "@/components/site/cta-button";
 import heroStream from "@/assets/hero-stream.jpg.asset.json";
 import heroStreamWebp from "@/assets/hero-stream.webp.asset.json";
+import sebastianPortrait from "@/assets/sebastian-bouvier.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -370,6 +371,16 @@ function Index() {
               </p>
               <p>Based in Stockholm. Working with teams anywhere.</p>
             </div>
+          </div>
+          <div className="mt-16 md:mt-20">
+            <img
+              src={sebastianPortrait.url}
+              alt="Sebastian Bouvier"
+              width={1254}
+              height={1254}
+              loading="lazy"
+              className="mx-auto w-full max-w-md"
+            />
           </div>
         </Section>
 
