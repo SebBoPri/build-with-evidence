@@ -221,7 +221,7 @@ function Index() {
             Building the wrong thing is still expensive.
           </h2>
 
-          <div className="mt-10 max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
+          <div className="mt-8 max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
             <p>
               A team can go from assumption to production in weeks. But if the problem
               isn&apos;t real, the customer isn&apos;t who you thought, or the solution
@@ -230,7 +230,7 @@ function Index() {
             </p>
           </div>
 
-          <div className="mt-16 md:mt-20">
+          <div className="mt-14 md:mt-16">
             <p className="label-mono">We&apos;ve all seen it</p>
             <ol className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
               {problemCases.map((item, i) => (
@@ -259,7 +259,7 @@ function Index() {
             From uncertain idea to a decision you can act on.
           </h2>
 
-          <div className="mt-10 max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
+          <div className="mt-8 max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
             <p>
               A focused engagement on one product opportunity. We run it with your team: framing the
               problem, talking to customers, testing the riskiest assumptions together. The
@@ -268,9 +268,9 @@ function Index() {
           </div>
 
 
-          <div className="rule-t mt-12 pt-10">
+          <div className="mt-14">
             <p className="label-mono">When to use it</p>
-            <ul className="mt-8 max-w-3xl space-y-7">
+            <ul className="mt-6 max-w-3xl space-y-6">
               {sprintWhen.map((i) => (
                 <li key={i} className="flex items-start gap-4">
                   <span className="mt-2 h-px w-4 shrink-0 bg-accent" aria-hidden="true" />
@@ -282,9 +282,9 @@ function Index() {
             </ul>
           </div>
 
-          <div className="rule-t mt-12 pt-10">
+          <div className="mt-14">
             <p className="label-mono">What you leave with</p>
-            <dl className="mt-8 grid gap-x-10 gap-y-8 md:grid-cols-3">
+            <dl className="mt-6 grid gap-x-10 gap-y-8 md:grid-cols-3">
               {sprintGet.map((f) => (
                 <div key={f.k}>
                   <dt className="text-base font-medium tracking-tight text-foreground">{f.k}</dt>
@@ -296,13 +296,13 @@ function Index() {
             </dl>
           </div>
 
-          <div className="rule-t mt-12 pt-10">
+          <div className="mt-14">
             <p className="text-lg leading-relaxed text-muted-foreground">
               You don&apos;t leave with more opinions.
             </p>
           </div>
 
-          <CtaButton href="#contact" className="mt-10">
+          <CtaButton href="#contact" className="mt-8">
             Let's explore together
           </CtaButton>
 
@@ -312,7 +312,7 @@ function Index() {
         <Section id="approach">
           <h2 className="display-md max-w-3xl text-balance">Start with what must be true.</h2>
 
-          <div className="mt-10 max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
+          <div className="mt-8 max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
             <p>
               Every product idea rests on assumptions. The dangerous ones are not the assumptions
               you question. They are the assumptions you never name.
@@ -343,7 +343,7 @@ function Index() {
 
         {/* About */}
         <Section id="about" label="About">
-          <div className="grid gap-14 md:grid-cols-12">
+          <div className="grid gap-12 md:grid-cols-12">
             <div className="md:col-span-4">
               <h2 className="display-md">Sebastian Bouvier</h2>
               <p className="mt-3 text-sm text-muted-foreground">Founder, Slipstream Labs</p>
@@ -353,7 +353,7 @@ function Index() {
                 width={1254}
                 height={1254}
                 loading="lazy"
-                className="mt-10 w-full"
+                className="mt-8 w-full"
               />
             </div>
             <div className="space-y-5 text-lg leading-relaxed text-muted-foreground md:col-span-8">
@@ -388,7 +388,7 @@ function Index() {
             <h2 className="display-md text-balance">
               Have an opportunity you&apos;re not sure about?
             </h2>
-            <div className="mt-7 max-w-2xl space-y-4 text-lg leading-relaxed text-muted-foreground md:text-xl">
+            <div className="mt-8 max-w-2xl space-y-4 text-lg leading-relaxed text-muted-foreground md:text-xl">
               <p>You don&apos;t need another workshop.</p>
               <p>You need to know whether there&apos;s something worth building.</p>
               <p className="text-foreground">Let&apos;s investigate it.</p>

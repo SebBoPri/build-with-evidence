@@ -42,7 +42,7 @@ export function ApproachRail({ steps }: { steps: Step[] }) {
   const active = Math.min(steps.length - 1, Math.floor(progress * steps.length + 0.0001));
 
   return (
-    <ol ref={ref} className="mt-20 grid gap-y-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+    <ol ref={ref} className="mt-16 grid gap-y-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
       {steps.map((s, i) => {
         const reached = progress > 0 && i <= active;
         const fill = Math.min(1, Math.max(0, progress * steps.length - i));
@@ -69,7 +69,7 @@ export function ApproachRail({ steps }: { steps: Step[] }) {
             </span>
 
             <h3
-              className={`mt-14 text-xl font-medium tracking-tight transition-colors duration-500 ${
+              className={`mt-10 text-xl font-medium tracking-tight transition-colors duration-500 ${
                 reached ? "text-foreground" : "text-foreground/45"
               }`}
             >
@@ -92,7 +92,7 @@ export function ApproachRail({ steps }: { steps: Step[] }) {
               {s.body}
             </p>
             <p
-              className={`label-mono mt-10 transition-opacity duration-500 ${
+              className={`label-mono mt-8 transition-opacity duration-500 ${
                 reached ? "opacity-100" : "opacity-50"
               }`}
             >
