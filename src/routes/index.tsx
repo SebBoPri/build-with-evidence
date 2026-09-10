@@ -270,9 +270,9 @@ function Index() {
 
           <div className="rule-t mt-12 pt-10">
             <p className="label-mono">When to use it</p>
-            <ul className="mt-5 max-w-3xl divide-y divide-[var(--hairline)] border-y border-hairline">
+            <ul className="mt-8 max-w-3xl space-y-7">
               {sprintWhen.map((i) => (
-                <li key={i} className="flex gap-4 py-4">
+                <li key={i} className="flex items-start gap-4">
                   <span className="mt-2 h-px w-4 shrink-0 bg-accent" aria-hidden="true" />
                   <span className="text-[0.95rem] leading-relaxed text-muted-foreground">
                     {i}
@@ -284,9 +284,9 @@ function Index() {
 
           <div className="rule-t mt-12 pt-10">
             <p className="label-mono">What you leave with</p>
-            <dl className="mt-5 grid gap-x-10 gap-y-6 md:grid-cols-3">
+            <dl className="mt-8 grid gap-x-10 gap-y-8 md:grid-cols-3">
               {sprintGet.map((f) => (
-                <div key={f.k} className="border-t border-hairline pt-4">
+                <div key={f.k}>
                   <dt className="text-base font-medium tracking-tight text-foreground">{f.k}</dt>
                   <dd className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">
                     {f.v}
