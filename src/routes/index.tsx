@@ -347,6 +347,14 @@ function Index() {
             <div className="md:col-span-4">
               <h2 className="display-md">Sebastian Bouvier</h2>
               <p className="mt-3 text-sm text-muted-foreground">Founder, Slipstream Labs</p>
+              <img
+                src={sebastianPortrait.url}
+                alt="Sebastian Bouvier"
+                width={1254}
+                height={1254}
+                loading="lazy"
+                className="mt-10 w-full"
+              />
             </div>
             <div className="space-y-5 text-lg leading-relaxed text-muted-foreground md:col-span-8">
               <p>
@@ -371,16 +379,6 @@ function Index() {
               </p>
               <p>Based in Stockholm. Working with teams anywhere.</p>
             </div>
-          </div>
-          <div className="mt-16 md:mt-20">
-            <img
-              src={sebastianPortrait.url}
-              alt="Sebastian Bouvier"
-              width={1254}
-              height={1254}
-              loading="lazy"
-              className="mx-auto w-full max-w-md"
-            />
           </div>
         </Section>
 
