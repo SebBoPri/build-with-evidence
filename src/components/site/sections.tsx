@@ -60,11 +60,7 @@ export function Section({
         {label ? (
           <Reveal>
             <p className="label-mono mb-8 flex items-center gap-3">
-              <span className="flex items-center gap-1" aria-hidden="true">
-                <span className="inline-block h-[2px] w-6 bg-[#214B9B]" />
-                <span className="inline-block h-[2px] w-3 bg-[#A05A9A]" />
-                <span className="inline-block h-[2px] w-1.5 bg-[#EBC67F]" />
-              </span>
+              <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
               {label}
             </p>
           </Reveal>
