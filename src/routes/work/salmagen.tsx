@@ -55,7 +55,7 @@ function CaseSection({ index, title, children }: { index: string; title: string;
   return (
     <section className="grid gap-6 md:grid-cols-12 md:gap-10">
       <div className="md:col-span-4">
-        <p className="label-mono">{index}</p>
+        <p className="label-mono text-[#214B9B]">{index}</p>
         <h2 className="mt-3 font-display text-xl tracking-tight text-foreground md:text-2xl">{title}</h2>
       </div>
       <div className="max-w-[40rem] space-y-6 text-[1.0625rem] leading-[1.75] text-foreground/80 md:col-span-8">
@@ -107,8 +107,13 @@ function SalmagenCase() {
             <h1 className="display-md fade-up delay-1 mt-10 max-w-3xl text-balance">
               When the user can&rsquo;t think straight, remove the wrong choice
             </h1>
+            <div className="fade-up delay-1 mt-8 flex h-0.5 w-24" aria-hidden="true">
+              <span className="w-1/2 bg-[#214B9B]" />
+              <span className="w-1/4 bg-[#A05A9A]" />
+              <span className="w-1/4 bg-[#EBC67F]" />
+            </div>
 
-            <dl className="fade-up delay-2 mt-10 grid gap-6 border-t border-hairline pt-8 sm:grid-cols-3">
+            <dl className="fade-up delay-2 mt-10 grid max-w-3xl gap-6 border-t border-hairline pt-8 sm:grid-cols-3">
               {meta.map((m) => (
                 <div key={m.label}>
                   <dt className="label-mono">{m.label}</dt>
@@ -130,7 +135,7 @@ function SalmagenCase() {
         <section>
           <div className="mx-auto w-full max-w-[84rem] px-6 md:px-10">
             <figure className="border-t border-hairline pt-10">
-              <div className="mx-auto w-full max-w-xl overflow-hidden rounded-sm">
+              <div className="mx-auto w-full max-w-2xl overflow-hidden rounded-sm">
                 <img
                   src={iceRescue.url}
                   alt="Ice rescue training: a person in a rescue suit in the water is pulled out by a line held by two skaters on the ice"
@@ -138,7 +143,7 @@ function SalmagenCase() {
                   loading="eager"
                 />
               </div>
-              <figcaption className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground">
+              <figcaption className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-muted-foreground">
                 Ice rescue as it happens today: the person in the water is pulled out by a line.
                 This is the moment S&auml;lmagen was designed for.
               </figcaption>
@@ -176,12 +181,22 @@ function SalmagenCase() {
                 making the right action clearer.
               </p>
               <ul className="space-y-6 border-l border-hairline pl-6">
-                <li>
-                  <span className="text-foreground">Fewer options.</span> The vest covers the
-                  backpack&rsquo;s straps and loops, leaving two reachable attachment points, both
-                  correct and both on the shoulders. Because every vest is identical, those points
-                  can be specified and quality controlled, which an improvised point on a personal
-                  pack never can.
+                <li className="grid gap-6 sm:grid-cols-2 sm:items-start">
+                  <p>
+                    <span className="text-foreground">Fewer options.</span> The vest covers the
+                    backpack&rsquo;s straps and loops, leaving two reachable attachment points,
+                    both correct and both on the shoulders. Because every vest is identical, those
+                    points can be specified and quality controlled, which an improvised point on a
+                    personal pack never can.
+                  </p>
+                  <figure>
+                    <img
+                      src={salmagenHero.url}
+                      alt="Working sketch of the Sälmagen rescue vest worn over a backpack, seen from the front"
+                      className="w-full"
+                      loading="lazy"
+                    />
+                  </figure>
                 </li>
                 <li>
                   <span className="text-foreground">Requirements from failure modes.</span> The load
@@ -199,24 +214,14 @@ function SalmagenCase() {
                   label, because mounting happens calmly at home and can afford to be learned.
                 </li>
               </ul>
-              <div className="grid gap-8 pt-4 sm:grid-cols-2">
-                <figure>
-                  <img
-                    src={salmagenHero.url}
-                    alt="Working sketch of the Sälmagen rescue vest worn over a backpack, seen from the front"
-                    className="w-full"
-                    loading="lazy"
-                  />
-                </figure>
-                <figure>
-                  <img
-                    src={nixProcessSketch.url}
-                    alt="Working page from the design process, with sketches and handwritten notes"
-                    className="natural w-full"
-                    loading="lazy"
-                  />
-                </figure>
-              </div>
+              <figure className="pt-4">
+                <img
+                  src={nixProcessSketch.url}
+                  alt="Working page from the design process, with sketches and handwritten notes"
+                  className="natural w-full"
+                  loading="lazy"
+                />
+              </figure>
             </CaseSection>
 
             <CaseSection index="04" title="What changed">
@@ -228,21 +233,29 @@ function SalmagenCase() {
             </CaseSection>
 
             <CaseSection index="05" title="Reading it now">
-              <p>
-                Looking back, the vest rested on three untested assumptions. That the low-friction
-                front actually reduces the force needed to pull someone out, which we only estimated
-                in a model. That skaters would find it comfortable enough to wear on an ordinary
-                tour, which we never tested. And that they carry a backpack suited to the activity,
-                which the design depended on. The riskiest was the second: a safety product only
-                works if it&rsquo;s worn on the day it&rsquo;s needed.
-              </p>
-              <p>
-                Today I would test that first, before any engineering: give club members a simple
-                mock-up to wear over their own backpacks on a few ordinary tours, and ask
-                afterwards whether they&rsquo;d wear it every time. If most took it off, left it at
-                home, or needed a different backpack to use it, I would stop and rethink the
-                concept before building anything more.
-              </p>
+              <div className="-mx-6 bg-[#EBC67F]/15 px-6 py-8 md:-mx-10 md:px-10 md:py-10">
+                <p className="font-display text-xl leading-snug tracking-tight text-foreground md:text-2xl">
+                  A safety product only works if it&rsquo;s worn on the day it&rsquo;s needed.
+                </p>
+                <div className="mt-6 space-y-6">
+                  <p>
+                    Looking back, the vest rested on three untested assumptions. That the
+                    low-friction front actually reduces the force needed to pull someone out, which
+                    we only estimated in a model. That skaters would find it comfortable enough to
+                    wear on an ordinary tour, which we never tested. And that they carry a backpack
+                    suited to the activity, which the design depended on. The riskiest was the
+                    second: a safety product only works if it&rsquo;s worn on the day it&rsquo;s
+                    needed.
+                  </p>
+                  <p>
+                    Today I would test that first, before any engineering: give club members a
+                    simple mock-up to wear over their own backpacks on a few ordinary tours, and
+                    ask afterwards whether they&rsquo;d wear it every time. If most took it off,
+                    left it at home, or needed a different backpack to use it, I would stop and
+                    rethink the concept before building anything more.
+                  </p>
+                </div>
+              </div>
             </CaseSection>
           </div>
         </Section>
@@ -251,7 +264,7 @@ function SalmagenCase() {
         <Section id="contact">
           <div className="max-w-3xl">
             <h2 className="display-md text-balance">
-              If one of these looks like your situation, let&rsquo;s find out.
+              If this sounds familiar, let&rsquo;s find out.
             </h2>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               Two to four weeks from uncertainty to a decision you can act on.
