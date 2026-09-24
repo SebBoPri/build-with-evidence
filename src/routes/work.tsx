@@ -161,10 +161,22 @@ function WorkPage() {
                 <p className="mt-3 max-w-md text-[0.95rem] leading-relaxed text-muted-foreground">
                   {w.body}
                 </p>
-                <p className="label-mono mt-6 flex items-center gap-3">
-                  <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
-                  {w.status}
-                </p>
+                {"href" in w && w.href ? (
+                  <p className="label-mono mt-6 flex items-center gap-3">
+                    <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
+                    <Link
+                      to={w.href}
+                      className="text-foreground underline-offset-4 transition-colors hover:underline"
+                    >
+                      Read the case
+                    </Link>
+                  </p>
+                ) : (
+                  <p className="label-mono mt-6 flex items-center gap-3">
+                    <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
+                    {w.status}
+                  </p>
+                )}
               </article>
             ))}
           </div>
