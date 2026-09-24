@@ -4,7 +4,7 @@ import { Wordmark } from "@/components/site/brand";
 import { CtaButton } from "@/components/site/cta-button";
 import { KillLineDiagram, OrderFlowDiagram } from "@/components/site/case-diagrams";
 
-export const Route = createFileRoute("/work")({
+export const Route = createFileRoute("/work/")({
   head: () => ({
     meta: [
       { title: "Work — Slipstream Labs" },
@@ -56,10 +56,10 @@ const cases = [
 
 const selectedWork = [
   {
-    meta: "University project · Physical product",
-    title: "Physical product",
-    body: "A physical product designed and built during university. Real photos exist and will be added with the write-up.",
-    status: "Write-up coming",
+    meta: "University thesis · 2018",
+    title: "Sälmagen rescue vest",
+    body: "When the user can't think straight, remove the wrong choice.",
+    href: "/work/salmagen",
   },
   {
     meta: "Hyper Island · Product management program",
@@ -161,10 +161,22 @@ function WorkPage() {
                 <p className="mt-3 max-w-md text-[0.95rem] leading-relaxed text-muted-foreground">
                   {w.body}
                 </p>
-                <p className="label-mono mt-6 flex items-center gap-3">
-                  <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
-                  {w.status}
-                </p>
+                {"href" in w && w.href ? (
+                  <p className="label-mono mt-6 flex items-center gap-3">
+                    <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
+                    <Link
+                      to={w.href}
+                      className="text-foreground underline-offset-4 transition-colors hover:underline"
+                    >
+                      Read the case
+                    </Link>
+                  </p>
+                ) : (
+                  <p className="label-mono mt-6 flex items-center gap-3">
+                    <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
+                    {w.status}
+                  </p>
+                )}
               </article>
             ))}
           </div>
