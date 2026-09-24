@@ -193,7 +193,7 @@ function WorkPage() {
                   >
                     {/* Vest icon after the Sälmagen sketch: flat shoulders, neck dip, armhole notches, straps rising from the shoulders, chest pocket, hanging strap */}
                     <path
-                      d="M32,50 C30,34 31,20 34,12 M88,50 C90,34 89,20 86,12"
+                      d="M34,50 C30,34 32,18 42,12 M86,50 C90,34 88,18 78,12"
                       fill="none"
                       stroke="white"
                       strokeWidth="2"
