@@ -210,6 +210,13 @@ function SalmagenCase() {
                 which the design depended on. The riskiest was the second: a safety product only
                 works if it&rsquo;s worn on the day it&rsquo;s needed.
               </p>
+              <p>
+                Today I would test that first, before any engineering: give club members a simple
+                mock-up to wear over their own backpacks on a few ordinary tours, and ask
+                afterwards whether they&rsquo;d wear it every time. If most took it off, left it at
+                home, or needed a different backpack to use it, I would stop and rethink the
+                concept before building anything more.
+              </p>
             </CaseSection>
           </div>
         </Section>
