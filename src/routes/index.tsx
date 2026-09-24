@@ -150,7 +150,13 @@ const sprintGet = [
 
 function Index() {
   return (
-    <div className="min-h-screen">
+    <div className="theme-paper min-h-screen">
+      <div className="paper-bar" aria-hidden="true">
+        <span style={{ background: "var(--paper-violet)" }} />
+        <span style={{ background: "var(--paper-sand)" }} />
+        <span style={{ background: "var(--paper-ink)" }} />
+        <span style={{ background: "var(--paper-blue)" }} />
+      </div>
       <header className="sticky top-0 z-50 border-b border-hairline bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex h-20 w-full max-w-[84rem] items-center justify-between px-6 md:px-10">
           <a href="#top" aria-label="Slipstream Labs home">
@@ -186,7 +192,7 @@ function Index() {
 
       <main id="top">
         {/* Under construction banner */}
-        <div className="relative overflow-hidden border-b border-hairline">
+        <div className="theme-dark-band relative overflow-hidden border-b border-hairline">
           <img
             src={constructionBanner}
             alt="An incomplete spherical battle station under construction in space"
@@ -233,16 +239,18 @@ function Index() {
               <p className="label-mono">Stockholm, Sweden</p>
             </div>
           </div>
-          <FullBleedFigure
-            src={heroStream.url}
-            srcWebp={heroStreamWebp.url}
-            alt=""
-            width={1600}
-            height={1073}
-            eager
-            breakOut
-            imgClassName="object-[25%_center] md:object-center"
-          />
+          <div className="theme-dark-band">
+            <FullBleedFigure
+              src={heroStream.url}
+              srcWebp={heroStreamWebp.url}
+              alt=""
+              width={1600}
+              height={1073}
+              eager
+              breakOut
+              imgClassName="object-[25%_center] md:object-center"
+            />
+          </div>
         </section>
 
 
@@ -360,16 +368,18 @@ function Index() {
 
 
         {/* Pull quote */}
-        <Section>
-          <blockquote className="max-w-4xl">
-            <p className="display-md text-balance">
-              Just because you can build it doesn&apos;t mean you should.
-            </p>
-            <p className="display-md mt-3 text-balance text-muted-foreground">
-              Speed is only an advantage when you&apos;re moving in the right direction.
-            </p>
-          </blockquote>
-        </Section>
+        <div className="theme-dark-band">
+          <Section>
+            <blockquote className="max-w-4xl">
+              <p className="display-md text-balance">
+                Just because you can build it doesn&apos;t mean you should.
+              </p>
+              <p className="display-md mt-3 text-balance text-muted-foreground">
+                Speed is only an advantage when you&apos;re moving in the right direction.
+              </p>
+            </blockquote>
+          </Section>
+        </div>
 
 
         {/* About */}
