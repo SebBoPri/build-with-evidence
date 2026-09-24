@@ -150,13 +150,7 @@ const sprintGet = [
 
 function Index() {
   return (
-    <div className="theme-paper min-h-screen">
-      <div className="paper-bar" aria-hidden="true">
-        <span style={{ background: "var(--paper-violet)" }} />
-        <span style={{ background: "var(--paper-sand)" }} />
-        <span style={{ background: "var(--paper-ink)" }} />
-        <span style={{ background: "var(--paper-blue)" }} />
-      </div>
+    <div className="min-h-screen">
       <header className="sticky top-0 z-50 border-b border-hairline bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex h-20 w-full max-w-[84rem] items-center justify-between px-6 md:px-10">
           <a href="#top" aria-label="Slipstream Labs home">
@@ -213,11 +207,7 @@ function Index() {
         <section>
           <div className="mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
             <p className="label-mono fade-up flex items-center gap-3">
-              <span className="flex items-center gap-1" aria-hidden="true">
-                <span className="inline-block h-[2px] w-6 bg-[#214B9B]" />
-                <span className="inline-block h-[2px] w-3 bg-[#A05A9A]" />
-                <span className="inline-block h-[2px] w-1.5 bg-[#EBC67F]" />
-              </span>
+              <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
               Product discovery &amp; strategy
             </p>
             <h1 className="display-xl fade-up delay-1 mt-10 max-w-4xl text-balance">
