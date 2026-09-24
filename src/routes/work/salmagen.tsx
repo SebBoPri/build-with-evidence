@@ -233,21 +233,29 @@ function SalmagenCase() {
             </CaseSection>
 
             <CaseSection index="05" title="Reading it now">
-              <p>
-                Looking back, the vest rested on three untested assumptions. That the low-friction
-                front actually reduces the force needed to pull someone out, which we only estimated
-                in a model. That skaters would find it comfortable enough to wear on an ordinary
-                tour, which we never tested. And that they carry a backpack suited to the activity,
-                which the design depended on. The riskiest was the second: a safety product only
-                works if it&rsquo;s worn on the day it&rsquo;s needed.
-              </p>
-              <p>
-                Today I would test that first, before any engineering: give club members a simple
-                mock-up to wear over their own backpacks on a few ordinary tours, and ask
-                afterwards whether they&rsquo;d wear it every time. If most took it off, left it at
-                home, or needed a different backpack to use it, I would stop and rethink the
-                concept before building anything more.
-              </p>
+              <div className="-mx-6 bg-[#EBC67F]/15 px-6 py-8 md:-mx-10 md:px-10 md:py-10">
+                <p className="font-display text-xl leading-snug tracking-tight text-foreground md:text-2xl">
+                  A safety product only works if it&rsquo;s worn on the day it&rsquo;s needed.
+                </p>
+                <div className="mt-6 space-y-6">
+                  <p>
+                    Looking back, the vest rested on three untested assumptions. That the
+                    low-friction front actually reduces the force needed to pull someone out, which
+                    we only estimated in a model. That skaters would find it comfortable enough to
+                    wear on an ordinary tour, which we never tested. And that they carry a backpack
+                    suited to the activity, which the design depended on. The riskiest was the
+                    second: a safety product only works if it&rsquo;s worn on the day it&rsquo;s
+                    needed.
+                  </p>
+                  <p>
+                    Today I would test that first, before any engineering: give club members a
+                    simple mock-up to wear over their own backpacks on a few ordinary tours, and
+                    ask afterwards whether they&rsquo;d wear it every time. If most took it off,
+                    left it at home, or needed a different backpack to use it, I would stop and
+                    rethink the concept before building anything more.
+                  </p>
+                </div>
+              </div>
             </CaseSection>
           </div>
         </Section>
@@ -256,7 +264,7 @@ function SalmagenCase() {
         <Section id="contact">
           <div className="max-w-3xl">
             <h2 className="display-md text-balance">
-              If one of these looks like your situation, let&rsquo;s find out.
+              If this sounds familiar, let&rsquo;s find out.
             </h2>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               Two to four weeks from uncertainty to a decision you can act on.
