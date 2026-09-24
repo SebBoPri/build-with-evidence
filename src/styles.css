@@ -235,9 +235,9 @@
 .theme-paper { --primary: oklch(0.16 0 0); --primary-foreground: oklch(0.99 0 0); --accent: oklch(0.16 0 0); --accent-foreground: oklch(0.99 0 0); --input: oklch(0 0 0 / 14%); }
 .theme-paper header stop { stop-color: var(--foreground); }
 
-/* Paper pages: serif display type, frog-style. */
-.theme-paper .display-xl,
-.theme-paper .display-md {
+/* Serif display type everywhere, frog-style. Body stays Geist. */
+.display-xl,
+.display-md {
   font-family: var(--font-display);
   letter-spacing: -0.02em;
 }
