@@ -220,10 +220,10 @@
   --border: oklch(0 0 0 / 12%);
   --hairline: oklch(0 0 0 / 10%);
   --ring: oklch(0.36 0.14 265);
-  --paper-violet: #b070a8;
-  --paper-sand: #ebc874;
+  --paper-violet: #A05A9A;
+  --paper-sand: #EBC67F;
   --paper-ink: #151515;
-  --paper-blue: #1f3a8f;
+  --paper-blue: #214B9B;
   background: var(--background);
   color: var(--foreground);
   min-height: 100vh;
