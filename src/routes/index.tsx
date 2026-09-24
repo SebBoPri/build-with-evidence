@@ -184,7 +184,7 @@ function Index() {
               ),
             )}
           </nav>
-          <CtaButton href="#contact" className="h-10 px-5">
+          <CtaButton href="#contact" className="h-10 whitespace-nowrap px-5">
             Let's explore together
           </CtaButton>
         </div>
