@@ -193,17 +193,17 @@ function WorkPage() {
                   >
                     {/* Vest icon after the Sälmagen sketch: arcing shoulder straps, vest body, chest pocket, hanging strap */}
                     <path
-                      d="M36,58 C26,30 40,10 54,20 C62,26 56,44 49,56"
+                      d="M31,58 C23,30 33,12 49,12 M42,58 C38,32 46,20 58,19"
                       fill="none"
                       stroke="white"
-                      strokeWidth="1.5"
+                      strokeWidth="1.2"
                       strokeDasharray="5 3"
                     />
                     <path
-                      d="M84,58 C94,30 80,10 66,20 C58,26 64,44 71,56"
+                      d="M89,58 C97,30 87,12 71,12 M78,58 C82,32 74,20 62,19"
                       fill="none"
                       stroke="white"
-                      strokeWidth="1.5"
+                      strokeWidth="1.2"
                       strokeDasharray="5 3"
                     />
                     <path
