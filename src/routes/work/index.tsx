@@ -191,17 +191,32 @@ function WorkPage() {
                     className="opacity-15 transition-opacity duration-500 group-hover:opacity-25"
                     aria-hidden="true"
                   >
-                    {/* Vest outline: shoulders, neck scoop, armholes, open front */}
+                    {/* Vest icon after the Sälmagen sketch: arcing shoulder straps, vest body, chest pocket, hanging strap */}
                     <path
-                      d="M38,22 L52,18 Q60,34 68,18 L82,22 Q96,30 94,46 Q84,52 86,66 L88,132 Q60,142 32,132 L34,66 Q36,52 26,46 Q24,30 38,22 Z"
+                      d="M36,58 C26,30 40,10 54,20 C62,26 56,44 49,56"
                       fill="none"
                       stroke="white"
                       strokeWidth="1.5"
-                      strokeDasharray="6 3"
+                      strokeDasharray="5 3"
                     />
-                    <path d="M60,38 L60,136" stroke="white" strokeWidth="0.8" />
-                    <circle cx="46" cy="30" r="3" fill="none" stroke="white" strokeWidth="0.8" />
-                    <circle cx="74" cy="30" r="3" fill="none" stroke="white" strokeWidth="0.8" />
+                    <path
+                      d="M84,58 C94,30 80,10 66,20 C58,26 64,44 71,56"
+                      fill="none"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeDasharray="5 3"
+                    />
+                    <path
+                      d="M31,56 Q60,70 89,56 L91,128 Q60,141 29,128 Z"
+                      fill="none"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeDasharray="5 3"
+                    />
+                    <rect x="51" y="80" width="18" height="14" fill="none" stroke="white" strokeWidth="0.8" />
+                    <path d="M51,84 L69,84" stroke="white" strokeWidth="0.8" />
+                    <path d="M60,141 L60,153" stroke="white" strokeWidth="1.5" strokeDasharray="4 2" />
+                    <rect x="56.5" y="144" width="7" height="5" fill="none" stroke="white" strokeWidth="0.8" />
                   </svg>
                 </div>
               </Link>
