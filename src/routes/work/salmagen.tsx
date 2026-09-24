@@ -3,6 +3,10 @@ import { Section } from "@/components/site/sections";
 import { Wordmark } from "@/components/site/brand";
 import { CtaButton } from "@/components/site/cta-button";
 import salmagenHero from "@/assets/salmagen-hero.webp.asset.json";
+import iceRescue from "@/assets/ice-rescue-training.jpg.asset.json";
+import nixConceptColor from "@/assets/nix-concept-color.png.asset.json";
+import nixConceptLinework from "@/assets/nix-concept-linework.png.asset.json";
+import nixProcessSketch from "@/assets/nix-process-sketch.jpg.asset.json";
 
 export const Route = createFileRoute("/work/salmagen")({
   head: () => ({
