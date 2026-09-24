@@ -54,7 +54,7 @@ function CaseSection({ index, title, children }: { index: string; title: string;
     <section className="grid gap-6 md:grid-cols-12 md:gap-10">
       <div className="md:col-span-4">
         <p className="label-mono">{index}</p>
-        <h2 className="mt-3 text-xl font-medium tracking-tight text-foreground md:text-2xl">{title}</h2>
+        <h2 className="mt-3 font-display text-xl tracking-tight text-foreground md:text-2xl">{title}</h2>
       </div>
       <div className="max-w-[40rem] space-y-6 text-[1.0625rem] leading-[1.75] text-foreground/80 md:col-span-8">
         {children}

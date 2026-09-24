@@ -69,7 +69,7 @@ export function ApproachRail({ steps }: { steps: Step[] }) {
             </span>
 
             <h3
-              className={`mt-10 text-xl font-medium tracking-tight transition-colors duration-500 ${
+              className={`mt-10 font-display text-xl tracking-tight transition-colors duration-500 ${
                 reached ? "text-foreground" : "text-foreground/45"
               }`}
             >
