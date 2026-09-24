@@ -55,7 +55,7 @@ function CaseSection({ index, title, children }: { index: string; title: string;
   return (
     <section className="grid gap-6 md:grid-cols-12 md:gap-10">
       <div className="md:col-span-4">
-        <p className="label-mono">{index}</p>
+        <p className="label-mono text-[#214B9B]">{index}</p>
         <h2 className="mt-3 font-display text-xl tracking-tight text-foreground md:text-2xl">{title}</h2>
       </div>
       <div className="max-w-[40rem] space-y-6 text-[1.0625rem] leading-[1.75] text-foreground/80 md:col-span-8">
@@ -107,8 +107,13 @@ function SalmagenCase() {
             <h1 className="display-md fade-up delay-1 mt-10 max-w-3xl text-balance">
               When the user can&rsquo;t think straight, remove the wrong choice
             </h1>
+            <div className="fade-up delay-1 mt-8 flex h-0.5 w-24" aria-hidden="true">
+              <span className="w-1/2 bg-[#214B9B]" />
+              <span className="w-1/4 bg-[#A05A9A]" />
+              <span className="w-1/4 bg-[#EBC67F]" />
+            </div>
 
-            <dl className="fade-up delay-2 mt-10 grid gap-6 border-t border-hairline pt-8 sm:grid-cols-3">
+            <dl className="fade-up delay-2 mt-10 grid max-w-3xl gap-6 border-t border-hairline pt-8 sm:grid-cols-3">
               {meta.map((m) => (
                 <div key={m.label}>
                   <dt className="label-mono">{m.label}</dt>
@@ -130,7 +135,7 @@ function SalmagenCase() {
         <section>
           <div className="mx-auto w-full max-w-[84rem] px-6 md:px-10">
             <figure className="border-t border-hairline pt-10">
-              <div className="mx-auto w-full max-w-xl overflow-hidden rounded-sm">
+              <div className="mx-auto w-full max-w-2xl overflow-hidden rounded-sm">
                 <img
                   src={iceRescue.url}
                   alt="Ice rescue training: a person in a rescue suit in the water is pulled out by a line held by two skaters on the ice"
@@ -138,7 +143,7 @@ function SalmagenCase() {
                   loading="eager"
                 />
               </div>
-              <figcaption className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground">
+              <figcaption className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-muted-foreground">
                 Ice rescue as it happens today: the person in the water is pulled out by a line.
                 This is the moment S&auml;lmagen was designed for.
               </figcaption>
