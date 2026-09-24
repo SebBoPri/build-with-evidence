@@ -191,14 +191,17 @@ function WorkPage() {
                     className="opacity-15 transition-opacity duration-500 group-hover:opacity-25"
                     aria-hidden="true"
                   >
+                    {/* Vest outline: shoulders, neck scoop, armholes, open front */}
                     <path
-                      d="M20,40 Q60,10 100,40 L100,120 Q60,150 20,120 Z"
+                      d="M38,22 L52,18 Q60,34 68,18 L82,22 Q96,30 94,46 Q84,52 86,66 L88,132 Q60,142 32,132 L34,66 Q36,52 26,46 Q24,30 38,22 Z"
                       fill="none"
                       stroke="white"
                       strokeWidth="1.5"
                       strokeDasharray="6 3"
                     />
-                    <path d="M40,60 L80,60 M40,80 L80,80 M40,100 L80,100" stroke="white" strokeWidth="0.8" />
+                    <path d="M60,38 L60,136" stroke="white" strokeWidth="0.8" />
+                    <circle cx="46" cy="30" r="3" fill="none" stroke="white" strokeWidth="0.8" />
+                    <circle cx="74" cy="30" r="3" fill="none" stroke="white" strokeWidth="0.8" />
                   </svg>
                 </div>
               </Link>
