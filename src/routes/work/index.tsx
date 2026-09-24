@@ -191,17 +191,25 @@ function WorkPage() {
                     className="opacity-15 transition-opacity duration-500 group-hover:opacity-25"
                     aria-hidden="true"
                   >
-                    {/* Vest outline: shoulders, neck scoop, armholes, open front */}
+                    {/* Vest icon after the Sälmagen sketch: flat shoulders, neck dip, armhole notches, straps rising from the shoulders, chest pocket, hanging strap */}
                     <path
-                      d="M38,22 L52,18 Q60,34 68,18 L82,22 Q96,30 94,46 Q84,52 86,66 L88,132 Q60,142 32,132 L34,66 Q36,52 26,46 Q24,30 38,22 Z"
+                      d="M34,50 C30,34 32,18 42,12 M86,50 C90,34 88,18 78,12"
+                      fill="none"
+                      stroke="white"
+                      strokeWidth="2"
+                      strokeDasharray="6 4"
+                    />
+                    <path
+                      d="M26,50 L48,50 Q60,60 72,50 L94,50 C102,54 104,64 99,72 L101,116 Q60,132 19,116 L21,72 C16,64 18,54 26,50 Z"
                       fill="none"
                       stroke="white"
                       strokeWidth="1.5"
-                      strokeDasharray="6 3"
+                      strokeDasharray="5 3"
                     />
-                    <path d="M60,38 L60,136" stroke="white" strokeWidth="0.8" />
-                    <circle cx="46" cy="30" r="3" fill="none" stroke="white" strokeWidth="0.8" />
-                    <circle cx="74" cy="30" r="3" fill="none" stroke="white" strokeWidth="0.8" />
+                    <rect x="51" y="76" width="18" height="14" fill="none" stroke="white" strokeWidth="0.8" />
+                    <path d="M51,80 L69,80" stroke="white" strokeWidth="0.8" />
+                    <path d="M60,132 L60,150" stroke="white" strokeWidth="1.5" strokeDasharray="4 2" />
+                    <rect x="56.5" y="140" width="7" height="5" fill="none" stroke="white" strokeWidth="0.8" />
                   </svg>
                 </div>
               </Link>
