@@ -128,7 +128,7 @@ export function ContactForm() {
             <button
               type="submit"
               disabled={status === "pending"}
-              className="group inline-flex h-12 items-center gap-3 bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+              className="group inline-flex h-12 items-center gap-3 bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity outline-offset-2 hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-foreground disabled:cursor-not-allowed disabled:opacity-60"
             >
               {status === "pending" ? "Sending" : "Let's explore together"}
               <span
