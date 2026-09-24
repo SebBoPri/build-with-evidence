@@ -191,34 +191,34 @@ function WorkPage() {
                     className="opacity-15 transition-opacity duration-500 group-hover:opacity-25"
                     aria-hidden="true"
                   >
-                    {/* Vest icon after the Sälmagen sketch: arcing shoulder straps, vest body, chest pocket, hanging strap */}
+                    {/* Vest icon after the Sälmagen sketch: strap loops leaning inward over a wide vest body, chest pocket, hanging strap */}
                     <path
-                      d="M34,58 C28,30 38,12 54,14"
+                      d="M28,56 C18,28 34,6 52,10 M40,56 C38,30 50,14 60,14"
                       fill="none"
                       stroke="white"
-                      strokeWidth="2"
-                      strokeDasharray="6 4"
+                      strokeWidth="1.3"
+                      strokeDasharray="5 3"
                     />
                     <path
-                      d="M86,58 C92,30 82,12 66,14"
+                      d="M92,56 C102,28 86,6 68,10 M80,56 C82,30 70,14 60,14"
                       fill="none"
                       stroke="white"
-                      strokeWidth="2"
-                      strokeDasharray="6 4"
+                      strokeWidth="1.3"
+                      strokeDasharray="5 3"
                     />
-                    <circle cx="54" cy="9" r="3" fill="none" stroke="white" strokeWidth="1" />
-                    <circle cx="66" cy="9" r="3" fill="none" stroke="white" strokeWidth="1" />
+                    <circle cx="53" cy="7" r="2.5" fill="none" stroke="white" strokeWidth="1" />
+                    <circle cx="67" cy="7" r="2.5" fill="none" stroke="white" strokeWidth="1" />
                     <path
-                      d="M31,56 Q60,70 89,56 L91,128 Q60,141 29,128 Z"
+                      d="M24,54 Q60,66 96,54 L97,116 Q60,133 23,116 Z"
                       fill="none"
                       stroke="white"
                       strokeWidth="1.5"
                       strokeDasharray="5 3"
                     />
-                    <rect x="51" y="80" width="18" height="14" fill="none" stroke="white" strokeWidth="0.8" />
-                    <path d="M51,84 L69,84" stroke="white" strokeWidth="0.8" />
-                    <path d="M60,141 L60,153" stroke="white" strokeWidth="1.5" strokeDasharray="4 2" />
-                    <rect x="56.5" y="144" width="7" height="5" fill="none" stroke="white" strokeWidth="0.8" />
+                    <rect x="51" y="78" width="18" height="14" fill="none" stroke="white" strokeWidth="0.8" />
+                    <path d="M51,82 L69,82" stroke="white" strokeWidth="0.8" />
+                    <path d="M60,133 L60,150" stroke="white" strokeWidth="1.5" strokeDasharray="4 2" />
+                    <rect x="56.5" y="140" width="7" height="5" fill="none" stroke="white" strokeWidth="0.8" />
                   </svg>
                 </div>
               </Link>
