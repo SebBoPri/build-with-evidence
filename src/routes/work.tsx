@@ -56,10 +56,10 @@ const cases = [
 
 const selectedWork = [
   {
-    meta: "University project · Physical product",
-    title: "Physical product",
-    body: "A physical product designed and built during university. Real photos exist and will be added with the write-up.",
-    status: "Write-up coming",
+    meta: "University thesis · 2018",
+    title: "Sälmagen rescue vest",
+    body: "When the user can't think straight, remove the wrong choice.",
+    href: "/work/salmagen",
   },
   {
     meta: "Hyper Island · Product management program",
