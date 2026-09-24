@@ -106,81 +106,167 @@ function WorkPage() {
         {/* Statement */}
         <section>
           <div className="mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
-            <p className="label-mono fade-up">Work</p>
-            <h1 className="display-md fade-up delay-1 mt-10 max-w-3xl text-balance">
+            <div className="fade-up flex items-center gap-1">
+              <span className="h-[2px] w-8 bg-[#214B9B]" aria-hidden="true" />
+              <span className="h-[2px] w-4 bg-[#A05A9A]" aria-hidden="true" />
+              <span className="h-[2px] w-2 bg-[#EBC67F]" aria-hidden="true" />
+              <span className="ml-3 text-xs font-bold uppercase tracking-[0.2em] text-foreground">
+                Work
+              </span>
+            </div>
+            <h1 className="fade-up delay-1 mt-10 max-w-4xl font-display text-5xl leading-[1.05] tracking-tight text-foreground md:text-7xl">
               Cases and work that show how I think.
             </h1>
-            <div className="fade-up delay-2 mt-8 max-w-xl space-y-5 text-lg leading-relaxed text-muted-foreground">
-              <p>
-                Every case follows the same shape: the question, the risk, the evidence, the
-                decision.
-              </p>
-              <p>
-                Some of this is client work, some is my own. Each entry is written up only when it
-                can be told honestly, so some are still pending.
-              </p>
-            </div>
+            <p className="fade-up delay-2 mt-10 max-w-2xl text-xl font-light leading-relaxed text-muted-foreground md:text-2xl">
+              Every case follows the same shape: the question, the risk, the evidence, the
+              decision. Some of this is client work, some is my own. Each entry is written up only
+              when it can be told honestly, so some are still pending.
+            </p>
           </div>
         </section>
 
-        {/* Cases */}
-        <Section label="Cases">
-          <div className="space-y-16 md:space-y-20">
-            {cases.map(({ Diagram, ...c }) => (
-              <article key={c.title} className="grid gap-10 border-t border-hairline pt-10 md:grid-cols-12 md:gap-12">
-                <div className="md:col-span-5">
-                  <p className="label-mono">{c.meta}</p>
-                  <h3 className="mt-4 text-xl font-medium tracking-tight text-foreground">
-                    {c.title}
-                  </h3>
-                  <p className="mt-3 max-w-md text-[0.95rem] leading-relaxed text-muted-foreground">
-                    {c.body}
-                  </p>
-                  <p className="label-mono mt-6 flex items-center gap-3">
-                    <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
-                    {c.status}
-                  </p>
-                </div>
-                <div className="text-muted-foreground md:col-span-7">
-                  <Diagram />
-                </div>
-              </article>
-            ))}
-          </div>
-        </Section>
+        {/* Featured grid */}
+        <section>
+          <div className="mx-auto w-full max-w-[84rem] px-6 pb-24 md:px-10 md:pb-32">
+            <div className="mb-10 flex items-center justify-between border-b border-hairline pb-4">
+              <h2 className="font-display text-sm italic text-foreground">Featured</h2>
+              <div className="flex gap-1" aria-hidden="true">
+                <span className="h-1 w-1 bg-[#214B9B]" />
+                <span className="h-1 w-1 bg-[#A05A9A]" />
+                <span className="h-1 w-1 bg-[#EBC67F]" />
+              </div>
+            </div>
 
-        {/* Selected work */}
-        <Section label="Selected work">
-          <div className="grid gap-x-12 gap-y-16 md:grid-cols-2">
-            {selectedWork.map((w) => (
-              <article key={w.title} className="border-t border-hairline pt-10">
-                <p className="label-mono">{w.meta}</p>
-                <h3 className="mt-4 text-xl font-medium tracking-tight text-foreground">
-                  {w.title}
-                </h3>
-                <p className="mt-3 max-w-md text-[0.95rem] leading-relaxed text-muted-foreground">
-                  {w.body}
-                </p>
-                {"href" in w && w.href ? (
-                  <p className="label-mono mt-6 flex items-center gap-3">
-                    <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
-                    <Link
-                      to={w.href}
-                      className="text-foreground underline-offset-4 transition-colors hover:underline"
-                    >
-                      Read the case
-                    </Link>
-                  </p>
-                ) : (
-                  <p className="label-mono mt-6 flex items-center gap-3">
-                    <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
-                    {w.status}
-                  </p>
-                )}
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-12">
+              {/* Data quality project */}
+              <article className="group relative aspect-[4/3] overflow-hidden bg-[#151515] md:col-span-8 md:aspect-[16/9]">
+                <div className="absolute inset-0 z-10 flex flex-col justify-between p-8 md:p-12">
+                  <div className="flex items-start justify-between">
+                    <span className="border border-white/20 px-3 py-1 text-xs font-bold uppercase tracking-widest text-white">
+                      Write-up coming
+                    </span>
+                    <span className="font-mono text-xs text-white/30">01</span>
+                  </div>
+                  <div>
+                    <h3 className="mb-4 font-display text-3xl text-white md:text-4xl">
+                      Data quality project
+                    </h3>
+                    <p className="max-w-xs text-sm font-medium uppercase tracking-[0.15em] text-white/60">
+                      Anonymized client
+                    </p>
+                  </div>
+                </div>
+                <svg
+                  className="absolute -bottom-[10%] -right-[10%] w-3/4 opacity-10 transition-all duration-700 group-hover:scale-105 group-hover:opacity-20"
+                  viewBox="0 0 200 200"
+                  aria-hidden="true"
+                >
+                  <circle cx="100" cy="100" r="80" fill="none" stroke="white" strokeWidth="0.5" />
+                  <circle cx="100" cy="100" r="60" fill="none" stroke="white" strokeWidth="0.5" />
+                  <path d="M20,100 L180,100 M100,20 L100,180" stroke="white" strokeWidth="0.5" />
+                </svg>
               </article>
-            ))}
+
+              {/* Mapping fund order flow */}
+              <article className="group relative aspect-[4/5] overflow-hidden bg-[#A05A9A] md:col-span-4 md:aspect-auto">
+                <div className="absolute inset-0 z-10 flex flex-col justify-between p-8">
+                  <div className="flex items-start justify-between">
+                    <span className="text-xs font-bold uppercase tracking-widest text-white">
+                      Fintech
+                    </span>
+                    <span className="font-mono text-xs text-white/40">02</span>
+                  </div>
+                  <div>
+                    <h3 className="mb-3 font-display text-2xl text-white">
+                      Mapping fund order flow
+                    </h3>
+                    <p className="text-xs uppercase tracking-widest text-white/70">
+                      Write-up coming
+                    </p>
+                  </div>
+                </div>
+                <svg
+                  className="absolute left-1/2 top-1/2 w-3/4 -translate-x-1/2 -translate-y-1/2 opacity-20 transition-transform duration-1000 group-hover:rotate-12"
+                  viewBox="0 0 100 100"
+                  aria-hidden="true"
+                >
+                  <rect x="10" y="10" width="80" height="80" fill="none" stroke="white" strokeWidth="1" />
+                  <path d="M10,50 L90,50 M50,10 L50,90" stroke="white" strokeWidth="0.5" />
+                </svg>
+              </article>
+
+              {/* Salmagen rescue vest */}
+              <Link
+                to="/work/salmagen"
+                className="group relative block aspect-[4/5] overflow-hidden bg-[#214B9B] md:col-span-4 md:aspect-auto"
+              >
+                <div className="absolute inset-0 z-10 flex flex-col justify-between p-8">
+                  <div className="flex items-start justify-between">
+                    <span className="text-xs font-bold uppercase tracking-widest text-white">
+                      Case study
+                    </span>
+                    <span className="font-mono text-xs text-white/40">03</span>
+                  </div>
+                  <div>
+                    <h3 className="mb-3 font-display text-2xl text-white">
+                      Sälmagen rescue vest
+                    </h3>
+                    <p className="text-xs uppercase tracking-widest text-white/70">
+                      University thesis · 2018 · Read the case
+                    </p>
+                  </div>
+                </div>
+                <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                  <svg
+                    width="140"
+                    height="180"
+                    viewBox="0 0 120 160"
+                    className="opacity-15 transition-opacity duration-500 group-hover:opacity-25"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20,40 Q60,10 100,40 L100,120 Q60,150 20,120 Z"
+                      fill="none"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeDasharray="6 3"
+                    />
+                    <path d="M40,60 L80,60 M40,80 L80,80 M40,100 L80,100" stroke="white" strokeWidth="0.8" />
+                  </svg>
+                </div>
+              </Link>
+
+              {/* Hyper Island PM program */}
+              <article className="group relative aspect-[4/3] overflow-hidden border-t border-white/10 bg-[#151515] md:col-span-8 md:aspect-[16/9]">
+                <div className="absolute inset-0 z-10 flex flex-col justify-between p-8 md:p-12">
+                  <div className="flex items-start justify-between">
+                    <span className="text-xs font-bold uppercase tracking-widest text-white/60">
+                      Education
+                    </span>
+                    <span className="font-mono text-xs text-white/30">04</span>
+                  </div>
+                  <div>
+                    <h3 className="mb-4 font-display text-3xl text-white md:text-4xl">
+                      Hyper Island PM program
+                    </h3>
+                    <p className="max-w-xs text-sm font-semibold uppercase tracking-widest text-white/60">
+                      Product management program · Write-up coming
+                    </p>
+                  </div>
+                </div>
+                <svg
+                  className="absolute bottom-0 right-0 w-1/2 translate-x-1/4 translate-y-1/4 opacity-20"
+                  viewBox="0 0 100 100"
+                  aria-hidden="true"
+                >
+                  <circle cx="50" cy="50" r="45" fill="none" stroke="white" strokeWidth="0.5" />
+                  <circle cx="50" cy="50" r="35" fill="none" stroke="white" strokeWidth="0.5" />
+                  <circle cx="50" cy="50" r="25" fill="none" stroke="white" strokeWidth="0.5" />
+                </svg>
+              </article>
+            </div>
           </div>
-        </Section>
+        </section>
 
         {/* Closing */}
         <Section id="contact">
