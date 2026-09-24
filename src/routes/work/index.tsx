@@ -106,31 +106,31 @@ function WorkPage() {
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-12">
               {/* Data quality project */}
-              <article className="group relative aspect-[4/3] overflow-hidden bg-[#151515] md:col-span-8 md:aspect-[16/9]">
+              <article className="group relative aspect-[4/3] overflow-hidden bg-[#EBC67F] md:col-span-8 md:aspect-[16/9]">
                 <div className="absolute inset-0 z-10 flex flex-col justify-between p-8 md:p-12">
                   <div className="flex items-start justify-between">
-                    <span className="border border-white/20 px-3 py-1 text-xs font-bold uppercase tracking-widest text-white">
+                    <span className="border border-[#151515]/30 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[#151515]">
                       Write-up coming
                     </span>
-                    <span className="font-mono text-xs text-white/30">01</span>
+                    <span className="font-mono text-xs text-[#151515]/40">01</span>
                   </div>
                   <div>
-                    <h3 className="mb-4 font-display text-3xl text-white md:text-4xl">
+                    <h3 className="mb-4 font-display text-3xl text-[#151515] md:text-4xl">
                       Data quality project
                     </h3>
-                    <p className="max-w-xs text-sm font-medium uppercase tracking-[0.15em] text-white/60">
+                    <p className="max-w-xs text-sm font-medium uppercase tracking-[0.15em] text-[#151515]/60">
                       Anonymized client
                     </p>
                   </div>
                 </div>
                 <svg
-                  className="absolute -bottom-[10%] -right-[10%] w-3/4 opacity-10 transition-all duration-700 group-hover:scale-105 group-hover:opacity-20"
+                  className="absolute -bottom-[10%] -right-[10%] w-3/4 opacity-15 transition-all duration-700 group-hover:scale-105 group-hover:opacity-25"
                   viewBox="0 0 200 200"
                   aria-hidden="true"
                 >
-                  <circle cx="100" cy="100" r="80" fill="none" stroke="white" strokeWidth="0.5" />
-                  <circle cx="100" cy="100" r="60" fill="none" stroke="white" strokeWidth="0.5" />
-                  <path d="M20,100 L180,100 M100,20 L100,180" stroke="white" strokeWidth="0.5" />
+                  <circle cx="100" cy="100" r="80" fill="none" stroke="#151515" strokeWidth="0.5" />
+                  <circle cx="100" cy="100" r="60" fill="none" stroke="#151515" strokeWidth="0.5" />
+                  <path d="M20,100 L180,100 M100,20 L100,180" stroke="#151515" strokeWidth="0.5" />
                 </svg>
               </article>
 
