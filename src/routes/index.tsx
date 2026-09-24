@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Section, FullBleedFigure } from "@/components/site/sections";
 import { Wordmark } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
@@ -70,6 +70,7 @@ const nav = [
   { href: "#sprint", label: "Discovery Sprint" },
   { href: "#approach", label: "Approach" },
   { href: "#about", label: "About" },
+  { href: "/work", label: "Work" },
 ];
 
 const problemCases = [
@@ -155,15 +156,26 @@ function Index() {
             <Wordmark />
           </a>
           <nav aria-label="Primary" className="hidden items-center gap-8 lg:flex">
-            {nav.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-              >
-                {item.label}
-              </a>
-            ))}
+            {nav.map((item) =>
+              item.href.startsWith("/") ? (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                  activeProps={{ className: "text-sm text-foreground" }}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  {item.label}
+                </a>
+              ),
+            )}
           </nav>
           <CtaButton href="#contact" className="h-10 px-5">
             Let's explore together
