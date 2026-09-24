@@ -12,7 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as WorkRouteImport } from './routes/work'
-import { Route as WorkSalmagenRouteImport } from './routes/work/salmagen'
+import { Route as WorkSalmagenRouteImport } from './routes/work.salmagen'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
