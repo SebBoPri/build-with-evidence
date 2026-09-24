@@ -51,12 +51,25 @@ const meta = [
   { label: "Timeframe", value: "2018" },
 ];
 
-function CaseSection({ index, title, children }: { index: string; title: string; children: React.ReactNode }) {
+function CaseSection({
+  index,
+  title,
+  lead,
+  children,
+}: {
+  index: string;
+  title: string;
+  lead?: string;
+  children: React.ReactNode;
+}) {
   return (
     <section className="grid gap-6 md:grid-cols-12 md:gap-10">
       <div className="md:col-span-4">
         <p className="label-mono text-[#214B9B]">{index}</p>
         <h2 className="mt-3 font-display text-xl tracking-tight text-foreground md:text-2xl">{title}</h2>
+        {lead ? (
+          <p className="mt-3 max-w-xs text-sm leading-relaxed text-foreground/60">{lead}</p>
+        ) : null}
       </div>
       <div className="max-w-[40rem] space-y-6 text-[1.0625rem] leading-[1.75] text-foreground/80 md:col-span-8">
         {children}
