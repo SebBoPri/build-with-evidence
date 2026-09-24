@@ -7,7 +7,7 @@ import salmagenHero from "@/assets/salmagen-hero.webp.asset.json";
 export const Route = createFileRoute("/work/salmagen")({
   head: () => ({
     meta: [
-      { title: "Sälmagen: when the user can't think straight, remove the wrong choice — Slipstream Labs" },
+      { title: "Sälmagen: when the user can't think straight, remove the wrong choice | Slipstream Labs" },
       {
         name: "description",
         content:
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/work/salmagen")({
       },
       {
         property: "og:title",
-        content: "Sälmagen: when the user can't think straight, remove the wrong choice — Slipstream Labs",
+        content: "Sälmagen: when the user can't think straight, remove the wrong choice | Slipstream Labs",
       },
       {
         property: "og:description",
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/work/salmagen")({
       { name: "twitter:card", content: "summary" },
       {
         name: "twitter:title",
-        content: "Sälmagen: when the user can't think straight, remove the wrong choice — Slipstream Labs",
+        content: "Sälmagen: when the user can't think straight, remove the wrong choice | Slipstream Labs",
       },
     ],
     links: [{ rel: "canonical", href: "https://slipstreamlabs.se/work/salmagen" }],
@@ -49,11 +49,14 @@ const meta = [
   { label: "Timeframe", value: "2018" },
 ];
 
-function CaseSection({ title, children }: { title: string; children: React.ReactNode }) {
+function CaseSection({ index, title, children }: { index: string; title: string; children: React.ReactNode }) {
   return (
-    <section className="border-t border-hairline pt-10">
-      <h2 className="label-mono">{title}</h2>
-      <div className="mt-6 max-w-2xl space-y-5 text-[0.95rem] leading-relaxed text-muted-foreground">
+    <section className="grid gap-6 md:grid-cols-12 md:gap-10">
+      <div className="md:col-span-4">
+        <p className="label-mono">{index}</p>
+        <h2 className="mt-3 text-xl font-medium tracking-tight text-foreground md:text-2xl">{title}</h2>
+      </div>
+      <div className="max-w-[40rem] space-y-6 text-[1.0625rem] leading-[1.75] text-foreground/80 md:col-span-8">
         {children}
       </div>
     </section>
@@ -107,12 +110,12 @@ function SalmagenCase() {
               {meta.map((m) => (
                 <div key={m.label}>
                   <dt className="label-mono">{m.label}</dt>
-                  <dd className="mt-2 text-sm text-muted-foreground">{m.value}</dd>
+                  <dd className="mt-2 text-[0.95rem] text-foreground/90">{m.value}</dd>
                 </div>
               ))}
             </dl>
 
-            <p className="fade-up delay-3 mt-10 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            <p className="fade-up delay-3 mt-12 max-w-2xl text-xl leading-relaxed text-foreground/85">
               Ice rescues fail when the person in the water, cold and frightened, has to attach the
               rescue line themselves. We designed a vest that leaves only correct attachment points.
               It reached prototype stage as part of the NIX safety system, but was never tested on
@@ -125,7 +128,7 @@ function SalmagenCase() {
         <section>
           <div className="mx-auto w-full max-w-[84rem] px-6 md:px-10">
             <figure className="border-t border-hairline pt-10">
-              <div className="mx-auto w-full max-w-xl border border-hairline">
+              <div className="mx-auto w-full max-w-lg overflow-hidden rounded-sm opacity-90">
                 <img
                   src={salmagenHero.url}
                   alt="Working sketch of the Sälmagen rescue vest worn over a backpack, seen from the front"
@@ -133,7 +136,7 @@ function SalmagenCase() {
                   loading="eager"
                 />
               </div>
-              <figcaption className="label-mono mt-4 text-muted-foreground">
+              <figcaption className="mx-auto mt-5 max-w-lg text-sm leading-relaxed text-muted-foreground">
                 Working sketch of Sälmagen worn over a backpack, from the front: two shoulder
                 attachment points and the low-friction glide surface. No photo of the prototype
                 exists.
@@ -144,8 +147,8 @@ function SalmagenCase() {
 
         {/* Body */}
         <Section>
-          <div className="space-y-16 md:space-y-20">
-            <CaseSection title="The situation">
+          <div className="space-y-20 md:space-y-28">
+            <CaseSection index="01" title="The situation">
               <p>
                 Long-distance skaters carry a throw line in case a companion goes through the ice, a
                 system that had barely changed since the 1960s. A team of six product developers set
@@ -155,7 +158,7 @@ function SalmagenCase() {
               </p>
             </CaseSection>
 
-            <CaseSection title="The real problem">
+            <CaseSection index="02" title="The real problem">
               <p>
                 Before designing anything, we studied how rescues actually play out: interviews with
                 skaters, literature from professional institutions, and observation sessions out on
@@ -166,12 +169,12 @@ function SalmagenCase() {
               </p>
             </CaseSection>
 
-            <CaseSection title="What we did">
+            <CaseSection index="03" title="What we did">
               <p>
                 We designed the vest so the wrong action becomes physically impossible, rather than
                 making the right action clearer.
               </p>
-              <ul className="space-y-5">
+              <ul className="space-y-6 border-l border-hairline pl-6">
                 <li>
                   <span className="text-foreground">Fewer options.</span> The vest covers the
                   backpack&rsquo;s straps and loops, leaving two reachable attachment points, both
@@ -197,7 +200,7 @@ function SalmagenCase() {
               </ul>
             </CaseSection>
 
-            <CaseSection title="What changed">
+            <CaseSection index="04" title="What changed">
               <p>
                 Sälmagen reached concept and prototype stage and was presented as part of NIX. With
                 help from our professors, we built a physics model of the rescue, estimating some of
@@ -205,7 +208,7 @@ function SalmagenCase() {
               </p>
             </CaseSection>
 
-            <CaseSection title="Reading it now">
+            <CaseSection index="05" title="Reading it now">
               <p>
                 Looking back, the vest rested on three untested assumptions. That the low-friction
                 front actually reduces the force needed to pull someone out, which we only estimated
