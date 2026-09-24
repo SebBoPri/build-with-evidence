@@ -167,13 +167,20 @@ function SalmagenCase() {
         {/* Body */}
         <Section>
           <div className="space-y-20 md:space-y-28">
-            <CaseSection index="01" title="The situation">
+            <CaseSection
+              index="01"
+              title="The situation"
+              lead="A rescue system barely changed since the 1960s, rethought as a bachelor thesis."
+            >
               <p>
-                Long-distance skaters carry a throw line in case a companion goes through the ice, a
-                system that had barely changed since the 1960s. A team of six product developers set
-                out to improve it, working with Linköping&rsquo;s long-distance skating club as our
-                bachelor thesis. The result was NIX, a safety system of three linked concepts: an
-                extension band, a lanyard bag and Sälmagen, a rescue vest. I worked on Sälmagen.
+                Long-distance skaters carry a throw line in case a companion goes through the ice.
+                The system had barely changed since the 1960s.
+              </p>
+              <p>
+                For our bachelor thesis, six product developers set out to improve it, working with
+                Linköping&rsquo;s long-distance skating club. The result was NIX, a safety system of
+                three linked concepts: an extension band, a lanyard bag and Sälmagen, a rescue vest.
+                I worked on Sälmagen.
               </p>
             </CaseSection>
 
