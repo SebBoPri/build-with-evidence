@@ -252,7 +252,11 @@ function SalmagenCase() {
               </figure>
             </CaseSection>
 
-            <CaseSection index="04" title="What changed">
+            <CaseSection
+              index="04"
+              title="What changed"
+              lead="Prototype built, physics modelled, never tested on real ice."
+            >
               <p>
                 Sälmagen reached concept and prototype stage and was presented as part of NIX. With
                 help from our professors, we built a physics model of the rescue, estimating some of
@@ -260,27 +264,40 @@ function SalmagenCase() {
               </p>
             </CaseSection>
 
-            <CaseSection index="05" title="Reading it now">
+            <CaseSection
+              index="05"
+              title="Reading it now"
+              lead="Three untested assumptions, one riskier than the rest."
+            >
               <div className="-mx-6 bg-[#EBC67F]/15 px-6 py-8 md:-mx-10 md:px-10 md:py-10">
                 <p className="font-display text-xl leading-snug tracking-tight text-foreground md:text-2xl">
                   A safety product only works if it&rsquo;s worn on the day it&rsquo;s needed.
                 </p>
-                <div className="mt-6 space-y-6">
-                  <p>
-                    Looking back, the vest rested on three untested assumptions. That the
-                    low-friction front actually reduces the force needed to pull someone out, which
-                    we only estimated in a model. That skaters would find it comfortable enough to
-                    wear on an ordinary tour, which we never tested. And that they carry a backpack
-                    suited to the activity, which the design depended on. The riskiest was the
-                    second: a safety product only works if it&rsquo;s worn on the day it&rsquo;s
-                    needed.
+                <div className="mt-8 space-y-6">
+                  <p className="text-sm uppercase tracking-[0.14em] text-foreground/60">
+                    The vest rested on three untested assumptions
                   </p>
+                  <ul className="space-y-3">
+                    <li>
+                      <span className="text-foreground">The low-friction front reduces pulling force.</span>{" "}
+                      We only estimated it in a model.
+                    </li>
+                    <li>
+                      <span className="text-foreground">Skaters would wear it on an ordinary tour.</span>{" "}
+                      We never tested comfort.
+                    </li>
+                    <li>
+                      <span className="text-foreground">They carry a backpack the design depends on.</span>{" "}
+                      Out of our control.
+                    </li>
+                  </ul>
+                  <p>The riskiest was the second, and it is the pull-quote above.</p>
                   <p>
-                    Today I would test that first, before any engineering: give club members a
-                    simple mock-up to wear over their own backpacks on a few ordinary tours, and
-                    ask afterwards whether they&rsquo;d wear it every time. If most took it off,
-                    left it at home, or needed a different backpack to use it, I would stop and
-                    rethink the concept before building anything more.
+                    Today I would test it first, before any engineering: give club members a simple
+                    mock-up to wear over their own backpacks on a few ordinary tours, and ask
+                    afterwards whether they&rsquo;d wear it every time. If most took it off, left it
+                    at home, or needed a different backpack to use it, I would stop and rethink the
+                    concept before building anything more.
                   </p>
                 </div>
               </div>
