@@ -128,22 +128,21 @@ function SalmagenCase() {
           </div>
         </section>
 
-        {/* Hero visual: working sketch from the thesis, treated monochrome */}
+        {/* Hero visual: natural photo of an ice rescue training session */}
         <section>
           <div className="mx-auto w-full max-w-[84rem] px-6 md:px-10">
             <figure className="border-t border-hairline pt-10">
-              <div className="mx-auto w-full max-w-lg overflow-hidden rounded-sm opacity-90">
+              <div className="mx-auto w-full max-w-3xl overflow-hidden rounded-sm">
                 <img
-                  src={salmagenHero.url}
-                  alt="Working sketch of the Sälmagen rescue vest worn over a backpack, seen from the front"
-                  className="w-full"
+                  src={iceRescue.url}
+                  alt="Ice rescue training: a person in a rescue suit in the water is pulled out by a line held by two skaters on the ice"
+                  className="natural w-full"
                   loading="eager"
                 />
               </div>
-              <figcaption className="mx-auto mt-5 max-w-lg text-sm leading-relaxed text-muted-foreground">
-                Working sketch of Sälmagen worn over a backpack, from the front: two shoulder
-                attachment points and the low-friction glide surface. No photo of the prototype
-                exists.
+              <figcaption className="mx-auto mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+                Ice rescue as it happens today: the person in the water is pulled out by a line.
+                This is the moment S&auml;lmagen was designed for.
               </figcaption>
             </figure>
           </div>
@@ -202,6 +201,58 @@ function SalmagenCase() {
                   label, because mounting happens calmly at home and can afford to be learned.
                 </li>
               </ul>
+              <div className="grid gap-8 pt-4 sm:grid-cols-2">
+                <figure>
+                  <img
+                    src={nixConceptColor.url}
+                    alt="Concept illustration of the Sälmagen rescue vest with lanyard, hook and buoyancy element"
+                    className="natural w-full"
+                    loading="lazy"
+                  />
+                  <figcaption className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    The S&auml;lmagen concept as illustrated for NIX: the vest covers the
+                    backpack&rsquo;s straps and leaves two attachment points, both on the
+                    shoulders.
+                  </figcaption>
+                </figure>
+                <figure>
+                  <img
+                    src={nixConceptLinework.url}
+                    alt="Construction linework of the Sälmagen rescue vest"
+                    className="natural w-full"
+                    loading="lazy"
+                  />
+                  <figcaption className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    Construction view: the load runs through the vest itself, not through webbing
+                    never rated to lift a person.
+                  </figcaption>
+                </figure>
+              </div>
+              <div className="grid gap-8 pt-4 sm:grid-cols-2">
+                <figure>
+                  <img
+                    src={salmagenHero.url}
+                    alt="Working sketch of the S&auml;lmagen rescue vest worn over a backpack, seen from the front"
+                    className="w-full"
+                    loading="lazy"
+                  />
+                  <figcaption className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    Working sketch of the vest worn over a backpack, from the front. No photo of
+                    the prototype exists.
+                  </figcaption>
+                </figure>
+                <figure>
+                  <img
+                    src={nixProcessSketch.url}
+                    alt="Working page from the design process, with sketches and handwritten notes"
+                    className="natural w-full"
+                    loading="lazy"
+                  />
+                  <figcaption className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    A working page from the process, with notes in the margins.
+                  </figcaption>
+                </figure>
+              </div>
             </CaseSection>
 
             <CaseSection index="04" title="What changed">
