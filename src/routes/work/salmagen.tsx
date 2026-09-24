@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Section } from "@/components/site/sections";
 import { Wordmark } from "@/components/site/brand";
 import { CtaButton } from "@/components/site/cta-button";
+import salmagenHero from "@/assets/salmagen-hero.webp.asset.json";
 
 export const Route = createFileRoute("/work/salmagen")({
   head: () => ({
@@ -120,19 +121,22 @@ function SalmagenCase() {
           </div>
         </section>
 
-        {/* Hero visual: real photo to be placed here, treated monochrome */}
+        {/* Hero visual: working sketch from the thesis, treated monochrome */}
         <section>
           <div className="mx-auto w-full max-w-[84rem] px-6 md:px-10">
             <figure className="border-t border-hairline pt-10">
-              <div
-                className="flex aspect-[16/9] w-full items-center justify-center border border-hairline"
-                aria-hidden="true"
-              >
-                <p className="label-mono text-muted-foreground/60">Photo coming</p>
+              <div className="w-full border border-hairline">
+                <img
+                  src={salmagenHero.url}
+                  alt="Working sketch of the Sälmagen rescue vest worn over a backpack, seen from the front"
+                  className="w-full"
+                  loading="eager"
+                />
               </div>
               <figcaption className="label-mono mt-4 text-muted-foreground">
-                Sälmagen from the front: two shoulder attachment points and the low-friction glide
-                surface.
+                Working sketch of Sälmagen worn over a backpack, from the front: two shoulder
+                attachment points and the low-friction glide surface. No photo of the prototype
+                exists.
               </figcaption>
             </figure>
           </div>
