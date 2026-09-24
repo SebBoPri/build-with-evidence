@@ -125,7 +125,7 @@ function SalmagenCase() {
         <section>
           <div className="mx-auto w-full max-w-[84rem] px-6 md:px-10">
             <figure className="border-t border-hairline pt-10">
-              <div className="w-full border border-hairline">
+              <div className="mx-auto w-full max-w-xl border border-hairline">
                 <img
                   src={salmagenHero.url}
                   alt="Working sketch of the Sälmagen rescue vest worn over a backpack, seen from the front"
