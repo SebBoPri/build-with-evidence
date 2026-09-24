@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Section } from "@/components/site/sections";
 import { Wordmark } from "@/components/site/brand";
 import { CtaButton } from "@/components/site/cta-button";
-import { KillLineDiagram, OrderFlowDiagram } from "@/components/site/case-diagrams";
 
 export const Route = createFileRoute("/work/")({
   head: () => ({
@@ -35,38 +34,6 @@ const homeNav = [
   { label: "Discovery Sprint", hash: "sprint" },
   { label: "Approach", hash: "approach" },
   { label: "About", hash: "about" },
-];
-
-const cases = [
-  {
-    meta: "Data quality · Anonymized client",
-    title: "Data quality project",
-    body: "A data quality project for an anonymized client. The write-up will follow the same structure as every case here: the question, the risk, the evidence, the decision.",
-    status: "Write-up coming",
-    Diagram: KillLineDiagram,
-  },
-  {
-    meta: "Fintech",
-    title: "Mapping fund order flow",
-    body: "Mapping the flow of fund orders through a fintech, end to end, before deciding what to change.",
-    status: "Write-up coming",
-    Diagram: OrderFlowDiagram,
-  },
-];
-
-const selectedWork = [
-  {
-    meta: "University thesis · 2018",
-    title: "Sälmagen rescue vest",
-    body: "When the user can't think straight, remove the wrong choice.",
-    href: "/work/salmagen",
-  },
-  {
-    meta: "Hyper Island · Product management program",
-    title: "Hyper Island PM program",
-    body: "Selected projects from the product management program at Hyper Island.",
-    status: "Write-up coming",
-  },
 ];
 
 function WorkPage() {
