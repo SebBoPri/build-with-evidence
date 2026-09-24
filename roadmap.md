@@ -6,3 +6,4 @@
 - Clarify whether the treatment covers the Home page too (user mentioned "Home. colour wise.").
 - Refine Work page colour direction: user likes v3 boldness but rejects the PPT/slide look; regenerate editorial-bold variants
 - Work page: imitate frog.co/work closely, mixing black and white sections; regenerate directions
+- Redesign landing page in frog register (serif fonts, black/white mix); user to pick from 3 directions
