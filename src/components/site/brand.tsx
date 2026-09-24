@@ -1,5 +1,5 @@
 /** Brand marks and technical line-art used across the site. */
-import { useId } from "react";
+
 
 export function Wordmark({ className = "" }: { className?: string }) {
   return (
