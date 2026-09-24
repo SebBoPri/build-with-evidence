@@ -201,20 +201,22 @@ function SalmagenCase() {
               </p>
             </CaseSection>
 
-            <CaseSection index="03" title="What we did">
-              <p>
-                We designed the vest so the wrong action becomes physically impossible, rather than
-                making the right action clearer.
-              </p>
-              <ul className="space-y-6 border-l border-hairline pl-6">
+            <CaseSection
+              index="03"
+              title="What we did"
+              lead="Make the wrong action physically impossible, not the right action clearer."
+            >
+              <ul className="space-y-8 border-l border-hairline pl-6">
                 <li className="grid gap-6 sm:grid-cols-2 sm:items-start">
-                  <p>
-                    <span className="text-foreground">Fewer options.</span> The vest covers the
-                    backpack&rsquo;s straps and loops, leaving two reachable attachment points,
-                    both correct and both on the shoulders. Because every vest is identical, those
-                    points can be specified and quality controlled, which an improvised point on a
-                    personal pack never can.
-                  </p>
+                  <div>
+                    <p>
+                      <span className="text-foreground">Fewer options.</span> The vest covers the
+                      backpack&rsquo;s straps and loops, leaving two reachable attachment points,
+                      both correct and both on the shoulders. Because every vest is identical, those
+                      points can be specified and quality controlled, which an improvised point on a
+                      personal pack never can.
+                    </p>
+                  </div>
                   <figure>
                     <img
                       src={salmagenHero.url}
