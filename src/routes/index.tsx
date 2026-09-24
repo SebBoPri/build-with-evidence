@@ -192,7 +192,7 @@ function Index() {
 
       <main id="top">
         {/* Under construction banner */}
-        <div className="theme-dark-band relative overflow-hidden border-b border-hairline">
+        <div className="relative overflow-hidden border-b border-hairline">
           <img
             src={constructionBanner}
             alt="An incomplete spherical battle station under construction in space"
@@ -200,10 +200,10 @@ function Index() {
             height={640}
             className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent" />
           <div className="relative mx-auto w-full max-w-[84rem] px-6 py-16 md:px-10 md:py-20">
-            <p className="label-mono fade-up">Under construction</p>
-            <p className="fade-up delay-1 mt-4 max-w-md text-base leading-relaxed text-muted-foreground">
+            <p className="label-mono fade-up !text-white/60">Under construction</p>
+            <p className="fade-up delay-1 mt-4 max-w-md text-base leading-relaxed text-white/75">
               What you are reading is the working draft. Case write-ups are on their way.
             </p>
           </div>
@@ -246,18 +246,16 @@ function Index() {
               <p className="label-mono">Stockholm, Sweden</p>
             </div>
           </div>
-          <div className="theme-dark-band">
-            <FullBleedFigure
-              src={heroStream.url}
-              srcWebp={heroStreamWebp.url}
-              alt=""
-              width={1600}
-              height={1073}
-              eager
-              breakOut
-              imgClassName="object-[25%_center] md:object-center"
-            />
-          </div>
+          <FullBleedFigure
+            src={heroStream.url}
+            srcWebp={heroStreamWebp.url}
+            alt=""
+            width={1600}
+            height={1073}
+            eager
+            breakOut
+            imgClassName="object-[25%_center] md:object-center"
+          />
         </section>
 
 
@@ -375,18 +373,16 @@ function Index() {
 
 
         {/* Pull quote */}
-        <div className="theme-dark-band">
-          <Section>
-            <blockquote className="max-w-4xl">
-              <p className="display-md text-balance">
-                Just because you can build it doesn&apos;t mean you should.
-              </p>
-              <p className="display-md mt-3 text-balance text-muted-foreground">
-                Speed is only an advantage when you&apos;re moving in the right direction.
-              </p>
-            </blockquote>
-          </Section>
-        </div>
+        <Section>
+          <blockquote className="max-w-4xl">
+            <p className="display-md text-balance">
+              Just because you can build it doesn&apos;t mean you should.
+            </p>
+            <p className="display-md mt-3 text-balance text-muted-foreground">
+              Speed is only an advantage when you&apos;re moving in the right direction.
+            </p>
+          </blockquote>
+        </Section>
 
 
         {/* About */}
