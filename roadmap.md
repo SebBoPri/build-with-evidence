@@ -8,4 +8,4 @@
 - Work page: imitate frog.co/work closely, mixing black and white sections; regenerate directions
 - Redesign landing page in frog register (serif fonts, black/white mix); user to pick from 3 directions
 
-- [ ] Recover and re-show the exact original logo font options previously presented.
+- [x] Recovered and restored the exact original Geist geometric wordmark v2 treatment.
