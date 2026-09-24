@@ -5,11 +5,14 @@ export function Wordmark({ className = "" }: { className?: string }) {
     <span
       className={`flex items-center gap-3 whitespace-nowrap text-foreground ${className}`}
     >
-      <span className="flex items-baseline font-display text-[15px] font-medium uppercase leading-none tracking-[0.18em]">
+      <span className="flex items-baseline font-display text-[13px] font-medium uppercase leading-none tracking-[0.18em] sm:text-[15px]">
         <span>Slipstream</span>
         <span className="ml-1.5 font-normal italic opacity-40">Labs</span>
       </span>
-      <span aria-hidden="true" className="flex flex-col items-end gap-1.5">
+      <span
+        aria-hidden="true"
+        className="hidden flex-col items-end gap-1.5 sm:flex"
+      >
         <span className="h-px w-6 bg-current opacity-10" />
         <span className="h-px w-12 bg-current opacity-60" />
         <span className="h-px w-4 bg-current opacity-10" />
