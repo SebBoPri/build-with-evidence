@@ -193,21 +193,19 @@ function WorkPage() {
                   >
                     {/* Vest icon after the Sälmagen sketch: strap loops leaning inward over a wide vest body, chest pocket, hanging strap */}
                     <path
-                      d="M28,54 C26,36 30,20 38,10"
+                      d="M28,54 C26,32 34,18 48,16"
                       fill="none"
                       stroke="white"
                       strokeWidth="2"
                       strokeDasharray="6 4"
                     />
                     <path
-                      d="M92,54 C94,36 90,20 82,10"
+                      d="M92,54 C94,32 86,18 72,16"
                       fill="none"
                       stroke="white"
                       strokeWidth="2"
                       strokeDasharray="6 4"
                     />
-                    <circle cx="39" cy="8" r="3" fill="none" stroke="white" strokeWidth="1" />
-                    <circle cx="81" cy="8" r="3" fill="none" stroke="white" strokeWidth="1" />
                     <path
                       d="M24,54 Q60,66 96,54 L97,116 Q60,133 23,116 Z"
                       fill="none"
