@@ -181,12 +181,22 @@ function SalmagenCase() {
                 making the right action clearer.
               </p>
               <ul className="space-y-6 border-l border-hairline pl-6">
-                <li>
-                  <span className="text-foreground">Fewer options.</span> The vest covers the
-                  backpack&rsquo;s straps and loops, leaving two reachable attachment points, both
-                  correct and both on the shoulders. Because every vest is identical, those points
-                  can be specified and quality controlled, which an improvised point on a personal
-                  pack never can.
+                <li className="grid gap-6 sm:grid-cols-2 sm:items-start">
+                  <p>
+                    <span className="text-foreground">Fewer options.</span> The vest covers the
+                    backpack&rsquo;s straps and loops, leaving two reachable attachment points,
+                    both correct and both on the shoulders. Because every vest is identical, those
+                    points can be specified and quality controlled, which an improvised point on a
+                    personal pack never can.
+                  </p>
+                  <figure>
+                    <img
+                      src={salmagenHero.url}
+                      alt="Working sketch of the Sälmagen rescue vest worn over a backpack, seen from the front"
+                      className="w-full"
+                      loading="lazy"
+                    />
+                  </figure>
                 </li>
                 <li>
                   <span className="text-foreground">Requirements from failure modes.</span> The load
@@ -204,24 +214,14 @@ function SalmagenCase() {
                   label, because mounting happens calmly at home and can afford to be learned.
                 </li>
               </ul>
-              <div className="grid gap-8 pt-4 sm:grid-cols-2">
-                <figure>
-                  <img
-                    src={salmagenHero.url}
-                    alt="Working sketch of the Sälmagen rescue vest worn over a backpack, seen from the front"
-                    className="w-full"
-                    loading="lazy"
-                  />
-                </figure>
-                <figure>
-                  <img
-                    src={nixProcessSketch.url}
-                    alt="Working page from the design process, with sketches and handwritten notes"
-                    className="natural w-full"
-                    loading="lazy"
-                  />
-                </figure>
-              </div>
+              <figure className="pt-4">
+                <img
+                  src={nixProcessSketch.url}
+                  alt="Working page from the design process, with sketches and handwritten notes"
+                  className="natural w-full"
+                  loading="lazy"
+                />
+              </figure>
             </CaseSection>
 
             <CaseSection index="04" title="What changed">
