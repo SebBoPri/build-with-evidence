@@ -51,12 +51,25 @@ const meta = [
   { label: "Timeframe", value: "2018" },
 ];
 
-function CaseSection({ index, title, children }: { index: string; title: string; children: React.ReactNode }) {
+function CaseSection({
+  index,
+  title,
+  lead,
+  children,
+}: {
+  index: string;
+  title: string;
+  lead?: string;
+  children: React.ReactNode;
+}) {
   return (
     <section className="grid gap-6 md:grid-cols-12 md:gap-10">
       <div className="md:col-span-4">
         <p className="label-mono text-[#214B9B]">{index}</p>
         <h2 className="mt-3 font-display text-xl tracking-tight text-foreground md:text-2xl">{title}</h2>
+        {lead ? (
+          <p className="mt-3 max-w-xs text-sm leading-relaxed text-foreground/60">{lead}</p>
+        ) : null}
       </div>
       <div className="max-w-[40rem] space-y-6 text-[1.0625rem] leading-[1.75] text-foreground/80 md:col-span-8">
         {children}
@@ -154,41 +167,56 @@ function SalmagenCase() {
         {/* Body */}
         <Section>
           <div className="space-y-20 md:space-y-28">
-            <CaseSection index="01" title="The situation">
+            <CaseSection
+              index="01"
+              title="The situation"
+              lead="A rescue system barely changed since the 1960s, rethought as a bachelor thesis."
+            >
               <p>
-                Long-distance skaters carry a throw line in case a companion goes through the ice, a
-                system that had barely changed since the 1960s. A team of six product developers set
-                out to improve it, working with Linköping&rsquo;s long-distance skating club as our
-                bachelor thesis. The result was NIX, a safety system of three linked concepts: an
-                extension band, a lanyard bag and Sälmagen, a rescue vest. I worked on Sälmagen.
+                Long-distance skaters carry a throw line in case a companion goes through the ice.
+                The system had barely changed since the 1960s.
+              </p>
+              <p>
+                For our bachelor thesis, six product developers set out to improve it, working with
+                Linköping&rsquo;s long-distance skating club. The result was NIX, a safety system of
+                three linked concepts: an extension band, a lanyard bag and Sälmagen, a rescue vest.
+                I worked on Sälmagen.
               </p>
             </CaseSection>
 
-            <CaseSection index="02" title="The real problem">
+            <CaseSection
+              index="02"
+              title="The real problem"
+              lead="The person attaching the line is the one whose judgement is failing."
+            >
               <p>
-                Before designing anything, we studied how rescues actually play out: interviews with
-                skaters, literature from professional institutions, and observation sessions out on
-                the ice. The finding that shaped the vest was about the user, not the equipment. The
-                person who has to attach the line is the one in the water: cold, frightened, and
+                We studied how rescues actually play out: interviews with skaters, literature from
+                professional institutions, observation sessions on the ice. The finding that shaped
+                the vest was about the user, not the equipment.
+              </p>
+              <p>
+                The person who has to attach the line is the one in the water: cold, frightened, and
                 with their ability to make decisions failing. Clearer instructions don&rsquo;t help
                 someone in that state.
               </p>
             </CaseSection>
 
-            <CaseSection index="03" title="What we did">
-              <p>
-                We designed the vest so the wrong action becomes physically impossible, rather than
-                making the right action clearer.
-              </p>
-              <ul className="space-y-6 border-l border-hairline pl-6">
+            <CaseSection
+              index="03"
+              title="What we did"
+              lead="Make the wrong action physically impossible, not the right action clearer."
+            >
+              <ul className="space-y-8 border-l border-hairline pl-6">
                 <li className="grid gap-6 sm:grid-cols-2 sm:items-start">
-                  <p>
-                    <span className="text-foreground">Fewer options.</span> The vest covers the
-                    backpack&rsquo;s straps and loops, leaving two reachable attachment points,
-                    both correct and both on the shoulders. Because every vest is identical, those
-                    points can be specified and quality controlled, which an improvised point on a
-                    personal pack never can.
-                  </p>
+                  <div>
+                    <p>
+                      <span className="text-foreground">Fewer options.</span> The vest covers the
+                      backpack&rsquo;s straps and loops, leaving two reachable attachment points,
+                      both correct and both on the shoulders. Because every vest is identical, those
+                      points can be specified and quality controlled, which an improvised point on a
+                      personal pack never can.
+                    </p>
+                  </div>
                   <figure>
                     <img
                       src={salmagenHero.url}
@@ -224,7 +252,11 @@ function SalmagenCase() {
               </figure>
             </CaseSection>
 
-            <CaseSection index="04" title="What changed">
+            <CaseSection
+              index="04"
+              title="What changed"
+              lead="Prototype built, physics modelled, never tested on real ice."
+            >
               <p>
                 Sälmagen reached concept and prototype stage and was presented as part of NIX. With
                 help from our professors, we built a physics model of the rescue, estimating some of
@@ -232,27 +264,40 @@ function SalmagenCase() {
               </p>
             </CaseSection>
 
-            <CaseSection index="05" title="Reading it now">
+            <CaseSection
+              index="05"
+              title="Reading it now"
+              lead="Three untested assumptions, one riskier than the rest."
+            >
               <div className="-mx-6 bg-[#EBC67F]/15 px-6 py-8 md:-mx-10 md:px-10 md:py-10">
                 <p className="font-display text-xl leading-snug tracking-tight text-foreground md:text-2xl">
                   A safety product only works if it&rsquo;s worn on the day it&rsquo;s needed.
                 </p>
-                <div className="mt-6 space-y-6">
-                  <p>
-                    Looking back, the vest rested on three untested assumptions. That the
-                    low-friction front actually reduces the force needed to pull someone out, which
-                    we only estimated in a model. That skaters would find it comfortable enough to
-                    wear on an ordinary tour, which we never tested. And that they carry a backpack
-                    suited to the activity, which the design depended on. The riskiest was the
-                    second: a safety product only works if it&rsquo;s worn on the day it&rsquo;s
-                    needed.
+                <div className="mt-8 space-y-6">
+                  <p className="text-sm uppercase tracking-[0.14em] text-foreground/60">
+                    The vest rested on three untested assumptions
                   </p>
+                  <ul className="space-y-3">
+                    <li>
+                      <span className="text-foreground">The low-friction front reduces pulling force.</span>{" "}
+                      We only estimated it in a model.
+                    </li>
+                    <li>
+                      <span className="text-foreground">Skaters would wear it on an ordinary tour.</span>{" "}
+                      We never tested comfort.
+                    </li>
+                    <li>
+                      <span className="text-foreground">They carry a backpack the design depends on.</span>{" "}
+                      Out of our control.
+                    </li>
+                  </ul>
+                  <p>The riskiest was the second, and it is the pull-quote above.</p>
                   <p>
-                    Today I would test that first, before any engineering: give club members a
-                    simple mock-up to wear over their own backpacks on a few ordinary tours, and
-                    ask afterwards whether they&rsquo;d wear it every time. If most took it off,
-                    left it at home, or needed a different backpack to use it, I would stop and
-                    rethink the concept before building anything more.
+                    Today I would test it first, before any engineering: give club members a simple
+                    mock-up to wear over their own backpacks on a few ordinary tours, and ask
+                    afterwards whether they&rsquo;d wear it every time. If most took it off, left it
+                    at home, or needed a different backpack to use it, I would stop and rethink the
+                    concept before building anything more.
                   </p>
                 </div>
               </div>
