@@ -184,12 +184,18 @@ function SalmagenCase() {
               </p>
             </CaseSection>
 
-            <CaseSection index="02" title="The real problem">
+            <CaseSection
+              index="02"
+              title="The real problem"
+              lead="The person attaching the line is the one whose judgement is failing."
+            >
               <p>
-                Before designing anything, we studied how rescues actually play out: interviews with
-                skaters, literature from professional institutions, and observation sessions out on
-                the ice. The finding that shaped the vest was about the user, not the equipment. The
-                person who has to attach the line is the one in the water: cold, frightened, and
+                We studied how rescues actually play out: interviews with skaters, literature from
+                professional institutions, observation sessions on the ice. The finding that shaped
+                the vest was about the user, not the equipment.
+              </p>
+              <p>
+                The person who has to attach the line is the one in the water: cold, frightened, and
                 with their ability to make decisions failing. Clearer instructions don&rsquo;t help
                 someone in that state.
               </p>
