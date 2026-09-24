@@ -232,7 +232,7 @@ function SalmagenCase() {
                 <figure>
                   <img
                     src={salmagenHero.url}
-                    alt="Working sketch of the S&auml;lmagen rescue vest worn over a backpack, seen from the front"
+                    alt="Working sketch of the Sälmagen rescue vest worn over a backpack, seen from the front"
                     className="w-full"
                     loading="lazy"
                   />
