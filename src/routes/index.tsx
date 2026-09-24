@@ -197,7 +197,7 @@ function Index() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent" />
           <div className="relative mx-auto w-full max-w-[84rem] px-6 py-16 md:px-10 md:py-20">
             <p className="label-mono fade-up !text-white/60">Under construction</p>
-            <p className="fade-up delay-1 mt-4 max-w-md text-base leading-relaxed text-white/75">
+            <p className="fade-up delay-1 mt-4 max-w-md text-base leading-relaxed text-white/85">
               What you are reading is the working draft. Case write-ups are on their way.
             </p>
           </div>
@@ -266,20 +266,29 @@ function Index() {
 
           <div className="mt-14 md:mt-16">
             <p className="label-mono">We&apos;ve all seen it</p>
-            <ol className="mt-5 divide-y divide-[var(--hairline)] border-y border-hairline">
+            <ol className="mt-5">
               {problemCases.map((item, i) => (
-                <li key={item.t} className="flex gap-6 py-6 md:py-7">
-                  <span className="label-mono shrink-0 pt-1">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <div className="max-w-3xl">
-                    <h3 className="text-base font-medium tracking-tight text-foreground">
-                      {item.t}
-                    </h3>
-                    <p className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">
-                      {item.body}
-                    </p>
+                <li
+                  key={item.t}
+                  className="group relative border-t border-hairline transition-colors duration-500 last:border-b hover:bg-foreground/[0.03]"
+                >
+                  <div className="flex gap-8 px-2 py-8 md:gap-12 md:px-4 md:py-10">
+                    <span className="label-mono shrink-0 pt-1.5 transition-colors duration-500 group-hover:text-foreground">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <div className="max-w-3xl">
+                      <h3 className="text-lg font-semibold tracking-tight text-foreground">
+                        {item.t}
+                      </h3>
+                      <p className="mt-2.5 max-w-2xl text-base leading-relaxed text-muted-foreground">
+                        {item.body}
+                      </p>
+                    </div>
                   </div>
+                  <span
+                    className="absolute bottom-0 left-0 h-px w-0 bg-foreground/20 transition-all duration-700 group-hover:w-full"
+                    aria-hidden="true"
+                  />
                 </li>
               ))}
             </ol>
@@ -308,7 +317,7 @@ function Index() {
               {sprintWhen.map((i) => (
                 <li key={i} className="flex items-start gap-4">
                   <span className="mt-2 h-px w-4 shrink-0 bg-accent" aria-hidden="true" />
-                  <span className="text-[0.95rem] leading-relaxed text-muted-foreground">
+                  <span className="text-base leading-relaxed text-muted-foreground">
                     {i}
                   </span>
                 </li>
@@ -322,7 +331,7 @@ function Index() {
               {sprintGet.map((f) => (
                 <div key={f.k}>
                   <dt className="text-base font-medium tracking-tight text-foreground">{f.k}</dt>
-                  <dd className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">
+                  <dd className="mt-2 text-base leading-relaxed text-muted-foreground">
                     {f.v}
                   </dd>
                 </div>

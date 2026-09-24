@@ -8,7 +8,7 @@ type FormspreeError = { field?: string; message: string };
 type FormspreeResponse = { errors?: FormspreeError[] };
 
 const fieldClass =
-  "mt-3 block w-full border border-input bg-transparent px-4 py-3 text-base text-foreground outline-none transition-colors focus:border-foreground";
+  "mt-3 block w-full border border-input bg-foreground/[0.04] px-4 py-3 text-base text-foreground outline-none transition-all duration-300 hover:border-foreground/40 focus:border-foreground focus:bg-foreground/[0.07] focus:ring-1 focus:ring-foreground/70";
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -78,7 +78,7 @@ export function ContactForm() {
           <input type="hidden" name="_subject" value="Discovery Sprint enquiry" />
 
           <div className="space-y-7">
-            <div>
+            <div className="field-group">
               <label htmlFor="name" className="label-mono">
                 Name
               </label>
@@ -91,7 +91,7 @@ export function ContactForm() {
                 className={fieldClass}
               />
             </div>
-            <div>
+            <div className="field-group">
               <label htmlFor="email" className="label-mono">
                 Email
               </label>
@@ -104,7 +104,7 @@ export function ContactForm() {
                 className={fieldClass}
               />
             </div>
-            <div>
+            <div className="field-group">
               <label htmlFor="message" className="label-mono">
                 What are you trying to work out?
               </label>
@@ -128,7 +128,7 @@ export function ContactForm() {
             <button
               type="submit"
               disabled={status === "pending"}
-              className="group inline-flex h-12 items-center gap-3 bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+              className="group inline-flex h-12 items-center gap-3 bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity outline-offset-2 hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-foreground disabled:cursor-not-allowed disabled:opacity-60"
             >
               {status === "pending" ? "Sending" : "Let's explore together"}
               <span
@@ -140,7 +140,7 @@ export function ContactForm() {
             </button>
             <a
               href="mailto:hello@slipstreamlabs.se"
-              className="text-sm text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
+              className="text-sm text-muted-foreground underline-offset-4 outline-offset-4 transition-colors hover:text-foreground hover:underline focus-visible:text-foreground focus-visible:underline"
             >
               hello@slipstreamlabs.se
             </a>
