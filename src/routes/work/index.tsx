@@ -4,7 +4,7 @@ import { Wordmark } from "@/components/site/brand";
 import { CtaButton } from "@/components/site/cta-button";
 import { KillLineDiagram, OrderFlowDiagram } from "@/components/site/case-diagrams";
 
-export const Route = createFileRoute("/work")({
+export const Route = createFileRoute("/work/")({
   head: () => ({
     meta: [
       { title: "Work — Slipstream Labs" },
