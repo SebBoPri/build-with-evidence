@@ -207,7 +207,7 @@ function WorkPage() {
                       strokeDasharray="6 4"
                     />
                     <path
-                      d="M24,54 Q60,66 96,54 L97,116 Q60,133 23,116 Z"
+                      d="M22,52 Q60,62 98,52 L99,114 Q60,131 21,114 Z"
                       fill="none"
                       stroke="white"
                       strokeWidth="1.5"
