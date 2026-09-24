@@ -231,3 +231,5 @@
 .theme-paper figure img { filter: invert(1) contrast(0.95); }
 .theme-paper a:hover { color: var(--paper-blue); }
 .paper-bar { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; height: 6px; }
+.theme-paper { --primary: oklch(0.16 0 0); --primary-foreground: oklch(0.99 0 0); }
+.theme-paper header svg { filter: invert(1); }
