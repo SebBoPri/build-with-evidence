@@ -69,19 +69,6 @@ const selectedWork = [
   },
 ];
 
-function EntryMeta({ meta, status }: { meta: string; status: string }) {
-  return (
-    <>
-      <p className="label-mono">{meta}</p>
-      <h3 className="mt-4 text-xl font-medium tracking-tight text-foreground">{title_safe()}</h3>
-    </>
-  );
-}
-
-function title_safe() {
-  return "";
-}
-
 function WorkPage() {
   return (
     <div className="min-h-screen">
