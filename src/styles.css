@@ -274,3 +274,8 @@
   color: var(--foreground);
 }
 .theme-paper .theme-dark-band img { filter: none; }
+
+/* Work pages: paint the page base white so no dark body can show through. */
+body:has(.theme-paper) {
+  background: oklch(0.99 0 0);
+}
