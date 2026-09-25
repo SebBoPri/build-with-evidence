@@ -337,7 +337,7 @@ function SalmagenCase() {
             </dl>
             <p className="mx-auto mt-10 max-w-xl text-sm leading-relaxed text-case-highlight-foreground/75">
               The low-friction surface and buoyancy also remained unproven in a real ice rescue.
-            </div>
+            </p>
           </div>
         </section>
 
