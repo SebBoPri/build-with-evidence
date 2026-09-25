@@ -51,19 +51,29 @@ const meta = [
   { label: "Timeframe", value: "2018" },
 ];
 
+const chapters = [
+  ["01", "The situation", "situation"],
+  ["02", "The real problem", "problem"],
+  ["03", "What we did", "work"],
+  ["04", "What changed", "changed"],
+  ["05", "Reading it now", "reading"],
+] as const;
+
 function CaseSection({
+  id,
   index,
   title,
   lead,
   children,
 }: {
+  id: string;
   index: string;
   title: string;
   lead?: string;
   children: React.ReactNode;
 }) {
   return (
-    <section className="grid gap-8 border-t border-hairline pt-10 md:grid-cols-12 md:gap-16 md:pt-14">
+    <section id={id} className="grid scroll-mt-28 gap-8 border-t border-hairline pt-10 md:grid-cols-12 md:gap-16 md:pt-14">
       <div className="md:sticky md:top-28 md:col-span-4 md:self-start">
         <p className="font-display text-4xl leading-none text-case-highlight">{index}</p>
         <h2 className="mt-5 font-display text-2xl text-foreground md:text-3xl">{title}</h2>
@@ -131,17 +141,17 @@ function SalmagenCase() {
               </dl>
             </div>
 
-            <p className="fade-up delay-3 mt-14 max-w-2xl font-display text-2xl leading-snug text-foreground/85 md:text-3xl">
-              Ice rescues fail when the person in the water, cold and frightened, has to attach the
-              rescue line themselves. We designed a vest that leaves only correct attachment points.
-              It reached prototype stage as part of the NIX safety system, but was never tested on
-              real ice.
+            <p className="fade-up delay-3 mt-14 max-w-3xl font-display text-2xl leading-snug text-foreground/85 md:text-3xl">
+              A rescue vest designed to remove the wrong attachment choice and create a load path
+              strong enough to pull a soaked skater over the ice edge. It reached prototype stage,
+              but was never tested in a real ice rescue.
             </p>
-            <dl className="mt-12 grid gap-px bg-hairline sm:grid-cols-3">
+            <dl className="mt-12 grid gap-px bg-hairline sm:grid-cols-2 lg:grid-cols-4">
               {[
-                ["Design decision", "Two fixed attachment points"],
-                ["Reached", "Prototype and physics model"],
-                ["Not reached", "A test on real ice"],
+                ["Problem", "Attach under stress, then pull a heavy person from the water"],
+                ["Contribution", "Developed the Sälmagen rescue vest within the NIX team"],
+                ["Outcome", "Prototype and physics model"],
+                ["Limitation", "No test in a real ice rescue"],
               ].map(([label, value]) => (
                 <div key={label} className="bg-background px-5 py-5">
                   <dt className="label-mono">{label}</dt>
@@ -172,10 +182,32 @@ function SalmagenCase() {
           </div>
         </section>
 
+        <nav aria-label="Case chapters" className="mx-auto w-full max-w-[72rem] px-6 pt-16 md:px-10 md:pt-20">
+          <ol className="grid border-y border-hairline sm:grid-cols-5">
+            {chapters.map(([number, label, id]) => (
+              <li
+                key={id}
+                className="border-b border-hairline last:border-b-0 sm:border-b-0 sm:border-r sm:last:border-r-0"
+              >
+                <a
+                  href={`#${id}`}
+                  className="group flex min-h-20 items-center gap-3 px-4 py-4 transition-colors hover:bg-case-highlight/[0.05] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-case-highlight"
+                >
+                  <span className="font-mono text-[0.6875rem] text-case-highlight">{number}</span>
+                  <span className="text-sm text-foreground/70 transition-colors group-hover:text-foreground">
+                    {label}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+
         {/* Body */}
         <Section>
           <div className="mx-auto max-w-[72rem] space-y-20 md:space-y-24">
             <CaseSection
+              id="situation"
               index="01"
               title="The situation"
               lead="A rescue system barely changed since the 1960s, rethought as a bachelor thesis."
@@ -193,6 +225,7 @@ function SalmagenCase() {
             </CaseSection>
 
             <CaseSection
+              id="problem"
               index="02"
               title="The real problem"
               lead="The person in the water is one problem. The person pulling them out is the other."
@@ -217,6 +250,7 @@ function SalmagenCase() {
             </CaseSection>
 
             <CaseSection
+              id="work"
               index="03"
               title="What we did"
               lead="Make the wrong action physically impossible, not the right action clearer."
@@ -268,6 +302,7 @@ function SalmagenCase() {
             </CaseSection>
 
             <CaseSection
+              id="changed"
               index="04"
               title="What changed"
               lead="Prototype built, physics modelled, never tested on real ice."
@@ -279,39 +314,49 @@ function SalmagenCase() {
               </p>
             </CaseSection>
 
-            <section className="bg-case-highlight px-7 py-12 text-case-highlight-foreground md:px-14 md:py-16 lg:px-20 lg:py-20">
+            <section
+              id="reading"
+              className="scroll-mt-28 bg-case-highlight px-7 py-12 text-case-highlight-foreground md:px-14 md:py-16 lg:px-20 lg:py-20"
+            >
               <p className="label-mono text-case-highlight-foreground/60">05 / Reading it now</p>
-              <div className="mt-8 grid gap-12 md:grid-cols-12 md:gap-16">
-                <blockquote className="font-display text-3xl leading-tight md:col-span-7 md:text-5xl">
+              <blockquote className="mt-8 max-w-4xl font-display text-3xl leading-tight md:text-5xl">
                   A safety product only works if it&rsquo;s worn on the day it&rsquo;s needed.
-                </blockquote>
-                <div className="space-y-6 text-[1.0625rem] leading-[1.65] text-case-highlight-foreground/85 md:col-span-5">
-                  <p className="text-xs uppercase tracking-[0.14em] text-case-highlight-foreground/60">
-                    The vest rested on three untested assumptions
-                  </p>
-                  <ul className="space-y-4 border-l border-case-highlight-foreground/25 pl-5">
-                    <li>
-                      <span className="text-case-highlight-foreground">The low-friction front reduces pulling force.</span>{" "}
-                      We only estimated it in a model.
-                    </li>
-                    <li>
-                      <span className="text-case-highlight-foreground">Skaters would wear it on an ordinary tour.</span>{" "}
-                      We never tested comfort.
-                    </li>
-                    <li>
-                      <span className="text-case-highlight-foreground">They carry a backpack the design depends on.</span>{" "}
-                      Out of our control.
-                    </li>
-                  </ul>
-                  <p>The riskiest was whether skaters would wear it on an ordinary tour.</p>
-                  <p>
-                    Today I would test it first, before any engineering: give club members a simple
-                    mock-up to wear over their own backpacks on a few ordinary tours, and ask
-                    afterwards whether they&rsquo;d wear it every time. If most took it off, left it
-                    at home, or needed a different backpack to use it, I would stop and rethink the
-                    concept before building anything more.
-                  </p>
-                </div>
+              </blockquote>
+
+              <div className="mt-12 grid gap-px bg-case-highlight-foreground/20 md:grid-cols-3">
+                {[
+                  [
+                    "Assumption",
+                    "Skaters would wear the vest over their own backpack on every ordinary tour.",
+                  ],
+                  [
+                    "Test today",
+                    "Give club members a simple mock-up to wear on several ordinary tours.",
+                  ],
+                  [
+                    "Kill-line",
+                    "Stop if most remove it, leave it at home, or need a different backpack.",
+                  ],
+                ].map(([label, text]) => (
+                  <div key={label} className="bg-case-highlight px-5 py-6 md:px-6 md:py-8">
+                    <p className="label-mono text-case-highlight-foreground/60">{label}</p>
+                    <p className="mt-4 text-[1rem] leading-relaxed text-case-highlight-foreground/90">
+                      {text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-10 grid gap-8 text-[1rem] leading-relaxed text-case-highlight-foreground/75 md:grid-cols-2">
+                <p>
+                  Two other assumptions also remained open: whether the low-friction front reduced
+                  pulling force, and whether the design could depend on a backpack the team did not
+                  control.
+                </p>
+                <p>
+                  The wear test comes first. If the vest is not there when the ice breaks, the rest
+                  of the engineering does not matter.
+                </p>
               </div>
             </section>
           </div>
