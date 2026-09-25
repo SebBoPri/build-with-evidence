@@ -51,32 +51,16 @@ const meta = [
   { label: "Timeframe", value: "2018" },
 ];
 
-function CaseSection({
-  index,
-  title,
-  lead,
-  children,
-}: {
-  index: string;
-  title: string;
-  lead?: string;
-  children: React.ReactNode;
-}) {
+function GhostNumeral({ value, side }: { value: string; side: "left" | "right" }) {
   return (
-    <section className="grid gap-8 md:grid-cols-12 md:gap-12">
-      <div className="md:col-span-4">
-        <span className="block font-display text-6xl font-light leading-none text-case-highlight/25 md:text-7xl">
-          {index}
-        </span>
-        <h2 className="mt-4 font-display text-3xl font-semibold text-foreground">{title}</h2>
-        {lead ? (
-          <p className="mt-4 max-w-xs text-[0.9375rem] leading-relaxed text-foreground/60">{lead}</p>
-        ) : null}
-      </div>
-      <div className="max-w-[42rem] space-y-6 text-lg leading-relaxed text-foreground/80 md:col-span-8">
-        {children}
-      </div>
-    </section>
+    <span
+      aria-hidden
+      className={`pointer-events-none absolute -top-24 hidden select-none font-display text-[13rem] leading-none text-case-highlight/[0.07] lg:block ${
+        side === "left" ? "-left-16" : "-right-8"
+      }`}
+    >
+      {value}
+    </span>
   );
 }
 
@@ -110,29 +94,28 @@ function SalmagenCase() {
       </header>
 
       <main>
-        {/* Headline + meta + summary */}
+        {/* Headline + meta strip */}
         <section>
-          <div className="mx-auto w-full max-w-[72rem] px-6 pb-14 pt-24 md:px-10 md:pb-20 md:pt-32">
+          <div className="mx-auto w-full max-w-[72rem] px-6 pb-16 pt-24 md:px-10 md:pb-24 md:pt-32">
             <p className="label-mono fade-up">
               <Link to="/work" className="transition-colors hover:text-foreground">
                 Work
               </Link>
               {" / "}Case
             </p>
-            <div className="mt-10 grid gap-12 lg:grid-cols-12 lg:items-end">
-              <h1 className="display-md fade-up delay-1 max-w-3xl text-balance lg:col-span-8">
-                When the user can&rsquo;t think straight, remove the wrong choice
-              </h1>
-              <dl className="fade-up delay-2 grid gap-5 border-l border-hairline pl-6 sm:grid-cols-3 lg:col-span-4 lg:grid-cols-1">
-                {meta.map((m) => (
-                  <div key={m.label}>
-                    <dt className="label-mono text-case-highlight">{m.label}</dt>
-                    <dd className="mt-1 text-[0.9rem] leading-snug text-foreground/90">{m.value}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-
+            <h1 className="fade-up delay-1 mt-10 max-w-4xl text-balance font-display text-5xl font-normal leading-[1.02] tracking-tight text-foreground md:text-7xl">
+              When the user can&rsquo;t think straight, remove the wrong choice
+            </h1>
+            <dl className="fade-up delay-2 mt-14 flex flex-wrap gap-x-16 gap-y-6 border-t border-hairline pt-10">
+              {meta.map((m) => (
+                <div key={m.label}>
+                  <dt className="mb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#A05A9A]">
+                    {m.label}
+                  </dt>
+                  <dd className="text-sm text-foreground/80">{m.value}</dd>
+                </div>
+              ))}
+            </dl>
             <p className="fade-up delay-3 mt-14 max-w-2xl font-display text-2xl leading-snug text-foreground/85 md:text-3xl">
               Ice rescues fail twice: when the person in the water, cold and frightened, has to
               attach the rescue line themselves, and when a soaked adult has to be hauled over the
@@ -143,27 +126,26 @@ function SalmagenCase() {
           </div>
         </section>
 
-        {/* Facts strip: tinted band spanning the page */}
-        <section className="border-y border-case-highlight/10 bg-case-highlight/[0.06]">
-          <div className="mx-auto w-full max-w-[72rem] px-6 py-8 md:px-10">
-            <dl className="grid gap-8 sm:grid-cols-3">
-              {[
-                ["Design decision", "Two fixed attachment points"],
-                ["Reached", "Prototype and physics model"],
-                ["Not reached", "A test on real ice"],
-              ].map(([label, value]) => (
-                <div key={label}>
-                  <dt className="label-mono text-case-highlight">{label}</dt>
-                  <dd className="mt-2 text-sm font-medium text-foreground/90">{value}</dd>
-                </div>
-              ))}
-            </dl>
+        {/* Facts band */}
+        <section className="border-y border-case-highlight/10 bg-case-highlight/[0.05]">
+          <div className="mx-auto grid w-full max-w-[72rem] gap-12 px-6 py-14 md:grid-cols-3 md:gap-16 md:px-10 md:py-16">
+            {[
+              ["01.", "Design decision", "Two fixed attachment points, both correct, both on the shoulders."],
+              ["02.", "Reached", "Concept, prototype and a physics model of the rescue forces."],
+              ["03.", "Not reached", "A test on real ice, with real skaters, in real cold."],
+            ].map(([numeral, label, text]) => (
+              <div key={label} className="space-y-4">
+                <span className="font-display text-2xl italic text-case-highlight">{numeral}</span>
+                <h3 className="text-sm font-semibold uppercase tracking-widest text-foreground">{label}</h3>
+                <p className="text-sm leading-relaxed text-foreground/60">{text}</p>
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* Hero visual: natural photo of an ice rescue training session */}
+        {/* Hero visual */}
         <section>
-          <div className="mx-auto w-full max-w-[72rem] px-6 md:px-10">
+          <div className="mx-auto w-full max-w-[72rem] px-6 pt-24 md:px-10 md:pt-32">
             <figure>
               <div className="w-full overflow-hidden rounded-sm">
                 <img
@@ -183,167 +165,181 @@ function SalmagenCase() {
 
         {/* Body */}
         <Section>
-          <div className="mx-auto max-w-[72rem] space-y-28 md:space-y-32">
-            <CaseSection
-              index="01"
-              title="The situation"
-              lead="A rescue system barely changed since the 1960s, rethought as a bachelor thesis."
-            >
-              <p>
-                Long-distance skaters carry a throw line in case a companion goes through the ice.
-                The system had barely changed since the 1960s.
-              </p>
-              <p>
-                For our bachelor thesis, six product developers set out to improve it, working with
-                Linköping&rsquo;s long-distance skating club. The result was NIX, a safety system of
-                three linked concepts: an extension band, a lanyard bag and Sälmagen, a rescue vest.
-                I worked on Sälmagen.
-              </p>
-            </CaseSection>
-
-            <CaseSection
-              index="02"
-              title="The real problem"
-              lead="The person in the water is one problem. The person pulling them out is the other."
-            >
-              <p>
-                We studied how rescues actually play out: interviews with skaters, literature from
-                professional institutions, observation sessions on the ice. The findings that shaped
-                the vest were about people, not equipment.
-              </p>
-              <p>
-                The person who has to attach the line is the one in the water: cold, frightened, and
-                with their ability to make decisions failing. Clearer instructions don&rsquo;t help
-                someone in that state.
-              </p>
-              <p>
-                And once the line is on, the hardest work begins: a person in soaked winter gear,
-                waterlogged and heavy, has to be pulled up over the ice edge. Pulling a large male
-                out can demand more strength than a companion has. So the question the vest had to
-                answer was not just where the line clips, but how to cut the force the rescue
-                demands.
-              </p>
-            </CaseSection>
-
-            <CaseSection
-              index="03"
-              title="What we did"
-              lead="Make the wrong action physically impossible, not the right action clearer."
-            >
-              <p>
-                Everything in the design serves one goal: reduce the force it takes to pull
-                somebody out of the water. It does this in three ways.
-              </p>
-              <ul className="space-y-8">
-                <li className="grid gap-6 sm:grid-cols-2 sm:items-start">
-                  <div>
-                    <p>
-                      <span className="text-foreground">Fewer options.</span> The vest covers the
-                      backpack&rsquo;s straps and loops, leaving two reachable attachment points,
-                      both correct and both on the shoulders. Because every vest is identical, those
-                      points can be specified and quality controlled, which an improvised point on a
-                      personal pack never can. And because the line clips at the shoulders, the pull
-                      runs through a load path built to lift a person instead of through webbing
-                      that stretches and gives, so less of the rescuer&rsquo;s strength is wasted.
-                    </p>
-                  </div>
-                  <figure>
-                    <img
-                      src={salmagenHero.url}
-                      alt="Working sketch of the Sälmagen rescue vest worn over a backpack, seen from the front"
-                      className="w-full"
-                      loading="lazy"
-                    />
-                  </figure>
-                </li>
-                <li className="border-t border-hairline pt-6">
-                  <span className="text-foreground">Buoyancy.</span> The vest and the backpack
-                  together add flotation, which makes the person in the water lighter to lift and
-                  cuts the force needed to pull somebody as heavy as a large male out. The same
-                  buoyancy element rights a face-down person before the pulling begins.
-                </li>
-                <li className="border-t border-hairline pt-6">
-                  <span className="text-foreground">Built to glide.</span> A hard, slippery surface
-                  on the stomach and chest reduces friction against the ice edge, so the person
-                  slides out over the edge while their companion pulls instead of being dragged,
-                  like a seal on its belly. Hence the name: S&auml;lmagen, &ldquo;seal belly&rdquo;.
-                </li>
-                <li className="border-t border-hairline pt-6">
-                  <span className="text-foreground">Interface split by stress level.</span> The
-                  emergency side can&rsquo;t be got wrong. The mounting side carries a printed
-                  label, because mounting happens calmly at home and can afford to be learned.
-                </li>
-              </ul>
-              <figure className="pt-4">
-                <img
-                  src={nixProcessSketch.url}
-                  alt="Working page from the design process, with sketches and handwritten notes"
-                  className="natural w-full"
-                  loading="lazy"
-                />
-              </figure>
-            </CaseSection>
-
-            <CaseSection
-              index="04"
-              title="What changed"
-              lead="Prototype built, physics modelled, never tested on real ice."
-            >
-              <p>
-                Sälmagen reached concept and prototype stage and was presented as part of NIX. With
-                help from our professors, we built a physics model of the rescue, estimating some of
-                the forces involved. It was never tested live in a real ice scenario.
-              </p>
-            </CaseSection>
-
-            <section className="bg-case-highlight px-7 py-12 text-case-highlight-foreground md:px-14 md:py-16 lg:px-20 lg:py-20">
-              <span className="block font-display text-6xl font-light leading-none text-case-highlight-foreground/25 md:text-7xl">
-                05
-              </span>
-              <h2 className="mt-4 font-display text-3xl font-semibold md:text-4xl">Reading it now</h2>
-              <div className="mt-10 grid gap-12 md:grid-cols-12 md:gap-16">
-                <blockquote className="border-l-2 border-case-highlight-foreground/40 pl-8 font-display text-2xl italic leading-relaxed md:col-span-7 md:text-3xl">
-                  A safety product only works if it&rsquo;s worn on the day it&rsquo;s needed.
-                </blockquote>
-                <div className="space-y-6 text-[1.0625rem] leading-[1.65] text-case-highlight-foreground/85 md:col-span-5">
-                  <p className="text-xs uppercase tracking-[0.14em] text-case-highlight-foreground/60">
-                    The vest rested on three untested assumptions
-                  </p>
-                  <ul className="space-y-5">
-                    {[
-                      ["The low-friction front reduces pulling force.", "We only estimated it in a model."],
-                      ["Skaters would wear it on an ordinary tour.", "We never tested comfort."],
-                      ["They carry a backpack the design depends on.", "Out of our control."],
-                    ].map(([point, note]) => (
-                      <li key={point} className="flex items-start gap-4">
-                        <span className="mt-2.5 h-1.5 w-1.5 shrink-0 bg-case-highlight-foreground/60" />
-                        <p>
-                          <span className="text-case-highlight-foreground">{point}</span> {note}
-                        </p>
-                      </li>
-                    ))}
-                  </ul>
-                  <p>The riskiest was whether skaters would wear it on an ordinary tour.</p>
-                  <p>
-                    Today I would test it first, before any engineering: give club members a simple
-                    mock-up to wear over their own backpacks on a few ordinary tours, and ask
-                    afterwards whether they&rsquo;d wear it every time. If most took it off, left it
-                    at home, or needed a different backpack to use it, I would stop and rethink the
-                    concept before building anything more.
-                  </p>
-                </div>
+          <div className="mx-auto max-w-[72rem] space-y-32 md:space-y-40">
+            {/* 01 The situation: text left, sketch right */}
+            <section className="relative grid items-start gap-12 md:grid-cols-12">
+              <GhostNumeral value="01" side="left" />
+              <div className="relative md:col-span-5 md:pt-10">
+                <h2 className="font-display text-4xl leading-tight text-foreground">The situation</h2>
+                <p className="mt-8 text-lg font-light leading-relaxed text-foreground/80">
+                  Long-distance skaters carry a throw line in case a companion goes through the ice.
+                  The system had barely changed since the 1960s.
+                </p>
+                <p className="mt-6 text-sm leading-relaxed text-foreground/55">
+                  For our bachelor thesis, six product developers set out to improve it, working
+                  with Linköping&rsquo;s long-distance skating club. The result was NIX, a safety
+                  system of three linked concepts: an extension band, a lanyard bag and Sälmagen, a
+                  rescue vest. I worked on Sälmagen.
+                </p>
               </div>
+              <div className="md:col-span-7">
+                <figure className="bg-[#EBC67F]/15 p-8 md:p-14">
+                  <img
+                    src={salmagenHero.url}
+                    alt="Working sketch of the Sälmagen rescue vest worn over a backpack, seen from the front"
+                    className="w-full"
+                    loading="lazy"
+                  />
+                  <figcaption className="mt-6 text-[9px] font-bold uppercase tracking-[0.3em] text-[#A05A9A]">
+                    Working sketch, vest worn over backpack
+                  </figcaption>
+                </figure>
+              </div>
+            </section>
+
+            {/* 02 The real problem: reversed rhythm, text right */}
+            <section className="relative grid items-start gap-12 md:grid-cols-12">
+              <GhostNumeral value="02" side="right" />
+              <div className="hidden md:col-span-5 md:block" aria-hidden />
+              <div className="relative md:col-span-7 md:pt-10">
+                <h2 className="font-display text-4xl leading-tight text-foreground">The real problem</h2>
+                <p className="mt-8 text-lg font-light leading-relaxed text-foreground/80">
+                  The person in the water is one problem. The person pulling them out is the other.
+                </p>
+                <p className="mt-6 leading-relaxed text-foreground/70">
+                  We studied how rescues actually play out: interviews with skaters, literature from
+                  professional institutions, observation sessions on the ice. The findings that
+                  shaped the vest were about people, not equipment. The person who has to attach the
+                  line is the one in the water: cold, frightened, and with their ability to make
+                  decisions failing. Clearer instructions don&rsquo;t help someone in that state.
+                </p>
+                <p className="mt-6 leading-relaxed text-foreground/70">
+                  And once the line is on, the hardest work begins: a person in soaked winter gear,
+                  waterlogged and heavy, has to be pulled up over the ice edge. Pulling a large male
+                  out can demand more strength than a companion has. So the question the vest had to
+                  answer was not just where the line clips, but how to cut the force the rescue
+                  demands.
+                </p>
+              </div>
+            </section>
+
+            {/* 03 What we did: full width list */}
+            <section className="relative">
+              <GhostNumeral value="03" side="left" />
+              <div className="relative">
+                <h2 className="font-display text-4xl leading-tight text-foreground">What we did</h2>
+                <p className="mt-8 max-w-2xl text-lg font-light leading-relaxed text-foreground/80">
+                  Make the wrong action physically impossible, not the right action clearer.
+                  Everything in the design serves one goal: reduce the force it takes to pull
+                  somebody out of the water. It does this in three ways.
+                </p>
+                <ul className="mt-14 grid gap-x-16 gap-y-12 md:grid-cols-3">
+                  <li className="border-t border-hairline pt-6">
+                    <p className="leading-relaxed text-foreground/70">
+                      <span className="font-medium text-foreground">Fewer options.</span> The vest
+                      covers the backpack&rsquo;s straps and loops, leaving two reachable attachment
+                      points, both correct and both on the shoulders. Because every vest is
+                      identical, those points can be specified and quality controlled, which an
+                      improvised point on a personal pack never can. And because the line clips at
+                      the shoulders, the pull runs through a load path built to lift a person
+                      instead of through webbing that stretches and gives, so less of the
+                      rescuer&rsquo;s strength is wasted.
+                    </p>
+                  </li>
+                  <li className="border-t border-hairline pt-6">
+                    <p className="leading-relaxed text-foreground/70">
+                      <span className="font-medium text-foreground">Buoyancy.</span> The vest and
+                      the backpack together add flotation, which makes the person in the water
+                      lighter to lift and cuts the force needed to pull somebody as heavy as a
+                      large male out. The same buoyancy element rights a face-down person before
+                      the pulling begins.
+                    </p>
+                  </li>
+                  <li className="border-t border-hairline pt-6">
+                    <p className="leading-relaxed text-foreground/70">
+                      <span className="font-medium text-foreground">Built to glide.</span> A hard,
+                      slippery surface on the stomach and chest reduces friction against the ice
+                      edge, so the person slides out over the edge while their companion pulls
+                      instead of being dragged, like a seal on its belly. Hence the name:
+                      S&auml;lmagen, &ldquo;seal belly&rdquo;.
+                    </p>
+                  </li>
+                </ul>
+                <p className="mt-12 max-w-2xl leading-relaxed text-foreground/70">
+                  <span className="font-medium text-foreground">Interface split by stress level.</span>{" "}
+                  The emergency side can&rsquo;t be got wrong. The mounting side carries a printed
+                  label, because mounting happens calmly at home and can afford to be learned.
+                </p>
+                <figure className="mt-14">
+                  <img
+                    src={nixProcessSketch.url}
+                    alt="Working page from the design process, with sketches and handwritten notes"
+                    className="natural w-full"
+                    loading="lazy"
+                  />
+                  <figcaption className="mt-4 text-xs leading-relaxed text-muted-foreground">
+                    A working page from the process: sketches and handwritten notes.
+                  </figcaption>
+                </figure>
+              </div>
+            </section>
+
+            {/* 04 What changed: text left, quiet right */}
+            <section className="relative grid items-start gap-12 md:grid-cols-12">
+              <GhostNumeral value="04" side="left" />
+              <div className="relative md:col-span-5 md:pt-10">
+                <h2 className="font-display text-4xl leading-tight text-foreground">What changed</h2>
+                <p className="mt-8 text-lg font-light leading-relaxed text-foreground/80">
+                  Prototype built, physics modelled, never tested on real ice.
+                </p>
+                <p className="mt-6 text-sm leading-relaxed text-foreground/55">
+                  Sälmagen reached concept and prototype stage and was presented as part of NIX.
+                  With help from our professors, we built a physics model of the rescue, estimating
+                  some of the forces involved. It was never tested live in a real ice scenario.
+                </p>
+              </div>
+              <div className="hidden md:col-span-7 md:block" aria-hidden />
             </section>
           </div>
         </Section>
 
+        {/* 05 Reading it now: blue focus section */}
+        <section className="bg-case-highlight py-24 text-case-highlight-foreground md:py-32">
+          <div className="mx-auto max-w-3xl px-6 text-center md:px-10">
+            <p className="text-[10px] uppercase tracking-[0.4em] text-case-highlight-foreground/50">
+              05 / Reading it now
+            </p>
+            <h2 className="mt-10 font-display text-4xl italic leading-tight md:text-5xl">
+              A safety product only works if it&rsquo;s worn on the day it&rsquo;s needed.
+            </h2>
+            <p className="mx-auto mt-10 max-w-xl text-[0.95rem] leading-relaxed text-case-highlight-foreground/80">
+              The vest rested on three untested assumptions: that the low-friction front reduces
+              pulling force (we only estimated it in a model), that skaters would wear it on an
+              ordinary tour (we never tested comfort), and that they carry a backpack the design
+              depends on (out of our control). The riskiest was whether skaters would wear it.
+            </p>
+            <p className="mx-auto mt-6 max-w-xl text-[0.95rem] leading-relaxed text-case-highlight-foreground/80">
+              Today I would test it first, before any engineering: give club members a simple
+              mock-up to wear over their own backpacks on a few ordinary tours, and ask afterwards
+              whether they&rsquo;d wear it every time. If most took it off, left it at home, or
+              needed a different backpack to use it, I would stop and rethink the concept before
+              building anything more.
+            </p>
+            <div className="mt-14 flex items-center justify-center gap-6" aria-hidden>
+              <span className="h-1.5 w-1.5 rounded-full bg-case-highlight-foreground" />
+              <span className="h-1.5 w-1.5 rounded-full bg-case-highlight-foreground/25" />
+              <span className="h-1.5 w-1.5 rounded-full bg-case-highlight-foreground/25" />
+            </div>
+          </div>
+        </section>
+
         {/* Closing */}
         <Section id="contact">
-          <div className="max-w-3xl">
-            <h2 className="display-md text-balance">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="font-display text-3xl italic leading-snug text-foreground/85 md:text-4xl">
               If this sounds familiar, let&rsquo;s find out.
-            </h2>
-            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            </p>
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
               Two to four weeks from uncertainty to a decision you can act on.
             </p>
             <CtaButton href="/#contact" className="mt-10">
