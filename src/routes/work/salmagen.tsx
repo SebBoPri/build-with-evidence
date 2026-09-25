@@ -222,6 +222,10 @@ function SalmagenCase() {
               title="What we did"
               lead="Make the wrong action physically impossible, not the right action clearer."
             >
+              <p>
+                Everything in the design serves one goal: reduce the force it takes to pull
+                somebody out of the water. It does this in three ways.
+              </p>
               <ul className="space-y-8">
                 <li className="grid gap-6 sm:grid-cols-2 sm:items-start">
                   <div>
