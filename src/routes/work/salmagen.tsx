@@ -234,7 +234,9 @@ function SalmagenCase() {
                       backpack&rsquo;s straps and loops, leaving two reachable attachment points,
                       both correct and both on the shoulders. Because every vest is identical, those
                       points can be specified and quality controlled, which an improvised point on a
-                      personal pack never can.
+                      personal pack never can. And because the line clips at the shoulders, the pull
+                      runs through a load path built to lift a person instead of through webbing
+                      that stretches and gives, so less of the rescuer&rsquo;s strength is wasted.
                     </p>
                   </div>
                   <figure>
