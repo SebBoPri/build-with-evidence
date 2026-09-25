@@ -249,14 +249,16 @@ function SalmagenCase() {
                   </figure>
                 </li>
                 <li className="border-t border-hairline pt-6">
-                  <span className="text-foreground">Requirements from failure modes.</span> The load
-                  runs through the vest rather than through webbing never rated to lift a person,
-                  and a buoyancy element rights a face-down person before the pulling begins.
+                  <span className="text-foreground">Buoyancy.</span> The vest and the backpack
+                  together add flotation, which makes the person in the water lighter to lift and
+                  cuts the force needed to pull somebody as heavy as a large male out. The same
+                  buoyancy element rights a face-down person before the pulling begins.
                 </li>
                 <li className="border-t border-hairline pt-6">
-                  <span className="text-foreground">Built to glide.</span> A low-friction front lets
-                  the person slide out over the ice edge while their companion pulls, like a seal on
-                  its belly. Hence the name: Sälmagen, &ldquo;seal belly&rdquo;.
+                  <span className="text-foreground">Built to glide.</span> A hard, slippery surface
+                  on the stomach and chest reduces friction against the ice edge, so the person
+                  slides out over the edge while their companion pulls instead of being dragged,
+                  like a seal on its belly. Hence the name: S&auml;lmagen, &ldquo;seal belly&rdquo;.
                 </li>
                 <li className="border-t border-hairline pt-6">
                   <span className="text-foreground">Interface split by stress level.</span> The
