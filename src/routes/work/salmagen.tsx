@@ -63,15 +63,15 @@ function CaseSection({
   children: React.ReactNode;
 }) {
   return (
-    <section className="grid gap-6 md:grid-cols-12 md:gap-10">
-      <div className="md:col-span-4">
-        <p className="label-mono text-[#214B9B]">{index}</p>
-        <h2 className="mt-3 font-display text-xl tracking-tight text-foreground md:text-2xl">{title}</h2>
+    <section className="grid gap-8 border-t border-hairline pt-10 md:grid-cols-12 md:gap-16 md:pt-14">
+      <div className="md:sticky md:top-28 md:col-span-4 md:self-start">
+        <p className="font-display text-4xl leading-none text-case-highlight">{index}</p>
+        <h2 className="mt-5 font-display text-2xl text-foreground md:text-3xl">{title}</h2>
         {lead ? (
-          <p className="mt-3 max-w-xs text-sm leading-relaxed text-foreground/60">{lead}</p>
+          <p className="mt-4 max-w-xs text-[0.9375rem] leading-relaxed text-foreground/60">{lead}</p>
         ) : null}
       </div>
-      <div className="max-w-[40rem] space-y-6 text-[1.0625rem] leading-[1.75] text-foreground/80 md:col-span-8">
+      <div className="max-w-[42rem] space-y-6 text-[1.0625rem] leading-[1.7] text-foreground/80 md:col-span-8">
         {children}
       </div>
     </section>
@@ -110,53 +110,61 @@ function SalmagenCase() {
       <main>
         {/* Headline + meta + summary */}
         <section>
-          <div className="mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
+          <div className="mx-auto w-full max-w-[72rem] px-6 pb-14 pt-24 md:px-10 md:pb-20 md:pt-32">
             <p className="label-mono fade-up">
               <Link to="/work" className="transition-colors hover:text-foreground">
                 Work
               </Link>
               {" / "}Case
             </p>
-            <h1 className="display-md fade-up delay-1 mt-10 max-w-3xl text-balance">
-              When the user can&rsquo;t think straight, remove the wrong choice
-            </h1>
-            <div className="fade-up delay-1 mt-8 flex h-0.5 w-24" aria-hidden="true">
-              <span className="w-1/2 bg-[#214B9B]" />
-              <span className="w-1/4 bg-[#A05A9A]" />
-              <span className="w-1/4 bg-[#EBC67F]" />
+            <div className="mt-10 grid gap-12 lg:grid-cols-12 lg:items-end">
+              <h1 className="display-md fade-up delay-1 max-w-3xl text-balance lg:col-span-8">
+                When the user can&rsquo;t think straight, remove the wrong choice
+              </h1>
+              <dl className="fade-up delay-2 grid gap-5 border-l border-hairline pl-6 sm:grid-cols-3 lg:col-span-4 lg:grid-cols-1">
+                {meta.map((m) => (
+                  <div key={m.label}>
+                    <dt className="label-mono text-case-highlight">{m.label}</dt>
+                    <dd className="mt-1 text-[0.9rem] leading-snug text-foreground/90">{m.value}</dd>
+                  </div>
+                ))}
+              </dl>
             </div>
 
-            <dl className="fade-up delay-2 mt-10 grid max-w-3xl gap-6 border-t border-hairline pt-8 sm:grid-cols-3">
-              {meta.map((m) => (
-                <div key={m.label}>
-                  <dt className="label-mono">{m.label}</dt>
-                  <dd className="mt-2 text-[0.95rem] text-foreground/90">{m.value}</dd>
-                </div>
-              ))}
-            </dl>
-
-            <p className="fade-up delay-3 mt-12 max-w-2xl text-xl leading-relaxed text-foreground/85">
+            <p className="fade-up delay-3 mt-14 max-w-2xl font-display text-2xl leading-snug text-foreground/85 md:text-3xl">
               Ice rescues fail when the person in the water, cold and frightened, has to attach the
               rescue line themselves. We designed a vest that leaves only correct attachment points.
               It reached prototype stage as part of the NIX safety system, but was never tested on
               real ice.
             </p>
+            <dl className="mt-12 grid gap-px bg-hairline sm:grid-cols-3">
+              {[
+                ["Design decision", "Two fixed attachment points"],
+                ["Reached", "Prototype and physics model"],
+                ["Not reached", "A test on real ice"],
+              ].map(([label, value]) => (
+                <div key={label} className="bg-background px-5 py-5">
+                  <dt className="label-mono">{label}</dt>
+                  <dd className="mt-2 text-sm text-foreground/90">{value}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </section>
 
         {/* Hero visual: natural photo of an ice rescue training session */}
         <section>
-          <div className="mx-auto w-full max-w-[84rem] px-6 md:px-10">
-            <figure className="border-t border-hairline pt-10">
-              <div className="mx-auto w-full max-w-2xl overflow-hidden rounded-sm">
+          <div className="mx-auto w-full max-w-[72rem] px-6 md:px-10">
+            <figure>
+              <div className="w-full overflow-hidden rounded-sm">
                 <img
                   src={iceRescue.url}
                   alt="Ice rescue training: a person in a rescue suit in the water is pulled out by a line held by two skaters on the ice"
-                  className="natural w-full"
+                  className="natural aspect-[16/8] w-full object-cover"
                   loading="eager"
                 />
               </div>
-              <figcaption className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+              <figcaption className="mt-4 max-w-2xl text-xs leading-relaxed text-muted-foreground">
                 Ice rescue as it happens today: the person in the water is pulled out by a line.
                 This is the moment S&auml;lmagen was designed for.
               </figcaption>
@@ -166,7 +174,7 @@ function SalmagenCase() {
 
         {/* Body */}
         <Section>
-          <div className="space-y-20 md:space-y-28">
+          <div className="mx-auto max-w-[72rem] space-y-20 md:space-y-24">
             <CaseSection
               index="01"
               title="The situation"
@@ -206,7 +214,7 @@ function SalmagenCase() {
               title="What we did"
               lead="Make the wrong action physically impossible, not the right action clearer."
             >
-              <ul className="space-y-8 border-l border-hairline pl-6">
+              <ul className="space-y-8">
                 <li className="grid gap-6 sm:grid-cols-2 sm:items-start">
                   <div>
                     <p>
@@ -226,17 +234,17 @@ function SalmagenCase() {
                     />
                   </figure>
                 </li>
-                <li>
+                <li className="border-t border-hairline pt-6">
                   <span className="text-foreground">Requirements from failure modes.</span> The load
                   runs through the vest rather than through webbing never rated to lift a person,
                   and a buoyancy element rights a face-down person before the pulling begins.
                 </li>
-                <li>
+                <li className="border-t border-hairline pt-6">
                   <span className="text-foreground">Built to glide.</span> A low-friction front lets
                   the person slide out over the ice edge while their companion pulls, like a seal on
                   its belly. Hence the name: Sälmagen, &ldquo;seal belly&rdquo;.
                 </li>
-                <li>
+                <li className="border-t border-hairline pt-6">
                   <span className="text-foreground">Interface split by stress level.</span> The
                   emergency side can&rsquo;t be got wrong. The mounting side carries a printed
                   label, because mounting happens calmly at home and can afford to be learned.
@@ -264,34 +272,31 @@ function SalmagenCase() {
               </p>
             </CaseSection>
 
-            <CaseSection
-              index="05"
-              title="Reading it now"
-              lead="Three untested assumptions, one riskier than the rest."
-            >
-              <div className="-mx-6 bg-[#EBC67F]/15 px-6 py-8 md:-mx-10 md:px-10 md:py-10">
-                <p className="font-display text-xl leading-snug tracking-tight text-foreground md:text-2xl">
+            <section className="bg-case-highlight px-7 py-12 text-case-highlight-foreground md:px-14 md:py-16 lg:px-20 lg:py-20">
+              <p className="label-mono text-case-highlight-foreground/60">05 / Reading it now</p>
+              <div className="mt-8 grid gap-12 md:grid-cols-12 md:gap-16">
+                <blockquote className="font-display text-3xl leading-tight md:col-span-7 md:text-5xl">
                   A safety product only works if it&rsquo;s worn on the day it&rsquo;s needed.
-                </p>
-                <div className="mt-8 space-y-6">
-                  <p className="text-sm uppercase tracking-[0.14em] text-foreground/60">
+                </blockquote>
+                <div className="space-y-6 text-[1.0625rem] leading-[1.65] text-case-highlight-foreground/85 md:col-span-5">
+                  <p className="text-xs uppercase tracking-[0.14em] text-case-highlight-foreground/60">
                     The vest rested on three untested assumptions
                   </p>
-                  <ul className="space-y-3">
+                  <ul className="space-y-4 border-l border-case-highlight-foreground/25 pl-5">
                     <li>
-                      <span className="text-foreground">The low-friction front reduces pulling force.</span>{" "}
+                      <span className="text-case-highlight-foreground">The low-friction front reduces pulling force.</span>{" "}
                       We only estimated it in a model.
                     </li>
                     <li>
-                      <span className="text-foreground">Skaters would wear it on an ordinary tour.</span>{" "}
+                      <span className="text-case-highlight-foreground">Skaters would wear it on an ordinary tour.</span>{" "}
                       We never tested comfort.
                     </li>
                     <li>
-                      <span className="text-foreground">They carry a backpack the design depends on.</span>{" "}
+                      <span className="text-case-highlight-foreground">They carry a backpack the design depends on.</span>{" "}
                       Out of our control.
                     </li>
                   </ul>
-                  <p>The riskiest was the second, and it is the pull-quote above.</p>
+                  <p>The riskiest was whether skaters would wear it on an ordinary tour.</p>
                   <p>
                     Today I would test it first, before any engineering: give club members a simple
                     mock-up to wear over their own backpacks on a few ordinary tours, and ask
@@ -301,7 +306,7 @@ function SalmagenCase() {
                   </p>
                 </div>
               </div>
-            </CaseSection>
+            </section>
           </div>
         </Section>
 
