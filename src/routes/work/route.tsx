@@ -6,7 +6,7 @@ export const Route = createFileRoute("/work")({
 
 function WorkLayout() {
   return (
-    <div className="theme-paper">
+    <div className="theme-paper min-h-screen bg-background text-foreground">
       <Outlet />
     </div>
   );
