@@ -309,19 +309,19 @@ function SalmagenCase() {
                   <p className="text-xs uppercase tracking-[0.14em] text-case-highlight-foreground/60">
                     The vest rested on three untested assumptions
                   </p>
-                  <ul className="space-y-4 border-l border-case-highlight-foreground/25 pl-5">
-                    <li>
-                      <span className="text-case-highlight-foreground">The low-friction front reduces pulling force.</span>{" "}
-                      We only estimated it in a model.
-                    </li>
-                    <li>
-                      <span className="text-case-highlight-foreground">Skaters would wear it on an ordinary tour.</span>{" "}
-                      We never tested comfort.
-                    </li>
-                    <li>
-                      <span className="text-case-highlight-foreground">They carry a backpack the design depends on.</span>{" "}
-                      Out of our control.
-                    </li>
+                  <ul className="space-y-5">
+                    {[
+                      ["The low-friction front reduces pulling force.", "We only estimated it in a model."],
+                      ["Skaters would wear it on an ordinary tour.", "We never tested comfort."],
+                      ["They carry a backpack the design depends on.", "Out of our control."],
+                    ].map(([point, note]) => (
+                      <li key={point} className="flex items-start gap-4">
+                        <span className="mt-2.5 h-1.5 w-1.5 shrink-0 bg-case-highlight-foreground/60" />
+                        <p>
+                          <span className="text-case-highlight-foreground">{point}</span> {note}
+                        </p>
+                      </li>
+                    ))}
                   </ul>
                   <p>The riskiest was whether skaters would wear it on an ordinary tour.</p>
                   <p>
