@@ -132,10 +132,11 @@ function SalmagenCase() {
             </div>
 
             <p className="fade-up delay-3 mt-14 max-w-2xl font-display text-2xl leading-snug text-foreground/85 md:text-3xl">
-              Ice rescues fail when the person in the water, cold and frightened, has to attach the
-              rescue line themselves. We designed a vest that leaves only correct attachment points.
-              It reached prototype stage as part of the NIX safety system, but was never tested on
-              real ice.
+              Ice rescues fail twice: when the person in the water, cold and frightened, has to
+              attach the rescue line themselves, and when a soaked adult has to be hauled over the
+              ice edge. We designed a vest that removes the wrong choices and cuts the force the
+              pull demands. It reached prototype stage as part of the NIX safety system, but was
+              never tested on real ice.
             </p>
             <dl className="mt-12 grid gap-px bg-hairline sm:grid-cols-3">
               {[
@@ -208,11 +209,11 @@ function SalmagenCase() {
                 someone in that state.
               </p>
               <p>
-                And once the line is on, it has to hold: a person in soaked winter gear is very
-                heavy to pull up against the ice edge. A line clipped to a random loop on a
-                backpack pulls through webbing never meant to lift a human being. Sälmagen&rsquo;s
-                shoulder attachment points answer both halves: the only place to clip, and a load
-                path built to take the pull.
+                And once the line is on, the hardest work begins: a person in soaked winter gear,
+                waterlogged and heavy, has to be pulled up over the ice edge. Pulling a large male
+                out can demand more strength than a companion has. So the question the vest had to
+                answer was not just where the line clips, but how to cut the force the rescue
+                demands.
               </p>
             </CaseSection>
 
