@@ -109,7 +109,7 @@ function SalmagenCase() {
             <dl className="fade-up delay-2 mt-14 flex flex-wrap gap-x-16 gap-y-6 border-t border-hairline pt-10">
               {meta.map((m) => (
                 <div key={m.label}>
-                  <dt className="mb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#A05A9A]">
+                  <dt className="mb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-case-highlight">
                     {m.label}
                   </dt>
                   <dd className="text-sm text-foreground/80">{m.value}</dd>
@@ -183,14 +183,14 @@ function SalmagenCase() {
                 </p>
               </div>
               <div className="md:col-span-7">
-                <figure className="bg-[#EBC67F]/15 p-8 md:p-14">
+                <figure className="bg-case-highlight/[0.06] p-8 md:p-14">
                   <img
                     src={salmagenHero.url}
                     alt="Working sketch of the Sälmagen rescue vest worn over a backpack, seen from the front"
                     className="w-full"
                     loading="lazy"
                   />
-                  <figcaption className="mt-6 text-[9px] font-bold uppercase tracking-[0.3em] text-[#A05A9A]">
+                  <figcaption className="mt-6 text-[9px] font-bold uppercase tracking-[0.3em] text-case-highlight">
                     Working sketch, vest worn over backpack
                   </figcaption>
                 </figure>
