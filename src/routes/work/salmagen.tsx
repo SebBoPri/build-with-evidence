@@ -132,10 +132,11 @@ function SalmagenCase() {
             </div>
 
             <p className="fade-up delay-3 mt-14 max-w-2xl font-display text-2xl leading-snug text-foreground/85 md:text-3xl">
-              Ice rescues fail when the person in the water, cold and frightened, has to attach the
-              rescue line themselves. We designed a vest that leaves only correct attachment points.
-              It reached prototype stage as part of the NIX safety system, but was never tested on
-              real ice.
+              Ice rescues fail twice: when the person in the water, cold and frightened, has to
+              attach the rescue line themselves, and when a soaked adult has to be hauled over the
+              ice edge. We designed a vest that removes the wrong choices and cuts the force the
+              pull demands. It reached prototype stage as part of the NIX safety system, but was
+              never tested on real ice.
             </p>
             <dl className="mt-12 grid gap-px bg-hairline sm:grid-cols-3">
               {[
@@ -208,11 +209,11 @@ function SalmagenCase() {
                 someone in that state.
               </p>
               <p>
-                And once the line is on, it has to hold: a person in soaked winter gear is very
-                heavy to pull up against the ice edge. A line clipped to a random loop on a
-                backpack pulls through webbing never meant to lift a human being. Sälmagen&rsquo;s
-                shoulder attachment points answer both halves: the only place to clip, and a load
-                path built to take the pull.
+                And once the line is on, the hardest work begins: a person in soaked winter gear,
+                waterlogged and heavy, has to be pulled up over the ice edge. Pulling a large male
+                out can demand more strength than a companion has. So the question the vest had to
+                answer was not just where the line clips, but how to cut the force the rescue
+                demands.
               </p>
             </CaseSection>
 
@@ -221,6 +222,10 @@ function SalmagenCase() {
               title="What we did"
               lead="Make the wrong action physically impossible, not the right action clearer."
             >
+              <p>
+                Everything in the design serves one goal: reduce the force it takes to pull
+                somebody out of the water. It does this in three ways.
+              </p>
               <ul className="space-y-8">
                 <li className="grid gap-6 sm:grid-cols-2 sm:items-start">
                   <div>
@@ -229,7 +234,9 @@ function SalmagenCase() {
                       backpack&rsquo;s straps and loops, leaving two reachable attachment points,
                       both correct and both on the shoulders. Because every vest is identical, those
                       points can be specified and quality controlled, which an improvised point on a
-                      personal pack never can.
+                      personal pack never can. And because the line clips at the shoulders, the pull
+                      runs through a load path built to lift a person instead of through webbing
+                      that stretches and gives, so less of the rescuer&rsquo;s strength is wasted.
                     </p>
                   </div>
                   <figure>
@@ -242,14 +249,16 @@ function SalmagenCase() {
                   </figure>
                 </li>
                 <li className="border-t border-hairline pt-6">
-                  <span className="text-foreground">Requirements from failure modes.</span> The load
-                  runs through the vest rather than through webbing never rated to lift a person,
-                  and a buoyancy element rights a face-down person before the pulling begins.
+                  <span className="text-foreground">Buoyancy.</span> The vest and the backpack
+                  together add flotation, which makes the person in the water lighter to lift and
+                  cuts the force needed to pull somebody as heavy as a large male out. The same
+                  buoyancy element rights a face-down person before the pulling begins.
                 </li>
                 <li className="border-t border-hairline pt-6">
-                  <span className="text-foreground">Built to glide.</span> A low-friction front lets
-                  the person slide out over the ice edge while their companion pulls, like a seal on
-                  its belly. Hence the name: Sälmagen, &ldquo;seal belly&rdquo;.
+                  <span className="text-foreground">Built to glide.</span> A hard, slippery surface
+                  on the stomach and chest reduces friction against the ice edge, so the person
+                  slides out over the edge while their companion pulls instead of being dragged,
+                  like a seal on its belly. Hence the name: S&auml;lmagen, &ldquo;seal belly&rdquo;.
                 </li>
                 <li className="border-t border-hairline pt-6">
                   <span className="text-foreground">Interface split by stress level.</span> The
