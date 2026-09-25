@@ -63,15 +63,17 @@ function CaseSection({
   children: React.ReactNode;
 }) {
   return (
-    <section className="grid gap-8 border-t border-hairline pt-10 md:grid-cols-12 md:gap-16 md:pt-14">
-      <div className="md:sticky md:top-28 md:col-span-4 md:self-start">
-        <p className="font-display text-4xl leading-none text-case-highlight">{index}</p>
-        <h2 className="mt-5 font-display text-2xl text-foreground md:text-3xl">{title}</h2>
+    <section className="grid gap-8 md:grid-cols-12 md:gap-12">
+      <div className="md:col-span-4">
+        <span className="block font-display text-6xl font-light leading-none text-case-highlight/25 md:text-7xl">
+          {index}
+        </span>
+        <h2 className="mt-4 font-display text-3xl font-semibold text-foreground">{title}</h2>
         {lead ? (
           <p className="mt-4 max-w-xs text-[0.9375rem] leading-relaxed text-foreground/60">{lead}</p>
         ) : null}
       </div>
-      <div className="max-w-[42rem] space-y-6 text-[1.0625rem] leading-[1.7] text-foreground/80 md:col-span-8">
+      <div className="max-w-[42rem] space-y-6 text-lg leading-relaxed text-foreground/80 md:col-span-8">
         {children}
       </div>
     </section>
@@ -138,15 +140,21 @@ function SalmagenCase() {
               pull demands. It reached prototype stage as part of the NIX safety system, but was
               never tested on real ice.
             </p>
-            <dl className="mt-12 grid gap-px bg-hairline sm:grid-cols-3">
+          </div>
+        </section>
+
+        {/* Facts strip: tinted band spanning the page */}
+        <section className="border-y border-case-highlight/10 bg-case-highlight/[0.06]">
+          <div className="mx-auto w-full max-w-[72rem] px-6 py-8 md:px-10">
+            <dl className="grid gap-8 sm:grid-cols-3">
               {[
                 ["Design decision", "Two fixed attachment points"],
                 ["Reached", "Prototype and physics model"],
                 ["Not reached", "A test on real ice"],
               ].map(([label, value]) => (
-                <div key={label} className="bg-background px-5 py-5">
-                  <dt className="label-mono">{label}</dt>
-                  <dd className="mt-2 text-sm text-foreground/90">{value}</dd>
+                <div key={label}>
+                  <dt className="label-mono text-case-highlight">{label}</dt>
+                  <dd className="mt-2 text-sm font-medium text-foreground/90">{value}</dd>
                 </div>
               ))}
             </dl>
@@ -175,7 +183,7 @@ function SalmagenCase() {
 
         {/* Body */}
         <Section>
-          <div className="mx-auto max-w-[72rem] space-y-20 md:space-y-24">
+          <div className="mx-auto max-w-[72rem] space-y-28 md:space-y-32">
             <CaseSection
               index="01"
               title="The situation"
@@ -289,9 +297,12 @@ function SalmagenCase() {
             </CaseSection>
 
             <section className="bg-case-highlight px-7 py-12 text-case-highlight-foreground md:px-14 md:py-16 lg:px-20 lg:py-20">
-              <p className="label-mono text-case-highlight-foreground/60">05 / Reading it now</p>
-              <div className="mt-8 grid gap-12 md:grid-cols-12 md:gap-16">
-                <blockquote className="font-display text-3xl leading-tight md:col-span-7 md:text-5xl">
+              <span className="block font-display text-6xl font-light leading-none text-case-highlight-foreground/25 md:text-7xl">
+                05
+              </span>
+              <h2 className="mt-4 font-display text-3xl font-semibold md:text-4xl">Reading it now</h2>
+              <div className="mt-10 grid gap-12 md:grid-cols-12 md:gap-16">
+                <blockquote className="border-l-2 border-case-highlight-foreground/40 pl-8 font-display text-2xl italic leading-relaxed md:col-span-7 md:text-3xl">
                   A safety product only works if it&rsquo;s worn on the day it&rsquo;s needed.
                 </blockquote>
                 <div className="space-y-6 text-[1.0625rem] leading-[1.65] text-case-highlight-foreground/85 md:col-span-5">
