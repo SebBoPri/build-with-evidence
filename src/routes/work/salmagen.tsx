@@ -195,17 +195,24 @@ function SalmagenCase() {
             <CaseSection
               index="02"
               title="The real problem"
-              lead="The person attaching the line is the one whose judgement is failing."
+              lead="The person in the water is one problem. The person pulling them out is the other."
             >
               <p>
                 We studied how rescues actually play out: interviews with skaters, literature from
-                professional institutions, observation sessions on the ice. The finding that shaped
-                the vest was about the user, not the equipment.
+                professional institutions, observation sessions on the ice. The findings that shaped
+                the vest were about people, not equipment.
               </p>
               <p>
                 The person who has to attach the line is the one in the water: cold, frightened, and
                 with their ability to make decisions failing. Clearer instructions don&rsquo;t help
                 someone in that state.
+              </p>
+              <p>
+                And once the line is on, it has to hold: a person in soaked winter gear is very
+                heavy to pull up against the ice edge. A line clipped to a random loop on a
+                backpack pulls through webbing never meant to lift a human being. Sälmagen&rsquo;s
+                shoulder attachment points answer both halves: the only place to clip, and a load
+                path built to take the pull.
               </p>
             </CaseSection>
 
