@@ -150,7 +150,7 @@ const sprintGet = [
 
 function Index() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-50 border-b border-hairline bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex h-20 w-full max-w-[84rem] items-center justify-between px-6 md:px-10">
           <a href="#top" aria-label="Slipstream Labs home">
@@ -207,7 +207,7 @@ function Index() {
         <section>
           <div className="mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
             <p className="label-mono fade-up flex items-center gap-3">
-              <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
+              <span className="section-accent" aria-hidden="true" />
               Product discovery &amp; strategy
             </p>
             <h1 className="display-xl fade-up delay-1 mt-10 max-w-4xl text-balance">
@@ -244,7 +244,7 @@ function Index() {
             height={1073}
             eager
             breakOut
-            imgClassName="object-[25%_center] md:object-center"
+            imgClassName="ink-on-paper object-[25%_center] md:object-center"
           />
         </section>
 
@@ -270,7 +270,7 @@ function Index() {
               {problemCases.map((item, i) => (
                 <li
                   key={item.t}
-                  className="group relative border-t border-hairline transition-colors duration-500 last:border-b hover:bg-foreground/[0.03]"
+                  className="group relative border-t border-hairline transition-colors duration-500 last:border-b hover:bg-case-highlight/[0.05]"
                 >
                   <div className="flex gap-8 px-2 py-8 md:gap-12 md:px-4 md:py-10">
                     <span className="label-mono shrink-0 pt-1.5 transition-colors duration-500 group-hover:text-foreground">
@@ -286,7 +286,7 @@ function Index() {
                     </div>
                   </div>
                   <span
-                    className="absolute bottom-0 left-0 h-px w-0 bg-foreground/20 transition-all duration-700 group-hover:w-full"
+                    className="absolute bottom-0 left-0 h-px w-0 bg-case-highlight transition-all duration-700 group-hover:w-full"
                     aria-hidden="true"
                   />
                 </li>
@@ -314,9 +314,18 @@ function Index() {
           <div className="mt-14">
             <p className="label-mono">When to use it</p>
             <ul className="mt-6 max-w-3xl space-y-6">
-              {sprintWhen.map((i) => (
+              {sprintWhen.map((i, index) => (
                 <li key={i} className="flex items-start gap-4">
-                  <span className="mt-2 h-px w-4 shrink-0 bg-accent" aria-hidden="true" />
+                  <span
+                    className={`mt-2 h-0.5 w-4 shrink-0 ${
+                      index % 3 === 0
+                        ? "bg-brand-blue"
+                        : index % 3 === 1
+                          ? "bg-brand-purple"
+                          : "bg-brand-gold"
+                    }`}
+                    aria-hidden="true"
+                  />
                   <span className="text-base leading-relaxed text-muted-foreground">
                     {i}
                   </span>
@@ -373,7 +382,7 @@ function Index() {
 
         {/* Pull quote */}
         <Section>
-          <blockquote className="max-w-4xl">
+          <blockquote className="max-w-4xl border-l-4 border-brand-purple pl-6 md:pl-10">
             <p className="display-md text-balance">
               Just because you can build it doesn&apos;t mean you should.
             </p>

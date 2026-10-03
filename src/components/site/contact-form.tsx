@@ -8,7 +8,7 @@ type FormspreeError = { field?: string; message: string };
 type FormspreeResponse = { errors?: FormspreeError[] };
 
 const fieldClass =
-  "mt-3 block w-full border border-input bg-foreground/[0.04] px-4 py-3 text-base text-foreground outline-none transition-all duration-300 hover:border-foreground/40 focus:border-foreground focus:bg-foreground/[0.07] focus:ring-1 focus:ring-foreground/70";
+  "mt-3 block w-full border border-input bg-foreground/[0.025] px-4 py-3 text-base text-foreground outline-none transition-all duration-300 hover:border-foreground/40 focus:border-case-highlight focus:bg-case-highlight/[0.025] focus:ring-1 focus:ring-case-highlight/70";
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -128,7 +128,7 @@ export function ContactForm() {
             <button
               type="submit"
               disabled={status === "pending"}
-              className="group inline-flex h-12 items-center gap-3 bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity outline-offset-2 hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-foreground disabled:cursor-not-allowed disabled:opacity-60"
+              className="group inline-flex h-12 items-center gap-3 bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity outline-offset-2 hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-case-highlight disabled:cursor-not-allowed disabled:opacity-60"
             >
               {status === "pending" ? "Sending" : "Let's explore together"}
               <span

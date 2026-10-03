@@ -60,7 +60,7 @@ export function Section({
         {label ? (
           <Reveal>
             <p className="label-mono mb-8 flex items-center gap-3">
-              <span className="inline-block h-px w-6 bg-border" aria-hidden="true" />
+              <span className="section-accent" aria-hidden="true" />
               {label}
             </p>
           </Reveal>
