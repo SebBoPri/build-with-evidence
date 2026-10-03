@@ -9,3 +9,4 @@
 - Redesign landing page in frog register (serif fonts, black/white mix); user to pick from 3 directions
 
 - [x] Recovered and restored the exact original Geist geometric wordmark v2 treatment.
+- [x] Extended the Work page's light editorial colour system across the full site.
