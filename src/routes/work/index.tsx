@@ -74,9 +74,9 @@ function WorkPage() {
         <section>
           <div className="mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
             <div className="fade-up flex items-center gap-1">
-              <span className="h-[2px] w-8 bg-[#214B9B]" aria-hidden="true" />
-              <span className="h-[2px] w-4 bg-[#A05A9A]" aria-hidden="true" />
-              <span className="h-[2px] w-2 bg-[#EBC67F]" aria-hidden="true" />
+              <span className="h-[2px] w-8 bg-brand-blue" aria-hidden="true" />
+              <span className="h-[2px] w-4 bg-brand-purple" aria-hidden="true" />
+              <span className="h-[2px] w-2 bg-brand-gold" aria-hidden="true" />
               <span className="ml-3 text-xs font-bold uppercase tracking-[0.2em] text-foreground">
                 Work
               </span>
@@ -98,9 +98,9 @@ function WorkPage() {
             <div className="mb-10 flex items-center justify-between border-b border-hairline pb-4">
               <h2 className="font-display text-sm italic text-foreground">Featured</h2>
               <div className="flex gap-1" aria-hidden="true">
-                <span className="h-1 w-1 bg-[#214B9B]" />
-                <span className="h-1 w-1 bg-[#A05A9A]" />
-                <span className="h-1 w-1 bg-[#EBC67F]" />
+                <span className="h-1 w-1 bg-brand-blue" />
+                <span className="h-1 w-1 bg-brand-purple" />
+                <span className="h-1 w-1 bg-brand-gold" />
               </div>
             </div>
 

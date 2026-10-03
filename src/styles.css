@@ -55,31 +55,35 @@
   --color-sidebar-ring: var(--sidebar-ring);
   --color-case-highlight: var(--case-highlight);
   --color-case-highlight-foreground: var(--case-highlight-foreground);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-purple: var(--brand-purple);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-ink: var(--brand-ink);
 }
 
 :root {
   --radius: 0.25rem;
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --surface: oklch(0.19 0 0);
-  --card: oklch(0.18 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.18 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.145 0 0);
-  --secondary: oklch(0.22 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.22 0 0);
-  --muted-foreground: oklch(0.77 0 0);
-  --accent: oklch(0.985 0 0);
-  --accent-foreground: oklch(0.145 0 0);
+  --background: oklch(0.99 0 0);
+  --foreground: oklch(0.16 0 0);
+  --surface: oklch(0.965 0 0);
+  --card: oklch(0.97 0 0);
+  --card-foreground: oklch(0.16 0 0);
+  --popover: oklch(0.99 0 0);
+  --popover-foreground: oklch(0.16 0 0);
+  --primary: oklch(0.16 0 0);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.95 0 0);
+  --secondary-foreground: oklch(0.16 0 0);
+  --muted: oklch(0.95 0 0);
+  --muted-foreground: oklch(0.42 0 0);
+  --accent: oklch(0.16 0 0);
+  --accent-foreground: oklch(0.99 0 0);
   --destructive: oklch(0.62 0.21 25);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 14%);
-  --hairline: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 16%);
-  --ring: oklch(1 0 0 / 40%);
+  --border: oklch(0 0 0 / 12%);
+  --hairline: oklch(0 0 0 / 10%);
+  --input: oklch(0 0 0 / 18%);
+  --ring: oklch(0.431 0.139 261.7);
   --chart-1: oklch(0.985 0 0);
   --chart-2: oklch(0.8 0 0);
   --chart-3: oklch(0.65 0 0);
@@ -95,6 +99,10 @@
   --sidebar-ring: oklch(1 0 0 / 40%);
   --case-highlight: oklch(0.431 0.139 261.7);
   --case-highlight-foreground: oklch(1 0 0);
+  --brand-gold: #EBC67F;
+  --brand-purple: #A05A9A;
+  --brand-blue: #214B9B;
+  --brand-ink: #151515;
 }
 
 .dark {
@@ -220,8 +228,7 @@
   animation-delay: 0.36s;
 }
 
-/* Work pages: classic paper treatment, white canvas with black ink.
-   Accents taken from the colour study: violet, sand, black, deep blue. */
+/* Paper treatment retained as a local boundary for Work routes. */
 .theme-paper {
   --background: oklch(0.99 0 0);
   --foreground: oklch(0.16 0 0);
@@ -233,10 +240,10 @@
   --border: oklch(0 0 0 / 12%);
   --hairline: oklch(0 0 0 / 10%);
   --ring: oklch(0.36 0.14 265);
-  --paper-violet: #A05A9A;
-  --paper-sand: #EBC67F;
-  --paper-ink: #151515;
-  --paper-blue: #214B9B;
+  --paper-violet: var(--brand-purple);
+  --paper-sand: var(--brand-gold);
+  --paper-ink: var(--brand-ink);
+  --paper-blue: var(--brand-blue);
   --case-highlight: oklch(0.431 0.139 261.7);
   --case-highlight-foreground: oklch(1 0 0);
   background: var(--background);
@@ -249,6 +256,35 @@
 .paper-bar { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; height: 6px; }
 .theme-paper { --primary: oklch(0.16 0 0); --primary-foreground: oklch(0.99 0 0); --accent: oklch(0.16 0 0); --accent-foreground: oklch(0.99 0 0); --input: oklch(0 0 0 / 14%); }
 .theme-paper header stop { stop-color: var(--foreground); }
+
+.ink-on-paper {
+  filter: invert(1) contrast(0.95);
+}
+
+.section-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.section-accent::before,
+.section-accent::after {
+  content: "";
+  display: block;
+  height: 2px;
+}
+
+.section-accent::before {
+  width: 1.5rem;
+  background: var(--brand-blue);
+  box-shadow: 1.75rem 0 0 var(--brand-purple);
+}
+
+.section-accent::after {
+  width: 0.5rem;
+  margin-left: 1.5rem;
+  background: var(--brand-gold);
+}
 
 /* Serif display type everywhere, frog-style. Body stays Geist. */
 .display-xl,

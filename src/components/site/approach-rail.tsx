@@ -50,19 +50,19 @@ export function ApproachRail({ steps }: { steps: Step[] }) {
           <li key={s.n} className="group relative lg:pr-8">
             <span className="absolute left-0 top-[7px] h-px w-full bg-hairline" aria-hidden="true">
               <span
-                className="block h-px origin-left bg-foreground/70 transition-transform duration-500 ease-out"
+                className="block h-px origin-left bg-case-highlight transition-transform duration-500 ease-out"
                 style={{ transform: `scaleX(${fill})`, width: "100%" }}
               />
             </span>
 
             <span
               className={`relative flex h-[15px] w-[15px] items-center justify-center rounded-full border bg-background transition-colors duration-500 ${
-                reached ? "border-foreground/60" : "border-border"
+                reached ? "border-case-highlight" : "border-border"
               }`}
               aria-hidden="true"
             >
               <span
-                className={`h-[5px] w-[5px] rounded-full bg-foreground transition-all duration-500 ${
+                className={`h-[5px] w-[5px] rounded-full bg-case-highlight transition-all duration-500 ${
                   reached ? "opacity-100 scale-125" : "opacity-30 group-hover:opacity-70"
                 }`}
               />
@@ -92,7 +92,7 @@ export function ApproachRail({ steps }: { steps: Step[] }) {
               {s.body}
             </p>
             <p
-              className={`label-mono mt-8 transition-opacity duration-500 ${
+              className={`label-mono mt-8 text-case-highlight transition-opacity duration-500 ${
                 reached ? "opacity-100" : "opacity-50"
               }`}
             >
