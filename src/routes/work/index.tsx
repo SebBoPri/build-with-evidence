@@ -106,20 +106,23 @@ function WorkPage() {
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-12">
               {/* Data quality project */}
-              <article className="group relative aspect-[4/3] overflow-hidden bg-[#EBC67F] md:col-span-8 md:aspect-[16/9]">
+              <Link
+                to="/work/data-quality-migration"
+                className="group relative block aspect-[4/3] overflow-hidden bg-[#EBC67F] md:col-span-8 md:aspect-[16/9]"
+              >
                 <div className="absolute inset-0 z-10 flex flex-col justify-between p-8 md:p-12">
                   <div className="flex items-start justify-between">
                     <span className="border border-[#151515]/30 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[#151515]">
-                      Write-up coming
+                      Case study
                     </span>
                     <span className="font-mono text-xs text-[#151515]/40">01</span>
                   </div>
                   <div>
                     <h3 className="mb-4 font-display text-3xl text-[#151515] md:text-4xl">
-                      Data quality project
+                      Turning data quality concerns into measurable action
                     </h3>
                     <p className="max-w-xs text-sm font-medium uppercase tracking-[0.15em] text-[#151515]/60">
-                      Anonymized client
+                      HR data migration · 2022–2024 · Read the case
                     </p>
                   </div>
                 </div>
@@ -132,7 +135,7 @@ function WorkPage() {
                   <circle cx="100" cy="100" r="60" fill="none" stroke="#151515" strokeWidth="0.5" />
                   <path d="M20,100 L180,100 M100,20 L100,180" stroke="#151515" strokeWidth="0.5" />
                 </svg>
-              </article>
+              </Link>
 
               {/* Mapping fund order flow */}
               <article className="group relative aspect-[4/5] overflow-hidden bg-[#A05A9A] md:col-span-4 md:aspect-auto">
