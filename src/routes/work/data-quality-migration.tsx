@@ -230,11 +230,11 @@ function DataQualityCase() {
               id="reading"
               className="scroll-mt-28 bg-brand-gold px-7 py-12 text-brand-ink md:px-14 md:py-16 lg:px-20 lg:py-20"
             >
-              <p className="label-mono text-brand-ink/60">05 / What I&rsquo;d do differently today</p>
+              <p className="label-mono text-brand-ink/80">05 / What I&rsquo;d do differently today</p>
               <blockquote className="mt-8 max-w-4xl font-display text-3xl leading-tight md:text-5xl">
                 Fixing an error is one thing. Making sure it doesn&rsquo;t happen again is another.
               </blockquote>
-              <div className="mt-10 max-w-2xl text-[1rem] leading-relaxed text-brand-ink/75">
+              <div className="mt-10 max-w-2xl text-[1rem] leading-relaxed text-brand-ink/90">
 
                 <p>
                   I&rsquo;d pay closer attention to whether the underlying causes were actually
