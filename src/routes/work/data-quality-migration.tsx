@@ -252,7 +252,7 @@ function DataQualityCase() {
                 <source srcSet={reviewMeetingWebp.url} type="image/webp" />
                 <img
                   src={reviewMeeting.url}
-                  alt="Illustration of a review meeting: four people around a conference table looking at a wall-mounted screen showing an HR data quality dashboard, with a handwritten go-live checklist on a glass whiteboard to the left"
+                  alt="AI-generated illustration of a review meeting: four people around a conference table looking at a wall-mounted screen showing an HR data quality dashboard, with a handwritten go-live checklist on a glass whiteboard to the left"
                   width={1672}
                   height={941}
                   className="natural w-full"
@@ -261,8 +261,9 @@ function DataQualityCase() {
                 />
               </picture>
               <figcaption className="mt-4 max-w-2xl text-xs leading-relaxed text-muted-foreground">
-                Reviewing the open list with the people who owned it. Illustration, not a photograph
-                from the engagement.
+                Reviewing the open list with the people who owned it. AI-generated illustration, not
+                a photograph from the engagement.
+
               </figcaption>
             </figure>
 
