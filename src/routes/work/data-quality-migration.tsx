@@ -2,6 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Section } from "@/components/site/sections";
 import { Wordmark } from "@/components/site/brand";
 import { CtaButton } from "@/components/site/cta-button";
+import heroDq from "@/assets/hero-dq.png.asset.json";
+import heroDqWebp from "@/assets/hero-dq.webp.asset.json";
 
 export const Route = createFileRoute("/work/data-quality-migration")({
   head: () => ({
@@ -157,6 +159,30 @@ function DataQualityCase() {
                 </div>
               ))}
             </dl>
+          </div>
+        </section>
+
+        {/* Hero visual: illustration of the filtering idea */}
+        <section>
+          <div className="mx-auto w-full max-w-[72rem] px-6 md:px-10">
+            <figure>
+              <picture>
+                <source srcSet={heroDqWebp.url} type="image/webp" />
+                <img
+                  src={heroDq.url}
+                  alt="Illustration: a dense cloud of many coloured points joined by curved lines on the left passes through four upright translucent panes and emerges on the right as four neat horizontal rows of dots"
+                  width={1672}
+                  height={941}
+                  className="natural w-full"
+                  loading="eager"
+                  decoding="async"
+                />
+              </picture>
+              <figcaption className="mt-4 max-w-2xl text-xs leading-relaxed text-muted-foreground">
+                The shape of the work: thousands of separate issues, filtered down to a short list
+                that could actually be worked through. Illustration, not a screenshot of the report.
+              </figcaption>
+            </figure>
           </div>
         </section>
 
