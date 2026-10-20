@@ -4,6 +4,9 @@ import { Wordmark } from "@/components/site/brand";
 import { CtaButton } from "@/components/site/cta-button";
 import heroDq from "@/assets/hero-dq.png.asset.json";
 import heroDqWebp from "@/assets/hero-dq.webp.asset.json";
+import reviewMeeting from "@/assets/dq-review-meeting.png.asset.json";
+import reviewMeetingWebp from "@/assets/dq-review-meeting.webp.asset.json";
+
 
 export const Route = createFileRoute("/work/data-quality-migration")({
   head: () => ({
@@ -244,7 +247,27 @@ function DataQualityCase() {
               </p>
             </CaseSection>
 
+            <figure>
+              <picture>
+                <source srcSet={reviewMeetingWebp.url} type="image/webp" />
+                <img
+                  src={reviewMeeting.url}
+                  alt="Illustration of a review meeting: four people around a conference table looking at a wall-mounted screen showing an HR data quality dashboard, with a handwritten go-live checklist on a glass whiteboard to the left"
+                  width={1672}
+                  height={941}
+                  className="natural w-full"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+              <figcaption className="mt-4 max-w-2xl text-xs leading-relaxed text-muted-foreground">
+                Reviewing the open list with the people who owned it. Illustration, not a photograph
+                from the engagement.
+              </figcaption>
+            </figure>
+
             <CaseSection id="outcome" index="04" title="The outcome" lead="Over 8,000 critical issues resolved before go-live.">
+
               <p>
                 More than 8,000 critical issues were resolved ahead of go-live. Payroll ran without
                 problems after the migration, and a process was in place to manage data quality
