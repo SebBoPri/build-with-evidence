@@ -260,11 +260,13 @@ function DataQualityCase() {
                   decoding="async"
                 />
               </picture>
-              <figcaption className="mt-4 max-w-2xl text-xs leading-relaxed text-muted-foreground">
-                Reviewing the open list with the people who owned it. AI-generated illustration, not
-                a photograph from the engagement.
-
+              <figcaption className="mt-4 flex max-w-2xl flex-wrap items-center gap-x-4 gap-y-2 text-xs leading-relaxed text-muted-foreground">
+                <span className="label-mono shrink-0 rounded-full border border-hairline px-3 py-1 text-[0.625rem]">
+                  AI generated illustration
+                </span>
+                Reviewing the open list with the people who owned it.
               </figcaption>
+
             </figure>
 
             <CaseSection id="outcome" index="04" title="The outcome" lead="Over 8,000 critical issues resolved before go-live.">
