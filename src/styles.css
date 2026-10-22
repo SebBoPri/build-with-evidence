@@ -298,6 +298,9 @@
   .display-md {
     line-height: 1.22;
   }
+  .display-xl {
+    line-height: 1.08;
+  }
 }
 
 /* Dark bands inside paper pages: restore the dark tokens locally. */
