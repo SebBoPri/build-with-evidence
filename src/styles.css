@@ -293,6 +293,13 @@
   letter-spacing: -0.02em;
 }
 
+/* Playfair descenders collide at phone sizes: open the leading there only. */
+@media (max-width: 767px) {
+  .display-md {
+    line-height: 1.22;
+  }
+}
+
 /* Dark bands inside paper pages: restore the dark tokens locally. */
 .theme-dark-band {
   --background: oklch(0.145 0 0);
