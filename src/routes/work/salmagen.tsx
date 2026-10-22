@@ -111,7 +111,10 @@ function SalmagenCase() {
               Work
             </Link>
           </nav>
-          <CtaButton href="/#contact" className="h-10 px-5">
+          <CtaButton
+            href="/#contact"
+            className="h-10 whitespace-nowrap px-5 max-sm:h-9 max-sm:gap-2 max-sm:px-3 max-sm:text-xs"
+          >
             Let's explore together
           </CtaButton>
         </div>
