@@ -173,9 +173,9 @@ function DataQualityCase() {
                 <source srcSet={heroDqWebp.url} type="image/webp" />
                 <img
                   src={heroDq.url}
-                  alt="Illustration: a dense cloud of many coloured points joined by curved lines on the left passes through four upright translucent panes and emerges on the right as four neat horizontal rows of dots"
-                  width={1672}
-                  height={941}
+                  alt="Illustration: a dense tangled cloud of many coloured points joined by chaotic curved lines on the left passes through four upright translucent panes, one colour each, and emerges on the right as four neat, evenly spaced horizontal rows of dots"
+                  width={1376}
+                  height={768}
                   className="natural w-full"
                   loading="eager"
                   decoding="async"
