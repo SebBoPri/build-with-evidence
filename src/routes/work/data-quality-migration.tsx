@@ -182,8 +182,8 @@ function DataQualityCase() {
                 />
               </picture>
               <figcaption className="mt-4 max-w-2xl text-xs leading-relaxed text-muted-foreground">
-                The shape of the work: thousands of separate issues, filtered down to a short list
-                that could actually be worked through. Illustration, not a screenshot of the report.
+                Thousands of issues, filtered down to a list that could be worked through.
+                Illustration, not a screenshot.
               </figcaption>
             </figure>
           </div>
