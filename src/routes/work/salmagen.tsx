@@ -162,25 +162,6 @@ function SalmagenCase() {
           </div>
         </section>
 
-        {/* Hero visual: natural photo of an ice rescue training session */}
-        <section>
-          <div className="mx-auto w-full max-w-[72rem] px-6 md:px-10">
-            <figure>
-              <div className="w-full overflow-hidden rounded-sm">
-                <img
-                  src={iceRescue.url}
-                  alt="Ice rescue training: a person in a rescue suit in the water is pulled out by a line held by two skaters on the ice"
-                  className="natural aspect-[16/8] w-full object-cover"
-                  loading="eager"
-                />
-              </div>
-              <figcaption className="mt-4 max-w-2xl text-xs leading-relaxed text-muted-foreground">
-                Ice rescue as it happens today: the person in the water is pulled out by a line.
-                This is the moment S&auml;lmagen was designed for.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
 
         <nav aria-label="Case chapters" className="mx-auto w-full max-w-[72rem] px-6 pt-16 md:px-10 md:pt-20">
           <ol className="grid border-y border-hairline sm:grid-cols-5">
