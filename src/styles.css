@@ -56,6 +56,7 @@
   --color-case-highlight: var(--case-highlight);
   --color-case-highlight-foreground: var(--case-highlight-foreground);
   --color-brand-gold: var(--brand-gold);
+  --color-brand-gold-text: var(--brand-gold-text);
   --color-brand-purple: var(--brand-purple);
   --color-brand-blue: var(--brand-blue);
   --color-brand-ink: var(--brand-ink);
@@ -100,6 +101,8 @@
   --case-highlight: oklch(0.431 0.139 261.7);
   --case-highlight-foreground: oklch(1 0 0);
   --brand-gold: #EBC67F;
+  /* Darker gold for small text on white, where the brand gold lacks contrast */
+  --brand-gold-text: oklch(0.52 0.1 75);
   --brand-purple: #A05A9A;
   --brand-blue: #214B9B;
   --brand-ink: #151515;
