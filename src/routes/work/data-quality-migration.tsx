@@ -6,6 +6,8 @@ import heroDq from "@/assets/hero-dq.png.asset.json";
 import heroDqWebp from "@/assets/hero-dq.webp.asset.json";
 import reviewMeeting from "@/assets/dq-review-meeting.png.asset.json";
 import reviewMeetingWebp from "@/assets/dq-review-meeting.webp.asset.json";
+import dqProcess from "@/assets/dq-process.png.asset.json";
+import dqProcessWebp from "@/assets/dq-process.webp.asset.json";
 
 
 export const Route = createFileRoute("/work/data-quality-migration")({
@@ -123,9 +125,35 @@ function DataQualityCase() {
       </header>
 
       <main>
+        {/* Hero visual: the review meeting */}
+        <section>
+          <div className="mx-auto w-full max-w-[72rem] px-6 pt-10 md:px-10 md:pt-14">
+            <figure>
+              <picture>
+                <source srcSet={reviewMeetingWebp.url} type="image/webp" />
+                <img
+                  src={reviewMeeting.url}
+                  alt="AI-generated illustration of a review meeting: four people around a conference table looking at a wall-mounted screen showing an HR data quality dashboard, with a handwritten go-live checklist on a glass whiteboard to the left"
+                  width={1672}
+                  height={941}
+                  className="natural w-full"
+                  loading="eager"
+                  decoding="async"
+                />
+              </picture>
+              <figcaption className="mt-4 flex max-w-2xl flex-wrap items-center gap-x-4 gap-y-2 text-xs leading-relaxed text-muted-foreground">
+                <span className="label-mono shrink-0 rounded-full border border-hairline px-3 py-1 text-[0.625rem]">
+                  AI generated illustration
+                </span>
+                Reviewing the open list with the people who owned it.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         {/* Headline + meta + summary */}
         <section>
-          <div className="mx-auto w-full max-w-[72rem] px-6 pb-14 pt-24 md:px-10 md:pb-20 md:pt-32">
+          <div className="mx-auto w-full max-w-[72rem] px-6 pb-14 pt-16 md:px-10 md:pb-20 md:pt-24">
             <p className="label-mono fade-up">
               <Link to="/work" className="transition-colors hover:text-foreground">
                 Work
@@ -252,24 +280,21 @@ function DataQualityCase() {
 
             <figure>
               <picture>
-                <source srcSet={reviewMeetingWebp.url} type="image/webp" />
+                <source srcSet={dqProcessWebp.url} type="image/webp" />
                 <img
-                  src={reviewMeeting.url}
-                  alt="AI-generated illustration of a review meeting: four people around a conference table looking at a wall-mounted screen showing an HR data quality dashboard, with a handwritten go-live checklist on a glass whiteboard to the left"
-                  width={1672}
-                  height={941}
+                  src={dqProcess.url}
+                  alt="Illustration of the data quality process in three steps: a DQ engine reading HR systems, an errors report, and a remediation team of three people, with two return paths back into the systems labelled Correct and Implement"
+                  width={1536}
+                  height={1024}
                   className="natural w-full"
                   loading="lazy"
                   decoding="async"
                 />
               </picture>
-              <figcaption className="mt-4 flex max-w-2xl flex-wrap items-center gap-x-4 gap-y-2 text-xs leading-relaxed text-muted-foreground">
-                <span className="label-mono shrink-0 rounded-full border border-hairline px-3 py-1 text-[0.625rem]">
-                  AI generated illustration
-                </span>
-                Reviewing the open list with the people who owned it.
+              <figcaption className="mt-4 max-w-2xl text-xs leading-relaxed text-muted-foreground">
+                The process: detect, report, fix, then feed the fix back into the systems.
+                Illustration, not a screenshot.
               </figcaption>
-
             </figure>
 
             <CaseSection id="outcome" index="04" title="The outcome" lead="Over 8,000 critical issues resolved before go-live.">
