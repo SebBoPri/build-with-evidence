@@ -14,6 +14,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as WorkRouteRouteImport } from './routes/work/route'
 import { Route as WorkIndexRouteImport } from './routes/work/index'
 import { Route as WorkDataQualityMigrationRouteImport } from './routes/work/data-quality-migration'
+import { Route as WorkHyperIslandRouteImport } from './routes/work/hyper-island'
 import { Route as WorkSalmagenRouteImport } from './routes/work/salmagen'
 
 const IndexRoute = IndexRouteImport.update({
@@ -42,6 +43,11 @@ const WorkDataQualityMigrationRoute =
     path: '/data-quality-migration',
     getParentRoute: () => WorkRouteRoute,
   } as any)
+const WorkHyperIslandRoute = WorkHyperIslandRouteImport.update({
+  id: '/hyper-island',
+  path: '/hyper-island',
+  getParentRoute: () => WorkRouteRoute,
+} as any)
 const WorkSalmagenRoute = WorkSalmagenRouteImport.update({
   id: '/salmagen',
   path: '/salmagen',
@@ -53,6 +59,7 @@ export interface FileRoutesByFullPath {
   '/work': typeof WorkRouteRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/work/data-quality-migration': typeof WorkDataQualityMigrationRoute
+  '/work/hyper-island': typeof WorkHyperIslandRoute
   '/work/salmagen': typeof WorkSalmagenRoute
   '/work/': typeof WorkIndexRoute
 }
@@ -60,6 +67,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/work/data-quality-migration': typeof WorkDataQualityMigrationRoute
+  '/work/hyper-island': typeof WorkHyperIslandRoute
   '/work/salmagen': typeof WorkSalmagenRoute
   '/work': typeof WorkIndexRoute
 }
@@ -69,6 +77,7 @@ export interface FileRoutesById {
   '/work': typeof WorkRouteRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/work/data-quality-migration': typeof WorkDataQualityMigrationRoute
+  '/work/hyper-island': typeof WorkHyperIslandRoute
   '/work/salmagen': typeof WorkSalmagenRoute
   '/work/': typeof WorkIndexRoute
 }
@@ -79,6 +88,7 @@ export interface FileRouteTypes {
     | '/work'
     | '/sitemap.xml'
     | '/work/data-quality-migration'
+    | '/work/hyper-island'
     | '/work/salmagen'
     | '/work/'
   fileRoutesByTo: FileRoutesByTo
@@ -86,6 +96,7 @@ export interface FileRouteTypes {
     | '/'
     | '/sitemap.xml'
     | '/work/data-quality-migration'
+    | '/work/hyper-island'
     | '/work/salmagen'
     | '/work'
   id:
@@ -94,6 +105,7 @@ export interface FileRouteTypes {
     | '/work'
     | '/sitemap.xml'
     | '/work/data-quality-migration'
+    | '/work/hyper-island'
     | '/work/salmagen'
     | '/work/'
   fileRoutesById: FileRoutesById
@@ -141,6 +153,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkDataQualityMigrationRouteImport
       parentRoute: typeof WorkRouteRoute
     }
+    '/work/hyper-island': {
+      id: '/work/hyper-island'
+      path: '/hyper-island'
+      fullPath: '/work/hyper-island'
+      preLoaderRoute: typeof WorkHyperIslandRouteImport
+      parentRoute: typeof WorkRouteRoute
+    }
     '/work/salmagen': {
       id: '/work/salmagen'
       path: '/salmagen'
@@ -153,12 +172,14 @@ declare module '@tanstack/react-router' {
 
 interface WorkRouteRouteChildren {
   WorkDataQualityMigrationRoute: typeof WorkDataQualityMigrationRoute
+  WorkHyperIslandRoute: typeof WorkHyperIslandRoute
   WorkSalmagenRoute: typeof WorkSalmagenRoute
   WorkIndexRoute: typeof WorkIndexRoute
 }
 
 const WorkRouteRouteChildren: WorkRouteRouteChildren = {
   WorkDataQualityMigrationRoute: WorkDataQualityMigrationRoute,
+  WorkHyperIslandRoute: WorkHyperIslandRoute,
   WorkSalmagenRoute: WorkSalmagenRoute,
   WorkIndexRoute: WorkIndexRoute,
 }
