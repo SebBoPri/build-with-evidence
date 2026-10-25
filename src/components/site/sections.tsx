@@ -57,23 +57,46 @@ export function Section({
   accent?: string;
   children: ReactNode;
 }) {
+  void accent;
   return (
     <section id={id} className="rule-t scroll-mt-16">
       <div className="mx-auto w-full max-w-[84rem] px-6 py-24 md:px-10 md:py-28">
         {label ? (
-          <Reveal>
-            <p
-              className="label-mono mb-8 flex items-center gap-3"
-              style={accent ? { color: accent } : undefined}
-            >
-              <span className="section-accent" aria-hidden="true" />
-              {label}
-            </p>
+          <Reveal className="mb-8">
+            <WorkLabel>{label}</WorkLabel>
           </Reveal>
         ) : null}
         <Reveal delay={80}>{children}</Reveal>
       </div>
     </section>
+  );
+}
+
+/** Work page label: blue / purple / gold bar plus a bold uppercase word. */
+export function WorkLabel({ children, className = "" }: { children: ReactNode; className?: string }) {
+  return (
+    <div className={`flex items-center gap-1 ${className}`}>
+      <span className="h-[2px] w-8 bg-brand-blue" aria-hidden="true" />
+      <span className="h-[2px] w-4 bg-brand-purple" aria-hidden="true" />
+      <span className="h-[2px] w-2 bg-brand-gold" aria-hidden="true" />
+      <span className="ml-3 text-xs font-bold uppercase tracking-[0.2em] text-foreground">
+        {children}
+      </span>
+    </div>
+  );
+}
+
+/** Work page sub-heading: italic serif, hairline underline, three colored dots. */
+export function WorkSubheading({ children, as: Tag = "h3" }: { children: ReactNode; as?: "h2" | "h3" }) {
+  return (
+    <div className="flex items-center justify-between border-b border-hairline pb-4">
+      <Tag className="font-display text-sm italic text-foreground">{children}</Tag>
+      <div className="flex gap-1" aria-hidden="true">
+        <span className="h-1 w-1 bg-brand-blue" />
+        <span className="h-1 w-1 bg-brand-purple" />
+        <span className="h-1 w-1 bg-brand-gold" />
+      </div>
+    </div>
   );
 }
 
