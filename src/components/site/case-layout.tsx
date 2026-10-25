@@ -231,7 +231,7 @@ export function NextCase({
       <Link
         to={to}
         className={cn(
-          "group mt-6 block px-7 py-10 transition-opacity hover:opacity-95 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-foreground md:px-12 md:py-14",
+          "next-case-card group mt-6 block px-7 py-10 transition-opacity hover:opacity-95 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-foreground md:px-12 md:py-14",
           surfaceClass,
         )}
       >
