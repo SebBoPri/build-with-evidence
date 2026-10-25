@@ -24,7 +24,7 @@ export const Route = createFileRoute("/work/data-quality-migration")({
       {
         name: "description",
         content:
-          "Making more than 10,000 HR data quality issues visible ahead of a SAP SuccessFactors migration, and resolving over 8,000 critical ones before go-live.",
+          "Making more than 10,000 HR data quality issues visible ahead of a migration to a cloud HR platform, and identifying and resolving over 8,000 before go-live.",
       },
       {
         property: "og:title",
@@ -33,7 +33,7 @@ export const Route = createFileRoute("/work/data-quality-migration")({
       {
         property: "og:description",
         content:
-          "Making more than 10,000 HR data quality issues visible ahead of a SAP SuccessFactors migration, and resolving over 8,000 critical ones before go-live.",
+          "Making more than 10,000 HR data quality issues visible ahead of a migration to a cloud HR platform, and identifying and resolving over 8,000 before go-live.",
       },
       { property: "og:type", content: "article" },
       { property: "og:url", content: "https://slipstreamlabs.se/work/data-quality-migration" },
@@ -53,7 +53,7 @@ const ACCENT = "text-brand-gold-text";
 
 const meta = [
   { label: "Role", value: "Product Owner (consultant)" },
-  { label: "Context", value: "HR data migration to SAP SuccessFactors at a Nordic transport and logistics company" },
+  { label: "Context", value: "Data migration to a cloud HR platform at a large Nordic transport and logistics company" },
   { label: "Timeframe", value: "2022–2024" },
 ];
 
@@ -75,11 +75,11 @@ function DataQualityCase() {
           title="Turning data quality concerns into measurable action"
           meta={meta}
           accentClass={ACCENT}
-          keyFigure={{ value: "8,000+", label: "critical issues resolved before go-live" }}
+          keyFigure={{ value: "8,000+", label: "issues identified and resolved before go-live" }}
           overview={[
             ["Problem", "Suspected data quality issues, scale unknown"],
             ["Contribution", "Owned a Power BI data quality solution"],
-            ["Outcome", "8,000+ critical issues resolved before go-live"],
+            ["Outcome", "8,000+ issues identified and resolved before go-live"],
             ["Limitation", "Root causes not tracked over time"],
           ]}
         />
@@ -107,7 +107,7 @@ function DataQualityCase() {
           <div className="mx-auto max-w-[72rem] space-y-20 md:space-y-24">
             <CaseSection id="situation" index="01" title="The situation" accentClass={ACCENT} lead="A system migration, and a concern nobody could size.">
               <p>
-                The company was migrating its HR data from a legacy system to SAP SuccessFactors.
+                The company was migrating its HR data from a legacy system to a cloud HR platform.
                 Leadership was concerned about the quality of the existing data, but there was no
                 clear picture of how many issues existed, where they were, or what needed to be
                 fixed before go-live.
@@ -153,7 +153,7 @@ function DataQualityCase() {
               index="03"
               title="From measurement to action"
               accentClass={ACCENT}
-              lead="Prioritise the critical issues, then stop them coming back."
+              lead="Prioritise the issues with the most impact, then stop them coming back."
               figure={
                 <CaseFigure caption="The process: detect, report, fix, then feed the fix back into the systems. Illustration, not a screenshot.">
                   <picture>
@@ -173,8 +173,8 @@ function DataQualityCase() {
             >
               <p>
                 I worked with HR business partners and other stakeholders to identify and
-                prioritise critical issues, then drove the remediation work with the client&rsquo;s
-                HR shared services team.
+                prioritise the issues with the most impact, then drove the remediation work
+                with the client&rsquo;s HR shared services team.
               </p>
               <p>
                 Beyond the immediate fixes, we established a process to help prevent the same issues
@@ -183,9 +183,9 @@ function DataQualityCase() {
               </p>
             </CaseSection>
 
-            <CaseSection id="outcome" index="04" title="The outcome" accentClass={ACCENT} lead="Over 8,000 critical issues resolved before go-live.">
+            <CaseSection id="outcome" index="04" title="The outcome" accentClass={ACCENT} lead="Over 8,000 issues identified and resolved before go-live.">
               <p>
-                More than 8,000 critical issues were resolved ahead of go-live. Payroll ran without
+                More than 8,000 issues were identified and resolved ahead of go-live. Payroll ran without
                 problems after the migration, and a process was in place to manage data quality
                 beyond the project.
               </p>
