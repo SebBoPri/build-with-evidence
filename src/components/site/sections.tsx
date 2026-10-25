@@ -48,10 +48,13 @@ export function Reveal({
 export function Section({
   id,
   label,
+  accent,
   children,
 }: {
   id?: string;
   label?: string;
+  /** CSS color for the section label, one brand accent per section */
+  accent?: string;
   children: ReactNode;
 }) {
   return (
@@ -59,7 +62,10 @@ export function Section({
       <div className="mx-auto w-full max-w-[84rem] px-6 py-24 md:px-10 md:py-28">
         {label ? (
           <Reveal>
-            <p className="label-mono mb-8 flex items-center gap-3">
+            <p
+              className="label-mono mb-8 flex items-center gap-3"
+              style={accent ? { color: accent } : undefined}
+            >
               <span className="section-accent" aria-hidden="true" />
               {label}
             </p>
