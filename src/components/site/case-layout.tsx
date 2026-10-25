@@ -193,9 +193,9 @@ export function CaseIntro({
             </div>
           ) : null}
         </div>
-        <dl className="fade-up delay-2 mt-10 grid gap-5 border-t border-hairline pt-6 sm:grid-cols-3">
+        <dl className="fade-up delay-2 mt-10 grid gap-x-px gap-y-5 border-t border-hairline pt-6 sm:grid-cols-2 lg:grid-cols-4">
           {meta.map((m) => (
-            <div key={m.label}>
+            <div key={m.label} className="px-4 md:px-5">
               <dt className={cn("label-mono", accentClass)}>{m.label}</dt>
               <dd className="mt-1 text-[0.9rem] leading-snug text-foreground/90">{m.value}</dd>
             </div>
