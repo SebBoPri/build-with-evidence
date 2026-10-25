@@ -38,7 +38,7 @@ function HyperIslandCase() {
         />
         <section className="mx-auto w-full max-w-[72rem] px-6 pb-14 md:px-10 md:pb-20">
           <div className="relative overflow-hidden bg-brand-ink px-7 py-16 text-primary-foreground md:px-14 md:py-24">
-            <p className="label-mono relative z-10 opacity-60">Education</p>
+            <p className="label-mono relative z-10 text-primary-foreground/60">Education</p>
             <h2 className="relative z-10 mt-5 font-display text-3xl md:text-5xl">Write-up coming</h2>
             <svg
               className="pointer-events-none absolute bottom-0 right-0 w-1/2 translate-x-1/4 translate-y-1/4 opacity-20"
