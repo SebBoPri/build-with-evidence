@@ -10,3 +10,4 @@
 
 - [x] Recovered and restored the exact original Geist geometric wordmark v2 treatment.
 - [x] Extended the Work page's light editorial colour system across the full site.
+- [x] Make the Hyper Island Work card clickable and verify its matching placeholder page.

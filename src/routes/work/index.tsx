@@ -210,7 +210,10 @@ function WorkPage() {
               </Link>
 
               {/* Hyper Island PM program */}
-              <article className="group relative aspect-[4/3] overflow-hidden border-t border-white/10 bg-[#151515] md:col-span-8 md:aspect-[16/9]">
+              <Link
+                to="/work/hyper-island"
+                className="group relative block aspect-[4/3] overflow-hidden border-t border-white/10 bg-[#151515] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-foreground md:col-span-8 md:aspect-[16/9]"
+              >
                 <div className="absolute inset-0 z-10 flex flex-col justify-between p-8 md:p-12">
                   <div className="flex items-start justify-between">
                     <span className="text-xs font-bold uppercase tracking-widest text-white/60">
@@ -236,7 +239,7 @@ function WorkPage() {
                   <circle cx="50" cy="50" r="35" fill="none" stroke="white" strokeWidth="0.5" />
                   <circle cx="50" cy="50" r="25" fill="none" stroke="white" strokeWidth="0.5" />
                 </svg>
-              </article>
+              </Link>
             </div>
           </div>
         </section>

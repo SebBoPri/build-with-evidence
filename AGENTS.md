@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Case pages
+- Work detail pages reuse `src/components/site/case-layout.tsx`, including placeholder entries, to keep navigation, typography and closing links consistent without inventing case content.
