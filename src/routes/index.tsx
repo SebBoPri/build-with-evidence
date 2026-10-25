@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Section, FullBleedFigure } from "@/components/site/sections";
+import { Section, FullBleedFigure, WorkLabel, WorkSubheading } from "@/components/site/sections";
 import { Wordmark } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import { ContactForm } from "@/components/site/contact-form";
@@ -191,16 +191,13 @@ function Index() {
         {/* Hero */}
         <section>
           <div className="mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
-            <p className="label-mono fade-up flex items-center gap-3">
-              <span className="section-accent" aria-hidden="true" />
-              Product discovery &amp; strategy
-            </p>
-            <h1 className="display-xl fade-up delay-1 mt-10 max-w-4xl text-balance">
+            <WorkLabel className="fade-up">Product discovery &amp; strategy</WorkLabel>
+            <h1 className="fade-up delay-1 mt-10 max-w-4xl text-balance font-display text-5xl leading-[1.05] tracking-tight text-foreground md:text-7xl">
               <span>Find what&rsquo;s worth</span>{" "}
               <br />
               <span className="text-muted-foreground">building.</span>
             </h1>
-            <div className="fade-up delay-2 mt-10 max-w-xl space-y-5 text-lg leading-relaxed text-muted-foreground">
+            <div className="fade-up delay-2 mt-10 max-w-2xl space-y-5 text-xl font-light leading-relaxed text-muted-foreground md:text-2xl">
               <p>
                 Slipstream Labs helps product teams turn uncertain ideas and opportunities into
                 evidence-backed paths forward, before committing significant engineering resources.
@@ -250,7 +247,7 @@ function Index() {
           </div>
 
           <div className="mt-14 md:mt-16">
-            <p className="label-mono">We&apos;ve all seen it</p>
+            <WorkSubheading>We&apos;ve all seen it</WorkSubheading>
             <ol className="mt-5">
               {problemCases.map((item, i) => (
                 <li
@@ -303,7 +300,7 @@ function Index() {
 
 
           <div className="mt-14">
-            <p className="label-mono">When to use it</p>
+            <WorkSubheading>When to use it</WorkSubheading>
             <ul className="mt-6 max-w-3xl space-y-6">
               {sprintWhen.map((i, index) => (
                 <li key={i} className="flex items-start gap-4">
@@ -326,23 +323,21 @@ function Index() {
           </div>
 
           <div className="mt-14">
-            <p className="label-mono">What you leave with</p>
-            <dl className="mt-6 grid gap-x-10 gap-y-8 md:grid-cols-3">
+            <WorkSubheading>What you leave with</WorkSubheading>
+            <dl className="mt-6 grid gap-4 md:grid-cols-3">
               {sprintGet.map((f, i) => (
                 <div
                   key={f.k}
-                  className={`border-l-2 pl-5 ${
+                  className={`p-6 md:p-8 ${
                     i % 3 === 0
-                      ? "border-brand-blue"
+                      ? "bg-brand-blue text-background"
                       : i % 3 === 1
-                        ? "border-brand-purple"
-                        : "border-brand-gold"
+                        ? "bg-brand-purple text-background"
+                        : "bg-brand-gold text-brand-ink"
                   }`}
                 >
-                  <dt className="text-base font-medium tracking-tight text-foreground">{f.k}</dt>
-                  <dd className="mt-2 text-base leading-relaxed text-muted-foreground">
-                    {f.v}
-                  </dd>
+                  <dt className="font-display text-xl tracking-tight">{f.k}</dt>
+                  <dd className="mt-3 text-base leading-relaxed opacity-85">{f.v}</dd>
                 </div>
               ))}
             </dl>
@@ -382,11 +377,11 @@ function Index() {
 
         {/* Pull quote */}
         <Section>
-          <blockquote className="max-w-4xl border-l-4 border-brand-purple pl-6 md:pl-10">
-            <p className="display-md text-balance">
+          <blockquote className="bg-brand-ink px-6 py-14 text-background md:px-14 md:py-20">
+            <p className="display-md max-w-4xl text-balance">
               Just because you can build it doesn&apos;t mean you should.
             </p>
-            <p className="display-md mt-3 text-balance text-muted-foreground">
+            <p className="display-md mt-3 max-w-4xl text-balance text-background/60">
               Speed is only an advantage when you&apos;re moving in the right direction.
             </p>
           </blockquote>
@@ -435,19 +430,28 @@ function Index() {
         </Section>
 
         {/* CTA */}
-        <Section id="contact" label="Contact" accent="var(--brand-blue)">
-          <div className="max-w-3xl">
-            <h2 className="display-md text-balance">
+        <section id="contact" className="scroll-mt-16 bg-brand-blue text-background">
+          <div className="mx-auto w-full max-w-[84rem] px-6 py-20 md:px-10 md:py-28">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-background/70">
+              Contact
+            </p>
+            <h2 className="display-md mt-8 max-w-3xl text-balance">
               Have an opportunity you&apos;re not sure about?
             </h2>
-            <div className="mt-8 max-w-2xl space-y-4 text-lg leading-relaxed text-muted-foreground md:text-xl">
+            <div className="mt-8 max-w-2xl space-y-4 text-lg font-light leading-relaxed text-background/80 md:text-xl">
               <p>You don&apos;t need another workshop.</p>
               <p>You need to know whether there&apos;s something worth building.</p>
-              <p className="text-foreground">Let&apos;s investigate it.</p>
+              <p className="text-background">Let&apos;s investigate it.</p>
             </div>
-            <ContactForm />
           </div>
-        </Section>
+        </section>
+        <section className="bg-background">
+          <div className="mx-auto w-full max-w-[84rem] px-6 pb-24 pt-4 md:px-10 md:pb-28">
+            <div className="max-w-3xl">
+              <ContactForm />
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer className="rule-t">

@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Section } from "@/components/site/sections";
+import { Section, WorkLabel, WorkSubheading } from "@/components/site/sections";
 import { Wordmark } from "@/components/site/brand";
 import { CtaButton } from "@/components/site/cta-button";
 
@@ -76,14 +76,7 @@ function WorkPage() {
         {/* Statement */}
         <section>
           <div className="mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
-            <div className="fade-up flex items-center gap-1">
-              <span className="h-[2px] w-8 bg-brand-blue" aria-hidden="true" />
-              <span className="h-[2px] w-4 bg-brand-purple" aria-hidden="true" />
-              <span className="h-[2px] w-2 bg-brand-gold" aria-hidden="true" />
-              <span className="ml-3 text-xs font-bold uppercase tracking-[0.2em] text-foreground">
-                Work
-              </span>
-            </div>
+            <WorkLabel className="fade-up">Work</WorkLabel>
             <h1 className="fade-up delay-1 mt-10 max-w-4xl font-display text-5xl leading-[1.05] tracking-tight text-foreground md:text-7xl">
               Cases and work that show how I think.
             </h1>
@@ -98,13 +91,8 @@ function WorkPage() {
         {/* Featured grid */}
         <section>
           <div className="mx-auto w-full max-w-[84rem] px-6 pb-24 md:px-10 md:pb-32">
-            <div className="mb-10 flex items-center justify-between border-b border-hairline pb-4">
-              <h2 className="font-display text-sm italic text-foreground">Featured</h2>
-              <div className="flex gap-1" aria-hidden="true">
-                <span className="h-1 w-1 bg-brand-blue" />
-                <span className="h-1 w-1 bg-brand-purple" />
-                <span className="h-1 w-1 bg-brand-gold" />
-              </div>
+            <div className="mb-10">
+              <WorkSubheading as="h2">Featured</WorkSubheading>
             </div>
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-12">
