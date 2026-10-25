@@ -4,7 +4,6 @@ import { Wordmark } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import { ContactForm } from "@/components/site/contact-form";
 import { CtaButton } from "@/components/site/cta-button";
-import constructionBanner from "@/assets/construction-banner.jpg";
 import heroStream from "@/assets/hero-stream.jpg.asset.json";
 import heroStreamWebp from "@/assets/hero-stream.webp.asset.json";
 import sebastianPortrait from "@/assets/sebastian-bouvier.png.asset.json";
@@ -188,23 +187,6 @@ function Index() {
       </header>
 
       <main id="top">
-        {/* Under construction banner */}
-        <div className="relative overflow-hidden border-b border-hairline">
-          <img
-            src={constructionBanner}
-            alt="An incomplete spherical battle station under construction in space"
-            width={1920}
-            height={640}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent" />
-          <div className="relative mx-auto w-full max-w-[84rem] px-6 py-16 md:px-10 md:py-20">
-            <p className="label-mono fade-up !text-white/60">Under construction</p>
-            <p className="fade-up delay-1 mt-4 max-w-md text-base leading-relaxed text-white/85">
-              What you are reading is the working draft. Case write-ups are on their way.
-            </p>
-          </div>
-        </div>
 
         {/* Hero */}
         <section>
