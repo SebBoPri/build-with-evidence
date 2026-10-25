@@ -59,7 +59,8 @@ export function ChapterNav({ chapters, accentClass }: { chapters: readonly Chapt
         const visible = entries.filter((e) => e.isIntersecting);
         if (visible.length) {
           visible.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-          setActive(visible[0].target.id);
+          const first = visible[0];
+          if (first) setActive(first.target.id);
         }
       },
       { rootMargin: "-140px 0px -55% 0px" },
