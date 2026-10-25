@@ -235,7 +235,7 @@ function Index() {
 
 
         {/* Problem */}
-        <Section id="problem" label="The problem">
+        <Section id="problem" label="The problem" accent="var(--brand-purple)">
           <h2 className="display-md max-w-3xl text-balance">
             Building the wrong thing is still expensive.
           </h2>
@@ -271,7 +271,13 @@ function Index() {
                     </div>
                   </div>
                   <span
-                    className="absolute bottom-0 left-0 h-px w-0 bg-case-highlight transition-all duration-700 group-hover:w-full"
+                    className={`absolute bottom-0 left-0 h-px w-0 transition-all duration-700 group-hover:w-full ${
+                      i % 3 === 0
+                        ? "bg-brand-blue"
+                        : i % 3 === 1
+                          ? "bg-brand-purple"
+                          : "bg-brand-gold"
+                    }`}
                     aria-hidden="true"
                   />
                 </li>
@@ -282,7 +288,7 @@ function Index() {
 
 
         {/* Discovery Sprint */}
-        <Section id="sprint" label="Discovery Sprint">
+        <Section id="sprint" label="Discovery Sprint" accent="var(--brand-gold-text)">
           <h2 className="display-md max-w-3xl text-balance">
             From uncertain idea to a decision you can act on.
           </h2>
@@ -322,8 +328,17 @@ function Index() {
           <div className="mt-14">
             <p className="label-mono">What you leave with</p>
             <dl className="mt-6 grid gap-x-10 gap-y-8 md:grid-cols-3">
-              {sprintGet.map((f) => (
-                <div key={f.k}>
+              {sprintGet.map((f, i) => (
+                <div
+                  key={f.k}
+                  className={`border-l-2 pl-5 ${
+                    i % 3 === 0
+                      ? "border-brand-blue"
+                      : i % 3 === 1
+                        ? "border-brand-purple"
+                        : "border-brand-gold"
+                  }`}
+                >
                   <dt className="text-base font-medium tracking-tight text-foreground">{f.k}</dt>
                   <dd className="mt-2 text-base leading-relaxed text-muted-foreground">
                     {f.v}
@@ -346,7 +361,7 @@ function Index() {
         </Section>
 
         {/* Approach */}
-        <Section id="approach">
+        <Section id="approach" label="Approach" accent="var(--brand-blue)">
           <h2 className="display-md max-w-3xl text-balance">Start with what must be true.</h2>
 
           <div className="mt-8 max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
@@ -379,7 +394,7 @@ function Index() {
 
 
         {/* About */}
-        <Section id="about" label="About">
+        <Section id="about" label="About" accent="var(--brand-gold-text)">
           <div className="grid gap-12 md:grid-cols-12">
             <div className="md:col-span-4">
               <h2 className="display-md">Sebastian Bouvier</h2>
@@ -420,7 +435,7 @@ function Index() {
         </Section>
 
         {/* CTA */}
-        <Section id="contact">
+        <Section id="contact" label="Contact" accent="var(--brand-blue)">
           <div className="max-w-3xl">
             <h2 className="display-md text-balance">
               Have an opportunity you&apos;re not sure about?
@@ -444,7 +459,10 @@ function Index() {
             <p>Stockholm, Sweden</p>
             <p>© 2026 Slipstream Labs</p>
           </div>
-          <p className="label-mono">Evidence before build</p>
+          <p className="label-mono flex items-center gap-3">
+            <span className="section-accent" aria-hidden="true" />
+            Evidence before build
+          </p>
         </div>
       </footer>
     </div>
