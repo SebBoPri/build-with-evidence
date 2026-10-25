@@ -186,14 +186,6 @@ function SalmagenCase() {
                   label, because mounting happens calmly at home and can afford to be learned.
                 </li>
               </ul>
-              <figure className="pt-4">
-                <img
-                  src={nixProcessSketch.url}
-                  alt="Working page from the design process, with sketches and handwritten notes"
-                  className="natural w-full"
-                  loading="lazy"
-                />
-              </figure>
             </CaseSection>
 
             <CaseSection
@@ -202,6 +194,16 @@ function SalmagenCase() {
               index="04"
               title="What changed"
               lead="Prototype built, physics modelled, never tested on real ice."
+              figure={
+                <CaseFigure caption="A working page from the design process.">
+                  <img
+                    src={nixProcessSketch.url}
+                    alt="Working page from the design process, with sketches and handwritten notes"
+                    className="natural mx-auto w-full max-w-[42rem]"
+                    loading="lazy"
+                  />
+                </CaseFigure>
+              }
             >
               <p>
                 Sälmagen reached concept and prototype stage and was presented as part of NIX. With
