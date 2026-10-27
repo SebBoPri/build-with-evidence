@@ -199,7 +199,7 @@ function WorkPage() {
 
               {/* Hyper Island PM program */}
               <Link
-                to="/work/hyper-island"
+                to="/work/spotify-feature-prioritisation"
                 className="group relative block aspect-[4/3] overflow-hidden border-t border-white/10 bg-[#151515] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-foreground md:col-span-8 md:aspect-[16/9]"
               >
                 <div className="absolute inset-0 z-10 flex flex-col justify-between p-8 md:p-12">
@@ -211,10 +211,10 @@ function WorkPage() {
                   </div>
                   <div>
                     <h3 className="mb-4 font-display text-3xl text-white md:text-4xl">
-                      Hyper Island PM program
+                      Testing value before building: which Spotify features first?
                     </h3>
                     <p className="max-w-xs text-sm font-semibold uppercase tracking-widest text-white/60">
-                      Product management program · Write-up coming
+                      Hyper Island course project · 2026
                     </p>
                   </div>
                 </div>
