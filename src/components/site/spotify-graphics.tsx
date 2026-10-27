@@ -95,6 +95,7 @@ function Dot({ fits }: { fits: boolean }) {
 
 /** Scoring of the three picks against the four strategy rules. */
 export function ScoringTable() {
+  // min-w-0 lets the scroll box shrink inside grid and flex parents.
   const heads = ["Feature", "Popular or niche", "Fills a gap", "Keeps people paying", "Generates data", "Offered as"];
   return (
     <div>
@@ -106,7 +107,7 @@ export function ScoringTable() {
           <Dot fits={false} /> Unclear or weak
         </span>
       </div>
-      <div className="overflow-x-auto border-y border-hairline">
+      <div className="w-full max-w-[calc(100vw-3rem)] overflow-x-auto border-y border-hairline md:max-w-none">
         <table className="w-full min-w-[44rem] text-left text-sm">
           <thead>
             <tr className="border-b border-hairline">
