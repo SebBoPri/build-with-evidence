@@ -6,13 +6,13 @@ import { CtaButton } from "@/components/site/cta-button";
 export const Route = createFileRoute("/work/")({
   head: () => ({
     meta: [
-      { title: "Work — Slipstream Labs" },
+      { title: "Work | Slipstream Labs" },
       {
         name: "description",
         content:
           "Cases and selected work from Slipstream Labs. Every case follows the same shape: the question, the risk, the evidence, the decision.",
       },
-      { property: "og:title", content: "Work — Slipstream Labs" },
+      { property: "og:title", content: "Work | Slipstream Labs" },
       {
         property: "og:description",
         content:
@@ -21,7 +21,7 @@ export const Route = createFileRoute("/work/")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://slipstreamlabs.se/work" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: "Work — Slipstream Labs" },
+      { name: "twitter:title", content: "Work | Slipstream Labs" },
     ],
     links: [{ rel: "canonical", href: "https://slipstreamlabs.se/work" }],
   }),

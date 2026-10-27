@@ -16,6 +16,7 @@ import { Route as WorkIndexRouteImport } from './routes/work/index'
 import { Route as WorkDataQualityMigrationRouteImport } from './routes/work/data-quality-migration'
 import { Route as WorkHyperIslandRouteImport } from './routes/work/hyper-island'
 import { Route as WorkSalmagenRouteImport } from './routes/work/salmagen'
+import { Route as WorkSpotifyFeaturePrioritisationRouteImport } from './routes/work/spotify-feature-prioritisation'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -53,6 +54,12 @@ const WorkSalmagenRoute = WorkSalmagenRouteImport.update({
   path: '/salmagen',
   getParentRoute: () => WorkRouteRoute,
 } as any)
+const WorkSpotifyFeaturePrioritisationRoute =
+  WorkSpotifyFeaturePrioritisationRouteImport.update({
+    id: '/spotify-feature-prioritisation',
+    path: '/spotify-feature-prioritisation',
+    getParentRoute: () => WorkRouteRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -61,6 +68,7 @@ export interface FileRoutesByFullPath {
   '/work/data-quality-migration': typeof WorkDataQualityMigrationRoute
   '/work/hyper-island': typeof WorkHyperIslandRoute
   '/work/salmagen': typeof WorkSalmagenRoute
+  '/work/spotify-feature-prioritisation': typeof WorkSpotifyFeaturePrioritisationRoute
   '/work/': typeof WorkIndexRoute
 }
 export interface FileRoutesByTo {
@@ -69,6 +77,7 @@ export interface FileRoutesByTo {
   '/work/data-quality-migration': typeof WorkDataQualityMigrationRoute
   '/work/hyper-island': typeof WorkHyperIslandRoute
   '/work/salmagen': typeof WorkSalmagenRoute
+  '/work/spotify-feature-prioritisation': typeof WorkSpotifyFeaturePrioritisationRoute
   '/work': typeof WorkIndexRoute
 }
 export interface FileRoutesById {
@@ -79,6 +88,7 @@ export interface FileRoutesById {
   '/work/data-quality-migration': typeof WorkDataQualityMigrationRoute
   '/work/hyper-island': typeof WorkHyperIslandRoute
   '/work/salmagen': typeof WorkSalmagenRoute
+  '/work/spotify-feature-prioritisation': typeof WorkSpotifyFeaturePrioritisationRoute
   '/work/': typeof WorkIndexRoute
 }
 export interface FileRouteTypes {
@@ -90,6 +100,7 @@ export interface FileRouteTypes {
     | '/work/data-quality-migration'
     | '/work/hyper-island'
     | '/work/salmagen'
+    | '/work/spotify-feature-prioritisation'
     | '/work/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -98,6 +109,7 @@ export interface FileRouteTypes {
     | '/work/data-quality-migration'
     | '/work/hyper-island'
     | '/work/salmagen'
+    | '/work/spotify-feature-prioritisation'
     | '/work'
   id:
     | '__root__'
@@ -107,6 +119,7 @@ export interface FileRouteTypes {
     | '/work/data-quality-migration'
     | '/work/hyper-island'
     | '/work/salmagen'
+    | '/work/spotify-feature-prioritisation'
     | '/work/'
   fileRoutesById: FileRoutesById
 }
@@ -167,6 +180,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkSalmagenRouteImport
       parentRoute: typeof WorkRouteRoute
     }
+    '/work/spotify-feature-prioritisation': {
+      id: '/work/spotify-feature-prioritisation'
+      path: '/spotify-feature-prioritisation'
+      fullPath: '/work/spotify-feature-prioritisation'
+      preLoaderRoute: typeof WorkSpotifyFeaturePrioritisationRouteImport
+      parentRoute: typeof WorkRouteRoute
+    }
   }
 }
 
@@ -174,6 +194,7 @@ interface WorkRouteRouteChildren {
   WorkDataQualityMigrationRoute: typeof WorkDataQualityMigrationRoute
   WorkHyperIslandRoute: typeof WorkHyperIslandRoute
   WorkSalmagenRoute: typeof WorkSalmagenRoute
+  WorkSpotifyFeaturePrioritisationRoute: typeof WorkSpotifyFeaturePrioritisationRoute
   WorkIndexRoute: typeof WorkIndexRoute
 }
 
@@ -181,6 +202,7 @@ const WorkRouteRouteChildren: WorkRouteRouteChildren = {
   WorkDataQualityMigrationRoute: WorkDataQualityMigrationRoute,
   WorkHyperIslandRoute: WorkHyperIslandRoute,
   WorkSalmagenRoute: WorkSalmagenRoute,
+  WorkSpotifyFeaturePrioritisationRoute: WorkSpotifyFeaturePrioritisationRoute,
   WorkIndexRoute: WorkIndexRoute,
 }
 
