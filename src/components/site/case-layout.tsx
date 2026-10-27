@@ -220,7 +220,7 @@ export function NextCase({
   context,
   surfaceClass,
 }: {
-  to: "/work/salmagen" | "/work/data-quality-migration";
+  to: "/work/salmagen" | "/work/data-quality-migration" | "/work/spotify-feature-prioritisation";
   title: string;
   context: string;
   surfaceClass: string;
