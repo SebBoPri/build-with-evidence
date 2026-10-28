@@ -56,7 +56,7 @@ export function FeatureFunnel() {
           >
             <p className="font-display text-3xl leading-none">{n}</p>
             <p className="mt-4 font-display text-xl">{name}</p>
-            <p className="label-mono mt-3 opacity-75">{offer}</p>
+            <p className={cn("label-mono mt-3", test ? "text-brand-ink/75" : "text-case-highlight-foreground/75")}>{offer}</p>
           </li>
         ))}
       </ol>
@@ -107,7 +107,7 @@ export function ScoringTable() {
           <Dot fits={false} /> Unclear or weak
         </span>
       </div>
-      <div className="w-full max-w-[calc(100vw-3rem)] overflow-x-auto border-y border-hairline md:max-w-none">
+      <div className="relative overflow-x-auto border-y border-hairline">
         <table className="w-full min-w-[44rem] text-left text-sm">
           <thead>
             <tr className="border-b border-hairline">
