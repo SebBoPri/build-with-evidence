@@ -84,7 +84,7 @@ function SpotifyCase() {
                   alt="AI-generated illustration of four people in a glass-walled meeting room arranging pink and yellow sticky notes on the glass under three handwritten headings: Discovery, Concerts and AI music"
                   width={1536}
                   height={1024}
-                  className="natural aspect-[16/9] w-full object-cover"
+                  className="natural aspect-[16/9] w-full object-cover object-top"
                   loading="eager"
                   decoding="async"
                 />
