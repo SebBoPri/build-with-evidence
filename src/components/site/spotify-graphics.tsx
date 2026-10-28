@@ -107,7 +107,7 @@ export function ScoringTable() {
           <Dot fits={false} /> Unclear or weak
         </span>
       </div>
-      <div className="w-full max-w-[calc(100vw-3rem)] overflow-x-auto border-y border-hairline md:max-w-none">
+      <div className="relative overflow-x-auto border-y border-hairline">
         <table className="w-full min-w-[44rem] text-left text-sm">
           <thead>
             <tr className="border-b border-hairline">
