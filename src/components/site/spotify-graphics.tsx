@@ -56,7 +56,7 @@ export function FeatureFunnel() {
           >
             <p className="font-display text-3xl leading-none">{n}</p>
             <p className="mt-4 font-display text-xl">{name}</p>
-            <p className="label-mono mt-3 opacity-75">{offer}</p>
+            <p className={cn("label-mono mt-3", test ? "text-brand-ink/75" : "text-case-highlight-foreground/75")}>{offer}</p>
           </li>
         ))}
       </ol>
