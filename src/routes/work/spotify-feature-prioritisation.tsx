@@ -9,6 +9,8 @@ import {
   ChapterNav,
   NextCase,
 } from "@/components/site/case-layout";
+import spotifyBrainstorm from "@/assets/spotify-brainstorm.png.asset.json";
+import spotifyBrainstormWebp from "@/assets/spotify-brainstorm.webp.asset.json";
 import { FeatureFunnel, ScoringTable, StatRow } from "@/components/site/spotify-graphics";
 
 const URL = "https://slipstreamlabs.se/work/spotify-feature-prioritisation";
@@ -68,6 +70,28 @@ function SpotifyCase() {
             ["Limitation", "Small convenience samples, retention not measured"],
           ]}
         />
+
+        <section className="mx-auto w-full max-w-[72rem] px-6 pb-14 md:px-10 md:pb-20">
+          <CaseFigure
+            tag="AI generated illustration"
+            caption="Sorting the research into the three themes that drove the ranking."
+          >
+            <div className="w-full overflow-hidden rounded-sm">
+              <picture>
+                <source srcSet={spotifyBrainstormWebp.url} type="image/webp" />
+                <img
+                  src={spotifyBrainstorm.url}
+                  alt="AI-generated illustration of four people in a glass-walled meeting room arranging pink and yellow sticky notes on the glass under three handwritten headings: Discovery, Concerts and AI music"
+                  width={1536}
+                  height={1024}
+                  className="natural aspect-[16/9] w-full object-cover object-top"
+                  loading="eager"
+                  decoding="async"
+                />
+              </picture>
+            </div>
+          </CaseFigure>
+        </section>
 
         <ChapterNav chapters={chapters} accentClass={ACCENT} />
 
