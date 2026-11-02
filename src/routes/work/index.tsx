@@ -228,6 +228,22 @@ function WorkPage() {
                   <circle cx="50" cy="50" r="25" fill="none" stroke="white" strokeWidth="0.5" />
                 </svg>
               </Link>
+
+              {/* TEDxFika community concept */}
+              <Link
+                to="/work/tedxfika"
+                className="next-case-card group relative flex min-h-96 flex-col justify-between overflow-hidden bg-brand-gold p-8 text-brand-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-foreground md:col-span-8 md:min-h-[26rem] md:p-12"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <span className="text-xs font-bold uppercase">Case study</span>
+                  <span className="font-mono text-xs opacity-50">05</span>
+                </div>
+                <p aria-hidden="true" className="my-8 font-display text-5xl opacity-30 md:text-6xl">1 → 12</p>
+                <div>
+                  <h3 className="mb-4 max-w-2xl font-display text-3xl md:text-4xl">The missing rung: keeping a 700-person audience between events</h3>
+                  <p className="text-sm font-medium uppercase opacity-70">TEDxFika · Hyper Island sprint · September 2026 · Read the case</p>
+                </div>
+              </Link>
             </div>
           </div>
         </section>

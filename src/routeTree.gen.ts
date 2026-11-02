@@ -17,6 +17,7 @@ import { Route as WorkDataQualityMigrationRouteImport } from './routes/work/data
 import { Route as WorkHyperIslandRouteImport } from './routes/work/hyper-island'
 import { Route as WorkSalmagenRouteImport } from './routes/work/salmagen'
 import { Route as WorkSpotifyFeaturePrioritisationRouteImport } from './routes/work/spotify-feature-prioritisation'
+import { Route as WorkTedxfikaRouteImport } from './routes/work/tedxfika'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -60,6 +61,11 @@ const WorkSpotifyFeaturePrioritisationRoute =
     path: '/spotify-feature-prioritisation',
     getParentRoute: () => WorkRouteRoute,
   } as any)
+const WorkTedxfikaRoute = WorkTedxfikaRouteImport.update({
+  id: '/tedxfika',
+  path: '/tedxfika',
+  getParentRoute: () => WorkRouteRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -69,6 +75,7 @@ export interface FileRoutesByFullPath {
   '/work/hyper-island': typeof WorkHyperIslandRoute
   '/work/salmagen': typeof WorkSalmagenRoute
   '/work/spotify-feature-prioritisation': typeof WorkSpotifyFeaturePrioritisationRoute
+  '/work/tedxfika': typeof WorkTedxfikaRoute
   '/work/': typeof WorkIndexRoute
 }
 export interface FileRoutesByTo {
@@ -78,6 +85,7 @@ export interface FileRoutesByTo {
   '/work/hyper-island': typeof WorkHyperIslandRoute
   '/work/salmagen': typeof WorkSalmagenRoute
   '/work/spotify-feature-prioritisation': typeof WorkSpotifyFeaturePrioritisationRoute
+  '/work/tedxfika': typeof WorkTedxfikaRoute
   '/work': typeof WorkIndexRoute
 }
 export interface FileRoutesById {
@@ -89,6 +97,7 @@ export interface FileRoutesById {
   '/work/hyper-island': typeof WorkHyperIslandRoute
   '/work/salmagen': typeof WorkSalmagenRoute
   '/work/spotify-feature-prioritisation': typeof WorkSpotifyFeaturePrioritisationRoute
+  '/work/tedxfika': typeof WorkTedxfikaRoute
   '/work/': typeof WorkIndexRoute
 }
 export interface FileRouteTypes {
@@ -101,6 +110,7 @@ export interface FileRouteTypes {
     | '/work/hyper-island'
     | '/work/salmagen'
     | '/work/spotify-feature-prioritisation'
+    | '/work/tedxfika'
     | '/work/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -110,6 +120,7 @@ export interface FileRouteTypes {
     | '/work/hyper-island'
     | '/work/salmagen'
     | '/work/spotify-feature-prioritisation'
+    | '/work/tedxfika'
     | '/work'
   id:
     | '__root__'
@@ -120,6 +131,7 @@ export interface FileRouteTypes {
     | '/work/hyper-island'
     | '/work/salmagen'
     | '/work/spotify-feature-prioritisation'
+    | '/work/tedxfika'
     | '/work/'
   fileRoutesById: FileRoutesById
 }
@@ -187,6 +199,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkSpotifyFeaturePrioritisationRouteImport
       parentRoute: typeof WorkRouteRoute
     }
+    '/work/tedxfika': {
+      id: '/work/tedxfika'
+      path: '/tedxfika'
+      fullPath: '/work/tedxfika'
+      preLoaderRoute: typeof WorkTedxfikaRouteImport
+      parentRoute: typeof WorkRouteRoute
+    }
   }
 }
 
@@ -195,6 +214,7 @@ interface WorkRouteRouteChildren {
   WorkHyperIslandRoute: typeof WorkHyperIslandRoute
   WorkSalmagenRoute: typeof WorkSalmagenRoute
   WorkSpotifyFeaturePrioritisationRoute: typeof WorkSpotifyFeaturePrioritisationRoute
+  WorkTedxfikaRoute: typeof WorkTedxfikaRoute
   WorkIndexRoute: typeof WorkIndexRoute
 }
 
@@ -203,6 +223,7 @@ const WorkRouteRouteChildren: WorkRouteRouteChildren = {
   WorkHyperIslandRoute: WorkHyperIslandRoute,
   WorkSalmagenRoute: WorkSalmagenRoute,
   WorkSpotifyFeaturePrioritisationRoute: WorkSpotifyFeaturePrioritisationRoute,
+  WorkTedxfikaRoute: WorkTedxfikaRoute,
   WorkIndexRoute: WorkIndexRoute,
 }
 

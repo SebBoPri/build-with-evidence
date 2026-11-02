@@ -11,3 +11,4 @@
 
 ## Case pages
 - Work detail pages reuse `src/components/site/case-layout.tsx`, including placeholder entries, to keep navigation, typography and closing links consistent without inventing case content.
+- Case-specific coded graphics live in focused site modules, keeping proposed formats separate from shared case layout and observed outcomes.
