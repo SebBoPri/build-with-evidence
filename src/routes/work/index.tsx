@@ -235,7 +235,7 @@ function WorkPage() {
                 className="next-case-card group relative flex min-h-96 flex-col justify-between overflow-hidden bg-brand-gold p-8 text-brand-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-foreground md:col-span-8 md:min-h-[26rem] md:p-12"
               >
                 <div className="flex items-start justify-between gap-4">
-                  <span className="text-xs font-bold uppercase">Case study</span>
+                  <span className="text-xs font-bold uppercase">Education</span>
                   <span className="font-mono text-xs opacity-50">05</span>
                 </div>
                 <p aria-hidden="true" className="my-8 font-display text-5xl opacity-30 md:text-6xl">1 → 12</p>
