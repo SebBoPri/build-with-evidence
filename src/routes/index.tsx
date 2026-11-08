@@ -188,7 +188,8 @@ function Index() {
               href="#contact"
               className="h-10 whitespace-nowrap px-5 max-sm:h-9 max-sm:gap-2 max-sm:px-3 max-sm:text-xs"
             >
-              Let's explore together
+              <span className="max-sm:hidden">Let's explore together</span>
+              <span className="sm:hidden">Let's talk</span>
             </CtaButton>
           </div>
         </div>
