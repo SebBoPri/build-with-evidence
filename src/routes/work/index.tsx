@@ -63,12 +63,21 @@ function WorkPage() {
               Work
             </Link>
           </nav>
-          <CtaButton
-            href="/#contact"
-            className="h-10 whitespace-nowrap px-5 max-sm:h-9 max-sm:gap-2 max-sm:px-3 max-sm:text-xs"
-          >
-            Let's explore together
-          </CtaButton>
+          <div className="flex items-center gap-4">
+            <Link
+              to="/"
+              className="text-sm font-medium text-foreground lg:hidden"
+            >
+              Home
+            </Link>
+            <CtaButton
+              href="/#contact"
+              className="h-10 whitespace-nowrap px-5 max-sm:h-9 max-sm:gap-2 max-sm:px-3 max-sm:text-xs"
+            >
+              <span className="max-sm:hidden">Let's explore together</span>
+              <span className="sm:hidden">Let's talk</span>
+            </CtaButton>
+          </div>
         </div>
       </header>
 
