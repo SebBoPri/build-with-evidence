@@ -178,12 +178,6 @@ function Index() {
             )}
           </nav>
           <div className="flex items-center gap-4">
-            <Link
-              to="/work"
-              className="text-sm font-medium text-foreground lg:hidden"
-            >
-              Work
-            </Link>
             <CtaButton
               href="#contact"
               className="h-10 whitespace-nowrap px-5 max-sm:h-9 max-sm:gap-2 max-sm:px-3 max-sm:text-xs"
@@ -193,6 +187,30 @@ function Index() {
             </CtaButton>
           </div>
         </div>
+        <nav aria-label="Sections" className="border-t border-hairline lg:hidden">
+          <div className="mx-auto flex w-full max-w-[84rem] snap-x gap-1 overflow-x-auto px-4 [scrollbar-width:none] md:px-8 [&::-webkit-scrollbar]:hidden">
+            {nav.map((item) =>
+              item.href.startsWith("/") ? (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  className="flex h-11 shrink-0 snap-start items-center whitespace-nowrap px-3 text-sm text-foreground/60 transition-colors hover:text-foreground"
+                  activeProps={{ className: "flex h-11 shrink-0 snap-start items-center whitespace-nowrap px-3 text-sm text-foreground" }}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="flex h-11 shrink-0 snap-start items-center whitespace-nowrap px-3 text-sm text-foreground/60 transition-colors hover:text-foreground"
+                >
+                  {item.label}
+                </a>
+              ),
+            )}
+          </div>
+        </nav>
       </header>
 
       <main id="top">
@@ -439,7 +457,7 @@ function Index() {
         </Section>
 
         {/* CTA */}
-        <section id="contact" className="scroll-mt-16 bg-brand-blue text-background">
+        <section id="contact" className="scroll-mt-16 bg-brand-blue text-background max-lg:scroll-mt-32">
           <div className="mx-auto w-full max-w-[84rem] px-6 py-20 md:px-10 md:py-28">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-background/70">
               Contact
