@@ -457,7 +457,7 @@ function Index() {
         </Section>
 
         {/* CTA */}
-        <section id="contact" className="scroll-mt-16 bg-brand-blue text-background">
+        <section id="contact" className="scroll-mt-16 bg-brand-blue text-background max-lg:scroll-mt-32">
           <div className="mx-auto w-full max-w-[84rem] px-6 py-20 md:px-10 md:py-28">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-background/70">
               Contact
