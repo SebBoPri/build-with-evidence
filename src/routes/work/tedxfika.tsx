@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/components/site/sections";
 import { CaseFigure, CaseFooter, CaseHeader, CaseIntro, CaseSection, ChapterNav, NextCase } from "@/components/site/case-layout";
 import { EngagementLadder, EveningRunSheet, OwnershipSplit } from "@/components/site/tedxfika-graphics";
+import tedxTeam from "@/assets/tedxfika-team.jpg.asset.json";
 
 const title = "The missing rung: keeping a 700-person audience between events | Slipstream Labs";
 const description = "A one-week Hyper Island sprint developing TEDxFika, a proposed monthly community format for TEDxStockholm. Pitched, but never run with real guests.";
@@ -52,6 +53,23 @@ function TedxFikaCase() {
             ["Limitation", "Never run with real guests"],
           ]}
         />
+
+        <section className="mx-auto w-full max-w-[72rem] px-6 pb-14 md:px-10 md:pb-20">
+          <CaseFigure caption="The sprint team at Hyper Island, September 2026.">
+            <div className="w-full overflow-hidden rounded-sm">
+              <img
+                src={tedxTeam.url}
+                alt="The Hyper Island sprint team posing with large red TEDx letters in front of a Hyper Island wall"
+                width={657}
+                height={588}
+                className="natural aspect-[16/9] w-full object-cover"
+                loading="eager"
+                decoding="async"
+              />
+            </div>
+          </CaseFigure>
+        </section>
+
         <ChapterNav chapters={chapters} accentClass={ACCENT} />
         <Section>
           <div className="mx-auto max-w-[72rem] space-y-20 md:space-y-24">
