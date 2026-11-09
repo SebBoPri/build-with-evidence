@@ -59,7 +59,7 @@ export function Section({
 }) {
   void accent;
   return (
-    <section id={id} className="rule-t scroll-mt-16 max-lg:scroll-mt-32">
+    <section id={id} className="rule-t scroll-mt-16 max-lg:scroll-mt-20">
       <div className="mx-auto w-full max-w-[84rem] px-6 py-24 md:px-10 md:py-28">
         {label ? (
           <Reveal className="mb-8">
