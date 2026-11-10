@@ -10,8 +10,14 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PortfolioRouteRouteImport } from './routes/portfolio/route'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as WorkRouteRouteImport } from './routes/work/route'
+import { Route as PortfolioIndexRouteImport } from './routes/portfolio/index'
+import { Route as PortfolioDataQualityMigrationRouteImport } from './routes/portfolio/data-quality-migration'
+import { Route as PortfolioSalmagenRouteImport } from './routes/portfolio/salmagen'
+import { Route as PortfolioSpotifyFeaturePrioritisationRouteImport } from './routes/portfolio/spotify-feature-prioritisation'
+import { Route as PortfolioTedxfikaRouteImport } from './routes/portfolio/tedxfika'
 import { Route as WorkIndexRouteImport } from './routes/work/index'
 import { Route as WorkDataQualityMigrationRouteImport } from './routes/work/data-quality-migration'
 import { Route as WorkHyperIslandRouteImport } from './routes/work/hyper-island'
@@ -24,6 +30,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PortfolioRouteRoute = PortfolioRouteRouteImport.update({
+  id: '/portfolio',
+  path: '/portfolio',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -33,6 +44,33 @@ const WorkRouteRoute = WorkRouteRouteImport.update({
   id: '/work',
   path: '/work',
   getParentRoute: () => rootRouteImport,
+} as any)
+const PortfolioIndexRoute = PortfolioIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => PortfolioRouteRoute,
+} as any)
+const PortfolioDataQualityMigrationRoute =
+  PortfolioDataQualityMigrationRouteImport.update({
+    id: '/data-quality-migration',
+    path: '/data-quality-migration',
+    getParentRoute: () => PortfolioRouteRoute,
+  } as any)
+const PortfolioSalmagenRoute = PortfolioSalmagenRouteImport.update({
+  id: '/salmagen',
+  path: '/salmagen',
+  getParentRoute: () => PortfolioRouteRoute,
+} as any)
+const PortfolioSpotifyFeaturePrioritisationRoute =
+  PortfolioSpotifyFeaturePrioritisationRouteImport.update({
+    id: '/spotify-feature-prioritisation',
+    path: '/spotify-feature-prioritisation',
+    getParentRoute: () => PortfolioRouteRoute,
+  } as any)
+const PortfolioTedxfikaRoute = PortfolioTedxfikaRouteImport.update({
+  id: '/tedxfika',
+  path: '/tedxfika',
+  getParentRoute: () => PortfolioRouteRoute,
 } as any)
 const WorkIndexRoute = WorkIndexRouteImport.update({
   id: '/',
@@ -69,74 +107,109 @@ const WorkTedxfikaRoute = WorkTedxfikaRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/portfolio': typeof PortfolioRouteRouteWithChildren
   '/work': typeof WorkRouteRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/portfolio/data-quality-migration': typeof PortfolioDataQualityMigrationRoute
+  '/portfolio/salmagen': typeof PortfolioSalmagenRoute
+  '/portfolio/spotify-feature-prioritisation': typeof PortfolioSpotifyFeaturePrioritisationRoute
+  '/portfolio/tedxfika': typeof PortfolioTedxfikaRoute
   '/work/data-quality-migration': typeof WorkDataQualityMigrationRoute
   '/work/hyper-island': typeof WorkHyperIslandRoute
   '/work/salmagen': typeof WorkSalmagenRoute
   '/work/spotify-feature-prioritisation': typeof WorkSpotifyFeaturePrioritisationRoute
   '/work/tedxfika': typeof WorkTedxfikaRoute
+  '/portfolio/': typeof PortfolioIndexRoute
   '/work/': typeof WorkIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/portfolio/data-quality-migration': typeof PortfolioDataQualityMigrationRoute
+  '/portfolio/salmagen': typeof PortfolioSalmagenRoute
+  '/portfolio/spotify-feature-prioritisation': typeof PortfolioSpotifyFeaturePrioritisationRoute
+  '/portfolio/tedxfika': typeof PortfolioTedxfikaRoute
   '/work/data-quality-migration': typeof WorkDataQualityMigrationRoute
   '/work/hyper-island': typeof WorkHyperIslandRoute
   '/work/salmagen': typeof WorkSalmagenRoute
   '/work/spotify-feature-prioritisation': typeof WorkSpotifyFeaturePrioritisationRoute
   '/work/tedxfika': typeof WorkTedxfikaRoute
+  '/portfolio': typeof PortfolioIndexRoute
   '/work': typeof WorkIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/portfolio': typeof PortfolioRouteRouteWithChildren
   '/work': typeof WorkRouteRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/portfolio/data-quality-migration': typeof PortfolioDataQualityMigrationRoute
+  '/portfolio/salmagen': typeof PortfolioSalmagenRoute
+  '/portfolio/spotify-feature-prioritisation': typeof PortfolioSpotifyFeaturePrioritisationRoute
+  '/portfolio/tedxfika': typeof PortfolioTedxfikaRoute
   '/work/data-quality-migration': typeof WorkDataQualityMigrationRoute
   '/work/hyper-island': typeof WorkHyperIslandRoute
   '/work/salmagen': typeof WorkSalmagenRoute
   '/work/spotify-feature-prioritisation': typeof WorkSpotifyFeaturePrioritisationRoute
   '/work/tedxfika': typeof WorkTedxfikaRoute
+  '/portfolio/': typeof PortfolioIndexRoute
   '/work/': typeof WorkIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/portfolio'
     | '/work'
     | '/sitemap.xml'
+    | '/portfolio/data-quality-migration'
+    | '/portfolio/salmagen'
+    | '/portfolio/spotify-feature-prioritisation'
+    | '/portfolio/tedxfika'
     | '/work/data-quality-migration'
     | '/work/hyper-island'
     | '/work/salmagen'
     | '/work/spotify-feature-prioritisation'
     | '/work/tedxfika'
+    | '/portfolio/'
     | '/work/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/sitemap.xml'
+    | '/portfolio/data-quality-migration'
+    | '/portfolio/salmagen'
+    | '/portfolio/spotify-feature-prioritisation'
+    | '/portfolio/tedxfika'
     | '/work/data-quality-migration'
     | '/work/hyper-island'
     | '/work/salmagen'
     | '/work/spotify-feature-prioritisation'
     | '/work/tedxfika'
+    | '/portfolio'
     | '/work'
   id:
     | '__root__'
     | '/'
+    | '/portfolio'
     | '/work'
     | '/sitemap.xml'
+    | '/portfolio/data-quality-migration'
+    | '/portfolio/salmagen'
+    | '/portfolio/spotify-feature-prioritisation'
+    | '/portfolio/tedxfika'
     | '/work/data-quality-migration'
     | '/work/hyper-island'
     | '/work/salmagen'
     | '/work/spotify-feature-prioritisation'
     | '/work/tedxfika'
+    | '/portfolio/'
     | '/work/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PortfolioRouteRoute: typeof PortfolioRouteRouteWithChildren
   WorkRouteRoute: typeof WorkRouteRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
@@ -148,6 +221,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portfolio': {
+      id: '/portfolio'
+      path: '/portfolio'
+      fullPath: '/portfolio'
+      preLoaderRoute: typeof PortfolioRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -163,6 +243,41 @@ declare module '@tanstack/react-router' {
       fullPath: '/work'
       preLoaderRoute: typeof WorkRouteRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/portfolio/': {
+      id: '/portfolio/'
+      path: '/'
+      fullPath: '/portfolio/'
+      preLoaderRoute: typeof PortfolioIndexRouteImport
+      parentRoute: typeof PortfolioRouteRoute
+    }
+    '/portfolio/data-quality-migration': {
+      id: '/portfolio/data-quality-migration'
+      path: '/data-quality-migration'
+      fullPath: '/portfolio/data-quality-migration'
+      preLoaderRoute: typeof PortfolioDataQualityMigrationRouteImport
+      parentRoute: typeof PortfolioRouteRoute
+    }
+    '/portfolio/salmagen': {
+      id: '/portfolio/salmagen'
+      path: '/salmagen'
+      fullPath: '/portfolio/salmagen'
+      preLoaderRoute: typeof PortfolioSalmagenRouteImport
+      parentRoute: typeof PortfolioRouteRoute
+    }
+    '/portfolio/spotify-feature-prioritisation': {
+      id: '/portfolio/spotify-feature-prioritisation'
+      path: '/spotify-feature-prioritisation'
+      fullPath: '/portfolio/spotify-feature-prioritisation'
+      preLoaderRoute: typeof PortfolioSpotifyFeaturePrioritisationRouteImport
+      parentRoute: typeof PortfolioRouteRoute
+    }
+    '/portfolio/tedxfika': {
+      id: '/portfolio/tedxfika'
+      path: '/tedxfika'
+      fullPath: '/portfolio/tedxfika'
+      preLoaderRoute: typeof PortfolioTedxfikaRouteImport
+      parentRoute: typeof PortfolioRouteRoute
     }
     '/work/': {
       id: '/work/'
@@ -209,6 +324,27 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface PortfolioRouteRouteChildren {
+  PortfolioDataQualityMigrationRoute: typeof PortfolioDataQualityMigrationRoute
+  PortfolioSalmagenRoute: typeof PortfolioSalmagenRoute
+  PortfolioSpotifyFeaturePrioritisationRoute: typeof PortfolioSpotifyFeaturePrioritisationRoute
+  PortfolioTedxfikaRoute: typeof PortfolioTedxfikaRoute
+  PortfolioIndexRoute: typeof PortfolioIndexRoute
+}
+
+const PortfolioRouteRouteChildren: PortfolioRouteRouteChildren = {
+  PortfolioDataQualityMigrationRoute: PortfolioDataQualityMigrationRoute,
+  PortfolioSalmagenRoute: PortfolioSalmagenRoute,
+  PortfolioSpotifyFeaturePrioritisationRoute:
+    PortfolioSpotifyFeaturePrioritisationRoute,
+  PortfolioTedxfikaRoute: PortfolioTedxfikaRoute,
+  PortfolioIndexRoute: PortfolioIndexRoute,
+}
+
+const PortfolioRouteRouteWithChildren = PortfolioRouteRoute._addFileChildren(
+  PortfolioRouteRouteChildren,
+)
+
 interface WorkRouteRouteChildren {
   WorkDataQualityMigrationRoute: typeof WorkDataQualityMigrationRoute
   WorkHyperIslandRoute: typeof WorkHyperIslandRoute
@@ -233,6 +369,7 @@ const WorkRouteRouteWithChildren = WorkRouteRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PortfolioRouteRoute: PortfolioRouteRouteWithChildren,
   WorkRouteRoute: WorkRouteRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }

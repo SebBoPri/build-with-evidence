@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { Wordmark } from "@/components/site/brand";
 import { CtaButton } from "@/components/site/cta-button";
 import { cn } from "@/lib/utils";
+import { casePath, indexPath, PORTFOLIO_EMAIL, useSiteVariant, type CaseSlug } from "@/components/site/site-variant";
 
 const homeNav = [
   { label: "Problem", hash: "problem" },
@@ -11,7 +12,52 @@ const homeNav = [
   { label: "About", hash: "about" },
 ];
 
+export function PortfolioHeader() {
+  return (
+    <header className="sticky top-0 z-50 border-b border-hairline bg-background/90 backdrop-blur-md">
+      <div className="mx-auto flex h-20 w-full max-w-[84rem] items-center justify-between px-6 md:px-10">
+        <Link to="/portfolio" className="font-display text-xl text-foreground md:text-2xl">
+          Sebastian Bouvier
+        </Link>
+        <CtaButton
+          href="#get-in-touch"
+          className="h-10 whitespace-nowrap px-5 max-sm:h-9 max-sm:gap-2 max-sm:px-3 max-sm:text-xs"
+        >
+          Get in touch
+        </CtaButton>
+      </div>
+    </header>
+  );
+}
+
+/** Personal closing block used on the standalone portfolio instead of the consultancy pitch. */
+export function PortfolioContact() {
+  return (
+    <div id="get-in-touch" className="max-w-3xl scroll-mt-28">
+      <h2 className="display-md text-balance">Want to talk about how I work?</h2>
+      <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+        I&rsquo;m happy to walk through any of these cases in more detail.
+      </p>
+      <CtaButton href={`mailto:${PORTFOLIO_EMAIL}`} className="mt-8">
+        {PORTFOLIO_EMAIL}
+      </CtaButton>
+    </div>
+  );
+}
+
+export function PortfolioFooter() {
+  return (
+    <footer className="rule-t">
+      <div className="mx-auto w-full max-w-[84rem] px-6 py-10 text-sm text-muted-foreground md:px-10">
+        <p>Sebastian Bouvier, Stockholm</p>
+        <p className="mt-1">© 2026</p>
+      </div>
+    </footer>
+  );
+}
+
 export function CaseHeader() {
+  if (useSiteVariant() === "portfolio") return <PortfolioHeader />;
   return (
     <header className="sticky top-0 z-50 border-b border-hairline bg-background/90 backdrop-blur-md">
       <div className="mx-auto flex h-20 w-full max-w-[84rem] items-center justify-between px-6 md:px-10">
@@ -190,12 +236,13 @@ export function CaseIntro({
   overview: [string, string][];
   accentClass: string;
 }) {
+  const variant = useSiteVariant();
   return (
     <section>
       <div className="mx-auto w-full max-w-[72rem] px-6 pb-10 pt-12 md:px-10 md:pb-14 md:pt-20">
         <p className="label-mono fade-up">
-          <Link to="/work" className="transition-colors hover:text-foreground">
-            Work
+          <Link to={indexPath(variant)} className="transition-colors hover:text-foreground">
+            {variant === "portfolio" ? "Portfolio" : "Work"}
           </Link>
           {" / "}Case
         </p>
@@ -235,16 +282,18 @@ export function NextCase({
   context,
   surfaceClass,
 }: {
-  to: "/work/salmagen" | "/work/data-quality-migration" | "/work/spotify-feature-prioritisation";
+  to: `/work/${CaseSlug}`;
   title: string;
   context: string;
   surfaceClass: string;
 }) {
+  const variant = useSiteVariant();
+  const target = casePath(variant, to.replace("/work/", "") as CaseSlug);
   return (
     <section className="mx-auto w-full max-w-[72rem] px-6 py-16 md:px-10 md:py-24">
       <p className="label-mono">Next case</p>
       <Link
-        to={to}
+        to={target}
         className={cn(
           "next-case-card group mt-6 block px-7 py-10 transition-opacity hover:opacity-95 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-foreground md:px-12 md:py-14",
           surfaceClass,
@@ -256,6 +305,9 @@ export function NextCase({
           Read the case <span aria-hidden="true" className="inline-block transition-transform group-hover:translate-x-1">&rarr;</span>
         </p>
       </Link>
+      {variant === "portfolio" ? (
+        <div className="mt-16"><PortfolioContact /></div>
+      ) : (
       <div className="mt-16 max-w-3xl">
         <h2 className="display-md text-balance">If this sounds familiar, let&rsquo;s find out.</h2>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
@@ -265,11 +317,13 @@ export function NextCase({
           Let's explore together
         </CtaButton>
       </div>
+      )}
     </section>
   );
 }
 
 export function CaseFooter() {
+  if (useSiteVariant() === "portfolio") return <PortfolioFooter />;
   return (
     <footer className="rule-t">
       <div className="mx-auto flex w-full max-w-[84rem] flex-col gap-3 px-6 py-10 text-sm text-muted-foreground md:flex-row md:items-end md:justify-between md:px-10">
