@@ -32,4 +32,4 @@ export function indexPath(variant: SiteVariant) {
   return variant === "portfolio" ? ("/portfolio" as const) : ("/work" as const);
 }
 
-export const PORTFOLIO_EMAIL = "hello@slipstreamlabs.se";
+export const PORTFOLIO_EMAIL = "Sebastian.Bouvier.Lundqvist@gmail.com";
