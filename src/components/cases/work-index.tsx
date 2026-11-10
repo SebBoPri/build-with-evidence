@@ -105,15 +105,38 @@ export function WorkIndex() {
                     </p>
                   </div>
                 </div>
-                <svg
-                  className="absolute -bottom-[10%] -right-[10%] w-3/4 opacity-15 transition-all duration-700 group-hover:scale-105 group-hover:opacity-25"
-                  viewBox="0 0 200 200"
-                  aria-hidden="true"
-                >
-                  <circle cx="100" cy="100" r="80" fill="none" stroke="#151515" strokeWidth="0.5" />
-                  <circle cx="100" cy="100" r="60" fill="none" stroke="#151515" strokeWidth="0.5" />
-                  <path d="M20,100 L180,100 M100,20 L100,180" stroke="#151515" strokeWidth="0.5" />
-                </svg>
+                <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                  <svg
+                    width="140"
+                    height="180"
+                    viewBox="0 0 120 160"
+                    fill="none"
+                    className="opacity-15 transition-opacity duration-500 group-hover:opacity-25"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20,40 Q60,10 100,40 L100,120 Q60,150 20,120 Z"
+                      stroke="#151515"
+                      strokeWidth="1.5"
+                      strokeDasharray="6 3"
+                    />
+                    <path
+                      d="M38,58 L42,62 L48,54 M56,58 L82,58"
+                      stroke="#151515"
+                      strokeWidth="0.8"
+                    />
+                    <path
+                      d="M38,80 L42,84 L48,76 M56,80 L82,80"
+                      stroke="#151515"
+                      strokeWidth="0.8"
+                    />
+                    <path
+                      d="M38,102 L42,106 L48,98 M56,102 L82,102"
+                      stroke="#151515"
+                      strokeWidth="0.8"
+                    />
+                  </svg>
+                </div>
               </Link>
 
               {/* Mapping fund order flow */}
@@ -206,15 +229,34 @@ export function WorkIndex() {
                     </p>
                   </div>
                 </div>
-                <svg
-                  className="absolute bottom-0 right-0 w-1/2 translate-x-1/4 translate-y-1/4 opacity-20"
-                  viewBox="0 0 100 100"
-                  aria-hidden="true"
-                >
-                  <circle cx="50" cy="50" r="45" fill="none" stroke="white" strokeWidth="0.5" />
-                  <circle cx="50" cy="50" r="35" fill="none" stroke="white" strokeWidth="0.5" />
-                  <circle cx="50" cy="50" r="25" fill="none" stroke="white" strokeWidth="0.5" />
-                </svg>
+                <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                  <svg
+                    width="140"
+                    height="180"
+                    viewBox="0 0 120 160"
+                    fill="none"
+                    className="opacity-15 transition-opacity duration-500 group-hover:opacity-25"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20,40 Q60,10 100,40 L100,120 Q60,150 20,120 Z"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeDasharray="6 3"
+                    />
+                    <rect
+                      x="34"
+                      y="56"
+                      width="52"
+                      height="10"
+                      stroke="white"
+                      strokeWidth="0.8"
+                      strokeDasharray="3 2"
+                    />
+                    <rect x="34" y="76" width="38" height="10" stroke="white" strokeWidth="0.8" />
+                    <rect x="34" y="96" width="24" height="10" stroke="white" strokeWidth="0.8" />
+                  </svg>
+                </div>
               </Link>
 
               {/* TEDxFika community concept */}
@@ -222,14 +264,45 @@ export function WorkIndex() {
                 to={casePath(variant, "tedxfika")}
                 className="next-case-card group relative flex min-h-96 flex-col justify-between overflow-hidden bg-brand-gold p-8 text-brand-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-foreground md:col-span-8 md:min-h-[26rem] md:p-12"
               >
-                <div className="flex items-start justify-between gap-4">
+                <div className="relative z-10 flex items-start justify-between gap-4">
                   <span className="text-xs font-bold uppercase">Education</span>
                   <span className="font-mono text-xs opacity-50">05</span>
                 </div>
-                <p aria-hidden="true" className="my-8 font-display text-5xl opacity-30 md:text-6xl">1 → 12</p>
-                <div>
+                <div className="relative z-10">
                   <h3 className="mb-4 max-w-2xl font-display text-3xl md:text-4xl">The missing rung: keeping a 700-person audience between events</h3>
                   <p className="text-sm font-medium uppercase opacity-70">TEDxFika · Hyper Island sprint · September 2026 · Read the case</p>
+                </div>
+                <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                  <svg
+                    width="140"
+                    height="180"
+                    viewBox="0 0 120 160"
+                    fill="none"
+                    className="opacity-15 transition-opacity duration-500 group-hover:opacity-25"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20,40 Q60,10 100,40 L100,120 Q60,150 20,120 Z"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeDasharray="6 3"
+                    />
+                    <path
+                      d="M38,74 L78,74 L74,108 L42,108 Z"
+                      stroke="currentColor"
+                      strokeWidth="0.8"
+                    />
+                    <path
+                      d="M78,82 Q90,84 88,94 Q86,102 76,100"
+                      stroke="currentColor"
+                      strokeWidth="0.8"
+                    />
+                    <path
+                      d="M50,54 Q54,60 50,66 M60,52 Q64,58 60,64 M70,54 Q74,60 70,66"
+                      stroke="currentColor"
+                      strokeWidth="0.8"
+                    />
+                  </svg>
                 </div>
               </Link>
             </div>
