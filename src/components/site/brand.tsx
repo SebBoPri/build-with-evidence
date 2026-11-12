@@ -1,25 +1,12 @@
 /** Brand marks and technical line-art used across the site. */
-import { useId } from "react";
 
 export function Wordmark({ className = "" }: { className?: string }) {
-  const gid = `slfade-${useId().replace(/:/g, "")}`;
   return (
     <div
       className={`flex w-[8.9rem] flex-col text-foreground ${className}`}
       aria-label="Slipstream Labs"
     >
-      <svg viewBox="0 0 640 64" className="h-[0.9rem] w-full" fill="none" aria-hidden="true">
-        <defs>
-          <linearGradient id={gid} x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0" stopColor="currentColor" stopOpacity="1" />
-            <stop offset="0.55" stopColor="currentColor" stopOpacity="0.6" />
-            <stop offset="1" stopColor="currentColor" stopOpacity="0.05" />
-          </linearGradient>
-        </defs>
-        <polygon points="0,0 638,31 0,24" fill={`url(#${gid})`} />
-        <polygon points="0,40 638,34 0,64" fill={`url(#${gid})`} />
-      </svg>
-      <span className="mt-1 flex items-baseline whitespace-nowrap font-sans text-[13px] uppercase leading-none tracking-[0.18em] sm:text-[15px]">
+      <span className="flex items-baseline whitespace-nowrap font-sans text-[13px] uppercase leading-none tracking-[0.18em] sm:text-[15px]">
         <span className="font-medium">Slipstream</span>
         <span className="ml-1.5 font-normal opacity-40">Labs</span>
       </span>
