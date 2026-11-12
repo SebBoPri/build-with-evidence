@@ -4,8 +4,7 @@ import { Wordmark } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import { ContactForm } from "@/components/site/contact-form";
 import { CtaButton } from "@/components/site/cta-button";
-import heroStream from "@/assets/hero-stream.jpg.asset.json";
-import heroStreamWebp from "@/assets/hero-stream.webp.asset.json";
+import { HeroRays } from "@/components/site/hero-rays";
 import sebastianPortrait from "@/assets/sebastian-bouvier.png.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -66,11 +65,11 @@ export const Route = createFileRoute("/")({
 });
 
 const nav = [
-  { href: "#problem", label: "Problem" },
-  { href: "#sprint", label: "Discovery Sprint" },
+  { href: "#problem", label: "The problem" },
+  { href: "#sprint", label: "The Discovery Sprint" },
   { href: "#approach", label: "Approach" },
-  { href: "#about", label: "About" },
   { href: "/work", label: "Work" },
+  { href: "#about", label: "About" },
 ];
 
 const problemCases = [
@@ -150,7 +149,7 @@ const sprintGet = [
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <header className="theme-dark-band sticky top-0 z-50 border-b border-hairline bg-background/80 backdrop-blur-md">
+      <header className="theme-dark-band sticky top-0 z-50 !bg-black/80 backdrop-blur-md">
         <div className="mx-auto flex h-16 w-full max-w-[84rem] items-center justify-between px-6 md:px-10 lg:h-20">
           <a href="#top" aria-label="Slipstream Labs home">
             <Wordmark />
@@ -182,13 +181,12 @@ function Index() {
             <Link to="/work" className="text-sm font-medium text-foreground lg:hidden">
               Work
             </Link>
-            <CtaButton
+            <a
               href="#contact"
-              className="h-10 whitespace-nowrap px-5 max-sm:h-9 max-sm:gap-2 max-sm:px-3 max-sm:text-xs"
+              className="inline-flex h-10 items-center rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 max-sm:h-9 max-sm:px-4"
             >
-              <span className="max-sm:hidden">Let's explore together</span>
-              <span className="sm:hidden">Let's talk</span>
-            </CtaButton>
+              Contact
+            </a>
           </div>
           </div>
         </div>
@@ -197,49 +195,30 @@ function Index() {
       <main id="top">
 
         {/* Hero */}
-        <section className="theme-dark-band relative overflow-hidden">
-          <picture>
-            <source srcSet={heroStreamWebp.url} type="image/webp" />
-            <img
-              src={heroStream.url}
-              alt=""
-              width={1600}
-              height={1073}
-              loading="eager"
-              fetchPriority="high"
-              className="absolute inset-0 h-full w-full object-cover object-[70%_center]"
-            />
-          </picture>
-          <div
-            className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-black/10"
-            aria-hidden="true"
-          />
-          <div className="relative mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
-            <WorkLabel className="fade-up">Product discovery &amp; strategy</WorkLabel>
-            <h1 className="fade-up delay-1 mt-10 max-w-4xl text-balance font-display text-5xl leading-[1.05] tracking-tight text-foreground md:text-7xl">
-              <span>Find what&rsquo;s worth</span>{" "}
-              <br />
-              <span className="text-muted-foreground">building.</span>
+        <section className="theme-dark-band relative -mt-16 overflow-hidden !bg-black lg:-mt-20">
+          <HeroRays className="absolute inset-0 h-full w-full" />
+          <div className="relative mx-auto flex min-h-svh w-full max-w-[84rem] flex-col justify-center px-6 pb-60 pt-32 md:px-10 md:pb-72 lg:pb-24 lg:pt-44">
+            <p className="fade-up flex items-center gap-4 text-base font-medium text-foreground md:text-lg">
+              <span className="h-px w-10 bg-foreground md:w-12" aria-hidden="true" />
+              Product discovery &amp; strategy
+            </p>
+            <h1 className="fade-up delay-1 mt-8 max-w-4xl font-sans text-5xl font-semibold leading-[1.02] tracking-[-0.035em] text-foreground sm:text-6xl md:text-7xl lg:text-[5.5rem]">
+              Find what&rsquo;s worth building.
             </h1>
-            <div className="fade-up delay-2 mt-10 max-w-2xl space-y-5 text-xl font-light leading-relaxed text-muted-foreground md:text-2xl">
-              <p>
-                Slipstream Labs helps product teams turn uncertain ideas and opportunities into
-                evidence-backed paths forward, before committing significant engineering resources.
-              </p>
-            </div>
-            <div className="fade-up delay-3 mt-12 flex flex-wrap items-center gap-3">
-              <CtaButton href="#contact">Let's explore together</CtaButton>
+            <p className="fade-up delay-2 mt-8 max-w-xl text-lg leading-snug text-foreground/90 md:text-2xl md:leading-snug">
+              Slipstream Labs helps product teams turn uncertain ideas and opportunities into
+              evidence-backed paths forward, before committing significant engineering resources.
+            </p>
+            <div className="fade-up delay-3 mt-12 flex flex-wrap items-center gap-x-10 gap-y-6">
+              <CtaButton href="#contact" className="h-14 rounded-md px-7 text-base">
+                Let's explore together
+              </CtaButton>
               <a
                 href="#sprint"
-                className="inline-flex h-12 items-center border border-border px-6 text-sm font-medium transition-colors hover:border-foreground"
+                className="text-base font-medium text-foreground underline decoration-foreground/60 decoration-1 underline-offset-[10px] transition-colors hover:decoration-foreground"
               >
                 How the sprint works
               </a>
-            </div>
-            <p className="label-mono fade-up delay-4 mt-14">Evidence before build.</p>
-            <div className="mt-20 flex flex-wrap items-center justify-between gap-x-8 gap-y-2 border-t border-hairline pt-6 md:mt-28">
-              <p className="label-mono">Assumption · Kill-line · Evidence · Decision</p>
-              <p className="label-mono">Stockholm, Sweden</p>
             </div>
           </div>
         </section>
