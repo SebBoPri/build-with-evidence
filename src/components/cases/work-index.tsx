@@ -1,64 +1,19 @@
 import { Link } from "@tanstack/react-router";
 import { Section, WorkLabel, WorkSubheading } from "@/components/site/sections";
-import { Wordmark } from "@/components/site/brand";
 import { CtaButton } from "@/components/site/cta-button";
-import { PortfolioContact, PortfolioFooter, PortfolioHeader } from "@/components/site/case-layout";
+import {
+  PortfolioContact,
+  PortfolioFooter,
+  PortfolioHeader,
+  StudioHeader,
+} from "@/components/site/case-layout";
 import { casePath, useSiteVariant } from "@/components/site/site-variant";
-
-const homeNav = [
-  { label: "Problem", hash: "problem" },
-  { label: "Discovery Sprint", hash: "sprint" },
-  { label: "Approach", hash: "approach" },
-  { label: "About", hash: "about" },
-];
 
 export function WorkIndex() {
   const variant = useSiteVariant();
   return (
     <div className="min-h-screen">
-      {variant === "portfolio" ? <PortfolioHeader /> : (
-      <header className="sticky top-0 z-50 border-b border-hairline bg-background/80 backdrop-blur-md">
-        <div className="mx-auto flex h-20 w-full max-w-[84rem] items-center justify-between px-6 md:px-10">
-          <Link to="/" aria-label="Slipstream Labs home">
-            <Wordmark />
-          </Link>
-          <nav aria-label="Primary" className="hidden items-center gap-8 lg:flex">
-            {homeNav.map((item) => (
-              <Link
-                key={item.hash}
-                to="/"
-                hash={item.hash}
-                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-              >
-                {item.label}
-              </Link>
-            ))}
-            <Link
-              to="/work"
-              className="text-sm text-foreground"
-              activeProps={{ className: "text-sm text-foreground" }}
-            >
-              Work
-            </Link>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Link
-              to="/"
-              className="text-sm font-medium text-foreground lg:hidden"
-            >
-              Home
-            </Link>
-            <CtaButton
-              href="/#contact"
-              className="h-10 whitespace-nowrap px-5 max-sm:h-9 max-sm:gap-2 max-sm:px-3 max-sm:text-xs"
-            >
-              <span className="max-sm:hidden">Let's explore together</span>
-              <span className="sm:hidden">Let's talk</span>
-            </CtaButton>
-          </div>
-        </div>
-      </header>
-      )}
+      {variant === "portfolio" ? <PortfolioHeader /> : <StudioHeader />}
 
       <main>
         {/* Statement */}

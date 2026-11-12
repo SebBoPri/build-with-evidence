@@ -6,10 +6,9 @@ import { cn } from "@/lib/utils";
 import { casePath, indexPath, PORTFOLIO_EMAIL, useSiteVariant, type CaseSlug } from "@/components/site/site-variant";
 
 const homeNav = [
-  { label: "Problem", hash: "problem" },
-  { label: "Discovery Sprint", hash: "sprint" },
+  { label: "The problem", hash: "problem" },
+  { label: "The Discovery Sprint", hash: "sprint" },
   { label: "Approach", hash: "approach" },
-  { label: "About", hash: "about" },
 ];
 
 export function PortfolioHeader() {
@@ -56,53 +55,58 @@ export function PortfolioFooter() {
   );
 }
 
-export function CaseHeader() {
-  if (useSiteVariant() === "portfolio") return <PortfolioHeader />;
+const studioLink = "text-[0.9375rem] text-foreground transition-opacity hover:opacity-60";
+const studioActive = { className: "underline decoration-foreground/40 underline-offset-8" };
+
+/** Dark Slipstream Labs header for /work pages, matching the home page header. */
+export function StudioHeader() {
   return (
-    <header className="sticky top-0 z-50 border-b border-hairline bg-background/90 backdrop-blur-md">
-      <div className="mx-auto flex h-20 w-full max-w-[84rem] items-center justify-between px-6 md:px-10">
+    <header className="theme-dark-band sticky top-0 z-50 border-b border-hairline !bg-black">
+      <div className="mx-auto flex h-16 w-full max-w-[84rem] items-center justify-between px-6 md:px-10 lg:h-20">
         <Link to="/" aria-label="Slipstream Labs home">
           <Wordmark />
         </Link>
-        <nav aria-label="Primary" className="hidden items-center gap-8 lg:flex">
-          {homeNav.map((item) => (
-            <Link
-              key={item.hash}
-              to="/"
-              hash={item.hash}
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-            >
-              {item.label}
+        <div className="flex items-center gap-10">
+          <nav aria-label="Primary" className="hidden items-center gap-10 lg:flex">
+            {homeNav.map((item) => (
+              <Link key={item.hash} to="/" hash={item.hash} className={studioLink}>
+                {item.label}
+              </Link>
+            ))}
+            <Link to="/work" className={studioLink} activeProps={studioActive}>
+              Work
             </Link>
-          ))}
-          <Link to="/work" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-            Work
-          </Link>
-        </nav>
-        <div className="flex items-center gap-4">
-          <Link
-            to="/"
-            className="text-sm font-medium text-foreground lg:hidden"
-          >
-            Home
-          </Link>
-          <Link
-            to="/work"
-            className="text-sm font-medium text-foreground lg:hidden"
-          >
-            Work
-          </Link>
-          <CtaButton
-            href="/#contact"
-            className="h-10 whitespace-nowrap px-5 max-sm:h-9 max-sm:gap-2 max-sm:px-3 max-sm:text-xs"
-          >
-            <span className="max-sm:hidden">Let's explore together</span>
-            <span className="sm:hidden">Let's talk</span>
-          </CtaButton>
+            <Link to="/" hash="about" className={studioLink}>
+              About
+            </Link>
+          </nav>
+          <div className="flex items-center gap-4">
+            <Link to="/" className="hidden text-sm font-medium text-foreground sm:inline lg:hidden">
+              Home
+            </Link>
+            <Link
+              to="/work"
+              className="text-sm font-medium text-foreground lg:hidden"
+              activeProps={studioActive}
+            >
+              Work
+            </Link>
+            <a
+              href="/#contact"
+              className="inline-flex h-10 items-center rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 max-sm:h-9 max-sm:px-4"
+            >
+              Contact
+            </a>
+          </div>
         </div>
       </div>
     </header>
   );
+}
+
+export function CaseHeader() {
+  if (useSiteVariant() === "portfolio") return <PortfolioHeader />;
+  return <StudioHeader />;
 }
 
 export type Chapter = readonly [number: string, label: string, id: string];
