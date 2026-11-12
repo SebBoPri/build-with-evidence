@@ -19,21 +19,12 @@ export function PortfolioHeader() {
         <Link to="/portfolio" className="font-display text-xl text-foreground md:text-2xl">
           Sebastian Bouvier
         </Link>
-        <div className="flex items-center gap-4 sm:gap-6">
-          <Link
-            to="/portfolio/cv"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            activeProps={{ className: "text-sm font-medium text-foreground" }}
-          >
-            CV
-          </Link>
-          <CtaButton
-            href="#get-in-touch"
-            className="h-10 whitespace-nowrap px-5 max-sm:h-9 max-sm:gap-2 max-sm:px-3 max-sm:text-xs"
-          >
-            Get in touch
-          </CtaButton>
-        </div>
+        <CtaButton
+          href="#get-in-touch"
+          className="h-10 whitespace-nowrap px-5 max-sm:h-9 max-sm:gap-2 max-sm:px-3 max-sm:text-xs"
+        >
+          Get in touch
+        </CtaButton>
       </div>
     </header>
   );
@@ -47,17 +38,9 @@ export function PortfolioContact() {
       <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
         I&rsquo;m happy to walk through any of these cases in more detail.
       </p>
-      <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-5">
-        <CtaButton href={`mailto:${PORTFOLIO_EMAIL}`} className="max-sm:px-4 max-sm:text-xs">
-          {PORTFOLIO_EMAIL}
-        </CtaButton>
-        <Link
-          to="/portfolio/cv"
-          className="inline-flex items-center gap-2 text-sm font-medium text-foreground underline decoration-foreground/30 underline-offset-4 transition-colors hover:decoration-foreground"
-        >
-          View my CV <span aria-hidden="true">→</span>
-        </Link>
-      </div>
+      <CtaButton href={`mailto:${PORTFOLIO_EMAIL}`} className="mt-8">
+        {PORTFOLIO_EMAIL}
+      </CtaButton>
     </div>
   );
 }

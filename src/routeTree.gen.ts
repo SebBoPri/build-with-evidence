@@ -14,7 +14,6 @@ import { Route as PortfolioRouteRouteImport } from './routes/portfolio/route'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as WorkRouteRouteImport } from './routes/work/route'
 import { Route as PortfolioIndexRouteImport } from './routes/portfolio/index'
-import { Route as PortfolioCvRouteImport } from './routes/portfolio/cv'
 import { Route as PortfolioDataQualityMigrationRouteImport } from './routes/portfolio/data-quality-migration'
 import { Route as PortfolioSalmagenRouteImport } from './routes/portfolio/salmagen'
 import { Route as PortfolioSpotifyFeaturePrioritisationRouteImport } from './routes/portfolio/spotify-feature-prioritisation'
@@ -49,11 +48,6 @@ const WorkRouteRoute = WorkRouteRouteImport.update({
 const PortfolioIndexRoute = PortfolioIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => PortfolioRouteRoute,
-} as any)
-const PortfolioCvRoute = PortfolioCvRouteImport.update({
-  id: '/cv',
-  path: '/cv',
   getParentRoute: () => PortfolioRouteRoute,
 } as any)
 const PortfolioDataQualityMigrationRoute =
@@ -116,7 +110,6 @@ export interface FileRoutesByFullPath {
   '/portfolio': typeof PortfolioRouteRouteWithChildren
   '/work': typeof WorkRouteRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/portfolio/cv': typeof PortfolioCvRoute
   '/portfolio/data-quality-migration': typeof PortfolioDataQualityMigrationRoute
   '/portfolio/salmagen': typeof PortfolioSalmagenRoute
   '/portfolio/spotify-feature-prioritisation': typeof PortfolioSpotifyFeaturePrioritisationRoute
@@ -132,7 +125,6 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/portfolio/cv': typeof PortfolioCvRoute
   '/portfolio/data-quality-migration': typeof PortfolioDataQualityMigrationRoute
   '/portfolio/salmagen': typeof PortfolioSalmagenRoute
   '/portfolio/spotify-feature-prioritisation': typeof PortfolioSpotifyFeaturePrioritisationRoute
@@ -151,7 +143,6 @@ export interface FileRoutesById {
   '/portfolio': typeof PortfolioRouteRouteWithChildren
   '/work': typeof WorkRouteRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/portfolio/cv': typeof PortfolioCvRoute
   '/portfolio/data-quality-migration': typeof PortfolioDataQualityMigrationRoute
   '/portfolio/salmagen': typeof PortfolioSalmagenRoute
   '/portfolio/spotify-feature-prioritisation': typeof PortfolioSpotifyFeaturePrioritisationRoute
@@ -171,7 +162,6 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/work'
     | '/sitemap.xml'
-    | '/portfolio/cv'
     | '/portfolio/data-quality-migration'
     | '/portfolio/salmagen'
     | '/portfolio/spotify-feature-prioritisation'
@@ -187,7 +177,6 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/sitemap.xml'
-    | '/portfolio/cv'
     | '/portfolio/data-quality-migration'
     | '/portfolio/salmagen'
     | '/portfolio/spotify-feature-prioritisation'
@@ -205,7 +194,6 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/work'
     | '/sitemap.xml'
-    | '/portfolio/cv'
     | '/portfolio/data-quality-migration'
     | '/portfolio/salmagen'
     | '/portfolio/spotify-feature-prioritisation'
@@ -261,13 +249,6 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/portfolio/'
       preLoaderRoute: typeof PortfolioIndexRouteImport
-      parentRoute: typeof PortfolioRouteRoute
-    }
-    '/portfolio/cv': {
-      id: '/portfolio/cv'
-      path: '/cv'
-      fullPath: '/portfolio/cv'
-      preLoaderRoute: typeof PortfolioCvRouteImport
       parentRoute: typeof PortfolioRouteRoute
     }
     '/portfolio/data-quality-migration': {
@@ -344,7 +325,6 @@ declare module '@tanstack/react-router' {
 }
 
 interface PortfolioRouteRouteChildren {
-  PortfolioCvRoute: typeof PortfolioCvRoute
   PortfolioDataQualityMigrationRoute: typeof PortfolioDataQualityMigrationRoute
   PortfolioSalmagenRoute: typeof PortfolioSalmagenRoute
   PortfolioSpotifyFeaturePrioritisationRoute: typeof PortfolioSpotifyFeaturePrioritisationRoute
@@ -353,7 +333,6 @@ interface PortfolioRouteRouteChildren {
 }
 
 const PortfolioRouteRouteChildren: PortfolioRouteRouteChildren = {
-  PortfolioCvRoute: PortfolioCvRoute,
   PortfolioDataQualityMigrationRoute: PortfolioDataQualityMigrationRoute,
   PortfolioSalmagenRoute: PortfolioSalmagenRoute,
   PortfolioSpotifyFeaturePrioritisationRoute:
