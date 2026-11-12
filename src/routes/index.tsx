@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Section, FullBleedFigure, WorkLabel, WorkSubheading } from "@/components/site/sections";
+import { Section, WorkLabel, WorkSubheading } from "@/components/site/sections";
 import { Wordmark } from "@/components/site/brand";
 import { ApproachRail } from "@/components/site/approach-rail";
 import { ContactForm } from "@/components/site/contact-form";
@@ -150,7 +150,7 @@ const sprintGet = [
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <header className="sticky top-0 z-50 border-b border-hairline bg-background/80 backdrop-blur-md">
+      <header className="theme-dark-band sticky top-0 z-50 border-b border-hairline bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex h-16 w-full max-w-[84rem] items-center justify-between px-6 md:px-10 lg:h-20">
           <a href="#top" aria-label="Slipstream Labs home">
             <Wordmark />
@@ -197,8 +197,24 @@ function Index() {
       <main id="top">
 
         {/* Hero */}
-        <section>
-          <div className="mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
+        <section className="theme-dark-band relative overflow-hidden">
+          <picture>
+            <source srcSet={heroStreamWebp.url} type="image/webp" />
+            <img
+              src={heroStream.url}
+              alt=""
+              width={1600}
+              height={1073}
+              loading="eager"
+              fetchPriority="high"
+              className="absolute inset-0 h-full w-full object-cover object-[70%_center]"
+            />
+          </picture>
+          <div
+            className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-black/10"
+            aria-hidden="true"
+          />
+          <div className="relative mx-auto w-full max-w-[84rem] px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
             <WorkLabel className="fade-up">Product discovery &amp; strategy</WorkLabel>
             <h1 className="fade-up delay-1 mt-10 max-w-4xl text-balance font-display text-5xl leading-[1.05] tracking-tight text-foreground md:text-7xl">
               <span>Find what&rsquo;s worth</span>{" "}
@@ -226,16 +242,6 @@ function Index() {
               <p className="label-mono">Stockholm, Sweden</p>
             </div>
           </div>
-          <FullBleedFigure
-            src={heroStream.url}
-            srcWebp={heroStreamWebp.url}
-            alt=""
-            width={1600}
-            height={1073}
-            eager
-            breakOut
-            imgClassName="ink-on-paper object-[25%_center] md:object-center"
-          />
         </section>
 
 
