@@ -2,15 +2,12 @@
 
 export function Wordmark({ className = "" }: { className?: string }) {
   return (
-    <div
-      className={`flex w-[8.9rem] flex-col text-foreground ${className}`}
+    <span
+      className={`whitespace-nowrap font-sans text-lg font-medium leading-none tracking-tight text-foreground sm:text-xl ${className}`}
       aria-label="Slipstream Labs"
     >
-      <span className="flex items-baseline whitespace-nowrap font-sans text-[13px] uppercase leading-none tracking-[0.18em] sm:text-[15px]">
-        <span className="font-medium">Slipstream</span>
-        <span className="ml-1.5 font-normal opacity-40">Labs</span>
-      </span>
-    </div>
+      Slipstream Labs
+    </span>
   );
 }
 

@@ -155,13 +155,14 @@ function Index() {
           <a href="#top" aria-label="Slipstream Labs home">
             <Wordmark />
           </a>
-          <nav aria-label="Primary" className="hidden items-center gap-8 lg:flex">
+          <div className="flex items-center gap-10">
+          <nav aria-label="Primary" className="hidden items-center gap-10 lg:flex">
             {nav.map((item) =>
               item.href.startsWith("/") ? (
                 <Link
                   key={item.href}
                   to={item.href}
-                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                  className="text-[0.9375rem] text-foreground transition-opacity hover:opacity-60"
                   activeProps={{ className: "text-sm text-foreground" }}
                 >
                   {item.label}
@@ -170,7 +171,7 @@ function Index() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                  className="text-[0.9375rem] text-foreground transition-opacity hover:opacity-60"
                 >
                   {item.label}
                 </a>
@@ -188,6 +189,7 @@ function Index() {
               <span className="max-sm:hidden">Let's explore together</span>
               <span className="sm:hidden">Let's talk</span>
             </CtaButton>
+          </div>
           </div>
         </div>
       </header>
