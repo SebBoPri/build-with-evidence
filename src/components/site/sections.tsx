@@ -1,5 +1,11 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
+/**
+ * Fades content in as it scrolls into view. Content is visible by default
+ * (server render, no script, already on screen); only blocks still below the
+ * fold are hidden once the script runs, and they reveal slightly before they
+ * enter the viewport so fast scrolling never lands on blank space.
+ */
 export function Reveal({
   children,
   delay = 0,
@@ -10,25 +16,23 @@ export function Reveal({
   className?: string;
 }) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [shown, setShown] = useState(false);
+  const [pending, setPending] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
-    if (!el) return;
-    if (typeof IntersectionObserver === "undefined") {
-      setShown(true);
-      return;
-    }
+    if (!el || typeof IntersectionObserver === "undefined") return;
+    if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
+    if (el.getBoundingClientRect().top < window.innerHeight) return;
+
+    setPending(true);
     const io = new IntersectionObserver(
       (entries) => {
-        for (const e of entries) {
-          if (e.isIntersecting) {
-            setShown(true);
-            io.disconnect();
-          }
+        if (entries.some((e) => e.isIntersecting)) {
+          setPending(false);
+          io.disconnect();
         }
       },
-      { rootMargin: "0px 0px -12% 0px", threshold: 0.05 },
+      { rootMargin: "0px 0px 10% 0px" },
     );
     io.observe(el);
     return () => io.disconnect();
@@ -37,8 +41,8 @@ export function Reveal({
   return (
     <div
       ref={ref}
-      className={`reveal ${shown ? "is-visible" : ""} ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
+      className={`reveal ${pending ? "is-pending" : ""} ${className}`}
+      style={{ transitionDelay: pending ? undefined : `${delay}ms` }}
     >
       {children}
     </div>

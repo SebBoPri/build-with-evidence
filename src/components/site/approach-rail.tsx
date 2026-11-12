@@ -3,8 +3,8 @@ import { useEffect, useRef, useState } from "react";
 type Step = { n: string; title: string; q?: string; body: string };
 
 /**
- * Five-step rail whose nodes light up in sequence as the section scrolls
- * through the viewport, so the rail doubles as a progress indicator.
+ * Five-step rail whose line and nodes fill in as the section scrolls through
+ * the viewport. The fill is decoration only: step text is always full strength.
  */
 export function ApproachRail({ steps }: { steps: Step[] }) {
   const ref = useRef<HTMLOListElement | null>(null);
@@ -68,36 +68,16 @@ export function ApproachRail({ steps }: { steps: Step[] }) {
               />
             </span>
 
-            <h3
-              className={`mt-10 font-display text-xl tracking-tight transition-colors duration-500 ${
-                reached ? "text-foreground" : "text-foreground/45"
-              }`}
-            >
-              {s.title}
-            </h3>
+            <h3 className="mt-10 font-display text-xl tracking-tight text-foreground">{s.title}</h3>
             {s.q ? (
-              <p
-                className={`mt-3 max-w-[16rem] text-[0.95rem] font-medium leading-relaxed transition-colors duration-500 ${
-                  reached ? "text-foreground" : "text-foreground/45"
-                }`}
-              >
+              <p className="mt-3 max-w-[16rem] text-[0.95rem] font-medium leading-relaxed text-foreground">
                 {s.q}
               </p>
             ) : null}
-            <p
-              className={`mt-3 max-w-[16rem] text-[0.95rem] leading-relaxed transition-colors duration-500 ${
-                reached ? "text-muted-foreground" : "text-muted-foreground/50"
-              }`}
-            >
+            <p className="mt-3 max-w-[16rem] text-[0.95rem] leading-relaxed text-muted-foreground">
               {s.body}
             </p>
-            <p
-              className={`label-mono mt-8 text-case-highlight transition-opacity duration-500 ${
-                reached ? "opacity-100" : "opacity-50"
-              }`}
-            >
-              Step {s.n}
-            </p>
+            <p className="label-mono mt-8 text-case-highlight">Step {s.n}</p>
           </li>
         );
       })}
