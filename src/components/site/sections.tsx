@@ -76,14 +76,11 @@ export function Section({
   );
 }
 
-/** Work page label: blue / purple / gold bar plus a bold uppercase word. */
+/** Section label: a bold uppercase word. */
 export function WorkLabel({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
-    <div className={`flex items-center gap-1 ${className}`}>
-      <span className="h-[2px] w-8 bg-brand-blue" aria-hidden="true" />
-      <span className="h-[2px] w-4 bg-brand-purple" aria-hidden="true" />
-      <span className="h-[2px] w-2 bg-brand-gold" aria-hidden="true" />
-      <span className="ml-3 text-xs font-bold uppercase tracking-[0.2em] text-foreground">
+    <div className={className}>
+      <span className="text-xs font-bold uppercase tracking-[0.2em] text-foreground">
         {children}
       </span>
     </div>
