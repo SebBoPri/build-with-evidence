@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { TedxFikaCase } from "@/components/cases/tedxfika";
 
-const title = "TEDxFika: the missing rung | Sebastian Bouvier";
+const title = "TEDxFika: keeping a 700-person audience engaged between events | Sebastian Bouvier";
 const description = "A one-week Hyper Island sprint developing a proposed monthly community format for TEDxStockholm.";
 
 export const Route = createFileRoute("/portfolio/tedxfika")({

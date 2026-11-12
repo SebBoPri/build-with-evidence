@@ -19,9 +19,8 @@ export function TedxFikaCase() {
       <CaseHeader />
       <main>
         <CaseIntro
-          title="The missing rung: keeping a 700-person audience between events"
+          title="Keeping a 700-person audience engaged between events"
           accentClass={ACCENT}
-          keyFigure={{ value: "1 → 12", label: "evenings a year instead of one, proposed format" }}
           meta={[
             { label: "Context", value: "A one-week Hyper Island sprint to develop a community concept for TEDxStockholm" },
             { label: "Timeframe", value: "September 2026, 1 week" },
